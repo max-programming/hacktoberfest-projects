@@ -11,5 +11,8 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: [require('daisyui')]
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: ['dracula', 'halloween']
+  }
 };

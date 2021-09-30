@@ -44,7 +44,7 @@ export default function Language({ repos, languageName }: Props) {
             <div className="w-5/6 max-w-md mx-auto">
               <h1 className="mb-5 text-5xl font-bold">
                 {repos.total_count} repositories for{' '}
-                <span className="font-mono underline text-warning">
+                <span className="font-mono underline text-accent">
                   {languageName.toUpperCase()}
                 </span>
               </h1>
