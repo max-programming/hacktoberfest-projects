@@ -1,4 +1,5 @@
 import { GetServerSideProps } from 'next';
+import Head from 'next/head';
 import Card from '../../components/Card';
 import Header from '../../components/Header';
 
@@ -10,6 +11,10 @@ interface Props {
 export default function Language({ repos, languageName }: Props) {
   return (
     <>
+      <Head>
+        <title>{languageName.toUpperCase()} Repositories</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
       <Header />
       <div className='container mx-auto'>
         <div className='min-h-screen pt-5'>
