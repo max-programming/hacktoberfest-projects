@@ -18,7 +18,6 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
 
   // Get the JSON response and parse it
   const repos = await res.json();
-  console.log(repos.items);
 
   return {
     props: {
