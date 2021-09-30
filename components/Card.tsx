@@ -58,7 +58,7 @@ export default function Card({ repo }: Props) {
           </a>
           <p className='gemojify'>{emojify(repo.description)}</p>
           <div className='card-actions'>
-            {repo.topics.map(topic => (
+            {repo.topics.map((topic: string) => (
               <a
                 key={topic}
                 href={`https://github.com/topics/${topic}`}

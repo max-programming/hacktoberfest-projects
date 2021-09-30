@@ -24,7 +24,7 @@ export default function Language({ repos, languageName }: Props) {
             </div>
           </div>
           <div className='grid grid-cols-3 gap-4'>
-            {repos.items.map(repo => (
+            {repos.items.map((repo: any) => (
               <Card key={repo.id} repo={repo} />
             ))}
           </div>
