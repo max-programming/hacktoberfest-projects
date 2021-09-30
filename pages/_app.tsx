@@ -5,6 +5,7 @@ import { DefaultSeo } from 'next-seo';
 import SEO from 'next-seo.config';
 
 import 'tailwindcss/tailwind.css';
+import '@fontsource/source-sans-pro';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

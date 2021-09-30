@@ -14,7 +14,7 @@ export default function Header() {
                 alt="Hacktoberfest"
                 blurDataURL="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPsrQcAAZ8BDlpDGcMAAAAASUVORK5CYII="
                 placeholder="blur"
-                src="https://raw.githubusercontent.com/github/explore/b9a0686036b9a0322b1d6f85ec26e4aa3e768a4b/topics/hacktoberfest/hacktoberfest.png"
+                src="/static/hacktoberfest.png"
               />
             </div>
           </div>
