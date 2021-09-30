@@ -13,7 +13,7 @@ const languages = [
   'C'
 ];
 
-export default function Hero() {
+const Hero = () => {
   return (
     <div className="min-h-screen hero">
       <div className="text-center hero-content">
@@ -36,4 +36,6 @@ export default function Hero() {
       </div>
     </div>
   );
-}
+};
+
+export default Hero;

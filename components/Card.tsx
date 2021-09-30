@@ -7,44 +7,48 @@ interface Props {
 
 export default function Card({ repo }: Props) {
   return (
-    <div className='shadow-sm card bg-neutral text-neutral-content'>
-      <div className='card-body'>
-        <div className='avatar'>
-          <div className='w-10 h-10 mb-2 rounded-full'>
+    <div className="shadow-sm card bg-neutral text-neutral-content">
+      <div className="card-body">
+        <div className="avatar">
+          <div className="w-10 h-10 mb-2 rounded-full">
             <a
               href={repo.owner.html_url}
               title={repo.owner.login}
-              target='_blank'
-              rel='noreferrer'
+              target="_blank"
+              rel="noreferrer"
             >
               <Image
                 src={repo.owner.avatar_url}
-                blurDataURL='data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPsrQcAAZ8BDlpDGcMAAAAASUVORK5CYII='
-                placeholder='blur'
+                blurDataURL="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPsrQcAAZ8BDlpDGcMAAAAASUVORK5CYII="
+                placeholder="blur"
                 width={50}
                 height={50}
                 alt={repo.owner.login}
+                className="rounded-xl"
               />
             </a>
           </div>
         </div>
+
         <a
           href={repo.html_url}
           title={repo.name}
-          target='_blank'
-          rel='noreferrer'
-          className='card-title link link-hover text-warning'
+          target="_blank"
+          rel="noreferrer"
+          className="card-title link link-hover text-warning text-3xl"
         >
           {repo.name}
         </a>
-        <p className='gemojify'>{emojify(repo.description)}</p>
-        <div className='card-actions'>
+
+        <p className="gemojify mb-2">{emojify(repo.description)}</p>
+
+        <div className="card-actions">
           {repo.topics.map((topic: string) => (
             <a
               key={topic}
               href={`https://github.com/topics/${topic}`}
-              target='_blank'
-              rel='noreferrer'
+              target="_blank"
+              rel="noreferrer"
               className={`badge ${
                 topic === 'hacktoberfest' ? 'badge-warning' : 'badge-info'
               }`}
@@ -53,17 +57,20 @@ export default function Card({ repo }: Props) {
             </a>
           ))}
         </div>
-        <div className='card-actions'>
-          <div className='shadow stats'>
-            <div className='stat'>
-              <div className='stat-title'>⭐ Stars</div>
-              <div className='stat-value'>{repo.stargazers_count}</div>
+
+        <div className="card-actions">
+          <div className="shadow stats">
+            <div className="stat">
+              <div className="stat-title text-center">⭐ Stars</div>
+              <div className="stat-value text-center">
+                {repo.stargazers_count}
+              </div>
             </div>
           </div>
-          <div className='shadow stats'>
-            <div className='stat'>
-              <div className='stat-title'>🍴 Forks</div>
-              <div className='stat-value'>{repo.forks}</div>
+          <div className="shadow stats">
+            <div className="stat">
+              <div className="stat-title text-center">🍴 Forks</div>
+              <div className="stat-value text-center">{repo.forks}</div>
             </div>
           </div>
         </div>
