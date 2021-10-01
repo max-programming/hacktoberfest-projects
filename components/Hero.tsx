@@ -11,6 +11,7 @@ const languages = [
   'Go',
   'CSS',
   'C',
+  'R',
   'Ruby',
   'CSharp',
   'Shell',
