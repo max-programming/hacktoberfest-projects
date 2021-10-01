@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { IoLogoGithub } from 'react-icons/io';
 
 const Header = () => {
   return (
-    <div className="justify-center mt-2 mb-2 ml-2 mr-2 shadow-lg navbar bg-base-200 rounded-box">
+    <div className="justify-between px-2 mt-2 mb-2 ml-2 mr-2 shadow-lg navbar bg-base-200 rounded-box">
       <Link href="/">
         <a>
           <div className="flex-none">
@@ -25,6 +26,16 @@ const Header = () => {
           </div>
         </a>
       </Link>
+      <div className="flex-none">
+        <a
+          href="https://github.com/max-programming/hacktoberfest-projects"
+          target="_blank"
+          rel="noreferrer"
+          className="btn btn-square btn-ghost"
+        >
+          <IoLogoGithub size="1.5rem" />
+        </a>
+      </div>
     </div>
   );
 };
