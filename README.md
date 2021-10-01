@@ -1,11 +1,10 @@
+# Hacktoberfest Projects 🎉
+
+A Web app which lets you find eligible repositories for Hacktoberfest 2021!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-# Hacktoberfest Projects 🎉
-
-A Web app which lets you find eligible repositories for Hacktoberfest 2021! 
-
 
 ## Run Locally
 
@@ -51,8 +50,8 @@ If you have any feedback, please reach out to us at the issues 😉
 
 ## Authors
 
-- [@MaxProgramming](https://www.github.com/max-programming)
-- [@janaSunrise](https://www.github.com/janaSunrise)
+- [Usman](https://www.github.com/max-programming)
+- [Sunrit Jana](https://www.github.com/janaSunrise)
 
 ## Contributors ✨
 
