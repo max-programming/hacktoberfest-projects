@@ -12,7 +12,8 @@ const languages = [
   'CSS',
   'C',
   'Ruby',
-  'GDScript'
+  'GDScript',
+  'CSharp'
 ];
 
 const Hero = () => {
