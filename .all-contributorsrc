@@ -58,6 +58,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Vaibhav2002",
+      "name": "Vaibhav Jaiswal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64367926?v=4",
+      "profile": "http://vaibhavjaiswal.vercel.app",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
