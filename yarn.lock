@@ -262,6 +262,11 @@
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
+"@types/twuni__emojify@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/twuni__emojify/-/twuni__emojify-1.0.0.tgz#cffb6873b6c0f25599202ff3c42b589f24d2c85c"
+  integrity sha512-5PK6m9dMh9cdBm52kdUALjaV5doDGTOQiXCoQAQOTAUGG6JbG8iu6qq6GNw9pbiVZYpVPc4EncGmyT01gPLzrA==
+
 "@typescript-eslint/parser@^4.20.0":
   version "4.32.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/parser/-/parser-4.32.0.tgz#751ecca0e2fecd3d44484a9b3049ffc1871616e5"
