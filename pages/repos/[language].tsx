@@ -1,3 +1,4 @@
+import Pagination from 'components/Pagination';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
@@ -5,29 +6,38 @@ import Card from '../../components/Card';
 import Header from '../../components/Header';
 
 interface Props {
+  page: number;
   languageName: string;
   repos: any;
 }
 
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const languageName = ctx.params?.language;
-  const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}`;
+  const page = ctx.query.p || '1';
+  const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}&page=${page}&per_page=21`;
   const res = await fetch(apiUrl, {
     headers: { Accept: 'application/vnd.github.mercy-preview+json' }
   });
+
+  if (!res.ok) {
+    return {
+      notFound: true
+    };
+  }
 
   // Get the JSON response and parse it
   const repos = await res.json();
 
   return {
     props: {
+      page: +page,
       repos,
       languageName
     }
   };
 };
 
-export default function Language({ repos, languageName }: Props) {
+export default function Language({ page, repos, languageName }: Props) {
   return (
     <>
       <Head>
@@ -56,6 +66,7 @@ export default function Language({ repos, languageName }: Props) {
             ))}
           </div>
         </div>
+        <Pagination languageName={languageName} page={page} />
       </div>
     </>
   );
