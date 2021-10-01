@@ -27,11 +27,7 @@ const Header = () => {
           </div>
         </a>
       </Link>
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="flex-none"
-      >
+      <div className="flex-none">
         <a
           href="https://github.com/max-programming/hacktoberfest-projects"
           target="_blank"
@@ -40,7 +36,7 @@ const Header = () => {
         >
           <IoLogoGithub size="1.5rem" />
         </a>
-      </motion.div>
+      </div>
     </div>
   );
 };
