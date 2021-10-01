@@ -11,10 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultSeo {...SEO} />
-      <NextNProgress
-        color="rgb(255, 255, 179)"
-        options={{ showSpinner: false }}
-      />
+      <NextNProgress color="#f54418" options={{ showSpinner: false }} />
       <Component {...pageProps} />
     </>
   );

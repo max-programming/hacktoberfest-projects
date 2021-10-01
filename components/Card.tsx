@@ -5,7 +5,7 @@ interface Props {
   repo: any;
 }
 
-export default function Card({ repo }: Props) {
+const Card = ({ repo }: Props) => {
   return (
     <div className="shadow-sm card bg-base-300">
       <div className="relative card-body">
@@ -79,4 +79,6 @@ export default function Card({ repo }: Props) {
       </div>
     </div>
   );
-}
+};
+
+export default Card;
