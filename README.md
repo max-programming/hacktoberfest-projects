@@ -62,3 +62,4 @@ If you have any feedback, please reach out to us at the issues 😉
 
 - [@MaxProgramming](https://www.github.com/max-programming)
 - [@janaSunrise](https://www.github.com/janaSunrise)
+- [@uozcan12](https://www.github.com/uozcan12)
