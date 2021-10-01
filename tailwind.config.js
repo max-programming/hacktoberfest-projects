@@ -6,7 +6,12 @@ module.exports = {
     fontFamily: {
       sans: ['Source Sans Pro']
     },
-    extend: {}
+    extend: {
+      colors: {
+        primary: '#f54418',
+        accent: '#2b3531'
+      }
+    }
   },
   variants: {
     extend: {}

@@ -14,3 +14,27 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scrollbar Styles */
+
+::-webkit-scrollbar {
+  width: 0.6em;
+}
+
+::-webkit-scrollbar-track {
+  background: #2b3531;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f54518;
+  border-radius: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
