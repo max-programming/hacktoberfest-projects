@@ -10,7 +10,8 @@ const languages = [
   'TypeScript',
   'Go',
   'CSS',
-  'C'
+  'C',
+  'Ruby'
 ];
 
 const Hero = () => {
