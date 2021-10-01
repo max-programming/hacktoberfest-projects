@@ -45,4 +45,8 @@ Contributions are always welcome!
 
 If you have any feedback, please reach out to us at the issues 😉
 
-  
+
+## Authors
+
+- [@MaxProgramming](https://www.github.com/max-programming)
+- [@janaSunrise](https://www.github.com/janaSunrise)
