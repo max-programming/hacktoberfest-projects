@@ -6,6 +6,7 @@ import Header from 'components/Header';
 import Pagination from 'components/Pagination';
 
 import capFirstLetter from 'utils/capFirstLetter';
+import Sort from 'components/Sort';
 
 interface Props {
   page: number;
@@ -16,7 +17,9 @@ interface Props {
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const languageName = ctx.params?.language;
   const page = ctx.query.p || '1';
-  const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}&page=${page}&per_page=21`;
+  const sort = ctx.query.s || '';
+  const order = ctx.query.o || 'desc';
+  const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
   const res = await fetch(apiUrl, {
     headers: { Accept: 'application/vnd.github.mercy-preview+json' }
   });
@@ -61,7 +64,7 @@ const Language = ({ page, repos, languageName }: Props) => {
               </h1>
             </div>
           </div>
-
+          <Sort languageName={languageName} page={page} />
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {repos.items.map((repo: any) => (
               <Card key={repo.id} repo={repo} />
