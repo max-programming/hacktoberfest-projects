@@ -5,6 +5,9 @@ A Web app which lets you find eligible repositories for Hacktoberfest 2021!
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+<a href="https://gitmoji.dev">
+  <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+</a>
 
 ## Run Locally
 
