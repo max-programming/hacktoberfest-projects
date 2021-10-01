@@ -42,7 +42,7 @@ const Hero = () => {
           {languages.map(language => (
             <Link key={language} href={`/repos/${language.toLowerCase()}`}>
               <a>
-                <button className="m-2 bg-primary hover:bg-accent border-0 btn btn-lg">
+                <button className="m-2 bg-primary hover:bg-hero-button-hover border-0 btn btn-lg">
                   {language}
                 </button>
               </a>
