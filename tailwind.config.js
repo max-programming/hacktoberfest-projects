@@ -8,7 +8,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#C63900',
+        primary: '#ff5724',
         accent: '#2b3531',
         'hero-button-hover': '#b53a25'
       }
