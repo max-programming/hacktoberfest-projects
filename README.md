@@ -11,7 +11,7 @@ A Web app which lets you find eligible repositories for Hacktoberfest 2021!
 Clone the project
 
 ```bash
-git clone https://github.com/max-programming/
+git clone https://github.com/max-programming/hacktoberfest-projects.git
 ```
 
 Go to the project directory
