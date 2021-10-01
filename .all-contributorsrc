@@ -31,6 +31,15 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "mihaiandrei97",
+      "name": "Mihai-Adrian Andrei",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61692246?v=4",
+      "profile": "https://github.com/mihaiandrei97",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
