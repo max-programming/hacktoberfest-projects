@@ -50,7 +50,9 @@ const Card = ({ repo }: Props) => {
               target="_blank"
               rel="noreferrer"
               className={`badge ${
-                topic === 'hacktoberfest' ? 'badge-accent' : 'badge-primary'
+                topic === 'hacktoberfest'
+                  ? 'bg-primary text-gray-900'
+                  : 'bg-accent'
               }`}
             >
               {topic}

@@ -6,7 +6,13 @@ module.exports = {
     fontFamily: {
       sans: ['Source Sans Pro']
     },
-    extend: {}
+    extend: {
+      colors: {
+        primary: '#ff5724',
+        accent: '#2b3531',
+        'hero-button-hover': '#b53a25'
+      }
+    }
   },
   variants: {
     extend: {}
