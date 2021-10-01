@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import languages from "assets/languages.json";
+import languages from 'assets/languages.json';
 
 const Hero = () => {
   return (
