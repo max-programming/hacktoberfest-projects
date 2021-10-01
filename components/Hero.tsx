@@ -1,24 +1,6 @@
 import Link from 'next/link';
 
-const languages = [
-  'JavaScript',
-  'Python',
-  'HTML',
-  'Java',
-  'PHP',
-  'Vue',
-  'C++',
-  'TypeScript',
-  'Go',
-  'CSS',
-  'C',
-  'R',
-  'Ruby',
-  'CSharp',
-  'Shell',
-  'GDScript',
-  'Rust'
-];
+import languages from "assets/languages.json";
 
 const Hero = () => {
   return (
