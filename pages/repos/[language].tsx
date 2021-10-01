@@ -1,9 +1,11 @@
-import Pagination from 'components/Pagination';
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
-import Card from '../../components/Card';
-import Header from '../../components/Header';
+import Card from 'components/Card';
+import Header from 'components/Header';
+import Pagination from 'components/Pagination';
+
+import capFirstLetter from 'utils/capFirstLetter';
 
 interface Props {
   page: number;
@@ -37,11 +39,11 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
   };
 };
 
-export default function Language({ page, repos, languageName }: Props) {
+const Language = ({ page, repos, languageName }: Props) => {
   return (
     <>
       <Head>
-        <title>{languageName.toUpperCase()} Repositories</title>
+        <title>{capFirstLetter(languageName)} Repositories</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -53,8 +55,8 @@ export default function Language({ page, repos, languageName }: Props) {
             <div className="w-5/6 max-w-md mx-auto">
               <h1 className="mb-5 text-5xl font-bold">
                 {repos.total_count} repositories for{' '}
-                <span className="font-mono underline text-primary">
-                  {languageName.toUpperCase()}
+                <span className="font-mono underline text-accent">
+                  {capFirstLetter(languageName)}
                 </span>
               </h1>
             </div>
@@ -70,4 +72,6 @@ export default function Language({ page, repos, languageName }: Props) {
       </div>
     </>
   );
-}
+};
+
+export default Language;

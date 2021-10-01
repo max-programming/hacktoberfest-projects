@@ -6,7 +6,7 @@ interface Props {
   page: number;
 }
 
-export default function Pagination({ languageName, page }: Props) {
+const Pagination = ({ languageName, page }: Props) => {
   return (
     <div className="items-center justify-center my-6 btn-group">
       <Link href={`/repos/${languageName}?p=${page - 1}`}>
@@ -23,4 +23,6 @@ export default function Pagination({ languageName, page }: Props) {
       </Link>
     </div>
   );
-}
+};
+
+export default Pagination;
