@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2021!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -75,6 +75,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/mihaiandrei97"><img src="https://avatars.githubusercontent.com/u/61692246?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mihai-Adrian Andrei</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=mihaiandrei97" title="Code">💻</a></td>
     <td align="center"><a href="https://gourav-khunger.web.app"><img src="https://avatars.githubusercontent.com/u/46792249?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gourav Khunger</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=gouravkhunger" title="Code">💻</a></td>
     <td align="center"><a href="https://www.apoorvcodes.me"><img src="https://avatars.githubusercontent.com/u/75479355?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Apoorv</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=apoorvcodes" title="Code">💻</a></td>
+    <td align="center"><a href="http://vaibhavjaiswal.vercel.app"><img src="https://avatars.githubusercontent.com/u/64367926?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vaibhav Jaiswal</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Vaibhav2002" title="Code">💻</a></td>
   </tr>
 </table>
 
