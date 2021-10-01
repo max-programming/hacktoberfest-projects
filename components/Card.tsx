@@ -77,6 +77,6 @@ const Card = ({ repo }: Props) => {
       </div>
     </div>
   );
-}
+};
 
 export default Card;

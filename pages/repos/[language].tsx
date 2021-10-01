@@ -71,6 +71,6 @@ const Language = ({ page, repos, languageName }: Props) => {
       </div>
     </>
   );
-}
+};
 
 export default Language;
