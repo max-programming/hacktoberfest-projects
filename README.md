@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2021!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Run Locally
@@ -63,6 +63,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://medium.com/@geeknees"><img src="https://avatars.githubusercontent.com/u/701242?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Masumi Kawasaki</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=geeknees" title="Code">💻</a></td>
+    <td align="center"><a href="http://rishit-khandelwal.github.io"><img src="https://avatars.githubusercontent.com/u/65018379?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rishit Khandelwal</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=rishit-khandelwal" title="Code">💻</a></td>
   </tr>
 </table>
 
