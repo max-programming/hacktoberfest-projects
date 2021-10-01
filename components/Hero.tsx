@@ -6,6 +6,7 @@ const languages = [
   'HTML',
   'Java',
   'PHP',
+  'Vue',
   'C++',
   'TypeScript',
   'Go',
