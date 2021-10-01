@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import languages from 'assets/languages.json';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
@@ -24,9 +25,16 @@ const Hero = () => {
           {languages.map(language => (
             <Link key={language} href={`/repos/${language.toLowerCase()}`}>
               <a>
-                <button className="m-2 bg-primary hover:bg-hero-button-hover border-0 btn btn-lg">
+                <motion.button
+                  initial={{ scale: 0.2 }}
+                  animate={{ scale: 1 }}
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  className="m-2 bg-primary hover:bg-hero-button-hover border-0 btn btn-lg"
+                >
                   {language}
-                </button>
+                </motion.button>
               </a>
             </Link>
           ))}

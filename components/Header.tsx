@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { IoLogoGithub } from 'react-icons/io';
@@ -26,7 +27,11 @@ const Header = () => {
           </div>
         </a>
       </Link>
-      <div className="flex-none">
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="flex-none"
+      >
         <a
           href="https://github.com/max-programming/hacktoberfest-projects"
           target="_blank"
@@ -35,7 +40,7 @@ const Header = () => {
         >
           <IoLogoGithub size="1.5rem" />
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 };
