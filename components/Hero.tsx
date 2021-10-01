@@ -12,8 +12,9 @@ const languages = [
   'CSS',
   'C',
   'Ruby',
-  'GDScript',
-  'CSharp'
+  'CSharp',
+  'Shell',
+  'GDScript'
 ];
 
 const Hero = () => {
@@ -44,6 +45,11 @@ const Hero = () => {
               </a>
             </Link>
           ))}
+          <a href="https://github.com/max-programming/hacktoberfest-projects/">
+            <button className="m-2 btn btn-lg btn-accent">
+              Add another language
+            </button>
+          </a>
         </div>
       </div>
     </div>
