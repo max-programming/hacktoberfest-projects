@@ -28,5 +28,6 @@
   "Sql",
   "Swift",
   "Perl",
-  "Groovy"
+  "Groovy",
+  "WebAssembly"
 ]
