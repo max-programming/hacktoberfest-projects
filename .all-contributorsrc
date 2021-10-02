@@ -104,6 +104,16 @@
         "code",
         "design"
       ]
+    },
+    {
+      "login": "emmalearnscode",
+      "name": "Emma Dawson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57045550?v=4",
+      "profile": "https://emmadawson.dev",
+      "contributions": [
+        "design",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
