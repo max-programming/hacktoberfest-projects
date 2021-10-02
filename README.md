@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2021!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -79,6 +79,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://cb-ashik.me"><img src="https://avatars.githubusercontent.com/u/47524279?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ashik Chapagain</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=projectashik" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.avneesh.tech/"><img src="https://avatars.githubusercontent.com/u/76690419?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Avneesh Agarwal</b></sub></a><br /><a href="#design-avneesh0612" title="Design">🎨</a></td>
   </tr>
 </table>
 
