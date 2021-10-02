@@ -2,6 +2,8 @@ import Link from 'next/link';
 
 import languages from 'assets/languages.json';
 
+const { main: mainLanguages, others: otherLanguages } = languages;
+
 const Hero = () => {
   return (
     <div
@@ -21,7 +23,7 @@ const Hero = () => {
             Select the programming language you would like to find repositories
             for.
           </p>
-          {languages.map(language => (
+          {mainLanguages.map(language => (
             <Link key={language} href={`/repos/${language.toLowerCase()}`}>
               <a>
                 <button className="m-2 bg-primary hover:bg-hero-button-hover border-0 btn btn-lg">
@@ -35,6 +37,27 @@ const Hero = () => {
               Add another language
             </button>
           </a>
+
+          {/* Display the other langs as dropdown in the center with daisy ui */}
+          <div className="dropdown">
+            <div tabIndex={0} className="m-1 btn">
+              Other languages
+            </div>
+
+            <ul
+              tabIndex={0}
+              className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52"
+            >
+              {otherLanguages.map(language => (
+                <Link key={language} href={`/repos/${language.toLowerCase()}`}>
+                  <a>
+                    {language}
+                    <br />
+                  </a>
+                </Link>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
