@@ -44,7 +44,7 @@ export default function Sort({ languageName, page }: Props) {
         </div>
         <ul
           tabIndex={0}
-          className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-56 overflow-y-scroll h-64"
+          className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-60 overflow-y-scroll h-64"
         >
           <li>
             <Link href={`/repos/${languageName}?p=${page}`}>
