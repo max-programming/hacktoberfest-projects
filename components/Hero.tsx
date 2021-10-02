@@ -39,26 +39,29 @@ const Hero = () => {
             </Link>
           ))}
           <a href="https://github.com/max-programming/hacktoberfest-projects/">
-            <button className="m-2 bg-accent hover:bg-primary border-0 btn btn-lg">
+            <button className="m-2 border-0 bg-accent hover:bg-primary btn btn-lg">
               Add another language
             </button>
           </a>
 
-          <div className="dropdown">
-            <div tabIndex={0} className="m-1 btn">
+          <div className="dropdown dropdown-top">
+            <div
+              tabIndex={0}
+              className="m-1 btn btn-lg bg-accent hover:bg-primary"
+            >
               Other languages
             </div>
 
             <ul
               tabIndex={0}
-              className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52 overflow-auto"
+              className="h-64 p-2 overflow-y-scroll shadow menu dropdown-content bg-base-100 rounded-box w-60"
             >
-              {otherLanguages.map(language => (
-                <Link key={language} href={`/repos/${language.toLowerCase()}`}>
-                  <a>
-                    {language}
-                  </a>
-                </Link>
+              {otherLanguages.sort().map(language => (
+                <li key={language}>
+                  <Link href={`/repos/${language.toLowerCase()}`}>
+                    <a>{language}</a>
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
