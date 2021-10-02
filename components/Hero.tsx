@@ -31,7 +31,7 @@ const Hero = () => {
                   initial={{ scale: 0.2 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.3 }}
-                  className="m-2 bg-primary hover:bg-hero-button-hover border-0 btn btn-lg"
+                  className="m-2 bg-primary text-neutral hover:bg-hero-button-hover border-0 btn btn-lg"
                 >
                   {language}
                 </motion.button>
