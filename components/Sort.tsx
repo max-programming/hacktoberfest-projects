@@ -12,6 +12,7 @@ enum SortTypes {
   FewestStars = 'Fewest stars',
   MostForks = 'Most forks',
   FewestForks = 'Fewest forks',
+  MostHelpWantedIssues = 'Most help wanted issues',
   RecentlyUpdated = 'Recently updated',
   LeastRecentlyUpdated = 'Least recently updated'
 }
@@ -28,6 +29,8 @@ export default function Sort({ languageName, page }: Props) {
       if (router.query.s === 'stars') return SortTypes.MostStars;
       if (router.query.s === 'forks') return SortTypes.MostForks;
       if (router.query.s === 'updated') return SortTypes.RecentlyUpdated;
+      if (router.query.s === 'help-wanted-issues')
+        return SortTypes.MostHelpWantedIssues;
       return SortTypes.BestMatch;
     } else {
       return SortTypes.BestMatch;
@@ -41,7 +44,7 @@ export default function Sort({ languageName, page }: Props) {
         </div>
         <ul
           tabIndex={0}
-          className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52"
+          className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-60 overflow-y-scroll h-64"
         >
           <li>
             <Link href={`/repos/${languageName}?p=${page}`}>
@@ -66,6 +69,13 @@ export default function Sort({ languageName, page }: Props) {
           <li>
             <Link href={`/repos/${languageName}?p=${page}&s=forks&o=asc`}>
               <a>Fewest forks</a>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href={`/repos/${languageName}?p=${page}&s=help-wanted-issues&o=desc`}
+            >
+              <a>Most help wanted issues</a>
             </Link>
           </li>
           <li>
