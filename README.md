@@ -43,7 +43,7 @@ npm run dev
 ## Tech Stack
 
 - [Next.js](https://nextjs.org/)
-- [Github API](https://api.github.com/)
+- [GitHub API](https://api.github.com/)
 - [Daisy UI](http://daisyui.com)
 
 ## Contributing
