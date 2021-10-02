@@ -94,6 +94,16 @@
         "design",
         "code"
       ]
+    },
+    {
+      "login": "Mikkel-T",
+      "name": "Mikkel Tønder",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71938724?v=4",
+      "profile": "http://mikkel-t.com",
+      "contributions": [
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
