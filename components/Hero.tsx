@@ -28,8 +28,6 @@ const Hero = () => {
                 <motion.button
                   initial={{ scale: 0.2 }}
                   animate={{ scale: 1 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
                   transition={{ duration: 0.3 }}
                   className="m-2 bg-primary hover:bg-hero-button-hover border-0 btn btn-lg"
                 >
