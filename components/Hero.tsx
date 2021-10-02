@@ -38,7 +38,6 @@ const Hero = () => {
             </button>
           </a>
 
-          {/* Display the other langs as dropdown in the center with daisy ui */}
           <div className="dropdown">
             <div tabIndex={0} className="m-1 btn">
               Other languages
@@ -46,13 +45,12 @@ const Hero = () => {
 
             <ul
               tabIndex={0}
-              className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52"
+              className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52 overflow-auto"
             >
               {otherLanguages.map(language => (
                 <Link key={language} href={`/repos/${language.toLowerCase()}`}>
                   <a>
                     {language}
-                    <br />
                   </a>
                 </Link>
               ))}
