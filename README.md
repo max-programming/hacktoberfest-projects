@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2021!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -82,6 +82,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://www.avneesh.tech/"><img src="https://avatars.githubusercontent.com/u/76690419?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Avneesh Agarwal</b></sub></a><br /><a href="#design-avneesh0612" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=avneesh0612" title="Code">💻</a></td>
     <td align="center"><a href="http://mikkel-t.com"><img src="https://avatars.githubusercontent.com/u/71938724?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mikkel Tønder</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Mikkel-T" title="Code">💻</a> <a href="#design-Mikkel-T" title="Design">🎨</a></td>
     <td align="center"><a href="https://emmadawson.dev"><img src="https://avatars.githubusercontent.com/u/57045550?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Emma Dawson</b></sub></a><br /><a href="#design-emmalearnscode" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=emmalearnscode" title="Code">💻</a></td>
+    <td align="center"><a href="https://king-coder.hashnode.dev/"><img src="https://avatars.githubusercontent.com/u/76843766?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kushagra Jain</b></sub></a><br /><a href="#content-Kushagra-Jain99" title="Content">🖋</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Kushagra-Jain99" title="Code">💻</a></td>
   </tr>
 </table>
 
