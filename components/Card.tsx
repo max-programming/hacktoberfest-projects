@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { emojify } from '@twuni/emojify';
+import { GoStar, GoRepoForked } from 'react-icons/go';
 
 interface Props {
   repo: any;
@@ -63,7 +64,9 @@ const Card = ({ repo }: Props) => {
         <div className="items-end justify-center h-full card-actions">
           <div className="shadow stats">
             <div className="stat">
-              <div className="text-center stat-title">⭐ Stars</div>
+              <div className="text-center stat-title items-center inline-flex">
+                <GoStar /> <span className="ml-0.5">Stars</span>
+              </div>
               <div className="text-center stat-value">
                 {repo.stargazers_count}
               </div>
@@ -71,7 +74,9 @@ const Card = ({ repo }: Props) => {
           </div>
           <div className="shadow stats">
             <div className="stat">
-              <div className="text-center stat-title">🍴 Forks</div>
+              <div className="text-center stat-title items-center inline-flex">
+                <GoRepoForked /> <span className="ml-0.5">Forks</span>
+              </div>
               <div className="text-center stat-value">{repo.forks}</div>
             </div>
           </div>
