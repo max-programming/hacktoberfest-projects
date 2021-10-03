@@ -38,11 +38,6 @@ const Hero = () => {
               </a>
             </Link>
           ))}
-          <a href="https://github.com/max-programming/hacktoberfest-projects/">
-            <button className="m-2 border-0 bg-accent hover:bg-primary btn btn-lg">
-              Add another language
-            </button>
-          </a>
 
           <div className="dropdown dropdown-top">
             <div
@@ -65,6 +60,11 @@ const Hero = () => {
               ))}
             </ul>
           </div>
+          <a href="https://github.com/max-programming/hacktoberfest-projects/">
+            <button className="m-2 border-0 bg-accent hover:bg-primary btn btn-lg">
+              Add another language
+            </button>
+          </a>
         </div>
       </div>
     </div>
