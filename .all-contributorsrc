@@ -124,6 +124,15 @@
         "content",
         "code"
       ]
+    },
+    {
+      "login": "shubhraagarwal",
+      "name": "Shubhra Agarwal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67220475?v=4",
+      "profile": "http://shubhraagarwal.netlify.app",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
