@@ -7,6 +7,7 @@ import Pagination from 'components/Pagination';
 
 import capFirstLetter from 'utils/capFirstLetter';
 import Sort from 'components/Sort';
+import { useRouter } from 'next/router';
 
 interface Props {
   page: number;
@@ -19,7 +20,8 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
   const page = ctx.query.p || '1';
   const sort = ctx.query.s || '';
   const order = ctx.query.o || 'desc';
-  const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
+  const searchQuery = ctx.query.q || '';
+  const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}+${searchQuery}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
   const res = await fetch(apiUrl, {
     headers: { Accept: 'application/vnd.github.mercy-preview+json' }
   });
@@ -43,6 +45,7 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
 };
 
 const Language = ({ page, repos, languageName }: Props) => {
+  const router = useRouter();
   return (
     <>
       <Head>
@@ -59,7 +62,9 @@ const Language = ({ page, repos, languageName }: Props) => {
               <h1 className="mb-5 text-5xl font-bold">
                 {repos.total_count} repositories for{' '}
                 <span className="font-mono underline text-primary">
-                  {capFirstLetter(languageName)}
+                  {router.query.q
+                    ? router.query.q + ' in ' + capFirstLetter(languageName)
+                    : capFirstLetter(languageName)}
                 </span>
               </h1>
             </div>
