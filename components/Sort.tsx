@@ -44,47 +44,51 @@ export default function Sort({ languageName, page }: Props) {
         </div>
         <ul
           tabIndex={0}
-          className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-60 overflow-y-scroll h-64"
+          className="h-64 p-2 overflow-y-scroll shadow menu dropdown-content bg-base-100 rounded-box w-60"
         >
           <li>
-            <Link href={`/repos/${languageName}?p=${page}`}>
+            <Link href={{ query: { ...router.query } }}>
               <a>Best match</a>
             </Link>
           </li>
           <li>
-            <Link href={`/repos/${languageName}?p=${page}&s=stars&o=desc`}>
+            <Link href={{ query: { ...router.query, s: 'stars', o: 'desc' } }}>
               <a>Most stars</a>
             </Link>
           </li>
           <li>
-            <Link href={`/repos/${languageName}?p=${page}&s=stars&o=asc`}>
+            <Link href={{ query: { ...router.query, s: 'stars', o: 'asc' } }}>
               <a>Fewest stars</a>
             </Link>
           </li>
           <li>
-            <Link href={`/repos/${languageName}?p=${page}&s=forks&o=desc`}>
+            <Link href={{ query: { ...router.query, s: 'forks', o: 'desc' } }}>
               <a>Most forks</a>
             </Link>
           </li>
           <li>
-            <Link href={`/repos/${languageName}?p=${page}&s=forks&o=asc`}>
+            <Link href={{ query: { ...router.query, s: 'forks', o: 'asc' } }}>
               <a>Fewest forks</a>
             </Link>
           </li>
           <li>
             <Link
-              href={`/repos/${languageName}?p=${page}&s=help-wanted-issues&o=desc`}
+              href={{
+                query: { ...router.query, s: 'help-wanted-issues', o: 'desc' }
+              }}
             >
               <a>Most help wanted issues</a>
             </Link>
           </li>
           <li>
-            <Link href={`/repos/${languageName}?p=${page}&s=updated&o=desc`}>
+            <Link
+              href={{ query: { ...router.query, s: 'updated', o: 'desc' } }}
+            >
               <a>Recently updated</a>
             </Link>
           </li>
           <li>
-            <Link href={`/repos/${languageName}?p=${page}&s=updated&o=asc`}>
+            <Link href={{ query: { ...router.query, s: 'updated', o: 'asc' } }}>
               <a>Least recently updated</a>
             </Link>
           </li>
