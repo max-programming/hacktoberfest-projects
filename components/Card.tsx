@@ -8,7 +8,7 @@ interface Props {
 
 const Card = ({ repo }: Props) => {
   return (
-    <div className="shadow-sm card bg-base-300">
+    <div className="shadow-sm card bg-base-300 mx-4">
       <div className="relative card-body">
         <div className="avatar">
           <div className="w-10 h-10 mb-2 rounded-full">
