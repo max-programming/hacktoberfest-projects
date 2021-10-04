@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { GoX } from 'react-icons/go';
 
 interface FormValues {
   searchQuery: string;
@@ -7,7 +8,7 @@ interface FormValues {
 
 export default function Search() {
   const router = useRouter();
-  const { register, handleSubmit } = useForm<FormValues>();
+  const { register, handleSubmit, reset } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = ({ searchQuery }) => {
     console.log(router.asPath);
     router.push({ query: { ...router.query, q: searchQuery } });
@@ -21,6 +22,13 @@ export default function Search() {
           type="text"
           {...register('searchQuery', { required: true })}
         />
+        <button
+          className="absolute top-0 right-0 rounded-l-none btn btn-ghost"
+          type="button"
+          onClick={() => reset()}
+        >
+          <GoX />
+        </button>
       </div>
     </form>
   );
