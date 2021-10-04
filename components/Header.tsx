@@ -22,7 +22,7 @@ const Header = () => {
               />
             </div>
           </div>
-          <div className="flex-1 px-2 mx-auto">
+          <div className="flex-1 hidden px-2 mx-auto lg:block">
             <span className="text-2xl font-bold text-center">
               Hacktoberfest Projects
             </span>

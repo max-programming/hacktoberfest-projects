@@ -14,7 +14,10 @@ export default function Search() {
     router.push({ query: { ...router.query, q: searchQuery } });
   };
   return (
-    <form className="w-2/4 m-2 form-control" onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className="w-full m-2 lg:w-2/4 form-control"
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div className="relative">
         <input
           placeholder="Search"
