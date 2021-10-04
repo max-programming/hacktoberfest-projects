@@ -18,10 +18,8 @@ const Card = ({ repo }: Props) => {
               target="_blank"
               rel="noreferrer"
             >
-              <Image
+              <img
                 src={repo.owner.avatar_url}
-                blurDataURL="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPsrQcAAZ8BDlpDGcMAAAAASUVORK5CYII="
-                placeholder="blur"
                 width={50}
                 height={50}
                 alt={repo.owner.login}
