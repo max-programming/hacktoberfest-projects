@@ -1,9 +1,11 @@
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { IoLogoGithub } from 'react-icons/io';
+import Search from './Search';
 
 const Header = () => {
+  const router = useRouter();
   return (
     <div className="justify-between px-2 mt-2 mb-2 ml-2 mr-2 shadow-lg navbar bg-base-200 rounded-box">
       <Link href="/">
@@ -27,6 +29,11 @@ const Header = () => {
           </div>
         </a>
       </Link>
+      {router.pathname !== '/' && (
+        <div className="justify-center flex-1">
+          <Search />
+        </div>
+      )}
       <div className="flex-none">
         <a
           href="https://github.com/max-programming/hacktoberfest-projects"
