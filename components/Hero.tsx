@@ -42,7 +42,7 @@ const Hero = () => {
           <div className="dropdown dropdown-top">
             <div
               tabIndex={0}
-              className="m-1 btn btn-lg bg-accent hover:bg-primary"
+              className="m-1 btn btn-lg bg-accent hover:bg-hero-button-hover"
             >
               Other languages
             </div>
@@ -61,7 +61,7 @@ const Hero = () => {
             </ul>
           </div>
           <a href="https://github.com/max-programming/hacktoberfest-projects/">
-            <button className="m-2 border-0 bg-accent hover:bg-primary btn btn-lg">
+            <button className="m-2 border-0 bg-accent hover:bg-hero-button-hover btn btn-lg">
               Add another language
             </button>
           </a>
