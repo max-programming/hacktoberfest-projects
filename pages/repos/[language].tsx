@@ -70,7 +70,7 @@ const Language = ({ page, repos, languageName }: Props) => {
             </div>
           </div>
           <Sort languageName={languageName} page={page} />
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="sm:grid sm:grid-cols-1 sm:gap-4 md:grid-cols-2 lg:grid-cols-3 flex items-center justify-center">
             {repos.items.map((repo: any) => (
               <Card key={repo.id} repo={repo} />
             ))}
