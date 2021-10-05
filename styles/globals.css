@@ -1,3 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: #6366F1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;
@@ -9,10 +21,6 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 @tailwind base;
@@ -33,8 +41,4 @@ a {
 ::-webkit-scrollbar-thumb {
   background: #f54518;
   border-radius: 10px;
-}
-
-html {
-  scroll-behavior: smooth;
 }
