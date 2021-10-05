@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2021!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -84,6 +84,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://emmadawson.dev"><img src="https://avatars.githubusercontent.com/u/57045550?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Emma Dawson</b></sub></a><br /><a href="#design-emmalearnscode" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=emmalearnscode" title="Code">💻</a></td>
     <td align="center"><a href="https://king-coder.hashnode.dev/"><img src="https://avatars.githubusercontent.com/u/76843766?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kushagra Jain</b></sub></a><br /><a href="#content-Kushagra-Jain99" title="Content">🖋</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Kushagra-Jain99" title="Code">💻</a></td>
     <td align="center"><a href="http://shubhraagarwal.netlify.app"><img src="https://avatars.githubusercontent.com/u/67220475?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shubhra Agarwal</b></sub></a><br /><a href="#design-shubhraagarwal" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/HussainGagan"><img src="https://avatars.githubusercontent.com/u/69407430?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hussain Gagan</b></sub></a><br /><a href="#content-HussainGagan" title="Content">🖋</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=HussainGagan" title="Code">💻</a></td>
   </tr>
 </table>
 
