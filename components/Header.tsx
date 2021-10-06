@@ -29,7 +29,7 @@ const Header = () => {
           </div>
         </a>
       </Link>
-      {router.pathname !== '/' && (
+      {router.pathname === '/repos/[language]' && (
         <div className="justify-center flex-1">
           <Search />
         </div>

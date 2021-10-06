@@ -1,4 +1,4 @@
-import { GetServerSideProps, GetServerSidePropsResult } from 'next';
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 
 import Card from 'components/Card';

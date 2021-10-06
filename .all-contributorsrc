@@ -6,6 +6,24 @@
   "commit": false,
   "contributors": [
     {
+      "login": "max-programming",
+      "name": "Max Programming",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51731966?v=4",
+      "profile": "https://usman-s.me",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "janaSunrise",
+      "name": "Sunrit Jana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56873669?v=4",
+      "profile": "https://sunritjana.now.sh",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
       "login": "geeknees",
       "name": "Masumi Kawasaki",
       "avatar_url": "https://avatars.githubusercontent.com/u/701242?v=4",
