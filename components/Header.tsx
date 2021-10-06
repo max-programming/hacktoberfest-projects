@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { IoLogoGithub } from 'react-icons/io';
+import { BsPeopleFill } from 'react-icons/bs';
 import Search from './Search';
 
 const Header = () => {
@@ -35,13 +36,18 @@ const Header = () => {
         </div>
       )}
       <div className="flex-none">
+        <Link passHref href="/contributors">
+          <a className="btn btn-square btn-ghost">
+            <BsPeopleFill size="1.5rem" title="Contributors" />
+          </a>
+        </Link>
         <a
           href="https://github.com/max-programming/hacktoberfest-projects"
           target="_blank"
           rel="noreferrer"
           className="btn btn-square btn-ghost"
         >
-          <IoLogoGithub size="1.5rem" />
+          <IoLogoGithub size="1.5rem" title="GitHub"/>
         </a>
       </div>
     </div>
