@@ -3,7 +3,9 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2021!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -39,7 +41,6 @@ yarn dev
 npm run dev
 ```
 
-
 ## Tech Stack
 
 - [Next.js](https://nextjs.org/)
@@ -53,7 +54,6 @@ Contributions are always welcome!
 ## Feedback
 
 If you have any feedback, please reach out to us at the issues 😉
-
 
 ## Authors
 
@@ -69,6 +69,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
+  <td align="center"><a href="https://usman-s.me"><img src="https://avatars.githubusercontent.com/u/51731966?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Max Programming</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=max-programming" title="Code">💻</a></td>
+  <td align="center"><a href="https://sunritjana.now.sh"><img src="https://avatars.githubusercontent.com/u/56873669?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sunrit Jana</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=janaSunrise" title="Code">💻</a></td>
     <td align="center"><a href="https://medium.com/@geeknees"><img src="https://avatars.githubusercontent.com/u/701242?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Masumi Kawasaki</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=geeknees" title="Code">💻</a> <a href="#content-geeknees" title="Content">🖋</a></td>
     <td align="center"><a href="http://rishit-khandelwal.github.io"><img src="https://avatars.githubusercontent.com/u/65018379?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rishit Khandelwal</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=rishit-khandelwal" title="Code">💻</a> <a href="#content-rishit-khandelwal" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/AnishDe12020"><img src="https://avatars.githubusercontent.com/u/63192115?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anish De</b></sub></a><br /><a href="#design-AnishDe12020" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=AnishDe12020" title="Code">💻</a></td>
