@@ -3,11 +3,10 @@ import { useRouter } from 'next/router';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 interface Props {
-  languageName: string;
   page: number;
 }
 
-const Pagination = ({ languageName, page }: Props) => {
+const Pagination = ({ page }: Props) => {
   const router = useRouter();
   return (
     <div className="items-center justify-center my-6 btn-group">

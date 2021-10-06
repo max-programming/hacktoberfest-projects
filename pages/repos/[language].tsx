@@ -69,14 +69,14 @@ const Language = ({ page, repos, languageName }: Props) => {
               </h1>
             </div>
           </div>
-          <Sort languageName={languageName} page={page} />
+          <Sort />
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {repos.items.map((repo: any) => (
               <Card key={repo.id} repo={repo} />
             ))}
           </div>
         </div>
-        <Pagination languageName={languageName} page={page} />
+        <Pagination page={page} />
       </div>
     </>
   );

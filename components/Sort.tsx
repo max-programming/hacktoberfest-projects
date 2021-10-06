@@ -1,11 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-interface Props {
-  languageName: string;
-  page: number;
-}
-
 enum SortTypes {
   BestMatch = 'Best match',
   MostStars = 'Most stars',
@@ -17,7 +12,7 @@ enum SortTypes {
   LeastRecentlyUpdated = 'Least recently updated'
 }
 
-export default function Sort({ languageName, page }: Props) {
+export default function Sort() {
   const router = useRouter();
   const selectedSort = (): SortTypes => {
     if (router.query.o === 'asc') {
