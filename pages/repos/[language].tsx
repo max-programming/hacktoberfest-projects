@@ -76,7 +76,7 @@ const Language = ({ page, repos, languageName }: Props) => {
             ))}
           </div>
         </div>
-        <Pagination page={page} />
+        <Pagination page={page} totalCount={repos.total_count} />
       </div>
     </>
   );
