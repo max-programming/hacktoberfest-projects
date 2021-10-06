@@ -1,7 +1,7 @@
 const Footer = () => {
   // Footer with copyright and credits and icons in the right end for the github repo and twitter profile using tailwind and daisy UI
   return (
-    <footer className="bg-gray-800 text-center text-white py-4 text-lg">
+    <footer className="bg-base-200 text-center text-white py-4 text-lg">
       <div className="container mx-auto px-4">
         <p>
           Made with <span className="text-red-500">💗</span> by{' '}
