@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { IoLogoGithub } from 'react-icons/io';
-import { BsFillPersonFill } from 'react-icons/bs';
+import { BsPeopleFill } from 'react-icons/bs';
 import Search from './Search';
 
 const Header = () => {
@@ -38,7 +38,7 @@ const Header = () => {
       <div className="flex-none">
         <Link passHref href="/contributors">
           <a className="btn btn-square btn-ghost">
-            <BsFillPersonFill size="1.5rem" />
+            <BsPeopleFill size="1.5rem" title="Contributors" />
           </a>
         </Link>
         <a
@@ -47,7 +47,7 @@ const Header = () => {
           rel="noreferrer"
           className="btn btn-square btn-ghost"
         >
-          <IoLogoGithub size="1.5rem" />
+          <IoLogoGithub size="1.5rem" title="GitHub"/>
         </a>
       </div>
     </div>
