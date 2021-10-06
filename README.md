@@ -51,6 +51,8 @@ npm run dev
 
 Contributions are always welcome!
 
+> Pull Requests about adding languages will not be merged, if you want to suggest adding a new language, please [create an issue](https://github.com/max-programming/hacktoberfest-projects/issues/new) for that 🙂
+
 ## Feedback
 
 If you have any feedback, please reach out to us at the issues 😉
