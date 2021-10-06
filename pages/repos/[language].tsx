@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetServerSideProps, GetServerSidePropsResult } from 'next';
 import Head from 'next/head';
 
 import Card from 'components/Card';
@@ -15,8 +15,8 @@ interface Props {
   repos: any;
 }
 
-export const getServerSideProps: GetServerSideProps = async ctx => {
-  const languageName = ctx.params?.language;
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
+  const languageName = ctx.params?.language as string;
   const page = ctx.query.p || '1';
   const sort = ctx.query.s || '';
   const order = ctx.query.o || 'desc';
