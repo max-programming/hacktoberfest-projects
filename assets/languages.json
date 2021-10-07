@@ -33,6 +33,8 @@
     "Groovy",
     "WebAssembly",
     "Pascal",
-    "CoffeeScript"
+    "CoffeeScript",
+    "React",
+    "Angular"
   ]
 }
