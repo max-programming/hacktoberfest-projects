@@ -50,7 +50,17 @@ const Language = ({ page, repos, languageName }: Props) => {
     <>
       <Head>
         <title>{capFirstLetter(languageName)} Repositories</title>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.ico"
+        />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" sizes="32x32" href="/favicon-32x32.ico" />
+        <link rel="icon" sizes="16x16" href="/favicon-16x16.ico" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#1A202C"></meta>
       </Head>
 
       <Header />
