@@ -8,6 +8,7 @@ import Pagination from 'components/Pagination';
 import capFirstLetter from 'utils/capFirstLetter';
 import Sort from 'components/Sort';
 import { useRouter } from 'next/router';
+import StarsFilter from 'components/StarsFilter';
 
 interface Props {
   page: number;
@@ -21,7 +22,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   const sort = ctx.query.s || '';
   const order = ctx.query.o || 'desc';
   const searchQuery = ctx.query.q || '';
-  const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}+${searchQuery}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
+  const startStars = ctx.query.startStars || 1;
+  const endStars = ctx.query.endStars || '';
+  console.log(ctx.query);
+  const starsQuery = startStars && endStars ? `stars:${startStars}..${endStars}` : startStars && !endStars ? `stars:>${startStars}` : !startStars && endStars ? `stars:<${endStars}` : ''
+  const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}+${searchQuery}+${starsQuery}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
   const res = await fetch(apiUrl, {
     headers: { Accept: 'application/vnd.github.mercy-preview+json' }
   });
@@ -80,6 +85,7 @@ const Language = ({ page, repos, languageName }: Props) => {
             </div>
           </div>
           <Sort />
+          <StarsFilter />
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
             {repos.items.map((repo: any) => (
               <Card key={repo.id} repo={repo} />
