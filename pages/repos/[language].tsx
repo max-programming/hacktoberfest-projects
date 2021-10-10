@@ -24,7 +24,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   const searchQuery = ctx.query.q || '';
   const startStars = ctx.query.startStars || 1;
   const endStars = ctx.query.endStars || '';
-  console.log(ctx.query);
   const starsQuery = startStars && endStars ? `stars:${startStars}..${endStars}` : startStars && !endStars ? `stars:>${startStars}` : !startStars && endStars ? `stars:<${endStars}` : ''
   const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}+${searchQuery}+${starsQuery}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
   const res = await fetch(apiUrl, {
