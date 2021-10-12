@@ -1,4 +1,5 @@
 import { IoLogoGithub } from 'react-icons/io';
+import Image from 'next/image';
 
 interface Contributor {
   login: string;
@@ -20,8 +21,15 @@ export default function ContributorCard({ contributor }: Props) {
         target="_blank"
         rel="noreferrer"
       >
-        <figure className="px-10 pt-10">
-          <img src={contributor.avatar_url} className="rounded-xl" />
+        <figure style={{height: 265.67}} className="px-10 pt-10">
+          <Image 
+            src={contributor.avatar_url}
+            width={225.67}
+            height={225.67}
+            blurDataURL="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPsrQcAAZ8BDlpDGcMAAAAASUVORK5CYII="
+            placeholder="blur"
+            className="rounded-xl"
+          />
         </figure>
       </a>
       <div className="card-body">
