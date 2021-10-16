@@ -9,16 +9,14 @@ interface FormValues {
 
 export default function StarsFilter() {
   const router = useRouter();
-  const { register, handleSubmit, reset } = useForm<FormValues>();
+  const { register, handleSubmit } = useForm<FormValues>();
   const onSubmit: SubmitHandler<FormValues> = ({ startStars, endStars }) => {
-    const query = endStars > startStars
+    const query = endStars
       ? {
           startStars,
           endStars,
         }
       : { startStars };
-      if(endStars < startStars) 
-        reset({ startStars})
     router.push({ query: { ...router.query, ...query } });
   };
 
