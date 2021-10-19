@@ -47,7 +47,7 @@ const Header = () => {
           rel="noreferrer"
           className="btn btn-square btn-ghost"
         >
-          <IoLogoGithub size="1.5rem" title="GitHub"/>
+          <IoLogoGithub size="1.5rem" title="GitHub" />
         </a>
       </div>
     </div>

@@ -13,9 +13,10 @@ const config = {
     {
       name: 'color-scheme',
       content: 'dark'
-    },{
-    name: 'msapplication-TileColor',
-    content: '#da532c'
+    },
+    {
+      name: 'msapplication-TileColor',
+      content: '#da532c'
     }
   ],
   openGraph: {
@@ -35,29 +36,29 @@ const config = {
   additionalLinkTags: [
     {
       rel: 'icon',
-      href: '/favicon.ico',
+      href: '/favicon.ico'
     },
     {
       rel: 'icon',
       href: '/favicon-32x32.ico',
-      sizes: '32x32',
+      sizes: '32x32'
     },
     {
       rel: 'icon',
       href: '/favicon-16x16.ico',
-      sizes: '16x16',
+      sizes: '16x16'
     },
     {
       rel: 'apple-touch-icon',
       href: '/apple-touch-icon.ico',
-      sizes: '76x76',
+      sizes: '76x76'
     },
     {
       rel: 'mask-icon',
       href: '/safari-pinned-tab.svg',
-      color: "#5bbad5",
-    },
-  ],
+      color: '#5bbad5'
+    }
+  ]
 };
 
 export default config;
