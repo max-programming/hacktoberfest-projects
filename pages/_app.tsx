@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       }}
     >
       <DefaultSeo {...SEO} />
-      <NextNProgress color="#f54418" options={{ showSpinner: false }} />
+      <NextNProgress color="#f54318" options={{ showSpinner: false }} />
       <Component {...pageProps} />
     </motion.div>
   );
