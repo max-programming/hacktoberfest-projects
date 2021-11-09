@@ -1,14 +1,13 @@
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import Card from 'components/Card';
 import Header from 'components/Header';
 import Pagination from 'components/Pagination';
-
-import capFirstLetter from 'utils/capFirstLetter';
 import Sort from 'components/Sort';
-import { useRouter } from 'next/router';
 import StarsFilter from 'components/StarsFilter';
+import capFirstLetter from 'utils/capFirstLetter';
 
 interface Props {
   page: number;

@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
-import languages from 'assets/languages.json';
 import { motion } from 'framer-motion';
+
+import languages from 'assets/languages.json';
 
 const { main: mainLanguages, others: otherLanguages } = languages;
 

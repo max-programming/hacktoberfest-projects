@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+
 import { IoLogoGithub } from 'react-icons/io';
 import { BsPeopleFill } from 'react-icons/bs';
+
 import Search from './Search';
 
 const Header = () => {
