@@ -14,7 +14,7 @@
     "@twuni/emojify": "^1.0.2",
     "daisyui": "^1.14.2",
     "framer-motion": "^4.1.17",
-    "next": ">=11.1.3",
+    "next": ">=12.1.0",
     "next-seo": "^4.28.1",
     "nextjs-progressbar": "^0.0.11",
     "react": "17.0.2",
