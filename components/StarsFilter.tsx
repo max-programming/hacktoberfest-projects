@@ -43,6 +43,7 @@ export default function StarsFilter() {
               onChange={e => {
                 field.onChange(parseInt(e.target.value, 10));
               }}
+              placeholder="Star's Starting Range"
             />
           )}
           control={control}
@@ -57,6 +58,7 @@ export default function StarsFilter() {
               onChange={e => {
                 field.onChange(parseInt(e.target.value, 10));
               }}
+              placeholder="Star's Finish Range"
             />
           )}
           control={control}
