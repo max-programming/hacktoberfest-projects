@@ -23,6 +23,7 @@
     "react-icons": "^4.2.0"
   },
   "devDependencies": {
+    "@types/node": "^18.7.23",
     "@types/react": "17.0.25",
     "@types/twuni__emojify": "^1.0.0",
     "autoprefixer": "^10.3.6",
