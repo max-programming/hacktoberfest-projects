@@ -8,6 +8,9 @@ import Pagination from 'components/Pagination';
 import Sort from 'components/Sort';
 import StarsFilter from 'components/StarsFilter';
 import capFirstLetter from 'utils/capFirstLetter';
+import { useState } from 'react';
+import { BsArrowUp } from 'react-icons/bs';
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface Props {
   page: number;
@@ -55,6 +58,22 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 };
 
 const Language = ({ page, repos, languageName }: Props) => {
+  const [scrollToTopBtn, setScrollToTopBtn] = useState(false);
+
+  const changeTopBtn = () => {
+    if (window.scrollY >= 200) {
+      setScrollToTopBtn(true);
+    } else {
+      setScrollToTopBtn(false);
+    }
+  };
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', changeTopBtn);
+  }
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   const router = useRouter();
   return (
     <>
@@ -74,7 +93,23 @@ const Language = ({ page, repos, languageName }: Props) => {
       </Head>
 
       <Header />
-
+      <AnimatePresence>
+        {scrollToTopBtn && (
+          <motion.div
+            className="fixed z-20 bottom-2 right-2"
+            onClick={scrollToTop}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <div className="relative w-16 h-16 rounded-full bg-primary">
+              <div className="absolute inset-3">
+                <BsArrowUp size={40} className="text-slate-100" />
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <div className="container mx-auto">
         <div className="min-h-screen pt-5">
           <div className="text-center">
