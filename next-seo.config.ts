@@ -16,7 +16,7 @@ const config = {
     },
     {
       name: 'msapplication-TileColor',
-      content: '#da532c'
+      content: '#ffd74d'
     }
   ],
   openGraph: {
@@ -24,7 +24,7 @@ const config = {
     locale: 'en_US',
     url: 'https://hacktoberfest-projects.vercel.app',
     title: 'Hacktoberfest projects',
-    description: `Quickly and easily find projects to contribute to this Hacktoberfest 2021!`,
+    description: `Quickly and easily find projects to contribute to this Hacktoberfest 2022!`,
     site_name: 'Hacktoberfest projects'
   },
   twitter: {

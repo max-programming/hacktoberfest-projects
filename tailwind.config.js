@@ -8,8 +8,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#ff5724',
-        accent: '#2b3531',
+        "primary-1": '#ffd74d',
+        "primary-2": '#40ddff',
+        "primary-3": '#7c7fff',
+        "primary": '#7c7fff',
+        accent: '#170f1e',
         'hero-button-hover': '#b53a25'
       }
     }

@@ -42,3 +42,7 @@ a {
   background: #f54518;
   border-radius: 10px;
 }
+
+.button {
+  @apply bg-gradient-to-r from-primary-1 via-primary-2 to-primary-3 text-black; 
+}
