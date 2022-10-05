@@ -10,7 +10,7 @@
     "format": "prettier --write \"./**/*.{ts,tsx,json}\""
   },
   "dependencies": {
-    "@fontsource/source-sans-pro": "^4.5.11",
+    "@fontsource/poppins": "^4.5.10",
     "@twuni/emojify": "^1.0.2",
     "daisyui": "^2.31.0",
     "framer-motion": "^7.5.2",

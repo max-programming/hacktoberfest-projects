@@ -1,6 +1,10 @@
-import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { GetServerSideProps } from 'next';
+
+import { useState } from 'react';
+import { BsArrowUp } from 'react-icons/bs';
+import { AnimatePresence, motion } from 'framer-motion';
 
 import Card from 'components/Card';
 import Header from 'components/Header';
@@ -8,9 +12,6 @@ import Pagination from 'components/Pagination';
 import Sort from 'components/Sort';
 import StarsFilter from 'components/StarsFilter';
 import capFirstLetter from 'utils/capFirstLetter';
-import { useState } from 'react';
-import { BsArrowUp } from 'react-icons/bs';
-import { AnimatePresence, motion } from 'framer-motion';
 
 interface Props {
   page: number;
@@ -34,6 +35,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
       : !startStars && endStars
       ? `stars:<${endStars}`
       : '';
+
   const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}+${searchQuery}+${starsQuery}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
   const res = await fetch(apiUrl, {
     headers: { Accept: 'application/vnd.github.mercy-preview+json' }
@@ -45,7 +47,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
     };
   }
 
-  // Get the JSON response and parse it
   const repos = await res.json();
 
   return {

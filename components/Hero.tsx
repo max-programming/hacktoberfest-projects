@@ -25,6 +25,7 @@ const Hero = () => {
             Select the programming language you would like to find repositories
             for.
           </p>
+
           {mainLanguages.map(language => (
             <Link key={language} href={`/repos/${language.toLowerCase()}`}>
               <a>

@@ -1,13 +1,13 @@
-import type { AppProps } from 'next/app';
-
 import NextNProgress from 'nextjs-progressbar';
 import { DefaultSeo } from 'next-seo';
 import { motion } from 'framer-motion';
 
 import SEO from 'next-seo.config';
 
-import '@fontsource/source-sans-pro';
+import '@fontsource/poppins';
 import '../styles/globals.css';
+
+import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
