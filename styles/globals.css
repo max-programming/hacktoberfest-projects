@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
 }
@@ -14,7 +18,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -23,12 +27,7 @@ a {
   text-decoration: none;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Scrollbar Styles */
-
 ::-webkit-scrollbar {
   width: 0.6em;
 }
@@ -44,5 +43,5 @@ a {
 }
 
 .button {
-  @apply bg-gradient-to-r from-primary-1 via-primary-2 to-primary-3 text-black; 
+  @apply bg-gradient-to-r from-primary-1 via-primary-2 to-primary-3 text-black;
 }

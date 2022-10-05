@@ -9,6 +9,7 @@ import Search from './Search';
 
 const Header = () => {
   const router = useRouter();
+
   return (
     <div className="justify-between px-2 mt-2 mb-2 ml-2 mr-2 shadow-lg navbar bg-accent rounded-box">
       <Link href="/">

@@ -3,9 +3,6 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   media: false, // or 'media' or 'class'
   theme: {
-    fontFamily: {
-      sans: ['Source Sans Pro']
-    },
     extend: {
       colors: {
         "primary-1": '#ffd74d',

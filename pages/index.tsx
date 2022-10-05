@@ -1,10 +1,10 @@
-import type { NextPage } from 'next';
-
 import Head from 'next/head';
 
 import Footer from 'components/Footer';
 import Header from 'components/Header';
 import Hero from 'components/Hero';
+
+import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +24,7 @@ const Home: NextPage = () => {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#1A202C"></meta>
       </Head>
+
       <Header />
       <Hero />
       <Footer />
