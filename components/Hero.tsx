@@ -32,7 +32,8 @@ const Hero = () => {
                   initial={{ scale: 0.2 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.3 }}
-                  className="m-2 bg-primary text-white hover:bg-hero-button-hover border-0 btn btn-lg"
+                  whileHover={{ rotate: '4deg' }}
+                  className="m-2 button border-0 btn btn-lg"
                 >
                   {language}
                 </motion.button>
@@ -43,7 +44,7 @@ const Hero = () => {
           <div className="dropdown dropdown-top">
             <div
               tabIndex={0}
-              className="m-1 btn btn-lg hover:bg-primary hover:text-white"
+              className="m-1 btn btn-lg hover:bg-primary-2 hover:text-black"
             >
               Other languages
             </div>
@@ -62,7 +63,7 @@ const Hero = () => {
             </ul>
           </div>
           <a href="https://github.com/max-programming/hacktoberfest-projects/">
-            <button className="m-2 border-0 hover:bg-primary hover:text-white btn btn-lg">
+            <button className="m-2 border-0 hover:bg-primary-2 hover:text-black btn btn-lg">
               Add another language
             </button>
           </a>
