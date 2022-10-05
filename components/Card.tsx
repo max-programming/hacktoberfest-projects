@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import { emojify } from '@twuni/emojify';
 import { GoStar, GoRepoForked } from 'react-icons/go';
 
@@ -18,7 +19,7 @@ const Card = ({ repo }: Props) => {
               target="_blank"
               rel="noreferrer"
             >
-              <img
+              <Image
                 src={repo.owner.avatar_url}
                 width={50}
                 height={50}
