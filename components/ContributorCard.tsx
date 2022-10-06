@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import { IoLogoGithub } from 'react-icons/io';
 
 interface Contributor {
