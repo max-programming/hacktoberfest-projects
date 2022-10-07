@@ -1,5 +1,10 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+import languages from 'assets/languages.json';
+
+const { main1: mainLanguages} = languages;
 
 enum SortTypes {
   BestMatch = 'Best match',
@@ -32,7 +37,29 @@ export default function Sort() {
     }
   };
   return (
-    <div className="flex justify-center mb-2">
+    <div className="flex justify-center mb-2 flex gap-2">
+      <div className="dropdown dropdown-hover ">
+        <div tabIndex={0} className="m-1 btn">
+          Sort By : {"Language"}
+        </div>
+        <ul
+          className="h-64 p-2 overflow-y-scroll shadow menu dropdown-content bg-base-100 rounded-box w-60"
+        >
+          <li>
+            {mainLanguages.map(language => (
+              <Link key={language} href={`/repos/${language.toLowerCase()}`}>
+                <a>
+                <motion.button
+                  animate={{ scale: 1 }}
+                >
+                  {language}
+                </motion.button>
+              </a>
+              </Link>
+            ))}
+          </li>
+        </ul>
+      </div>
       <div className="dropdown dropdown-hover">
         <div tabIndex={0} className="m-1 btn">
           Sort: {selectedSort()}
