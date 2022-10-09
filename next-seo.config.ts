@@ -28,7 +28,7 @@ const config = {
     site_name: 'Hacktoberfest projects', 
     images: [
       {
-        url: '/hacktoberfest.png',
+        url: '/hacktoberfest.svg',
         width: 800,
         height: 600,
         alt: 'Og Image Alt',
