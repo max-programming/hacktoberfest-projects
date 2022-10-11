@@ -61,6 +61,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 const Language = ({ page, repos, languageName }: Props) => {
   const [scrollToTopBtn, setScrollToTopBtn] = useState(false);
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   const changeTopBtn = () => {
     if (window.scrollY >= 200) {
       setScrollToTopBtn(true);
@@ -68,18 +72,17 @@ const Language = ({ page, repos, languageName }: Props) => {
       setScrollToTopBtn(false);
     }
   };
+
   if (typeof window !== 'undefined') {
     window.addEventListener('scroll', changeTopBtn);
   }
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
 
   const router = useRouter();
+
   return (
     <>
       <Head>
-        <title>{capFirstLetter(languageName)} Repositories</title>
+        <title>{`${capFirstLetter(languageName)} Repositories`}</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"

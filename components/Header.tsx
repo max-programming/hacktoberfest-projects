@@ -17,7 +17,7 @@ const Header = () => {
           <div className="flex-none">
             <div className="w-10 h-10 m-1 rounded-full">
               <Image
-                src="/static/hacktoberfest.png"
+                src="/hacktoberfest.svg"
                 width={50}
                 height={50}
                 alt="Hacktoberfest"

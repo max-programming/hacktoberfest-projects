@@ -8,7 +8,11 @@ interface FormValues {
 
 export default function Search() {
   const router = useRouter();
-  const { register, handleSubmit, reset } = useForm<FormValues>();
+  const { register, handleSubmit, reset } = useForm<FormValues>({
+    defaultValues: {
+      searchQuery: router.query.q as string
+    }
+  });
   const onSubmit: SubmitHandler<FormValues> = ({ searchQuery }) => {
     console.log(router.asPath);
     router.push({ query: { ...router.query, q: searchQuery } });
