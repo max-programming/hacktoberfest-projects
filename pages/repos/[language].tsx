@@ -82,7 +82,7 @@ const Language = ({ page, repos, languageName }: Props) => {
   return (
     <>
       <Head>
-        <title>{capFirstLetter(languageName)} Repositories</title>
+        <title>{`${capFirstLetter(languageName)} Repositories`}</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
