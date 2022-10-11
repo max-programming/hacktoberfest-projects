@@ -7,6 +7,8 @@ interface Props {
   totalCount: number;
 }
 
+const MAX_PER_PAGE = 21;
+
 const Pagination = ({ page, totalCount }: Props) => {
   const router = useRouter();
   return (
@@ -19,7 +21,7 @@ const Pagination = ({ page, totalCount }: Props) => {
           </a>
         </Link>
       )}
-      {totalCount >= 21 && (
+      {totalCount >= MAX_PER_PAGE && page < Math.ceil(totalCount / MAX_PER_PAGE) && (
         <Link href={{ query: { ...router.query, p: page + 1 } }}>
           <a className="btn btn-outline btn-wide">
             <span className="mr-2">Next Page</span>
