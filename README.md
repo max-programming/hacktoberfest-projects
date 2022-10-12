@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2022!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -93,11 +93,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://github.com/hussamkhatib"><img src="https://avatars.githubusercontent.com/u/52914487?v=4?s=100" width="100px;" alt="mohammed hussam"/><br /><sub><b>mohammed hussam</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=hussamkhatib" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/Tejash429"><img src="https://avatars.githubusercontent.com/u/110290355?v=4?s=100" width="100px;" alt="Tejash Patel"/><br /><sub><b>Tejash Patel</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Tejash429" title="Code">💻</a></td>
       <td align="center"><a href="https://hassancodess.netlify.app/"><img src="https://avatars.githubusercontent.com/u/102203080?v=4?s=100" width="100px;" alt="Hassan Hanif"/><br /><sub><b>Hassan Hanif</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=hassancodess" title="Code">💻</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=hassancodess" title="Documentation">📖</a> <a href="#a11y-hassancodess" title="Accessibility">️️️️♿️</a></td>
+      <td align="center"><a href="https://github.com/vinmaster"><img src="https://avatars.githubusercontent.com/u/926821?v=4?s=100" width="100px;" alt="Vincent Ho"/><br /><sub><b>Vincent Ho</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=vinmaster" title="Code">💻</a></td>
     </tr>
   </tbody>
-  <tfoot>
-    
-  </tfoot>
 </table>
 
 <!-- markdownlint-restore -->
