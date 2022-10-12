@@ -49,7 +49,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 
   const repos = await res.json();
 
-  if (repos.total_count === 0) {
+  if (repos.items.length < 1) {
     return {
       notFound: true,
     };
