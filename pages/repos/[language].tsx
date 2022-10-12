@@ -49,6 +49,12 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 
   const repos = await res.json();
 
+  if (repos.items.length < 1) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
       page: +page,
