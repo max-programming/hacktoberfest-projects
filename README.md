@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2022!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -95,6 +95,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://hassancodess.netlify.app/"><img src="https://avatars.githubusercontent.com/u/102203080?v=4?s=100" width="100px;" alt="Hassan Hanif"/><br /><sub><b>Hassan Hanif</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=hassancodess" title="Code">💻</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=hassancodess" title="Documentation">📖</a> <a href="#a11y-hassancodess" title="Accessibility">️️️️♿️</a></td>
       <td align="center"><a href="https://github.com/vinmaster"><img src="https://avatars.githubusercontent.com/u/926821?v=4?s=100" width="100px;" alt="Vincent Ho"/><br /><sub><b>Vincent Ho</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=vinmaster" title="Code">💻</a></td>
       <td align="center"><a href="https://github.com/Adnanarodiya"><img src="https://avatars.githubusercontent.com/u/99405994?v=4?s=100" width="100px;" alt="Adnan Arodiya"/><br /><sub><b>Adnan Arodiya</b></sub></a><br /><a href="#design-Adnanarodiya" title="Design">🎨</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="http://davemenninger.com/"><img src="https://avatars.githubusercontent.com/u/159995?v=4?s=100" width="100px;" alt="Dave Menninger ⚡"/><br /><sub><b>Dave Menninger ⚡</b></sub></a><br /><a href="#ideas-davemenninger" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>

@@ -208,6 +208,15 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "davemenninger",
+      "name": "Dave Menninger ⚡",
+      "avatar_url": "https://avatars.githubusercontent.com/u/159995?v=4",
+      "profile": "http://davemenninger.com/",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
