@@ -37,7 +37,7 @@ export default function Sort() {
     }
   };
   return (
-    <div className="flex justify-center mb-2 flex gap-2">
+    <div className="flex justify-center items-center mb-2 flex-col gap-2">
       <div className="dropdown dropdown-hover ">
         <div tabIndex={0} className="m-1 btn">
           Sort By : {"Language"}
