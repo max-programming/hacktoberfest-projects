@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import languages from 'assets/languages.json';
+import LanguageButton from './LanguageButton';
 
 const { main: mainLanguages, others: otherLanguages } = languages;
 
@@ -27,19 +28,7 @@ const Hero = () => {
           </p>
 
           {mainLanguages.map(language => (
-            <Link key={language} href={`/repos/${language.toLowerCase()}`}>
-              <a>
-                <motion.button
-                  initial={{ scale: 0.2 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.3 }}
-                  whileHover={{ rotate: '4deg' }}
-                  className="m-2 button border-0 btn btn-lg"
-                >
-                  {language}
-                </motion.button>
-              </a>
-            </Link>
+            <LanguageButton key={language} language={language} />
           ))}
 
           <div className="dropdown dropdown-top">
