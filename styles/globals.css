@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn {
+  clip-path: polygon(
+    12px 0px,
+    100% 0px,
+    100% 72%,
+    calc(100% - 12px) 100%,
+    0px 100%,
+    0px 12px
+  );
+}
+
 * {
   box-sizing: border-box;
 }
@@ -19,8 +30,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
