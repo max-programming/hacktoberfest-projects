@@ -43,6 +43,7 @@ npm run dev
 
 - [Next.js](https://nextjs.org/)
 - [Github API](https://api.github.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Daisy UI](http://daisyui.com)
 
 ## Contributing
