@@ -11,7 +11,7 @@ const Header = () => {
   const router = useRouter();
 
   return (
-    <div className="justify-between px-2 mt-2 mb-2 ml-2 w-[99.2%] shadow-lg navbar bg-accent rounded-box">
+    <div className="justify-between px-2  mt-2 mb-2 ml-1.5 w-[99.2%] shadow-lg navbar bg-accent rounded-box">
       <Link href="/">
         <a>
           <div className="flex-none">
