@@ -10,7 +10,7 @@ export default function FourOhFour() {
           <div className="img-c mx-auto w-56 md:w-auto lg:w-auto  ">
             <Image src={fourgif} alt="" />
           </div>
-          <div className="button bg-cyan-900 rounded-full p-2 w-40  mx-auto">
+          <div className="button bg-cyan-900 rounded-full p-2 w-40  mx-auto text-center">
             <Link href="/">Go back home</Link>
           </div>
         </div>
