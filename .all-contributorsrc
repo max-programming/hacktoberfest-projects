@@ -208,6 +208,25 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "davemenninger",
+      "name": "Dave Menninger ⚡",
+      "avatar_url": "https://avatars.githubusercontent.com/u/159995?v=4",
+      "profile": "http://davemenninger.com/",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "Rahul-Kumar-prog",
+      "name": "Rahul kumar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68837569?v=4",
+      "profile": "https://github.com/Rahul-Kumar-prog",
+      "contributions": [
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -1,4 +1,40 @@
 {
+  "main1":[
+    "JavaScript",
+    "Python",
+    "C",
+    "C++",
+    "Rust",
+    "HTML",
+    "TypeScript",
+    "PHP",
+    "Dart",
+    "Java",
+    "Elixir",
+    "Objective-C",
+    "Swift",
+    "Kotlin",
+    "Vue",
+    "Svelte",
+    "Go",
+    "CSS",
+    "Ruby",
+    "CSharp",
+    "Shell",
+    "Rust",
+    "MATLAB",
+    "Bash",
+    "Scss",
+    "Haskell",
+    "R",
+    "Sql",
+    "Perl",
+    "Groovy",
+    "WebAssembly",
+    "Pascal",
+    "CoffeeScript"
+  ],
+
   "main": [
     "JavaScript",
     "Python",
@@ -10,6 +46,7 @@
     "PHP",
     "Dart",
     "Java",
+    "Elixir",
     "Ruby"
   ],
   "others": [
