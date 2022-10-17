@@ -69,7 +69,7 @@ export default function StarsFilter() {
           control={control}
         />
 
-        <button className="rounded-l-none btn btn-ghost" type="submit">
+        <button className="rounded-tr- btn btn-ghost " type="submit">
           Search
         </button>
       </div>
