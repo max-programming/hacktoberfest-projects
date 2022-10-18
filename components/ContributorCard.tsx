@@ -31,7 +31,7 @@ export default function ContributorCard({ contributor }: Props) {
         </a>
         <div className="justify-center card-actions">
           <a
-            className="text-white btn border-[#dbe8d9] hover:border-[#dbe8d9] btn-outline hover:bg-[#dbe8d9]"
+            className="text-white btn border-[#dbe8d9] hover:border-[#dbe8d9] btn-outline border-2 hover:bg-[#dbe8d9]"
             href={`https://github.com/${contributor.login}`}
             target="_blank"
             rel="noreferrer"
