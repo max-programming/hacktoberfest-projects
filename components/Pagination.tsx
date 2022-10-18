@@ -12,10 +12,10 @@ const MAX_PER_PAGE = 21;
 const Pagination = ({ page, totalCount }: Props) => {
   const router = useRouter();
   return (
-    <div className="items-center flex justify-evenly my-6 btn-group">
+    <div className="items-center flex justify-evenly my-6 flex-col gap-4 sm:gap-0 sm:flex-row">
       {page > 1 && (
         <Link href={{ query: { ...router.query, p: page - 1 } }}>
-          <a className="btn btn-outline btn-wide">
+          <a className="btn btn-wide">
             <BsArrowLeft />
             <span className="ml-2">Previous Page</span>
           </a>
@@ -24,7 +24,7 @@ const Pagination = ({ page, totalCount }: Props) => {
       {totalCount >= MAX_PER_PAGE &&
         page < Math.ceil(totalCount / MAX_PER_PAGE) && (
           <Link href={{ query: { ...router.query, p: page + 1 } }}>
-            <a className="btn btn-outline btn-wide">
+            <a className="btn btn-wide">
               <span className="mr-2">Next Page</span>
               <BsArrowRight />
             </a>
