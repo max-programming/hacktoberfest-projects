@@ -37,13 +37,13 @@ export default function StarsFilter() {
       className="w-full m-2 mx-auto mb-4 lg:w-2/4 form-control"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-col sm:flex-row">
         <Controller
           name="startStars"
           render={({ field }) => (
             <input
               type="number"
-              className="w-full pr-16 input input-primary input-bordered border-primary"
+              className="w-3/5 m-auto sm:w-full pr-4 input input-primary input-bordered border-primary"
               {...field}
               onChange={e => {
                 field.onChange(parseInt(e.target.value, 10));
@@ -58,7 +58,7 @@ export default function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-full pr-16 input input-primary input-bordered border-primary"
+              className="w-3/5 m-auto sm:w-full pr-4 input input-primary input-bordered border-primary"
               {...field}
               onChange={e => {
                 field.onChange(parseInt(e.target.value, 10));
