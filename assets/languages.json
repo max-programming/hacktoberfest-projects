@@ -32,7 +32,8 @@
     "Groovy",
     "WebAssembly",
     "Pascal",
-    "CoffeeScript"
+    "CoffeeScript",
+    "Crystal"
   ],
 
   "main": [
@@ -71,6 +72,7 @@
     "Groovy",
     "WebAssembly",
     "Pascal",
-    "CoffeeScript"
+    "CoffeeScript",
+    "Crystal"
   ]
 }
