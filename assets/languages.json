@@ -1,5 +1,5 @@
 {
-  "main1":[
+  "main1": [
     "JavaScript",
     "Python",
     "C",
@@ -32,7 +32,11 @@
     "WebAssembly",
     "Pascal",
     "CoffeeScript",
-    "Crystal"
+    "Crystal",
+    "VHDL",
+    "Verilog",
+    "PowerShell",
+    "Batchfile"
   ],
 
   "main": [
@@ -72,6 +76,10 @@
     "WebAssembly",
     "Pascal",
     "CoffeeScript",
-    "Crystal"
+    "Crystal",
+    "VHDL",
+    "Verilog",
+    "PowerShell",
+    "Batchfile"
   ]
 }
