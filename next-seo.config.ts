@@ -25,18 +25,18 @@ const config = {
     url: 'https://hacktoberfest-projects.vercel.app',
     title: 'Hacktoberfest projects',
     description: `Quickly and easily find projects to contribute to this Hacktoberfest 2022!`,
-    site_name: 'Hacktoberfest projects', 
+    site_name: 'Hacktoberfest projects',
     images: [
       {
         url: '/hacktoberfest.svg',
         width: 800,
         height: 600,
         alt: 'Og Image Alt',
-        type: 'image/jpeg',
-      },
+        type: 'image/jpeg'
+      }
     ]
   },
- 
+
   twitter: {
     creator: '@MaxProgramming1',
     cardType: 'summary_large_image',

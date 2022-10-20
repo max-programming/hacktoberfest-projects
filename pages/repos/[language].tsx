@@ -51,7 +51,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 
   if (repos.items.length < 1) {
     return {
-      notFound: true,
+      notFound: true
     };
   }
 
