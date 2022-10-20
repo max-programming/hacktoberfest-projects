@@ -33,3 +33,4 @@ jobs:
         with:
           eslint: true
           prettier: true
+          prettier_args: '--write "./**/*.{ts,tsx,json}"'
