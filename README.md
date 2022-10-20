@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2022!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -100,6 +100,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center"><a href="http://davemenninger.com/"><img src="https://avatars.githubusercontent.com/u/159995?v=4?s=100" width="100px;" alt="Dave Menninger ⚡"/><br /><sub><b>Dave Menninger ⚡</b></sub></a><br /><a href="#ideas-davemenninger" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center"><a href="https://github.com/Rahul-Kumar-prog"><img src="https://avatars.githubusercontent.com/u/68837569?v=4?s=100" width="100px;" alt="Rahul kumar"/><br /><sub><b>Rahul kumar</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Rahul-Kumar-prog" title="Code">💻</a> <a href="#design-Rahul-Kumar-prog" title="Design">🎨</a></td>
+      <td align="center"><a href="https://github.com/ur5us"><img src="https://avatars.githubusercontent.com/u/453776?v=4?s=100" width="100px;" alt="Juri Hahn"/><br /><sub><b>Juri Hahn</b></sub></a><br /><a href="#content-ur5us" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
