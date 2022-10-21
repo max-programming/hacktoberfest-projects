@@ -49,6 +49,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 
   const repos = await res.json();
 
+  repos.items = repos.items.filter((repo: any) => !repo.archived);
+
   if (repos.items.length < 1) {
     return {
       notFound: true
