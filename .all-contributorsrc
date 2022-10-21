@@ -236,6 +236,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "marcopollivier",
+      "name": "Marco Ollivier",
+      "avatar_url": "https://avatars.githubusercontent.com/u/697445?v=4",
+      "profile": "http://marcopollivier.dev",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
