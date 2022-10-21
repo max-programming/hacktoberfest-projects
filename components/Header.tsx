@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import { IoLogoGithub } from 'react-icons/io';
@@ -15,7 +16,7 @@ const Header = () => {
         <a>
           <div className="flex-none">
             <div className="w-10 h-10 m-1 rounded-full">
-              <img
+              <Image
                 src="/hacktoberfest.svg"
                 width={50}
                 height={50}
