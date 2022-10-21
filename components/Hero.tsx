@@ -11,12 +11,6 @@ const Hero = () => {
   return (
     <div
       className="min-h-screen hero"
-      style={{
-        backgroundImage:
-          'url("https://hacktoberfest.digitalocean.com/_nuxt/img/logo-hacktoberfest-full.f42e3b1.svg")',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '80%'
-      }}
     >
       <div className="hero-overlay w-0 bg-opacity-60"></div>
       <div className="text-center hero-content">
