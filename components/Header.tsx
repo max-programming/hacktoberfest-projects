@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -16,7 +15,7 @@ const Header = () => {
         <a>
           <div className="flex-none">
             <div className="w-10 h-10 m-1 rounded-full">
-              <Image
+              <img
                 src="/hacktoberfest.svg"
                 width={50}
                 height={50}
