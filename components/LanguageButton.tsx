@@ -10,7 +10,7 @@ const LanguageButton = ({ language }: { language: string }) => {
           animate={{ scale: 1 }}
           transition={{ duration: 0.3 }}
           whileHover={{ rotate: '4deg' }}
-          className="m-2 button border-0 btn btn-lg"
+          className="m-2 button border-0 btn btn-lg btn-clip"
         >
           {language}
         </motion.button>
