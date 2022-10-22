@@ -5,6 +5,7 @@ import languages from 'assets/languages.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUpAZ } from '@fortawesome/free-solid-svg-icons';
+import sortByName from 'utils/sortByName';
 
 const { main1: mainLanguages } = languages;
 
@@ -50,7 +51,7 @@ export default function Sort() {
         </div>
         <ul className="h-64 p-2 overflow-y-scroll shadow menu dropdown-content bg-base-100 rounded-box w-60">
           <li>
-            {mainLanguages.map(language => (
+            {mainLanguages.sort(sortByName).map(language => (
               <Link key={language} href={`/repos/${language.toLowerCase()}`}>
                 <a>{language}</a>
               </Link>
