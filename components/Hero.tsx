@@ -4,6 +4,7 @@ import Link from 'next/link';
 import languages from 'assets/languages.json';
 import LanguageButton from './LanguageButton';
 import { useRouter } from 'next/router';
+import sortByName from 'utils/sortByName';
 
 const { main: mainLanguages, others: otherLanguages } = languages;
 
@@ -42,7 +43,7 @@ const Hero = () => {
               tabIndex={0}
               className="h-64 p-2 overflow-y-scroll shadow menu dropdown-content bg-base-100 rounded-box w-60"
             >
-              {otherLanguages.sort().map(language => (
+              {otherLanguages.sort(sortByName).map(language => (
                 <li key={language}>
                   <Link href={`/repos/${language.toLowerCase()}`}>
                     <a>{language}</a>
