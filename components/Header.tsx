@@ -40,7 +40,7 @@ const Header = () => {
       )}
       <div className="flex-none">
         <Link passHref href="/contributors">
-          <a className="btn btn-square btn-ghost">
+          <a className="btn btn-square btn-ghost umami--click--contributors-button">
             <BsPeopleFill size="1.5rem" title="Contributors" />
           </a>
         </Link>
@@ -48,7 +48,7 @@ const Header = () => {
           href="https://github.com/max-programming/hacktoberfest-projects"
           target="_blank"
           rel="noreferrer"
-          className="btn btn-square btn-ghost"
+          className="btn btn-square btn-ghost umami--click--github-button"
         >
           <IoLogoGithub size="1.5rem" title="GitHub" />
         </a>

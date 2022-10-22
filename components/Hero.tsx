@@ -34,7 +34,7 @@ const Hero = () => {
           <div className="dropdown dropdown-top">
             <div
               tabIndex={0}
-              className="m-1 btn btn-lg btn-clip hover:bg-primary-2 hover:text-black "
+              className="m-1 btn btn-lg btn-clip hover:bg-primary-2 hover:text-black umami--click--otherlangs-button"
             >
               Other languages
             </div>
