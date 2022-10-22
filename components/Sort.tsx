@@ -41,7 +41,7 @@ export default function Sort() {
   };
   return (
     <div className="flex justify-center items-center mb-2 flex-col gap-2">
-      <div className="dropdown dropdown-hover ">
+      <div className="dropdown dropdown-hover">
         <div tabIndex={0} className="m-1 btn w-60">
           <FontAwesomeIcon
             icon={faCode}
@@ -49,15 +49,17 @@ export default function Sort() {
           ></FontAwesomeIcon>
           Language
         </div>
-        <ul className="h-64 p-2 overflow-y-scroll shadow menu dropdown-content bg-base-100 rounded-box w-60">
-          <li>
+        <div className="h-64 p-2 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
+          <ul tabIndex={0} className="menu menu-vertical">
             {mainLanguages.sort(sortByName).map(language => (
-              <Link key={language} href={`/repos/${language.toLowerCase()}`}>
-                <a>{language}</a>
-              </Link>
+              <li key={language}>
+                <Link href={`/repos/${language.toLowerCase()}`}>
+                  <a>{language}</a>
+                </Link>
+              </li>
             ))}
-          </li>
-        </ul>
+          </ul>
+        </div>
       </div>
       <div className="dropdown dropdown-hover">
         <div tabIndex={0} className="btn mb-3 w-60">
@@ -67,43 +69,57 @@ export default function Sort() {
           ></FontAwesomeIcon>
           {selectedSort()}
         </div>
-        <ul
-          tabIndex={0}
-          className="h-64 p-2 overflow-y-scroll shadow menu dropdown-content bg-base-100 rounded-box w-60"
-        >
-          <li>
-            <Link href={{ query: { ...router.query } }}>
-              <a>Best match</a>
-            </Link>
-            <Link href={{ query: { ...router.query, s: 'stars', o: 'desc' } }}>
-              <a>Most stars</a>
-            </Link>
-            <Link href={{ query: { ...router.query, s: 'stars', o: 'asc' } }}>
-              <a>Fewest stars</a>
-            </Link>
-            <Link href={{ query: { ...router.query, s: 'forks', o: 'desc' } }}>
-              <a>Most forks</a>
-            </Link>
-            <Link href={{ query: { ...router.query, s: 'forks', o: 'asc' } }}>
-              <a>Fewest forks</a>
-            </Link>
-            <Link
-              href={{
-                query: { ...router.query, s: 'help-wanted-issues', o: 'desc' }
-              }}
-            >
-              <a>Most help wanted issues</a>
-            </Link>
-            <Link
-              href={{ query: { ...router.query, s: 'updated', o: 'desc' } }}
-            >
-              <a>Recently updated</a>
-            </Link>
-            <Link href={{ query: { ...router.query, s: 'updated', o: 'asc' } }}>
-              <a>Least recently updated</a>
-            </Link>
-          </li>
-        </ul>
+        <div className="h-64 p-2 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
+          <ul
+            tabIndex={0}
+            className="menu menu-vertical"
+          >
+            <li>
+              <Link href={{ query: { ...router.query } }}>
+                <a>Best match</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={{ query: { ...router.query, s: 'stars', o: 'desc' } }}>
+                <a>Most stars</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={{ query: { ...router.query, s: 'stars', o: 'asc' } }}>
+                <a>Fewest stars</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={{ query: { ...router.query, s: 'forks', o: 'desc' } }}>
+                <a>Most forks</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={{ query: { ...router.query, s: 'forks', o: 'asc' } }}>
+                <a>Fewest forks</a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={{
+                  query: { ...router.query, s: 'help-wanted-issues', o: 'desc' }
+                }}
+              >
+                <a>Most help wanted issues</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={{ query: { ...router.query, s: 'updated', o: 'desc' } }}>
+                <a>Recently updated</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={{ query: { ...router.query, s: 'updated', o: 'asc' } }}>
+                <a>Least recently updated</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
