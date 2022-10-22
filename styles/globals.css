@@ -47,7 +47,7 @@ a {
   @apply bg-gradient-to-r from-primary-1 via-primary-2 to-primary-3 text-black;
 }
 
-.btn {
+.btn-clip {
   clip-path: polygon(
     12px 0px,
     100% 0px,

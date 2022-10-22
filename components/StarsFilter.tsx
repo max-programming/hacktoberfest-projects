@@ -11,8 +11,12 @@ export default function StarsFilter() {
   const router = useRouter();
   const { handleSubmit, control, reset } = useForm<FormValues>({
     defaultValues: {
-      startStars: +(router.query.startStars as string),
-      endStars: +(router.query.endStars as string)
+      startStars: !router.query.startStars
+        ? undefined
+        : +(router.query.startStars as string),
+      endStars: !router.query.endStars
+        ? undefined
+        : +(router.query.endStars as string)
     }
   });
 

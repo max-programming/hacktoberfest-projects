@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { GetServerSideProps } from 'next';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BsArrowUp } from 'react-icons/bs';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -49,9 +49,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 
   const repos = await res.json();
 
+  repos.items = repos.items.filter((repo: any) => !repo.archived);
+
   if (repos.items.length < 1) {
     return {
-      notFound: true,
+      notFound: true
     };
   }
 
@@ -66,25 +68,22 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 
 const Language = ({ page, repos, languageName }: Props) => {
   const [scrollToTopBtn, setScrollToTopBtn] = useState(false);
+  const router = useRouter();
+  useEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-  };
-
-  const changeTopBtn = () => {
+  const onScroll = () => {
     if (window.scrollY >= 200) {
       setScrollToTopBtn(true);
     } else {
       setScrollToTopBtn(false);
     }
   };
-
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', changeTopBtn);
-  }
-
-  const router = useRouter();
-
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <>
       <Head>

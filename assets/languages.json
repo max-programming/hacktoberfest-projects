@@ -32,7 +32,8 @@
     "WebAssembly",
     "Pascal",
     "CoffeeScript",
-    "Crystal"
+    "Crystal",
+    "Clojure"
   ],
 
   "main": [
@@ -72,6 +73,7 @@
     "WebAssembly",
     "Pascal",
     "CoffeeScript",
-    "Crystal"
+    "Crystal",
+    "Clojure"
   ]
 }
