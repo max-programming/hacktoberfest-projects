@@ -33,7 +33,7 @@ const Card = ({ repo }: Props) => {
           title={repo.name}
           target="_blank"
           rel="noreferrer"
-          className={`text-3xl card-title link link-hover text-primary umami--click--${repo.owner.login}-${repo.name}`}
+          className={`text-3xl card-title link link-hover text-primary`}
         >
           {repo.name}
         </a>
