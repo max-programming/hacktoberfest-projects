@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: hacktoberfest_projects_prod
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.prod
+    ports:
+      - 3000:3000
