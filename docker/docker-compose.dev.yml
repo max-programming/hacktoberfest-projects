@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: hacktoberfest_projects_dev
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.dev
+    ports:
+      - 3000:3000
+    volumes:
+      - ../:/app
+      - /app/node_modules
