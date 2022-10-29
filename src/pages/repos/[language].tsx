@@ -12,61 +12,15 @@ import Pagination from 'components/Pagination';
 import Sort from 'components/Sort';
 import StarsFilter from 'components/StarsFilter';
 import capFirstLetter from 'utils/capFirstLetter';
+import { Repos } from 'types';
 
-interface Props {
-  page: number;
-  languageName: string;
-  repos: any;
-}
+// interface Props {
+//   page: number;
+//   languageName: string;
+//   repos: Repos;
+// }
 
-export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
-  const languageName = ctx.params?.language as string;
-  const page = ctx.query.p || '1';
-  const sort = ctx.query.s || '';
-  const order = ctx.query.o || 'desc';
-  const searchQuery = ctx.query.q || '';
-  const startStars = ctx.query.startStars || 1;
-  const endStars = ctx.query.endStars || '';
-  const starsQuery =
-    startStars && endStars
-      ? `stars:${startStars}..${endStars}`
-      : startStars && !endStars
-      ? `stars:>${startStars}`
-      : !startStars && endStars
-      ? `stars:<${endStars}`
-      : '';
-
-  const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}+${searchQuery}+${starsQuery}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
-  const res = await fetch(apiUrl, {
-    headers: { Accept: 'application/vnd.github.mercy-preview+json' }
-  });
-
-  if (!res.ok) {
-    return {
-      notFound: true
-    };
-  }
-
-  const repos = await res.json();
-
-  repos.items = repos.items.filter((repo: any) => !repo.archived);
-
-  if (repos.items.length < 1) {
-    return {
-      notFound: true
-    };
-  }
-
-  return {
-    props: {
-      page: +page,
-      repos,
-      languageName
-    }
-  };
-};
-
-const Language = ({ page, repos, languageName }: Props) => {
+const Language = () => {
   const [scrollToTopBtn, setScrollToTopBtn] = useState(false);
   const router = useRouter();
   useEffect(() => {
@@ -136,7 +90,7 @@ const Language = ({ page, repos, languageName }: Props) => {
           <Sort />
           <StarsFilter />
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {repos.items.map((repo: any) => (
+            {repos.items.map(repo => (
               <Card key={repo.id} repo={repo} />
             ))}
           </div>
@@ -147,4 +101,50 @@ const Language = ({ page, repos, languageName }: Props) => {
   );
 };
 
+// export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
+//   const languageName = ctx.params?.language as string;
+//   const page = ctx.query.p || '1';
+//   const sort = ctx.query.s || '';
+//   const order = ctx.query.o || 'desc';
+//   const searchQuery = ctx.query.q || '';
+//   const startStars = ctx.query.startStars || 1;
+//   const endStars = ctx.query.endStars || '';
+//   const starsQuery =
+//     startStars && endStars
+//       ? `stars:${startStars}..${endStars}`
+//       : startStars && !endStars
+//       ? `stars:>${startStars}`
+//       : !startStars && endStars
+//       ? `stars:<${endStars}`
+//       : '';
+
+//   const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}+${searchQuery}+${starsQuery}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
+//   const res = await fetch(apiUrl, {
+//     headers: { Accept: 'application/vnd.github.mercy-preview+json' }
+//   });
+
+//   if (!res.ok) {
+//     return {
+//       notFound: true
+//     };
+//   }
+
+//   const repos: Repos = await res.json();
+
+//   repos.items = repos.items.filter(repo => !repo.archived);
+
+//   if (repos.items.length < 1) {
+//     return {
+//       notFound: true
+//     };
+//   }
+
+//   return {
+//     props: {
+//       page: +page,
+//       repos,
+//       languageName
+//     }
+//   };
+// };
 export default Language;

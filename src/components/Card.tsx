@@ -1,8 +1,9 @@
 import { emojify } from '@twuni/emojify';
 import { GoStar, GoRepoForked } from 'react-icons/go';
+import { Repo } from 'types';
 
 interface Props {
-  repo: any;
+  repo: Repo;
 }
 
 const Card = ({ repo }: Props) => {
