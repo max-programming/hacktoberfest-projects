@@ -1,38 +1,38 @@
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import languages from 'assets/languages.json';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
-import { faArrowUpAZ } from '@fortawesome/free-solid-svg-icons';
-import sortByName from 'utils/sortByName';
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import languages from "@/src/assets/languages.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUpAZ } from "@fortawesome/free-solid-svg-icons";
+import sortByName from "@/src/utils/sortByName";
 
 const { main1: mainLanguages } = languages;
 
 enum SortTypes {
-  BestMatch = 'Best match',
-  MostStars = 'Most stars',
-  FewestStars = 'Fewest stars',
-  MostForks = 'Most forks',
-  FewestForks = 'Fewest forks',
-  MostHelpWantedIssues = 'Most help wanted issues',
-  RecentlyUpdated = 'Recently updated',
-  LeastRecentlyUpdated = 'Least recently updated'
+  BestMatch = "Best match",
+  MostStars = "Most stars",
+  FewestStars = "Fewest stars",
+  MostForks = "Most forks",
+  FewestForks = "Fewest forks",
+  MostHelpWantedIssues = "Most help wanted issues",
+  RecentlyUpdated = "Recently updated",
+  LeastRecentlyUpdated = "Least recently updated",
 }
 
 export default function Sort() {
   const router = useRouter();
   const selectedSort = (): SortTypes => {
-    if (router.query.o === 'asc') {
-      if (router.query.s === 'stars') return SortTypes.FewestStars;
-      if (router.query.s === 'forks') return SortTypes.FewestForks;
-      if (router.query.s === 'updated') return SortTypes.LeastRecentlyUpdated;
+    if (router.query.o === "asc") {
+      if (router.query.s === "stars") return SortTypes.FewestStars;
+      if (router.query.s === "forks") return SortTypes.FewestForks;
+      if (router.query.s === "updated") return SortTypes.LeastRecentlyUpdated;
       return SortTypes.BestMatch;
-    } else if (router.query.o === 'desc') {
-      if (router.query.s === 'stars') return SortTypes.MostStars;
-      if (router.query.s === 'forks') return SortTypes.MostForks;
-      if (router.query.s === 'updated') return SortTypes.RecentlyUpdated;
-      if (router.query.s === 'help-wanted-issues')
+    } else if (router.query.o === "desc") {
+      if (router.query.s === "stars") return SortTypes.MostStars;
+      if (router.query.s === "forks") return SortTypes.MostForks;
+      if (router.query.s === "updated") return SortTypes.RecentlyUpdated;
+      if (router.query.s === "help-wanted-issues")
         return SortTypes.MostHelpWantedIssues;
       return SortTypes.BestMatch;
     } else {
@@ -40,21 +40,21 @@ export default function Sort() {
     }
   };
   return (
-    <div className="flex justify-center items-center mb-2 flex-col gap-2">
+    <div className="mb-2 flex flex-col items-center justify-center gap-2">
       <div className="dropdown dropdown-hover">
-        <div tabIndex={0} className="m-1 btn w-60">
+        <div tabIndex={0} className="btn m-1 w-60">
           <FontAwesomeIcon
             icon={faCode}
-            className=" w-6 h-6 mr-3"
+            className=" mr-3 h-6 w-6"
           ></FontAwesomeIcon>
           Language
         </div>
-        <div className="h-64 p-2 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
+        <div className="dropdown-content rounded-box h-64 w-60 overflow-y-scroll bg-base-100 p-2 shadow">
           <ul tabIndex={0} className="menu menu-vertical">
-            {mainLanguages.sort(sortByName).map(language => (
+            {mainLanguages.sort(sortByName).map((language) => (
               <li key={language}>
                 <Link href={`/repos/${language.toLowerCase()}`}>
-                  <a>{language}</a>
+                  {language}
                 </Link>
               </li>
             ))}
@@ -65,57 +65,66 @@ export default function Sort() {
         <div tabIndex={0} className="btn mb-3 w-60">
           <FontAwesomeIcon
             icon={faArrowUpAZ}
-            className=" w-6 h-6 mr-3"
+            className=" mr-3 h-6 w-6"
           ></FontAwesomeIcon>
           {selectedSort()}
         </div>
-        <div className="h-64 p-2 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
-          <ul
-            tabIndex={0}
-            className="menu menu-vertical"
-          >
+        <div className="dropdown-content rounded-box h-64 w-60 overflow-y-scroll bg-base-100 p-2 shadow">
+          <ul tabIndex={0} className="menu menu-vertical">
             <li>
               <Link href={{ query: { ...router.query } }}>
-                <a>Best match</a>
+                Best match
               </Link>
             </li>
             <li>
-              <Link href={{ query: { ...router.query, s: 'stars', o: 'desc' } }}>
-                <a>Most stars</a>
+              <Link
+                href={{ query: { ...router.query, s: "stars", o: "desc" } }}
+              >
+                Most stars
               </Link>
             </li>
             <li>
-              <Link href={{ query: { ...router.query, s: 'stars', o: 'asc' } }}>
-                <a>Fewest stars</a>
+              <Link href={{ query: { ...router.query, s: "stars", o: "asc" } }}>
+                Fewest stars
               </Link>
             </li>
             <li>
-              <Link href={{ query: { ...router.query, s: 'forks', o: 'desc' } }}>
-                <a>Most forks</a>
+              <Link
+                href={{ query: { ...router.query, s: "forks", o: "desc" } }}
+              >
+                Most forks
               </Link>
             </li>
             <li>
-              <Link href={{ query: { ...router.query, s: 'forks', o: 'asc' } }}>
-                <a>Fewest forks</a>
+              <Link href={{ query: { ...router.query, s: "forks", o: "asc" } }}>
+                Fewest forks
               </Link>
             </li>
             <li>
               <Link
                 href={{
-                  query: { ...router.query, s: 'help-wanted-issues', o: 'desc' }
+                  query: {
+                    ...router.query,
+                    s: "help-wanted-issues",
+                    o: "desc",
+                  },
                 }}
               >
-                <a>Most help wanted issues</a>
+                Most help wanted issues
               </Link>
             </li>
             <li>
-              <Link href={{ query: { ...router.query, s: 'updated', o: 'desc' } }}>
-                <a>Recently updated</a>
+              <Link
+                href={{ query: { ...router.query, s: "updated", o: "desc" } }}
+              >
+                Recently updated
               </Link>
             </li>
             <li>
-              <Link href={{ query: { ...router.query, s: 'updated', o: 'asc' } }}>
-                <a>Least recently updated</a>
+              <Link
+                href={{ query: { ...router.query, s: "updated", o: "asc" } }}
+              >
+                Least recently updated
               </Link>
             </li>
           </ul>

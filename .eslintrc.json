@@ -1,7 +1,12 @@
 {
-  "extends": "next/core-web-vitals",
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   "rules": {
-    "@next/next/no-img-element": 0,
-    "import/no-anonymous-default-export": "none"
+    "@typescript-eslint/consistent-type-imports": "warn",
+    "import/no-anonymous-default-export": "off"
   }
 }

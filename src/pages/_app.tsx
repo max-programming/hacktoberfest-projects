@@ -1,16 +1,17 @@
-import Head from 'next/head';
-import NextNProgress from 'nextjs-progressbar';
-import { DefaultSeo } from 'next-seo';
-import { motion } from 'framer-motion';
+import { type AppType } from "next/app";
 
-import SEO from 'next-seo.config';
+import { trpc } from "../utils/trpc";
+import Head from "next/head";
+import NextNProgress from "nextjs-progressbar";
+import { DefaultSeo } from "next-seo";
+import { motion } from "framer-motion";
 
-import '@fontsource/poppins';
-import '../styles/globals.css';
+import SEO from "../../next-seo.config";
 
-import type { AppProps } from 'next/app';
+import "@fontsource/poppins";
+import "../styles/globals.css";
 
-function MyApp({ Component, pageProps, router }: AppProps) {
+const MyApp: AppType = ({ Component, pageProps, router }) => {
   return (
     <motion.div
       key={router.route}
@@ -18,20 +19,27 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       animate="animate"
       variants={{
         initial: {
-          opacity: 0
+          opacity: 0,
         },
         animate: {
-          opacity: 1
-        }
+          opacity: 1,
+        },
       }}
     >
       <Head>
-        <script async defer data-website-id="2529a688-ee5c-4869-9f85-7bb8fa5b6518" src="https://insights.usman-s.me/umami.js"></script>
+        <script
+          async
+          defer
+          data-website-id="2529a688-ee5c-4869-9f85-7bb8fa5b6518"
+          src="https://insights.usman-s.me/umami.js"
+        ></script>
       </Head>
-      <DefaultSeo {...SEO} />
+      {/* <DefaultSeo {...SEO} /> */}
       <NextNProgress color="#ffd74d" options={{ showSpinner: false }} />
       <Component {...pageProps} />
     </motion.div>
   );
-}
-export default MyApp;
+};
+
+// export default MyApp;
+export default trpc.withTRPC(MyApp);

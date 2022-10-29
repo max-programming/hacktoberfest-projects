@@ -1,15 +1,15 @@
-import Head from 'next/head';
+import Head from "next/head";
 
-import Footer from 'components/Footer';
-import Header from 'components/Header';
-import Hero from 'components/Hero';
+import Footer from "@/src/components/Footer";
+import Header from "@/src/components/Header";
+import Hero from "@/src/components/Hero";
 
-import type { NextPage } from 'next';
+import type { NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
     <div>
-      <Head>
+      {/* <Head>
         <title>Hacktoberfest projects</title>
 
         <link
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#1A202C"></meta>
-      </Head>
+      </Head> */}
 
       <Header />
       <Hero />
