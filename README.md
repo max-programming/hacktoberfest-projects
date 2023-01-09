@@ -63,6 +63,10 @@ If you have any feedback, please reach out to us at the issues 😉
 - [Usman](https://www.github.com/max-programming)
 - [Sunrit Jana](https://www.github.com/janaSunrise)
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=max-programming/hacktoberfest-projects&type=Date)](https://star-history.com/#max-programming/hacktoberfest-projects&Date)
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
