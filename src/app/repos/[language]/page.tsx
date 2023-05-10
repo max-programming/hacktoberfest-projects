@@ -7,6 +7,7 @@ import capFirstLetter from '@/utils/capFirstLetter';
 import { getReposData } from '@/utils/getReposData';
 import type { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
+import { Suspense } from 'react';
 
 type Props = {
   params: { language: string };
@@ -20,13 +21,13 @@ export function generateMetadata(
 ): Metadata {
   return {
     ...parent,
-    title: `${capFirstLetter(params.language)} Repositories`
+    title: `${capFirstLetter(params.language)} Repositories`,
   };
 }
 
 export default async function RepositoriesPage({
   params,
-  searchParams
+  searchParams,
 }: Props) {
   const data = await getReposData(
     params.language,
@@ -38,13 +39,13 @@ export default async function RepositoriesPage({
   return (
     <>
       <ScrollToTopButton />
-      <div className="container mx-auto">
-        <div className="min-h-screen pt-5">
-          <div className="text-center">
-            <div className="w-5/6 max-w-md mx-auto">
-              <h1 className="mb-5 text-5xl font-bold">
+      <div className='container mx-auto'>
+        <div className='min-h-screen pt-5'>
+          <div className='text-center'>
+            <div className='w-5/6 max-w-md mx-auto'>
+              <h1 className='mb-5 text-5xl font-bold'>
                 {repos.total_count} repositories for{' '}
-                <span className="font-mono underline text-primary">
+                <span className='font-mono underline text-primary'>
                   {searchParams.q
                     ? searchParams.q + ' in ' + capFirstLetter(params.language)
                     : capFirstLetter(params.language)}
@@ -52,9 +53,11 @@ export default async function RepositoriesPage({
               </h1>
             </div>
           </div>
-          <Sort />
-          <StarsFilter />
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <Suspense fallback={<SortingFallback />}>
+            <Sort />
+            <StarsFilter />
+          </Suspense>
+          <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
             {repos.items.map(repo => (
               <RepoCard key={repo.id} repo={repo} />
             ))}
@@ -67,5 +70,13 @@ export default async function RepositoriesPage({
         />
       </div>
     </>
+  );
+}
+
+function SortingFallback() {
+  return (
+    <div className='flex justify-center'>
+      <div className='animate-pulse bg-gray-200 rounded-md h-10 w-32' />
+    </div>
   );
 }
