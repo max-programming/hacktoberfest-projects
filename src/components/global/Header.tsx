@@ -51,5 +51,9 @@ export default function Header() {
 }
 
 function SearchFallback() {
-  return <>Search Fallback</>;
+  return (
+    <div className='flex justify-center'>
+      <div className='animate-pulse bg-gray-200 rounded-md h-1/2 w-full' />
+    </div>
+  );
 }
