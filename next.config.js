@@ -8,9 +8,10 @@ module.exports = {
     return [
       {
         source: '/github',
-        destination: 'https://github.com/max-programming/hacktoberfest-projects',
+        destination:
+          'https://github.com/max-programming/hacktoberfest-projects',
         permanent: true,
       },
-    ]
+    ];
   },
 };
