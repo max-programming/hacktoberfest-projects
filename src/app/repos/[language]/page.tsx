@@ -67,6 +67,7 @@ export default async function RepositoriesPage({
           page={page}
           totalCount={repos.total_count}
           searchParams={searchParams}
+          language={params.language}
         />
       </div>
     </>
