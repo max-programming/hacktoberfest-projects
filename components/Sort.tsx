@@ -7,7 +7,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUpAZ } from '@fortawesome/free-solid-svg-icons';
 import sortByName from 'utils/sortByName';
 
-const { main1: mainLanguages } = languages;
+const { mainLanguages } = languages;
 
 enum SortTypes {
   BestMatch = 'Best match',
