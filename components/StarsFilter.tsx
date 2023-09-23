@@ -22,7 +22,7 @@ export default function StarsFilter() {
 
   const onSubmit: SubmitHandler<FormValues> = ({ startStars, endStars }) => {
     let query;
-    if (endStars < startStars) {
+    if (typeof endStars === 'number' && endStars < startStars) {
       reset({ startStars, endStars: '' });
       query = { startStars };
       const { endStars, ...rest } = router.query;
@@ -47,7 +47,7 @@ export default function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 m-auto sm:w-full pr-4 input input-primary input-bordered border-primary"
+              className="w-3/5 m-auto sm:w-full pr-4 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent"
               {...field}
               onChange={e => {
                 field.onChange(parseInt(e.target.value, 10));
@@ -62,7 +62,7 @@ export default function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 m-auto sm:w-full pr-4 input input-primary input-bordered border-primary"
+              className="w-3/5 m-auto sm:w-full pr-4 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent"
               {...field}
               onChange={e => {
                 field.onChange(parseInt(e.target.value, 10));
@@ -73,7 +73,7 @@ export default function StarsFilter() {
           control={control}
         />
 
-        <button className="rounded-tr- btn btn-ghost " type="submit">
+        <button className="btn btn-ghost ml-2" type="submit">
           Search
         </button>
       </div>

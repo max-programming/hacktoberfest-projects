@@ -12,11 +12,12 @@ import Pagination from 'components/Pagination';
 import Sort from 'components/Sort';
 import StarsFilter from 'components/StarsFilter';
 import capFirstLetter from 'utils/capFirstLetter';
+import { RepoItem, RepoData } from 'types';
 
 interface Props {
   page: number;
   languageName: string;
-  repos: any;
+  repos: RepoData;
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
@@ -37,6 +38,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
       : '';
 
   const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}+${searchQuery}+${starsQuery}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
+
   const res = await fetch(apiUrl, {
     headers: { Accept: 'application/vnd.github.mercy-preview+json' }
   });
@@ -49,7 +51,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 
   const repos = await res.json();
 
-  repos.items = repos.items.filter((repo: any) => !repo.archived);
+  repos.items = repos.items.filter((repo: RepoItem) => !repo.archived);
 
   if (repos.items.length < 1) {
     return {
@@ -111,7 +113,7 @@ const Language = ({ page, repos, languageName }: Props) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="relative w-16 h-16 rounded-full bg-primary">
+            <div className="relative w-16 h-16 rounded-full bg-2023-bavarian-blue-2">
               <div className="absolute inset-3">
                 <BsArrowUp size={40} className="text-slate-100" />
               </div>
@@ -123,20 +125,20 @@ const Language = ({ page, repos, languageName }: Props) => {
         <div className="min-h-screen pt-5">
           <div className="text-center">
             <div className="w-5/6 max-w-md mx-auto">
-              <h1 className="mb-5 text-5xl font-bold">
+              <h1 className="mb-5 text-5xl font-bold uppercase">
                 {repos.total_count} repositories for{' '}
-                <span className="font-mono underline text-primary">
+                <span className="font-mono text-2023-bavarian-gold-2">
                   {router.query.q
-                    ? router.query.q + ' in ' + capFirstLetter(languageName)
-                    : capFirstLetter(languageName)}
+                    ? router.query.q + ' in ' + languageName
+                    : languageName}
                 </span>
               </h1>
             </div>
           </div>
           <Sort />
           <StarsFilter />
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {repos.items.map((repo: any) => (
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {repos.items.map(repo => (
               <Card key={repo.id} repo={repo} />
             ))}
           </div>

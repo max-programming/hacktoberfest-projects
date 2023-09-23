@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       key={router.route}
       initial="initial"
       animate="animate"
-      className="bg-2023-void-2 pt-2"
+      className="pt-2"
       variants={{
         initial: {
           opacity: 0

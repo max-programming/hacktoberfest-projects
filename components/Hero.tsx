@@ -5,10 +5,11 @@ import languages from 'assets/languages.json';
 import LanguageButton from './LanguageButton';
 import { useRouter } from 'next/router';
 import sortByName from 'utils/sortByName';
+import Button from './Button';
 
 const { main: mainLanguages, others: otherLanguages } = languages;
 
-const Hero = () => {
+function Hero() {
   const router = useRouter();
   const handleSubmit: FormEventHandler = e => {
     e.preventDefault();
@@ -17,12 +18,14 @@ const Hero = () => {
     router.push(`/repos/${search}`);
   };
   return (
-    <div className="min-h-screen hero">
+    <div className="min-h-screen hero bg-gradient-radial from-2023-bavarian-gold-4 to-2023-void-2 bg-blend-overlay pt-10">
       <div className="hero-overlay w-0 bg-opacity-60"></div>
       <div className="text-center hero-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold">Select your language</h1>
-          <p className="mb-5">
+          <h1 className="mb-5 text-5xl font-bold uppercase">
+            Select your language
+          </h1>
+          <p className="mb-5 uppercase">
             Select the programming language you would like to find repositories
             for.
           </p>
@@ -32,12 +35,9 @@ const Hero = () => {
           ))}
 
           <div className="dropdown dropdown-top">
-            <div
-              tabIndex={0}
-              className="m-1 btn btn-lg btn-clip hover:bg-primary-2 hover:text-black umami--click--otherlangs-button"
-            >
+            <Button tabIndex={0} className="umami--click--otherlangs-button">
               Other languages
-            </div>
+            </Button>
 
             <ul
               tabIndex={0}
@@ -63,27 +63,27 @@ const Hero = () => {
               <input
                 type="text"
                 placeholder="Search for your language"
-                className="input input-bordered w-full input-info max-w-xs rounded-tr-none rounded-br-none"
+                className="input input-bordered w-full border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 max-w-xs rounded-tr-none rounded-br-none bg-transparent"
                 name="search"
               />
               <button
                 type="submit"
-                className="btn btn-square hover:bg-primary-2 hover:text-black rounded-tl-none rounded-bl-none"
+                className="btn btn-square rounded-tl-none rounded-bl-none bg-transparent border-2023-manga-3 hover:bg-2023-manga-2 hover:text-2023-void-2 hover:border-2023-manga-2"
               >
                 <SearchIcon />
               </button>
             </div>
           </form>
           {/* <a href="https://github.com/max-programming/hacktoberfest-projects/">
-            <button className="m-2 border-0 hover:bg-primary-2 hover:text-black btn btn-lg">
-              Add another language
-            </button>
-          </a> */}
+              <button className="m-2 border-0 hover:bg-primary-2 hover:text-black btn btn-lg">
+                Add another language
+              </button>
+            </a> */}
         </div>
       </div>
     </div>
   );
-};
+}
 
 const SearchIcon = () => (
   <svg

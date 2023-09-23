@@ -1,13 +1,14 @@
 import { emojify } from '@twuni/emojify';
 import { GoStar, GoRepoForked } from 'react-icons/go';
+import { RepoItem } from 'types';
 
 interface Props {
-  repo: any;
+  repo: RepoItem;
 }
 
-const Card = ({ repo }: Props) => {
+function Card({ repo }: Props) {
   return (
-    <div className="shadow-sm card bg-base-300 mx-4">
+    <div className="shadow-sm card bg-2023-void-2 ring-1 ring-2023-manga-3">
       <div className="relative card-body">
         <div className="avatar">
           <div className="w-10 h-10 mb-2 rounded-full">
@@ -33,7 +34,7 @@ const Card = ({ repo }: Props) => {
           title={repo.name}
           target="_blank"
           rel="noreferrer"
-          className={`text-3xl card-title link link-hover text-primary`}
+          className={`text-3xl card-title link link-hover text-2023-bavarian-gold-2`}
         >
           {repo.name}
         </a>
@@ -49,8 +50,8 @@ const Card = ({ repo }: Props) => {
               rel="noreferrer"
               className={`badge ${
                 topic === 'hacktoberfest'
-                  ? 'bg-primary text-gray-900'
-                  : 'bg-accent'
+                  ? 'bg-2023-bavarian-gold-1 text-2023-void-2'
+                  : 'bg-2023-bavarian-blue-2 text-2023-void-2'
               }`}
             >
               {topic}
@@ -59,7 +60,7 @@ const Card = ({ repo }: Props) => {
         </div>
 
         <div className="items-end justify-center h-full card-actions">
-          <div className="shadow stats">
+          <div className="shadow stats bg-transparent ring-1 ring-2023-manga-2">
             <div className="stat">
               <div className="text-center stat-title items-center inline-flex">
                 <GoStar /> <span className="ml-0.5">Stars</span>
@@ -69,7 +70,7 @@ const Card = ({ repo }: Props) => {
               </div>
             </div>
           </div>
-          <div className="shadow stats">
+          <div className="shadow stats bg-transparent ring-1 ring-2023-manga-2">
             <div className="stat">
               <div className="text-center stat-title items-center inline-flex">
                 <GoRepoForked /> <span className="ml-0.5">Forks</span>
@@ -81,6 +82,6 @@ const Card = ({ repo }: Props) => {
       </div>
     </div>
   );
-};
+}
 
 export default Card;

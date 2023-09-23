@@ -25,7 +25,7 @@ export default function Search() {
       <div className="relative">
         <input
           placeholder="Search"
-          className="w-full pr-16 input input-primary input-bordered border-primary"
+          className="w-full pr-16 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent"
           type="text"
           {...register('searchQuery', { required: true })}
         />
