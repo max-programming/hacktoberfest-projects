@@ -19,8 +19,19 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:
+    Poppins,
+    -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
 }
 
 a {
@@ -44,7 +55,7 @@ a {
 }
 
 .button {
-  @apply bg-gradient-to-r from-primary-1 via-primary-2 to-primary-3 text-black;
+  /* @apply bg-gradient-to-r from-primary-1 via-primary-2 to-primary-3 text-black; */
 }
 
 .btn-clip {

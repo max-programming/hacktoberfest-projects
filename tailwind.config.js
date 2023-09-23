@@ -8,12 +8,34 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary-1': '#ffd74d',
-        'primary-2': '#40ddff',
-        'primary-3': '#7c7fff',
-        primary: '#7c7fff',
-        accent: '#170f1e',
-        'hero-button-hover': '#b53a25'
+        2023: {
+          'bavarian-red': {
+            1: '#f8bd89',
+            2: '#ec4237',
+            3: '#a3180f',
+            4: '#460a07'
+          },
+          'bavarian-blue': {
+            1: '#b2e3f0',
+            2: '#33b6d8',
+            3: '#14596b',
+            4: '#0c3640'
+          },
+          'bavarian-gold': {
+            1: '#fffba4',
+            2: '#d2b863',
+            3: '#ad832d',
+            4: '#382e10'
+          },
+          manga: {
+            2: '#efedef',
+            3: '#c3bcc3',
+            4: '#655f67'
+          },
+          void: {
+            2: '#0f0913'
+          }
+        }
       }
     }
   },
@@ -22,6 +44,6 @@ module.exports = {
   },
   plugins: [require('daisyui')],
   daisyui: {
-    themes: ['dark']
+    base: false
   }
 };
