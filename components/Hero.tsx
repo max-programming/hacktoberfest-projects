@@ -46,7 +46,7 @@ const Hero = () => {
               {otherLanguages.sort(sortByName).map(language => (
                 <li key={language}>
                   <Link href={`/repos/${language.toLowerCase()}`}>
-                    <a>{language}</a>
+                    {language}
                   </Link>
                 </li>
               ))}

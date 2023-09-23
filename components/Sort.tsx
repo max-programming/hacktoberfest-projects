@@ -54,7 +54,7 @@ export default function Sort() {
             {mainLanguages.sort(sortByName).map(language => (
               <li key={language}>
                 <Link href={`/repos/${language.toLowerCase()}`}>
-                  <a>{language}</a>
+                  {language}
                 </Link>
               </li>
             ))}
@@ -70,33 +70,32 @@ export default function Sort() {
           {selectedSort()}
         </div>
         <div className="h-64 p-2 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
-          <ul
-            tabIndex={0}
-            className="menu menu-vertical"
-          >
+          <ul tabIndex={0} className="menu menu-vertical">
             <li>
-              <Link href={{ query: { ...router.query } }}>
-                <a>Best match</a>
-              </Link>
+              <Link href={{ query: { ...router.query } }}>Best match</Link>
             </li>
             <li>
-              <Link href={{ query: { ...router.query, s: 'stars', o: 'desc' } }}>
-                <a>Most stars</a>
+              <Link
+                href={{ query: { ...router.query, s: 'stars', o: 'desc' } }}
+              >
+                Most stars
               </Link>
             </li>
             <li>
               <Link href={{ query: { ...router.query, s: 'stars', o: 'asc' } }}>
-                <a>Fewest stars</a>
+                Fewest stars
               </Link>
             </li>
             <li>
-              <Link href={{ query: { ...router.query, s: 'forks', o: 'desc' } }}>
-                <a>Most forks</a>
+              <Link
+                href={{ query: { ...router.query, s: 'forks', o: 'desc' } }}
+              >
+                Most forks
               </Link>
             </li>
             <li>
               <Link href={{ query: { ...router.query, s: 'forks', o: 'asc' } }}>
-                <a>Fewest forks</a>
+                Fewest forks
               </Link>
             </li>
             <li>
@@ -105,17 +104,21 @@ export default function Sort() {
                   query: { ...router.query, s: 'help-wanted-issues', o: 'desc' }
                 }}
               >
-                <a>Most help wanted issues</a>
+                Most help wanted issues
               </Link>
             </li>
             <li>
-              <Link href={{ query: { ...router.query, s: 'updated', o: 'desc' } }}>
-                <a>Recently updated</a>
+              <Link
+                href={{ query: { ...router.query, s: 'updated', o: 'desc' } }}
+              >
+                Recently updated
               </Link>
             </li>
             <li>
-              <Link href={{ query: { ...router.query, s: 'updated', o: 'asc' } }}>
-                <a>Least recently updated</a>
+              <Link
+                href={{ query: { ...router.query, s: 'updated', o: 'asc' } }}
+              >
+                Least recently updated
               </Link>
             </li>
           </ul>

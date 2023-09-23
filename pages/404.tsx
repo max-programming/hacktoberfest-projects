@@ -15,7 +15,7 @@ export default function Custom404() {
               The Page you are looking for might have been removed or it is
               Temporarily unavailable
             </p>
-            <Link rel="stylesheet" href="/">
+            <Link href="/">
               <button className="rounded-none transition delay-150 duration-300 ease-in-out btn shadow-lg button mt-6 mt-[3rem] bg-[#fafafa] text-[#170f1e] ">
                 Go back Home
               </button>
