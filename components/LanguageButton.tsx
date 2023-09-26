@@ -8,7 +8,7 @@ function LanguageButton({ language }: { language: string }) {
   const url = `https://cdn.simpleicons.org/${language.toLowerCase()}/default`;
   return (
     <Link href={`/repos/${language.toLowerCase()}`}>
-      <Button>{language} <img className='ml-1 h-5 w-5' src={url} /></Button>
+      <Button> <img className='mr-1 h-5 w-5' src={url} alt={language}/> {language}</Button>
     </Link>
   );
 }
