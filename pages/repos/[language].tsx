@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { GetServerSideProps } from 'next';
 
 import { useEffect, useState } from 'react';
-import { BsArrowUp } from 'react-icons/bs';
+import { FaAngleUp } from 'react-icons/fa6';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import Card from 'components/Card';
@@ -107,17 +107,15 @@ const Language = ({ page, repos, languageName }: Props) => {
       <AnimatePresence>
         {scrollToTopBtn && (
           <motion.div
-            className="fixed z-20 bottom-2 right-2"
+            className="fixed z-20 bottom-4 right-4"
             onClick={scrollToTop}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="relative w-16 h-16 rounded-full bg-2023-bavarian-blue-2">
-              <div className="absolute inset-3">
-                <BsArrowUp size={40} className="text-slate-100" />
-              </div>
-            </div>
+            <button className="relative w-12 aspect-square flex justify-center items-center rounded-full bg-2023-bavarian-blue-2 text-2xl hover:scale-95 transition-transform ">
+              <FaAngleUp className="text-slate-100" />
+            </button>
           </motion.div>
         )}
       </AnimatePresence>
