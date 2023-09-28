@@ -248,6 +248,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "Deveesh-Shetty",
+      "name": "Deveesh Shetty",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89470104?v=4",
+      "profile": "http://deveesh.vercel.app",
+      "contributions": [
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -256,5 +266,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }
