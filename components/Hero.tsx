@@ -22,10 +22,10 @@ function Hero() {
       <div className="hero-overlay w-0 bg-opacity-60"></div>
       <div className="text-center hero-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold uppercase">
+          <h1 className="mb-5 text-neutral-700 text-5xl font-bold uppercase">
             Select your language
           </h1>
-          <p className="mb-5 uppercase">
+          <p className="mb-5 text-neutral-700 font-semibold uppercase">
             Select the programming language you would like to find repositories
             for.
           </p>
@@ -57,13 +57,13 @@ function Hero() {
             onSubmit={handleSubmit}
           >
             <label className="label">
-              <span className="label-text">Can&apos;t find your language?</span>
+              <span className="label-text text-neutral-700">Can&apos;t find your language?</span>
             </label>
             <div className="flex">
               <input
                 type="text"
                 placeholder="Search for your language"
-                className="input input-bordered w-full border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 max-w-xs rounded-tr-none rounded-br-none bg-transparent"
+                className="input input-bordered w-full text-neutral-100 border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 max-w-xs rounded-tr-none rounded-br-none bg-transparent"
                 name="search"
               />
               <button

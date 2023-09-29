@@ -26,7 +26,7 @@ function Header() {
             href="/contributors"
             className="btn btn-square btn-ghost umami--click--contributors-button"
           >
-            <BsPeopleFill size="1.5rem" title="Contributors" />
+            <BsPeopleFill size="1.5rem" color='white' title="Contributors" />
           </Link>
           <a
             href="https://github.com/max-programming/hacktoberfest-projects"
@@ -34,7 +34,7 @@ function Header() {
             rel="noreferrer"
             className="btn btn-square btn-ghost umami--click--github-button"
           >
-            <IoLogoGithub size="1.5rem" title="GitHub" />
+            <IoLogoGithub size="1.5rem" color='white' title="GitHub" />
           </a>
         </div>
       </div>
