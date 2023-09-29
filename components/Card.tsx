@@ -39,7 +39,7 @@ function Card({ repo }: Props) {
           {repo.name}
         </a>
 
-        <p className="mb-2">{emojify(repo.description)}</p>
+        <p className="mb-2 text-[#848482]">{emojify(repo.description)}</p>
 
         <div className="card-actions">
           {repo.topics.map((topic: string) => (

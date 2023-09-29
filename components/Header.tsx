@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
+import { IconContext } from 'react-icons';
 import { IoLogoGithub } from 'react-icons/io';
 import { BsPeopleFill } from 'react-icons/bs';
 
@@ -21,21 +21,36 @@ function Header() {
             <Search />
           </div>
         )}
-        <div className="flex-none">
+        <div className="flex-none ">
           <Link
             href="/contributors"
-            className="btn btn-square btn-ghost umami--click--contributors-button"
+            className="btn btn-square btn-ghost  umami--click--contributors-button"
           >
-            <BsPeopleFill size="1.5rem" title="Contributors" />
+            <IconContext.Provider
+              value={{ style:{
+                color: 'white',
+                
+              } , className: 'global-class-name' }}
+            >
+              <div>
+                <BsPeopleFill size="1.5rem" title="Contributors" />
+              </div>
+            </IconContext.Provider>
           </Link>
-          <a
+          <Link
             href="https://github.com/max-programming/hacktoberfest-projects"
             target="_blank"
             rel="noreferrer"
             className="btn btn-square btn-ghost umami--click--github-button"
           >
-            <IoLogoGithub size="1.5rem" title="GitHub" />
-          </a>
+            <IconContext.Provider
+              value={{ color: 'white', className: 'global-class-name' }}
+            >
+              <div>
+                <IoLogoGithub size="1.5rem" title="GitHub" />
+              </div>
+            </IconContext.Provider>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { color } from 'framer-motion';
 import { IoLogoGithub } from 'react-icons/io';
 
 interface Contributor {
@@ -14,7 +15,7 @@ interface Props {
 
 export default function ContributorCard({ contributor }: Props) {
   return (
-    <div className="text-center shadow-2xl card">
+    <div className="text-center shadow-2xl card" >
       <a
         href={`https://github.com/${contributor.login}`}
         target="_blank"
@@ -29,13 +30,13 @@ export default function ContributorCard({ contributor }: Props) {
         </figure>
       </a>
       <div className="card-body items-center text-center">
-        <h2 className="card-title">{contributor.name}</h2>
-        <a href={contributor.profile} className="link hover:text-[#dbe8d9]">
+        <h2 className="card-title text-white">{contributor.name}</h2>
+        <a href={contributor.profile} className="link text-[#848482] hover:text-[#fde92d]">
           {contributor.profile}
         </a>
         <div className="justify-center card-actions">
           <a
-            className="text-white btn border-[#dbe8d9] hover:border-[#dbe8d9] btn-outline border-2 hover:bg-[#dbe8d9]"
+            className="text-[#848482] btn border-[#848482] hover:border-[#fde92d] btn-outline border-2 hover:text-[#fde92d]"
             href={`https://github.com/${contributor.login}`}
             target="_blank"
             rel="noreferrer"
