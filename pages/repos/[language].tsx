@@ -135,7 +135,7 @@ const Language = ({ page, repos, languageName }: Props) => {
           </div>
           <Sort />
           <StarsFilter />
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 p-4 lg:grid-cols-3">
             {repos.items.map(repo => (
               <Card key={repo.id} repo={repo} />
             ))}
