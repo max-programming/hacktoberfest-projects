@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2022!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -107,7 +107,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ur5us"><img src="https://avatars.githubusercontent.com/u/453776?v=4?s=100" width="100px;" alt="Juri Hahn"/><br /><sub><b>Juri Hahn</b></sub></a><br /><a href="#content-ur5us" title="Content">🖋</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=ur5us" title="Code">💻</a> <a href="#ideas-ur5us" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-ur5us" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://marcopollivier.dev"><img src="https://avatars.githubusercontent.com/u/697445?v=4?s=100" width="100px;" alt="Marco Ollivier"/><br /><sub><b>Marco Ollivier</b></sub></a><br /><a href="#ideas-marcopollivier" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://deveesh.vercel.app"><img src="https://avatars.githubusercontent.com/u/89470104?v=4?s=100" width="100px;" alt="Deveesh Shetty"/><br /><sub><b>Deveesh Shetty</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Deveesh-Shetty" title="Code">💻</a> <a href="#design-Deveesh-Shetty" title="Design">🎨</a></td>
-       <td align="center" valign="top" width="14.28%"><a href="http://ahmadou.vercel.app"><img src="https://ahmadou.vercel.app/static/media/ahmad.66f17b60679a4b7c961b.png" width="100px;" alt="Ahmadou5"/><br /><sub><b>Ahmadou5</b><sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=ahmadou5" title="Code">💻</a> 
     </tr>
   </tbody>
 </table>
