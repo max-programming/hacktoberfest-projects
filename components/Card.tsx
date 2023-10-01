@@ -23,7 +23,7 @@ function Card({ repo }: Props) {
                 width={50}
                 height={50}
                 alt={repo.owner.login}
-                className="rounded-xl"
+                className="rounded-full"
               />
             </a>
           </div>
@@ -34,7 +34,7 @@ function Card({ repo }: Props) {
           title={repo.name}
           target="_blank"
           rel="noreferrer"
-          className={`text-3xl card-title link link-hover text-2023-bavarian-gold-2`}
+          className={`lg:text-4xl text-3xl card-title link link-hover mb-2 text-2023-bavarian-gold-2`}
         >
           {repo.name}
         </a>
