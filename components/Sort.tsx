@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import languages from 'assets/languages.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
@@ -23,6 +22,43 @@ enum SortTypes {
 
 export default function Sort() {
   const router = useRouter();
+
+  const navigationItems = [
+    {
+      name: "Best match",
+      href: { query: { ...router.query } }
+    },
+    {
+      name: "Most stars",
+      href: { query: { ...router.query, s: 'stars', o: 'desc' } }
+    },
+    {
+      name: "Fewest stars",
+      href: { query: { ...router.query, s: 'stars', o: 'asc' } }
+    },
+    {
+      name: "Most forks",
+      href: { query: { ...router.query, s: 'forks', o: 'desc' } }
+    },
+    {
+      name: "Fewest forks",
+      href: { query: { ...router.query, s: 'forks', o: 'asc' } }
+    },
+    {
+      name: "Most help wanted issues",
+      href: { query: { ...router.query, s: 'help-wanted-issues', o: 'desc' } }
+    },
+    {
+      name: "Recently updated",
+      href: { query: { ...router.query, s: 'updated', o: 'desc' } }
+    },
+    {
+      name: "Least recently updated",
+      href: { query: { ...router.query, s: 'updated', o: 'asc' } }
+    },
+
+  ];
+
   const selectedSort = (): SortTypes => {
     if (router.query.o === 'asc') {
       if (router.query.s === 'stars') return SortTypes.FewestStars;
@@ -72,56 +108,13 @@ export default function Sort() {
         </Button>
         <div className="h-64 p-2 z-50 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
           <ul tabIndex={0} className="menu menu-vertical">
-            <li>
-              <Link href={{ query: { ...router.query } }}>Best match</Link>
-            </li>
-            <li>
-              <Link
-                href={{ query: { ...router.query, s: 'stars', o: 'desc' } }}
-              >
-                Most stars
-              </Link>
-            </li>
-            <li>
-              <Link href={{ query: { ...router.query, s: 'stars', o: 'asc' } }}>
-                Fewest stars
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={{ query: { ...router.query, s: 'forks', o: 'desc' } }}
-              >
-                Most forks
-              </Link>
-            </li>
-            <li>
-              <Link href={{ query: { ...router.query, s: 'forks', o: 'asc' } }}>
-                Fewest forks
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={{
-                  query: { ...router.query, s: 'help-wanted-issues', o: 'desc' }
-                }}
-              >
-                Most help wanted issues
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={{ query: { ...router.query, s: 'updated', o: 'desc' } }}
-              >
-                Recently updated
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={{ query: { ...router.query, s: 'updated', o: 'asc' } }}
-              >
-                Least recently updated
-              </Link>
-            </li>
+            {navigationItems.map((item, index) => (
+              <li key={index}>
+                <Link href={{ query: item.href.query }}>
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
