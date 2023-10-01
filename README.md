@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2022!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-28-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -109,6 +109,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://deveesh.vercel.app"><img src="https://avatars.githubusercontent.com/u/89470104?v=4?s=100" width="100px;" alt="Deveesh Shetty"/><br /><sub><b>Deveesh Shetty</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Deveesh-Shetty" title="Code">💻</a> <a href="#design-Deveesh-Shetty" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/malik-vishu"><img src="https://avatars.githubusercontent.com/u/127117253?v=4?s=100" width="100px;" alt="Vishwas Malik"/><br /><sub><b>Vishwas Malik</b></sub></a><br /><a href="#design-malik-vishu" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=malik-vishu" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://priyank.live"><img src="https://avatars.githubusercontent.com/u/88102392?v=4?s=100" width="100px;" alt="Priyankar Pal"/><br /><sub><b>Priyankar Pal</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=priyankarpal" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://lynxsumit.vercel.app"><img src="https://avatars.githubusercontent.com/u/114245865?v=4?s=100" width="100px;" alt="Sumit Upadhyay"/><br /><sub><b>Sumit Upadhyay</b></sub></a><br /><a href="#design-LynxSumit" title="Design">🎨</a></td>
     </tr>
   </tbody>
 </table>
