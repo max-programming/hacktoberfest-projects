@@ -191,6 +191,13 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/127117253?v=4",
       "profile": "https://github.com/malik-vishu",
       "contributions": ["design", "code"]
+    },
+    {
+      "login": "Ahmadou5",
+      "name": "Ahmad Auwal",
+      "avatar_url": "https://ahmadou.vercel.app/static/media/ahmad.66f17b60679a4b7c961b.png",
+      "profile": "https://ahmadou.vercel.app",
+      "contributions": ["code"]
     }
   ],
   "contributorsPerLine": 7,
