@@ -34,14 +34,14 @@ function Card({ repo }: Props) {
           title={repo.name}
           target="_blank"
           rel="noreferrer"
-          className={`text-3xl card-title link link-hover text-2023-bavarian-gold-2`}
+          className={`text-3xl card-title link link-hover text-2023-bavarian-gold-2 overflow-x-clip`}
         >
           {repo.name}
         </a>
 
         <p className="mb-2">{emojify(repo.description)}</p>
 
-        <div className="card-actions">
+        <div className="card-actions pb-2">
           {repo.topics.map((topic: string) => (
             <a
               key={topic}
