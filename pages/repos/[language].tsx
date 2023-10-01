@@ -120,7 +120,7 @@ const Language = ({ page, repos, languageName }: Props) => {
         )}
       </AnimatePresence>
       <div className="container mx-auto">
-        <div className="min-h-screen pt-5">
+        <div className="min-h-screen pt-5 px-2">
           <div className="text-center">
             <div className="w-5/6 max-w-md mx-auto">
               <h1 className="mb-5 text-5xl font-bold uppercase">
