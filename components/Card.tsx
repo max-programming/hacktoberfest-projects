@@ -8,7 +8,7 @@ interface Props {
 
 function Card({ repo }: Props) {
   return (
-    <div className="shadow-sm card bg-2023-void-2 ring-1 ring-2023-manga-3">
+    <div className="shadow-sm lg:w- w-[90%] bg-white card bg-2023-void-2 ring-1 ring-2023-manga-3">
       <div className="relative card-body">
         <div className="avatar">
           <div className="w-10 h-10 mb-2 rounded-full">
