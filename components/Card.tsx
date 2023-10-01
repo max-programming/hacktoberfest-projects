@@ -39,7 +39,7 @@ function Card({ repo }: Props) {
           {repo.name}
         </a>
 
-        <p className="mb-2">{emojify(repo.description)}</p>
+        <p className="mb-2 text-neutral-100">{emojify(repo.description)}</p>
 
         <div className="card-actions">
           {repo.topics.map((topic: string) => (
@@ -63,9 +63,10 @@ function Card({ repo }: Props) {
           <div className="shadow stats bg-transparent ring-1 ring-2023-manga-2">
             <div className="stat">
               <div className="text-center stat-title items-center inline-flex">
-                <GoStar /> <span className="ml-0.5">Stars</span>
+                <GoStar color="rgb(163 163 163 / var(--tw-text-opacity))"/>{' '}
+                <span className="ml-0.5 text-neutral-400">Stars</span>
               </div>
-              <div className="text-center stat-value">
+              <div className="text-center stat-value text-neutral-400">
                 {repo.stargazers_count}
               </div>
             </div>
@@ -73,9 +74,12 @@ function Card({ repo }: Props) {
           <div className="shadow stats bg-transparent ring-1 ring-2023-manga-2">
             <div className="stat">
               <div className="text-center stat-title items-center inline-flex">
-                <GoRepoForked /> <span className="ml-0.5">Forks</span>
+                <GoRepoForked color="rgb(163 163 163 / var(--tw-text-opacity))" />{' '}
+                <span className="ml-0.5 text-neutral-400">Forks</span>
               </div>
-              <div className="text-center stat-value">{repo.forks}</div>
+              <div className="text-center stat-value text-neutral-400">
+                {repo.forks}
+              </div>
             </div>
           </div>
         </div>

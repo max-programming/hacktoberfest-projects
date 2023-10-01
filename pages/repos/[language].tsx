@@ -123,7 +123,7 @@ const Language = ({ page, repos, languageName }: Props) => {
         <div className="min-h-screen pt-5">
           <div className="text-center">
             <div className="w-5/6 max-w-md mx-auto">
-              <h1 className="mb-5 text-5xl font-bold uppercase">
+              <h1 className="mb-5 text-5xl text-neutral-100 font-bold uppercase">
                 {repos.total_count} repositories for{' '}
                 <span className="font-mono text-2023-bavarian-gold-2">
                   {router.query.q
