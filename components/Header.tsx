@@ -33,7 +33,7 @@ function Header() {
               href="/contributors"
               className="btn btn-square btn-ghost umami--click--contributors-button"
             >
-              <BsPeopleFill size="1.5rem" title="Contributors" />
+              <BsPeopleFill size="1.5rem" color='white' title="Contributors" />
             </Link>
 
             <a

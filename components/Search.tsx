@@ -31,7 +31,7 @@ export default function Search({ searchBarWrapperStyles }: SearchProps) {
         <div className="relative">
           <input
             placeholder="Search"
-            className="w-full pr-16 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent"
+            className="w-full text-neutral-100 pr-16 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent"
             type="text"
             {...register('searchQuery', { required: true })}
           />

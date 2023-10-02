@@ -47,7 +47,7 @@ export default function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 m-auto sm:w-full pr-4 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent"
+              className="w-3/5 text-neutral-100 m-auto sm:w-full pr-4 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent"
               {...field}
               onChange={e => {
                 field.onChange(parseInt(e.target.value, 10));
@@ -62,7 +62,7 @@ export default function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 m-auto sm:w-full pr-4 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent"
+              className="w-3/5 text-neutral-100 m-auto sm:w-full pr-4 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent"
               {...field}
               onChange={e => {
                 field.onChange(parseInt(e.target.value, 10));
@@ -73,7 +73,7 @@ export default function StarsFilter() {
           control={control}
         />
 
-        <button className="btn btn-ghost ml-2" type="submit">
+        <button className="btn btn-ghost ml-2 ring-1 ring-2023-manga-2" type="submit">
           Search
         </button>
       </div>

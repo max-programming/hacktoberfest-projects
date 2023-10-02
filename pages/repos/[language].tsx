@@ -13,6 +13,7 @@ import Sort from 'components/Sort';
 import StarsFilter from 'components/StarsFilter';
 import capFirstLetter from 'utils/capFirstLetter';
 import { RepoItem, RepoData } from 'types';
+import { env } from 'env.mjs';
 
 interface Props {
   page: number;
@@ -39,9 +40,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 
   const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}+${searchQuery}+${starsQuery}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
 
-  const res = await fetch(apiUrl, {
-    headers: { Accept: 'application/vnd.github.mercy-preview+json' }
-  });
+  const headers: HeadersInit = {
+    Accept: 'application/vnd.github.mercy-preview+json'
+  };
+
+  if (env.GITHUB_TOKEN) headers.Authorization = `Bearer ${env.GITHUB_TOKEN}`;
+
+  const res = await fetch(apiUrl, { headers });
 
   if (!res.ok) {
     return {
@@ -123,7 +128,7 @@ const Language = ({ page, repos, languageName }: Props) => {
         <div className="min-h-screen pt-5">
           <div className="text-center">
             <div className="w-5/6 max-w-md mx-auto">
-              <h1 className="mb-5 text-5xl font-bold uppercase">
+              <h1 className="mb-5 text-5xl text-neutral-100 font-bold uppercase">
                 {repos.total_count} repositories for{' '}
                 <span className="font-mono text-2023-bavarian-gold-2">
                   {router.query.q
@@ -135,7 +140,7 @@ const Language = ({ page, repos, languageName }: Props) => {
           </div>
           <Sort />
           <StarsFilter />
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 p-4 lg:grid-cols-3">
             {repos.items.map(repo => (
               <Card key={repo.id} repo={repo} />
             ))}

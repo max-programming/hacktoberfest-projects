@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2022!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-33-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -107,6 +107,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ur5us"><img src="https://avatars.githubusercontent.com/u/453776?v=4?s=100" width="100px;" alt="Juri Hahn"/><br /><sub><b>Juri Hahn</b></sub></a><br /><a href="#content-ur5us" title="Content">🖋</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=ur5us" title="Code">💻</a> <a href="#ideas-ur5us" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-ur5us" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://marcopollivier.dev"><img src="https://avatars.githubusercontent.com/u/697445?v=4?s=100" width="100px;" alt="Marco Ollivier"/><br /><sub><b>Marco Ollivier</b></sub></a><br /><a href="#ideas-marcopollivier" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://deveesh.vercel.app"><img src="https://avatars.githubusercontent.com/u/89470104?v=4?s=100" width="100px;" alt="Deveesh Shetty"/><br /><sub><b>Deveesh Shetty</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Deveesh-Shetty" title="Code">💻</a> <a href="#design-Deveesh-Shetty" title="Design">🎨</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/malik-vishu"><img src="https://avatars.githubusercontent.com/u/127117253?v=4?s=100" width="100px;" alt="Vishwas Malik"/><br /><sub><b>Vishwas Malik</b></sub></a><br /><a href="#design-malik-vishu" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=malik-vishu" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://priyank.live"><img src="https://avatars.githubusercontent.com/u/88102392?v=4?s=100" width="100px;" alt="Priyankar Pal"/><br /><sub><b>Priyankar Pal</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=priyankarpal" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://lynxsumit.vercel.app"><img src="https://avatars.githubusercontent.com/u/114245865?v=4?s=100" width="100px;" alt="Sumit Upadhyay"/><br /><sub><b>Sumit Upadhyay</b></sub></a><br /><a href="#design-LynxSumit" title="Design">🎨</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://p7u.tech"><img src="https://avatars.githubusercontent.com/u/112266318?v=4?s=100" width="100px;" alt="Priyanshu Verma"/><br /><sub><b>Priyanshu Verma</b></sub></a><br /><a href="#design-p7uverma" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/issues?q=author%3Ap7uverma" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://snehafarkya.vercel.app"><img src="https://avatars.githubusercontent.com/u/63949465?v=4?s=100" width="100px;" alt="Sneha Farkya"/><br /><sub><b>Sneha Farkya</b></sub></a><br /><a href="#design-snehafarkya" title="Design">🎨</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.sadiksaifi.dev"><img src="https://avatars.githubusercontent.com/u/86684667?v=4?s=100" width="100px;" alt="Sadik Saifi"/><br /><sub><b>Sadik Saifi</b></sub></a><br /><a href="#design-sadiksaifi" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=sadiksaifi" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://donno2048.github.io/Portfolio/"><img src="https://avatars.githubusercontent.com/u/61805754?v=4?s=100" width="100px;" alt="Elisha Hollander"/><br /><sub><b>Elisha Hollander</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=donno2048" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
