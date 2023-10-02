@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2022!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-33-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-34-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -116,6 +116,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://snehafarkya.vercel.app"><img src="https://avatars.githubusercontent.com/u/63949465?v=4?s=100" width="100px;" alt="Sneha Farkya"/><br /><sub><b>Sneha Farkya</b></sub></a><br /><a href="#design-snehafarkya" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.sadiksaifi.dev"><img src="https://avatars.githubusercontent.com/u/86684667?v=4?s=100" width="100px;" alt="Sadik Saifi"/><br /><sub><b>Sadik Saifi</b></sub></a><br /><a href="#design-sadiksaifi" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=sadiksaifi" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://donno2048.github.io/Portfolio/"><img src="https://avatars.githubusercontent.com/u/61805754?v=4?s=100" width="100px;" alt="Elisha Hollander"/><br /><sub><b>Elisha Hollander</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=donno2048" title="Code">💻</a></td>
+<td align="center" valign="top" width="14.28%"><a href="https://github.com/NishidhJain"><img src="https://avatars.githubusercontent.com/u/61869195?v=4?s=100" width="100px;" alt="Nishidh Jain"/><br /><sub><b>Nishidh Jain</b></sub></a><br /><a href="#design-NishidhJain" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=NishidhJain" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
