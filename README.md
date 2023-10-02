@@ -3,7 +3,7 @@
 A Web app which lets you find eligible repositories for Hacktoberfest 2022!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-31-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-32-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -114,6 +114,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://lynxsumit.vercel.app"><img src="https://avatars.githubusercontent.com/u/114245865?v=4?s=100" width="100px;" alt="Sumit Upadhyay"/><br /><sub><b>Sumit Upadhyay</b></sub></a><br /><a href="#design-LynxSumit" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://p7u.tech"><img src="https://avatars.githubusercontent.com/u/112266318?v=4?s=100" width="100px;" alt="Priyanshu Verma"/><br /><sub><b>Priyanshu Verma</b></sub></a><br /><a href="#design-p7uverma" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/issues?q=author%3Ap7uverma" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://snehafarkya.vercel.app"><img src="https://avatars.githubusercontent.com/u/63949465?v=4?s=100" width="100px;" alt="Sneha Farkya"/><br /><sub><b>Sneha Farkya</b></sub></a><br /><a href="#design-snehafarkya" title="Design">🎨</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.sadiksaifi.dev"><img src="https://avatars.githubusercontent.com/u/86684667?v=4?s=100" width="100px;" alt="Sadik Saifi"/><br /><sub><b>Sadik Saifi</b></sub></a><br /><a href="#design-sadiksaifi" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=sadiksaifi" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
