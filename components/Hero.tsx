@@ -65,6 +65,7 @@ function Hero() {
                 placeholder="Search for your language"
                 className="input input-bordered w-full text-neutral-100 border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 max-w-xs rounded-tr-none rounded-br-none bg-transparent"
                 name="search"
+                required
               />
               <button
                 type="submit"

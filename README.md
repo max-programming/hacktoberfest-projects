@@ -1,6 +1,6 @@
 # Hacktoberfest Projects 🎉
 
-A Web app which lets you find eligible repositories for Hacktoberfest 2022!
+A Web app which lets you find eligible repositories for Hacktoberfest!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-31-orange.svg?style=flat-square)](#contributors-)
