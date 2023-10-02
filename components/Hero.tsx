@@ -1,4 +1,4 @@
-import { FormEventHandler } from 'react';
+import { FormEventHandler, useState } from 'react';
 import Link from 'next/link';
 
 import languages from 'assets/languages.json';
@@ -10,11 +10,20 @@ import Button from './Button';
 const { main: mainLanguages, others: otherLanguages } = languages;
 
 function Hero() {
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const router = useRouter();
   const handleSubmit: FormEventHandler = e => {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
-    const search = formData.get('search');
+    const search = (formData.get('search') as string).trim();
+    // Check if the input is empty or contains only spaces
+    if (search === '') {
+      setErrorMessage('Empty search terms invalid!');
+      return;
+    } else {
+      // Clear any previous error message & proceed to search
+      setErrorMessage(null);
+    }
     router.push(`/repos/${search}`);
   };
   return (
@@ -65,7 +74,6 @@ function Hero() {
                 placeholder="Search for your language"
                 className="input input-bordered w-full text-neutral-100 border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 max-w-xs rounded-tr-none rounded-br-none bg-transparent"
                 name="search"
-                required
               />
               <button
                 type="submit"
@@ -75,6 +83,11 @@ function Hero() {
               </button>
             </div>
           </form>
+          {errorMessage && (
+            <div
+              className="text-red-500 animate-pulse animate-duration-1000"
+            >
+              {errorMessage}</div>)}
           {/* <a href="https://github.com/max-programming/hacktoberfest-projects/">
               <button className="m-2 border-0 hover:bg-primary-2 hover:text-black btn btn-lg">
                 Add another language
