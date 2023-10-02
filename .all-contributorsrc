@@ -305,6 +305,16 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "sadiksaifi",
+      "name": "Sadik Saifi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86684667?v=4",
+      "profile": "http://www.sadiksaifi.dev",
+      "contributions": [
+        "design",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
