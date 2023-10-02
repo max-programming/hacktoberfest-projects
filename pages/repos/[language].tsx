@@ -13,6 +13,7 @@ import Sort from 'components/Sort';
 import StarsFilter from 'components/StarsFilter';
 import capFirstLetter from 'utils/capFirstLetter';
 import { RepoItem, RepoData } from 'types';
+import { env } from 'env.mjs';
 
 interface Props {
   page: number;
@@ -39,9 +40,13 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
 
   const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}+${searchQuery}+${starsQuery}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
 
-  const res = await fetch(apiUrl, {
-    headers: { Accept: 'application/vnd.github.mercy-preview+json' }
-  });
+  const headers: HeadersInit = {
+    Accept: 'application/vnd.github.mercy-preview+json'
+  };
+
+  if (env.GITHUB_TOKEN) headers.Authorization = `Bearer ${env.GITHUB_TOKEN}`;
+
+  const res = await fetch(apiUrl, { headers });
 
   if (!res.ok) {
     return {
