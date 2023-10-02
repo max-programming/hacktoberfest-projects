@@ -23,7 +23,7 @@ Go to the project directory
 cd hacktoberfest-projects
 ```
 
-Install dependencies
+Install dependencies (if you want to use `npm` you can use but its recommended to use `pnpm`)
 
 ```bash
 pnpm i
