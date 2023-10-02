@@ -315,6 +315,15 @@
         "design",
         "code"
       ]
+    },
+    {
+      "login": "donno2048",
+      "name": "Elisha Hollander",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61805754?v=4",
+      "profile": "https://donno2048.github.io/Portfolio/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
