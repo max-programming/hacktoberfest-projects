@@ -296,6 +296,15 @@
         "design",
         "bug"
       ]
+    },
+    {
+      "login": "snehafarkya",
+      "name": "Sneha Farkya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63949465?v=4",
+      "profile": "https://snehafarkya.vercel.app",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
