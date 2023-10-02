@@ -29,7 +29,7 @@ function Card({ repo }: Props) {
             title={repo.name}
             target="_blank"
             rel="noreferrer"
-            className={`text-3xl card-title link link-hover text-2023-bavarian-gold-2 overflow-hidden whitespace-nowrap overflow-ellipsis`}
+            className="text-3xl cursor-pointer hover:underline text-2023-bavarian-gold-2 whitespace-nowrap overflow-hidden text-ellipsis max-w-full"
           >
             {repo.name}
           </a>
