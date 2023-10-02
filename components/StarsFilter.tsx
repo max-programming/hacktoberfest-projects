@@ -1,10 +1,10 @@
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { SubmitHandler, Controller, useForm } from 'react-hook-form';
-import { GoX } from 'react-icons/go';
 
 interface FormValues {
-  startStars: number;
-  endStars: number | string;
+  startStars: number | '';
+  endStars: number | '';
 }
 
 export default function StarsFilter() {
@@ -12,17 +12,17 @@ export default function StarsFilter() {
   const { handleSubmit, control, reset } = useForm<FormValues>({
     defaultValues: {
       startStars: !router.query.startStars
-        ? undefined
+        ? ''
         : +(router.query.startStars as string),
       endStars: !router.query.endStars
-        ? undefined
+        ? ''
         : +(router.query.endStars as string)
     }
   });
 
   const onSubmit: SubmitHandler<FormValues> = ({ startStars, endStars }) => {
     let query;
-    if (typeof endStars === 'number' && endStars < startStars) {
+    if (typeof endStars === 'number' && typeof startStars === 'number' && endStars < startStars) {
       reset({ startStars, endStars: '' });
       query = { startStars };
       const { endStars, ...rest } = router.query;
@@ -35,6 +35,10 @@ export default function StarsFilter() {
       router.push({ query: { ...router.query, ...query } });
     }
   };
+
+  useEffect(() => {
+    reset();
+  }, [router.query?.language, reset]);
 
   return (
     <form
