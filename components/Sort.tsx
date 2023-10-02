@@ -77,7 +77,7 @@ export default function Sort() {
     }
   };
   return (
-    <div className="flex justify-center items-center mb-2 flex-col gap-2">
+    <div className="flex justify-center items-center mb-8 flex-col gap-2">
       <div className="dropdown dropdown-hover">
         <Button tabIndex={0} className="m-1 py-2">
           <FontAwesomeIcon
