@@ -8,55 +8,59 @@ interface Props {
 
 function Card({ repo }: Props) {
   return (
-    <div className="shadow-sm card bg-2023-void-2 ring-1 ring-2023-manga-3">
-      <div className="relative card-body">
-        <div className="flex gap-4 items-center justify-start">
-          <a
-            className="border-2 rounded-full h-14 aspect-square p-1 border-neutral-100"
-            href={repo.owner.html_url}
-            title={repo.owner.login}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src={repo.owner.avatar_url}
-              alt={repo.owner.login}
-              className="rounded-full"
-            />
-          </a>
-          <a
-            href={repo.html_url}
-            title={repo.name}
-            target="_blank"
-            rel="noreferrer"
-            className="text-3xl cursor-pointer hover:underline text-2023-bavarian-gold-2 whitespace-nowrap overflow-hidden text-ellipsis max-w-full"
-          >
-            {repo.name}
-          </a>
-        </div>
-
-        <p className="my-2 text-neutral-300">{emojify(repo.description)}</p>
-
-        <div className="card-actions">
-          {repo.topics.map((topic: string) => (
+    <section className="shadow-sm card bg-2023-void-2 ring-1 ring-2023-manga-3 transition duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-2023-bavarian-gold-2/30">
+      <div className="relative card-body p-6">
+        <div className="flex-1">
+          <div className="flex gap-4 items-center justify-start">
             <a
-              key={topic}
-              href={`https://github.com/topics/${topic}`}
+              className="border-2 rounded-full h-14 aspect-square p-1.5 border-neutral-100"
+              href={repo.owner.html_url}
+              title={repo.owner.login}
               target="_blank"
               rel="noreferrer"
-              className={`badge ${
-                topic === 'hacktoberfest'
-                  ? 'bg-2023-bavarian-gold-1 text-2023-void-2'
-                  : 'bg-2023-bavarian-blue-2 text-2023-void-2'
-              }`}
             >
-              {topic}
+              <img
+                src={repo.owner.avatar_url}
+                alt={repo.owner.login}
+                className="rounded-full"
+              />
             </a>
-          ))}
+            <h2>
+              <a
+                href={repo.html_url}
+                title={repo.name}
+                target="_blank"
+                rel="noreferrer"
+                className="text-3xl cursor-pointer hover:underline text-2023-bavarian-gold-2 whitespace-nowrap overflow-hidden text-ellipsis max-w-full"
+              >
+                {repo.name}
+              </a>
+            </h2>
+          </div>
+
+          <h6 className="my-5 text-lg">{emojify(repo.description)}</h6>
+
+          <div className="card-actions gap-y-3">
+            {repo.topics.map((topic: string) => (
+              <a
+                key={topic}
+                href={`https://github.com/topics/${topic}`}
+                target="_blank"
+                rel="noreferrer"
+                className={`badge inline px-3 py-0.5 h-auto ${
+                  topic === 'hacktoberfest'
+                    ? 'bg-2023-bavarian-gold-1 text-2023-void-2'
+                    : 'bg-2023-bavarian-blue-2 text-2023-void-2'
+                }`}
+              >
+                {topic}
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* stars and forks cards */}
-        <div className="w-full flex gap-3 xl:gap-5 text-neutral-100 cursor-pointer mt-6">
+        <div className="w-full flex gap-3 xl:gap-5 text-neutral-100 cursor-pointer mt-8">
           <a
             href={`${repo.html_url}/stargazers`}
             target="_blank"
@@ -64,10 +68,10 @@ function Card({ repo }: Props) {
           >
             <GoStar className="text-yellow-200 text-2xl" />
             <div className="flex flex-col">
-              <div className="xl:text-2xl text-lg font-semibold">
+              <div className="text-lg xl:text-2xl font-semibold mb-0.5">
                 {repo.stargazers_count}
               </div>
-              <div className="text-neutral-400 text-xs lg:text-sm">Stars</div>
+              <div className="text-neutral-300 text-xs lg:text-sm">Stars</div>
             </div>
             <div
               id="tooltip"
@@ -83,8 +87,8 @@ function Card({ repo }: Props) {
           >
             <GoRepoForked className="text-yellow-200 text-2xl" />
             <div className="flex flex-col">
-              <div className="text-2xl font-semibold">{repo.forks}</div>
-              <div className="text-neutral-400 text-xs lg:text-sm">Forks</div>
+              <div className="text-lg xl:text-2xl font-semibold mb-0.5">{repo.forks}</div>
+              <div className="text-neutral-300 text-xs lg:text-sm">Forks</div>
             </div>
             <div
               id="tooltip"
@@ -95,7 +99,7 @@ function Card({ repo }: Props) {
           </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
