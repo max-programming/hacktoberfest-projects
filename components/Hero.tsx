@@ -85,7 +85,7 @@ function Hero() {
           </form>
           {errorMessage && (
             <div
-              className="text-red-500 animate-pulse animate-duration-1000"
+              className="text-red-500 animate-pulse"
             >
               {errorMessage}</div>)}
           {/* <a href="https://github.com/max-programming/hacktoberfest-projects/">
