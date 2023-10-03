@@ -23,11 +23,30 @@ function Hero() {
       <div className="text-center hero-content">
         <div className="max-w-md">
           <h1 className="mb-5 text-2023-manga-3 text-5xl font-bold uppercase">
-            Select your language
+            Search your language
           </h1>
+          <form
+            className="form-control w-full max-w-xs mx-auto items-center mt-10 mb-12"
+            onSubmit={handleSubmit}
+          >
+            <div className="flex w-full">
+              <input
+                type="text"
+                placeholder="Search for your language"
+                className="input input-bordered w-full text-neutral-100 border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 max-w-xs rounded-tr-none rounded-br-none bg-transparent"
+                name="search"
+              />
+              <button
+                type="submit"
+                className="btn btn-square rounded-tl-none rounded-bl-none bg-transparent border-2023-manga-3 hover:bg-2023-manga-2 hover:text-2023-void-2 hover:border-2023-manga-2"
+              >
+                <SearchIcon />
+              </button>
+            </div>
+          </form>
           <p className="mb-5 text-2023-manga-3 font-semibold uppercase">
-            Select the programming language you would like to find repositories
-            for.
+            Or select the programming language you would like to find
+            repositories for.
           </p>
 
           {mainLanguages.map(language => (
@@ -52,28 +71,6 @@ function Hero() {
               ))}
             </ul>
           </div>
-          <form
-            className="form-control w-full max-w-xs mx-auto items-center"
-            onSubmit={handleSubmit}
-          >
-            <label className="label">
-              <span className="label-text text-2023-manga-3">Can&apos;t find your language?</span>
-            </label>
-            <div className="flex">
-              <input
-                type="text"
-                placeholder="Search for your language"
-                className="input input-bordered w-full text-neutral-100 border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 max-w-xs rounded-tr-none rounded-br-none bg-transparent"
-                name="search"
-              />
-              <button
-                type="submit"
-                className="btn btn-square rounded-tl-none rounded-bl-none bg-transparent border-2023-manga-3 hover:bg-2023-manga-2 hover:text-2023-void-2 hover:border-2023-manga-2"
-              >
-                <SearchIcon />
-              </button>
-            </div>
-          </form>
           {/* <a href="https://github.com/max-programming/hacktoberfest-projects/">
               <button className="m-2 border-0 hover:bg-primary-2 hover:text-black btn btn-lg">
                 Add another language
