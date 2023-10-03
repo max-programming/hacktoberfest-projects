@@ -29,8 +29,8 @@ export default function ContributorCard({ contributor }: Props) {
         </figure>
       </a>
       <div className="card-body items-center text-center">
-        <h2 className="card-title">{contributor.name}</h2>
-        <a href={contributor.profile} className="link hover:text-[#dbe8d9]">
+        <h2 className="card-title text-neutral-100">{contributor.name}</h2>
+        <a href={contributor.profile} className="link text-neutral-100 hover:text-[#dbe8d9]">
           {contributor.profile}
         </a>
         <div className="justify-center card-actions">

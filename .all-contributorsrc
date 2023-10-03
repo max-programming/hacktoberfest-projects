@@ -248,7 +248,92 @@
       "contributions": [
         "ideas"
       ]
-    }
+    },
+    {
+      "login": "Deveesh-Shetty",
+      "name": "Deveesh Shetty",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89470104?v=4",
+      "profile": "http://deveesh.vercel.app",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "malik-vishu",
+      "name": "Vishwas Malik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127117253?v=4",
+      "profile": "https://github.com/malik-vishu",
+      "contributions": [
+        "design",
+        "code"
+      ]
+    },
+    {
+      "login": "priyankarpal",
+      "name": "Priyankar Pal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88102392?v=4",
+      "profile": "http://priyank.live",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "LynxSumit",
+      "name": "Sumit Upadhyay",
+      "avatar_url": "https://avatars.githubusercontent.com/u/114245865?v=4",
+      "profile": "https://lynxsumit.vercel.app",
+      "contributions": [
+        "design"
+      ]
+    },
+    {
+      "login": "p7uverma",
+      "name": "Priyanshu Verma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112266318?v=4",
+      "profile": "https://p7u.tech",
+      "contributions": [
+        "design",
+        "bug"
+      ]
+    },
+    {
+      "login": "snehafarkya",
+      "name": "Sneha Farkya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63949465?v=4",
+      "profile": "https://snehafarkya.vercel.app",
+      "contributions": [
+        "design"
+      ]
+    },
+    {
+      "login": "sadiksaifi",
+      "name": "Sadik Saifi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86684667?v=4",
+      "profile": "http://www.sadiksaifi.dev",
+      "contributions": [
+        "design",
+        "code"
+      ]
+    },
+    {
+      "login": "donno2048",
+      "name": "Elisha Hollander",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61805754?v=4",
+      "profile": "https://donno2048.github.io/Portfolio/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "NishidhJain",
+      "name": "Nishidh Jain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61869195?v=4",
+      "profile": "https://github.com/NishidhJain",
+      "contributions": [
+        "design",
+        "code"
+      ]
   ],
   "contributorsPerLine": 7,
   "projectName": "hacktoberfest-projects",
@@ -256,5 +341,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }

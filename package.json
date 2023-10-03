@@ -15,16 +15,18 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@t3-oss/env-nextjs": "^0.6.1",
     "@twuni/emojify": "^1.0.2",
     "daisyui": "^3.7.7",
     "framer-motion": "^10.16.4",
-    "next": ">=13.5.2",
+    "next": "^13.5.3",
     "next-seo": "^6.1.0",
     "nextjs-progressbar": "^0.0.16",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.46.2",
-    "react-icons": "^4.11.0"
+    "react-icons": "^4.11.0",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
     "@types/node": "^20.6.3",
