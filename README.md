@@ -23,20 +23,16 @@ Go to the project directory
 cd hacktoberfest-projects
 ```
 
-Install dependencies
+Install dependencies (if you want to use `npm` you can use but its recommended to use `pnpm`)
 
 ```bash
-yarn
-# or
-npm install
+pnpm i
 ```
 
 Start the server
 
 ```bash
-yarn dev
-# or
-npm run dev
+pnpm dev
 ```
 
 ## Tech Stack
