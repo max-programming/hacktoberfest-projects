@@ -334,6 +334,7 @@
         "design",
         "code"
       ]
+    }
   ],
   "contributorsPerLine": 7,
   "projectName": "hacktoberfest-projects",
