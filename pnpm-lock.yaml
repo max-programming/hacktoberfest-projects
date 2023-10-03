@@ -4,92 +4,93 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-importers:
+dependencies:
+  '@fontsource/poppins':
+    specifier: ^5.0.8
+    version: 5.0.8
+  '@fortawesome/fontawesome-svg-core':
+    specifier: ^6.4.2
+    version: 6.4.2
+  '@fortawesome/free-regular-svg-icons':
+    specifier: ^6.4.2
+    version: 6.4.2
+  '@fortawesome/free-solid-svg-icons':
+    specifier: ^6.4.2
+    version: 6.4.2
+  '@fortawesome/react-fontawesome':
+    specifier: ^0.2.0
+    version: 0.2.0(@fortawesome/fontawesome-svg-core@6.4.2)(react@18.2.0)
+  '@t3-oss/env-nextjs':
+    specifier: ^0.6.1
+    version: 0.6.1(typescript@5.2.2)(zod@3.22.2)
+  '@twuni/emojify':
+    specifier: ^1.0.2
+    version: 1.0.2
+  daisyui:
+    specifier: ^3.7.7
+    version: 3.8.2
+  framer-motion:
+    specifier: ^10.16.4
+    version: 10.16.4(react-dom@18.2.0)(react@18.2.0)
+  next:
+    specifier: ^13.5.3
+    version: 13.5.3(react-dom@18.2.0)(react@18.2.0)
+  next-cloudinary:
+    specifier: ^4.22.0
+    version: 4.22.0(next@13.5.3)(react@18.2.0)
+  next-seo:
+    specifier: ^6.1.0
+    version: 6.1.0(next@13.5.3)(react-dom@18.2.0)(react@18.2.0)
+  nextjs-progressbar:
+    specifier: ^0.0.16
+    version: 0.0.16(next@13.5.3)(react@18.2.0)
+  react:
+    specifier: 18.2.0
+    version: 18.2.0
+  react-dom:
+    specifier: 18.2.0
+    version: 18.2.0(react@18.2.0)
+  react-hook-form:
+    specifier: ^7.46.2
+    version: 7.47.0(react@18.2.0)
+  react-icons:
+    specifier: ^4.11.0
+    version: 4.11.0(react@18.2.0)
+  zod:
+    specifier: ^3.22.2
+    version: 3.22.2
 
-  .:
-    dependencies:
-      '@fontsource/poppins':
-        specifier: ^5.0.8
-        version: 5.0.8
-      '@fortawesome/fontawesome-svg-core':
-        specifier: ^6.4.2
-        version: 6.4.2
-      '@fortawesome/free-regular-svg-icons':
-        specifier: ^6.4.2
-        version: 6.4.2
-      '@fortawesome/free-solid-svg-icons':
-        specifier: ^6.4.2
-        version: 6.4.2
-      '@fortawesome/react-fontawesome':
-        specifier: ^0.2.0
-        version: 0.2.0(@fortawesome/fontawesome-svg-core@6.4.2)(react@18.2.0)
-      '@t3-oss/env-nextjs':
-        specifier: ^0.6.1
-        version: 0.6.1(typescript@5.2.2)(zod@3.22.2)
-      '@twuni/emojify':
-        specifier: ^1.0.2
-        version: 1.0.2
-      daisyui:
-        specifier: ^3.7.7
-        version: 3.8.2
-      framer-motion:
-        specifier: ^10.16.4
-        version: 10.16.4(react-dom@18.2.0)(react@18.2.0)
-      next:
-        specifier: ^13.5.3
-        version: 13.5.3(react-dom@18.2.0)(react@18.2.0)
-      next-seo:
-        specifier: ^6.1.0
-        version: 6.1.0(next@13.5.3)(react-dom@18.2.0)(react@18.2.0)
-      nextjs-progressbar:
-        specifier: ^0.0.16
-        version: 0.0.16(next@13.5.3)(react@18.2.0)
-      react:
-        specifier: 18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
-      react-hook-form:
-        specifier: ^7.46.2
-        version: 7.47.0(react@18.2.0)
-      react-icons:
-        specifier: ^4.11.0
-        version: 4.11.0(react@18.2.0)
-      zod:
-        specifier: ^3.22.2
-        version: 3.22.2
-    devDependencies:
-      '@types/node':
-        specifier: ^20.6.3
-        version: 20.8.0
-      '@types/react':
-        specifier: 18.2.22
-        version: 18.2.22
-      '@types/twuni__emojify':
-        specifier: ^1.0.0
-        version: 1.0.0
-      autoprefixer:
-        specifier: ^10.4.16
-        version: 10.4.16(postcss@8.4.31)
-      eslint:
-        specifier: 8.50.0
-        version: 8.50.0
-      eslint-config-next:
-        specifier: 13.5.2
-        version: 13.5.2(eslint@8.50.0)(typescript@5.2.2)
-      postcss:
-        specifier: ^8.4.30
-        version: 8.4.31
-      prettier:
-        specifier: ^3.0.3
-        version: 3.0.3
-      tailwindcss:
-        specifier: ^3.3.3
-        version: 3.3.3
-      typescript:
-        specifier: 5.2.2
-        version: 5.2.2
+devDependencies:
+  '@types/node':
+    specifier: ^20.6.3
+    version: 20.8.0
+  '@types/react':
+    specifier: 18.2.22
+    version: 18.2.22
+  '@types/twuni__emojify':
+    specifier: ^1.0.0
+    version: 1.0.0
+  autoprefixer:
+    specifier: ^10.4.16
+    version: 10.4.16(postcss@8.4.31)
+  eslint:
+    specifier: 8.50.0
+    version: 8.50.0
+  eslint-config-next:
+    specifier: 13.5.2
+    version: 13.5.2(eslint@8.50.0)(typescript@5.2.2)
+  postcss:
+    specifier: ^8.4.30
+    version: 8.4.31
+  prettier:
+    specifier: ^3.0.3
+    version: 3.0.3
+  tailwindcss:
+    specifier: ^3.3.3
+    version: 3.3.3
+  typescript:
+    specifier: 5.2.2
+    version: 5.2.2
 
 packages:
 
@@ -108,6 +109,29 @@ packages:
     dependencies:
       regenerator-runtime: 0.14.0
     dev: true
+
+  /@cloudinary-util/url-loader@3.10.0:
+    resolution: {integrity: sha512-RNp6WayU6e5ikA7yCRqNhp0lOwLl82vLco9EwpES2si6Hb+g9yEaeTYvobD44ISQeJUnPl6e1c/AEYVSjfzwrg==}
+    dependencies:
+      '@cloudinary-util/util': 2.2.1
+      '@cloudinary/url-gen': 1.11.2
+    dev: false
+
+  /@cloudinary-util/util@2.2.1:
+    resolution: {integrity: sha512-MEIqn5WtPP3mxSMTNNfpqlGS1UquAXcjmVdY/t/edD/ZWVjI85viBiOMIuF0W6n6UF5gTstLymfQNYx0YO/GZg==}
+    dev: false
+
+  /@cloudinary/transformation-builder-sdk@1.6.1:
+    resolution: {integrity: sha512-cBoSFbE4SnXO2QvUq+cYgUpXufmZTgg05Cy+jAdiNRGcC6lN+KO0ybMnLU6yg9cFub2NRkBDpU4N53wg4a977w==}
+    dependencies:
+      '@cloudinary/url-gen': 1.11.2
+    dev: false
+
+  /@cloudinary/url-gen@1.11.2:
+    resolution: {integrity: sha512-9yL3BlThh3PfyRg/zS8cQVic3FdFaIOp361YrDrQ4fqYbYE47SGWF4ji9KoFxYF4ejfDEptayeG9jF2C465KRQ==}
+    dependencies:
+      '@cloudinary/transformation-builder-sdk': 1.6.1
+    dev: false
 
   /@emotion/is-prop-valid@0.8.8:
     resolution: {integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==}
@@ -1896,6 +1920,18 @@ packages:
   /natural-compare@1.4.0:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
+
+  /next-cloudinary@4.22.0(next@13.5.3)(react@18.2.0):
+    resolution: {integrity: sha512-jSTHLsIEJsKVijyCY2gLybKr6nwJrTEHRi93PjoFKF6H7AmMh5K7pQJPi61lHQ3d9s16rQMMfPSQPp8Kq1aMVw==}
+    peerDependencies:
+      next: ^12 || ^13
+      react: ^17 || ^18
+    dependencies:
+      '@cloudinary-util/url-loader': 3.10.0
+      '@cloudinary-util/util': 2.2.1
+      next: 13.5.3(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+    dev: false
 
   /next-seo@6.1.0(next@13.5.3)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-iMBpFoJsR5zWhguHJvsoBDxDSmdYTHtnVPB1ij+CD0NReQCP78ZxxbdL9qkKIf4oEuZEqZkrjAQLB0bkII7RYA==}
