@@ -1,6 +1,8 @@
 # Hacktoberfest Projects 🎉
 
-A Web app which lets you find eligible repositories for Hacktoberfest 2022!
+A Web app that lets you find eligible repositories for Hacktoberfest 2022!
+
+Use it here - https://finder.usmans.me
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-34-orange.svg?style=flat-square)](#contributors-)
@@ -9,7 +11,14 @@ A Web app which lets you find eligible repositories for Hacktoberfest 2022!
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
 </a>
 
-## Run Locally
+
+## Contributing
+
+Contributions are always welcome!
+
+> Pull Requests about adding languages will not be merged, if you want to suggest adding a new language, please [create an issue](https://github.com/max-programming/hacktoberfest-projects/issues/new) for that 🙂
+
+### Run Locally
 
 Clone the project
 
@@ -42,11 +51,6 @@ pnpm dev
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Daisy UI](http://daisyui.com)
 
-## Contributing
-
-Contributions are always welcome!
-
-> Pull Requests about adding languages will not be merged, if you want to suggest adding a new language, please [create an issue](https://github.com/max-programming/hacktoberfest-projects/issues/new) for that 🙂
 
 ## Feedback
 
