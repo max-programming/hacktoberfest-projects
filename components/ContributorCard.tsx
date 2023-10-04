@@ -1,3 +1,5 @@
+import { env } from 'env.mjs';
+import { CldImage, getCldImageUrl } from 'next-cloudinary';
 import { IoLogoGithub } from 'react-icons/io';
 
 interface Contributor {
@@ -13,6 +15,15 @@ interface Props {
 }
 
 export default function ContributorCard({ contributor }: Props) {
+  const url = env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME
+    ? getCldImageUrl({
+        src: contributor.avatar_url,
+        deliveryType: 'fetch',
+        width: 250,
+        height: 250
+      })
+    : contributor.avatar_url;
+
   return (
     <div className="text-center shadow-2xl card">
       <a
@@ -21,16 +32,15 @@ export default function ContributorCard({ contributor }: Props) {
         rel="noreferrer"
       >
         <figure className="px-10 pt-10">
-          <img
-            src={contributor.avatar_url}
-            alt={contributor.name}
-            className="rounded-xl"
-          />
+          <img src={url} alt={contributor.name} className="rounded-xl" />
         </figure>
       </a>
       <div className="card-body items-center text-center">
         <h2 className="card-title text-neutral-100">{contributor.name}</h2>
-        <a href={contributor.profile} className="link text-neutral-100 hover:text-[#dbe8d9]">
+        <a
+          href={contributor.profile}
+          className="link text-neutral-100 hover:text-[#dbe8d9]"
+        >
           {contributor.profile}
         </a>
         <div className="justify-center card-actions">
