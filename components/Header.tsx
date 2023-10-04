@@ -42,7 +42,7 @@ function Header() {
               rel="noreferrer"
               className="btn btn-square btn-ghost umami--click--github-button"
             >
-              <IoLogoGithub size="1.5rem" title="GitHub" />
+              <IoLogoGithub size="1.5rem" color='white' title="GitHub" />
             </a>
           </div>
         </div>          
