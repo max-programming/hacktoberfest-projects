@@ -8,11 +8,12 @@ interface Props {
 
 function Card({ repo }: Props) {
   return (
-    <div className="shadow-sm card bg-2023-void-2 ring-1 ring-2023-manga-3">
-      <div className="relative card-body">
-        <div className="avatar">
-          <div className="w-10 h-10 mb-2 rounded-full">
+    <section className="shadow-sm card bg-2023-void-2 ring-1 ring-2023-manga-3 transition duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-2023-bavarian-gold-2/30">
+      <div className="relative card-body p-6">
+        <div className="flex-1">
+          <div className="flex gap-4 items-center justify-start">
             <a
+              className="border-2 rounded-full h-14 aspect-square p-1.5 border-neutral-100"
               href={repo.owner.html_url}
               title={repo.owner.login}
               target="_blank"
@@ -20,71 +21,84 @@ function Card({ repo }: Props) {
             >
               <img
                 src={repo.owner.avatar_url}
-                width={50}
-                height={50}
                 alt={repo.owner.login}
-                className="rounded-xl"
+                className="rounded-full"
               />
             </a>
+            <h2 className="text-3xl cursor-pointer hover:underline text-2023-bavarian-gold-2 whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
+              <a
+                href={repo.html_url}
+                title={repo.name}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {repo.name}
+              </a>
+            </h2>
+          </div>
+
+          <h6 className="my-5 text-lg">{emojify(repo.description)}</h6>
+
+          <div className="card-actions gap-y-3">
+            {repo.topics.map((topic: string) => (
+              <a
+                key={topic}
+                href={`https://github.com/topics/${topic}`}
+                target="_blank"
+                rel="noreferrer"
+                className={`badge inline px-3 py-0.5 h-auto ${
+                  topic === 'hacktoberfest'
+                    ? 'bg-2023-bavarian-gold-1 text-2023-void-2'
+                    : 'bg-2023-bavarian-blue-2 text-2023-void-2'
+                }`}
+              >
+                {topic}
+              </a>
+            ))}
           </div>
         </div>
 
-        <a
-          href={repo.html_url}
-          title={repo.name}
-          target="_blank"
-          rel="noreferrer"
-          className={`text-3xl card-title link link-hover text-2023-bavarian-gold-2`}
-        >
-          {repo.name}
-        </a>
-
-        <p className="mb-2 text-neutral-100">{emojify(repo.description)}</p>
-
-        <div className="card-actions">
-          {repo.topics.map((topic: string) => (
-            <a
-              key={topic}
-              href={`https://github.com/topics/${topic}`}
-              target="_blank"
-              rel="noreferrer"
-              className={`badge ${
-                topic === 'hacktoberfest'
-                  ? 'bg-2023-bavarian-gold-1 text-2023-void-2'
-                  : 'bg-2023-bavarian-blue-2 text-2023-void-2'
-              }`}
-            >
-              {topic}
-            </a>
-          ))}
-        </div>
-
-        <div className="items-end justify-center h-full card-actions">
-          <div className="shadow stats bg-transparent ring-1 ring-2023-manga-2">
-            <div className="stat">
-              <div className="text-center stat-title items-center inline-flex">
-                <GoStar color="rgb(163 163 163 / var(--tw-text-opacity))"/>{' '}
-                <span className="ml-0.5 text-neutral-400">Stars</span>
-              </div>
-              <div className="text-center stat-value text-neutral-400">
+        {/* stars and forks cards */}
+        <div className="w-full flex gap-3 xl:gap-5 text-neutral-100 cursor-pointer mt-8">
+          <a
+            href={`${repo.html_url}/stargazers`}
+            target="_blank"
+            className="group w-full border rounded-xl p-3 xl:px-4 flex items-center gap-2 xl:gap-3 relative"
+          >
+            <GoStar className="text-yellow-200 text-2xl" />
+            <div className="flex flex-col">
+              <div className="text-lg xl:text-2xl font-semibold mb-0.5">
                 {repo.stargazers_count}
               </div>
+              <div className="text-neutral-300 text-xs lg:text-sm">Stars</div>
             </div>
-          </div>
-          <div className="shadow stats bg-transparent ring-1 ring-2023-manga-2">
-            <div className="stat">
-              <div className="text-center stat-title items-center inline-flex">
-                <GoRepoForked color="rgb(163 163 163 / var(--tw-text-opacity))" />{' '}
-                <span className="ml-0.5 text-neutral-400">Forks</span>
-              </div>
-              <div className="text-center stat-value text-neutral-400">
-                {repo.forks}
-              </div>
+            <div
+              id="tooltip"
+              className="hidden group-hover:block absolute bg-2023-void-2 text-2023-bavarian-gold-2 px-2 py-1 rounded-md"
+            >
+              Checkout all the stars here!
             </div>
-          </div>
+          </a>
+          <a
+            href={`${repo.html_url}/forks`}
+            target="_blank"
+            className="group w-full border rounded-xl p-3 flex items-center gap-3 relative"
+          >
+            <GoRepoForked className="text-yellow-200 text-2xl" />
+            <div className="flex flex-col">
+              <div className="text-lg xl:text-2xl font-semibold mb-0.5">{repo.forks}</div>
+              <div className="text-neutral-300 text-xs lg:text-sm">Forks</div>
+            </div>
+            <div
+              id="tooltip"
+              className="hidden group-hover:block absolute bg-2023-void-2 text-2023-bavarian-gold-2 px-2 py-1 rounded-md"
+            >
+              Checkout all the forks here!
+            </div>
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -305,6 +305,53 @@
       "contributions": [
         "design"
       ]
+    },
+    {
+      "login": "sadiksaifi",
+      "name": "Sadik Saifi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86684667?v=4",
+      "profile": "http://www.sadiksaifi.dev",
+      "contributions": [
+        "design",
+        "code"
+      ]
+    },
+    {
+      "login": "donno2048",
+      "name": "Elisha Hollander",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61805754?v=4",
+      "profile": "https://donno2048.github.io/Portfolio/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "NishidhJain",
+      "name": "Nishidh Jain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61869195?v=4",
+      "profile": "https://github.com/NishidhJain",
+      "contributions": [
+        "design",
+        "code"
+      ]
+    },
+    {
+      "login": "beyzanur-seyhan",
+      "name": "Beyzanur Seyhan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80166639?v=4",
+      "profile": "https://github.com/beyzanur-seyhan",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "maitri-vv",
+      "name": "maitri-vv",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87691594?v=4",
+      "profile": "https://maitri-vv.github.io/Maitri-sPortfolio/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

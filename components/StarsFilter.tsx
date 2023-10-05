@@ -53,6 +53,7 @@ export default function StarsFilter() {
                 field.onChange(parseInt(e.target.value, 10));
               }}
               placeholder="Star's Starting Range"
+              min="0"
             />
           )}
           control={control}
@@ -68,12 +69,13 @@ export default function StarsFilter() {
                 field.onChange(parseInt(e.target.value, 10));
               }}
               placeholder="Star's Finish Range"
+              min="0"
             />
           )}
           control={control}
         />
 
-        <button className="btn btn-ghost ml-2" type="submit">
+        <button className="btn btn-ghost ml-2 ring-1 ring-2023-manga-2" type="submit">
           Search
         </button>
       </div>

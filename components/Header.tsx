@@ -5,40 +5,51 @@ import { useRouter } from 'next/router';
 import { IoLogoGithub } from 'react-icons/io';
 import { BsPeopleFill } from 'react-icons/bs';
 
-import Search from './Search';
+import Search, { SearchProps } from './Search';
 
-function Header() {
+
+const SearchBar = (props: SearchProps) => {
   const router = useRouter();
 
+  return (router.pathname === '/repos/[language]' && (
+      <Search {...props} />
+    )
+  )
+}
+
+function Header() {
   return (
-    <div className="border-b-[0.5px] border-dashed border-b-2023-manga-3 flex justify-center mb-5">
-      <div className="justify-between px-2 mb-2 ml-1.5 w-3/4 shadow-lg navbar rounded-box">
-        <Link href="/">
-          <img src="/hacktoberfest.svg" alt="Hacktoberfest" />
-        </Link>
-        {router.pathname === '/repos/[language]' && (
-          <div className="justify-center flex-1">
-            <Search />
-          </div>
-        )}
-        <div className="flex-none">
-          <Link
-            href="/contributors"
-            className="btn btn-square btn-ghost umami--click--contributors-button"
-          >
-            <BsPeopleFill size="1.5rem" color='white' title="Contributors" />
+    <header className="border-b-[0.5px] border-dashed border-b-2023-manga-3 mb-5">
+      <div className="container mx-auto px-4 py-2">
+        <div className="justify-between shadow-lg navbar">
+          <Link href="/">
+            <img src="/hacktoberfest.svg" alt="Hacktoberfest" className="h-12 w-auto sm:h-auto" />
           </Link>
-          <a
-            href="https://github.com/max-programming/hacktoberfest-projects"
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-square btn-ghost umami--click--github-button"
-          >
-            <IoLogoGithub size="1.5rem" color='white' title="GitHub" />
-          </a>
-        </div>
+
+          <SearchBar searchBarWrapperStyles="hidden sm:inline-flex flex-1 max-w-md px-6" />
+
+          <div className="flex-none">
+            <Link
+              href="/contributors"
+              className="btn btn-square btn-ghost umami--click--contributors-button"
+            >
+              <BsPeopleFill size="1.5rem" color='white' title="Contributors" />
+            </Link>
+
+            <a
+              href="https://github.com/max-programming/hacktoberfest-projects"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-square btn-ghost umami--click--github-button"
+            >
+              <IoLogoGithub size="1.5rem" color='white' title="GitHub" />
+            </a>
+          </div>
+        </div>          
+
+        <SearchBar searchBarWrapperStyles="sm:hidden px-2 mb-3" />
       </div>
-    </div>
+    </header>
   );
 }
 
