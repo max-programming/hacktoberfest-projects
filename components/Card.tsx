@@ -25,13 +25,12 @@ function Card({ repo }: Props) {
                 className="rounded-full"
               />
             </a>
-            <h2>
+            <h2 className="text-3xl cursor-pointer hover:underline text-2023-bavarian-gold-2 whitespace-nowrap overflow-hidden text-ellipsis max-w-full">
               <a
                 href={repo.html_url}
                 title={repo.name}
                 target="_blank"
                 rel="noreferrer"
-                className="text-3xl cursor-pointer hover:underline text-2023-bavarian-gold-2 whitespace-nowrap overflow-hidden text-ellipsis max-w-full"
               >
                 {repo.name}
               </a>
