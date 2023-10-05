@@ -1,5 +1,5 @@
 import { emojify } from '@twuni/emojify';
-import { GoStar, GoRepoForked } from 'react-icons/go';
+import { GoStar, GoRepoForked, GoIssueOpened } from 'react-icons/go';
 import { RepoItem } from 'types';
 
 interface Props {
@@ -59,7 +59,7 @@ function Card({ repo }: Props) {
         </div>
 
         {/* stars and forks cards */}
-        <div className="w-full flex gap-3 xl:gap-5 text-neutral-100 cursor-pointer mt-8">
+        <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-3 xl:gap-5 text-neutral-100 cursor-pointer mt-8">
           <a
             href={`${repo.html_url}/stargazers`}
             target="_blank"
@@ -86,7 +86,9 @@ function Card({ repo }: Props) {
           >
             <GoRepoForked className="text-yellow-200 text-2xl" />
             <div className="flex flex-col">
-              <div className="text-lg xl:text-2xl font-semibold mb-0.5">{repo.forks}</div>
+              <div className="text-lg xl:text-2xl font-semibold mb-0.5">
+                {repo.forks}
+              </div>
               <div className="text-neutral-300 text-xs lg:text-sm">Forks</div>
             </div>
             <div
@@ -94,6 +96,25 @@ function Card({ repo }: Props) {
               className="hidden group-hover:block absolute bg-2023-void-2 text-2023-bavarian-gold-2 px-2 py-1 rounded-md"
             >
               Checkout all the forks here!
+            </div>
+          </a>
+          <a
+            href={`${repo.html_url}/issues`}
+            target="_blank"
+            className="group w-full border rounded-xl p-3 flex items-center gap-3 relative"
+          >
+            <GoIssueOpened className="text-yellow-200 text-2xl" />
+            <div className="flex flex-col">
+              <div className="text-lg xl:text-2xl font-semibold mb-0.5">
+                {repo.open_issues_count}
+              </div>
+              <div className="text-neutral-300 text-xs lg:text-sm">Issues</div>
+            </div>
+            <div
+              id="tooltip"
+              className="hidden group-hover:block absolute bg-2023-void-2 text-2023-bavarian-gold-2 px-2 py-1 rounded-md"
+            >
+              Checkout all open issues here!
             </div>
           </a>
         </div>
