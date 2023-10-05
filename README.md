@@ -1,15 +1,24 @@
 # Hacktoberfest Projects 🎉
 
-A Web app which lets you find eligible repositories for Hacktoberfest 2022!
+A Web app that lets you find eligible repositories for Hacktoberfest 2022!
+
+Use it here - https://finder.usmans.me
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-34-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-36-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
 </a>
 
-## Run Locally
+
+## Contributing
+
+Contributions are always welcome!
+
+> Pull Requests about adding languages will not be merged, if you want to suggest adding a new language, please [create an issue](https://github.com/max-programming/hacktoberfest-projects/issues/new) for that 🙂
+
+### Run Locally
 
 Clone the project
 
@@ -23,20 +32,16 @@ Go to the project directory
 cd hacktoberfest-projects
 ```
 
-Install dependencies
+Install dependencies (if you want to use `npm` you can use but its recommended to use `pnpm`)
 
 ```bash
-yarn
-# or
-npm install
+pnpm i
 ```
 
 Start the server
 
 ```bash
-yarn dev
-# or
-npm run dev
+pnpm dev
 ```
 
 ## Tech Stack
@@ -46,11 +51,6 @@ npm run dev
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Daisy UI](http://daisyui.com)
 
-## Contributing
-
-Contributions are always welcome!
-
-> Pull Requests about adding languages will not be merged, if you want to suggest adding a new language, please [create an issue](https://github.com/max-programming/hacktoberfest-projects/issues/new) for that 🙂
 
 ## Feedback
 
@@ -116,7 +116,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://snehafarkya.vercel.app"><img src="https://avatars.githubusercontent.com/u/63949465?v=4?s=100" width="100px;" alt="Sneha Farkya"/><br /><sub><b>Sneha Farkya</b></sub></a><br /><a href="#design-snehafarkya" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.sadiksaifi.dev"><img src="https://avatars.githubusercontent.com/u/86684667?v=4?s=100" width="100px;" alt="Sadik Saifi"/><br /><sub><b>Sadik Saifi</b></sub></a><br /><a href="#design-sadiksaifi" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=sadiksaifi" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://donno2048.github.io/Portfolio/"><img src="https://avatars.githubusercontent.com/u/61805754?v=4?s=100" width="100px;" alt="Elisha Hollander"/><br /><sub><b>Elisha Hollander</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=donno2048" title="Code">💻</a></td>
-<td align="center" valign="top" width="14.28%"><a href="https://github.com/NishidhJain"><img src="https://avatars.githubusercontent.com/u/61869195?v=4?s=100" width="100px;" alt="Nishidh Jain"/><br /><sub><b>Nishidh Jain</b></sub></a><br /><a href="#design-NishidhJain" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=NishidhJain" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/NishidhJain"><img src="https://avatars.githubusercontent.com/u/61869195?v=4?s=100" width="100px;" alt="Nishidh Jain"/><br /><sub><b>Nishidh Jain</b></sub></a><br /><a href="#design-NishidhJain" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=NishidhJain" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/beyzanur-seyhan"><img src="https://avatars.githubusercontent.com/u/80166639?v=4?s=100" width="100px;" alt="Beyzanur Seyhan"/><br /><sub><b>Beyzanur Seyhan</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=beyzanur-seyhan" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://maitri-vv.github.io/Maitri-sPortfolio/"><img src="https://avatars.githubusercontent.com/u/87691594?v=4?s=100" width="100px;" alt="maitri-vv"/><br /><sub><b>maitri-vv</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=maitri-vv" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

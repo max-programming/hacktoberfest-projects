@@ -65,6 +65,7 @@ function Hero() {
                 placeholder="Search for your language"
                 className="input input-bordered w-full text-neutral-100 border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 max-w-xs rounded-tr-none rounded-br-none bg-transparent"
                 name="search"
+                autoComplete="off"
               />
               <button
                 type="submit"
@@ -89,7 +90,7 @@ const SearchIcon = () => (
   <svg
     className="w-6 h-6"
     fill="none"
-    stroke="currentColor"
+    stroke="white"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
   >
