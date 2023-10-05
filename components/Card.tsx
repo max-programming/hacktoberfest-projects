@@ -37,7 +37,7 @@ function Card({ repo }: Props) {
             </h2>
           </div>
 
-          <h6 className="my-5 text-lg">{emojify(repo.description)}</h6>
+          <h6 className="my-5 text-lg text-slate-50">{emojify(repo.description)}</h6>
 
           <div className="card-actions gap-y-3">
             {repo.topics.map((topic: string) => (
