@@ -46,7 +46,7 @@ function Hero() {
               />
               <button
                 type="submit"
-                className="btn btn-square rounded-tl-none rounded-bl-none bg-transparent border-2023-manga-3 hover:bg-2023-manga-2 hover:text-2023-void-2 hover:border-2023-manga-2"
+                className="btn btn-square rounded-tl-none rounded-bl-none bg-transparent border-2023-manga-3 hover:bg-2023-manga-4 hover:text-2023-void-2 hover:border-2023-manga-2"
               >
                 <SearchIcon />
               </button>
