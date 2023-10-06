@@ -19,7 +19,10 @@ export default function Search({ searchBarWrapperStyles }: SearchProps) {
   });
 
   const onSubmit: SubmitHandler<FormValues> = ({ searchQuery }) => {
-    router.push({ query: { ...router.query, q: searchQuery } });
+    let trimmedQuery = searchQuery.trim();
+    if(trimmedQuery !== ''){ //Performs search only with non-empty strings
+      router.push({ query: { ...router.query, q: trimmedQuery } });
+    }
   };
 
   return (
