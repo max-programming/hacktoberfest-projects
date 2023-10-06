@@ -9,6 +9,7 @@ import '@fontsource/poppins';
 import '../styles/globals.css';
 
 import type { AppProps } from 'next/app';
+import Footer from 'components/Footer';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
@@ -37,6 +38,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <DefaultSeo {...SEO} />
       <NextNProgress color="#ffd74d" options={{ showSpinner: false }} />
       <Component {...pageProps} />
+      <Footer/>
     </motion.div>
   );
 }
