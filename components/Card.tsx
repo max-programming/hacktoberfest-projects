@@ -37,7 +37,9 @@ function Card({ repo }: Props) {
             </h2>
           </div>
 
-          <h6 className="my-5 text-2023-manga-2 text-lg">{emojify(repo.description)}</h6>
+          <h6 className="my-5 text-2023-manga-2 text-lg">
+            {emojify(repo.description)}
+          </h6>
 
           <div className="card-actions gap-y-3">
             {repo.topics.map((topic: string) => (
@@ -112,7 +114,7 @@ function Card({ repo }: Props) {
             </div>
             <div
               id="tooltip"
-              className="hidden group-hover:block absolute bg-2023-void-2 text-2023-bavarian-gold-2 px-2 py-1 rounded-md"
+              className="hidden group-hover:block absolute text-sm bg-2023-void-2 text-2023-bavarian-gold-2 px-2 py-1 rounded-md"
             >
               Checkout all open issues here!
             </div>
