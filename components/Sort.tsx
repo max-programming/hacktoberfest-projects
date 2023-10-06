@@ -6,6 +6,7 @@ import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUpAZ } from '@fortawesome/free-solid-svg-icons';
 import sortByName from 'utils/sortByName';
 import Button from './Button';
+import { useState } from 'react';
 
 const { mainLanguages } = languages;
 
@@ -22,6 +23,7 @@ enum SortTypes {
 
 export default function Sort() {
   const router = useRouter();
+  const [isDisplay, setIsDisplay] = useState<boolean>(false);
 
   const navigationItems = [
     {
@@ -75,27 +77,26 @@ export default function Sort() {
       return SortTypes.BestMatch;
     }
   };
-
-  const handleClick = () => {
-    const elem = document.activeElement as HTMLElement;
-    if (elem) {
-      elem?.blur();
-    }
-  };
   return (
     <div className="flex justify-center items-center mb-8 flex-col gap-2">
       <div className="dropdown dropdown-hover">
-        <Button tabIndex={0} className="m-1 py-2">
-          <FontAwesomeIcon
-            icon={faCode}
-            className=" w-6 h-6 mr-3"
-          ></FontAwesomeIcon>
-          Language
-        </Button>
-        <div className="h-64 p-2 overflow-y-scroll shadow dropdown-content z-50 bg-base-100 rounded-box w-60">
+        <div onClick={() => setIsDisplay(true)}>
+          <Button tabIndex={0} className="m-1 py-2">
+            <FontAwesomeIcon
+              icon={faCode}
+              className=" w-6 h-6 mr-3"
+            ></FontAwesomeIcon>
+            Language
+          </Button>
+        </div>
+        <div
+          className={`h-64 p-2 overflow-y-scroll shadow dropdown-content z-50 bg-base-100 rounded-box w-60 ${
+            !isDisplay && 'hidden'
+          }`}
+        >
           <ul tabIndex={0} className="menu menu-vertical">
             {mainLanguages.sort(sortByName).map(language => (
-              <li key={language} onClick={handleClick}>
+              <li key={language} onClick={() => setIsDisplay(false)}>
                 <Link href={`/repos/${language.toLowerCase()}`}>
                   {language}
                 </Link>
@@ -105,17 +106,23 @@ export default function Sort() {
         </div>
       </div>
       <div className="dropdown dropdown-hover">
-        <Button tabIndex={0} className="py-2">
-          <FontAwesomeIcon
-            icon={faArrowUpAZ}
-            className=" w-6 h-6 mr-3"
-          ></FontAwesomeIcon>
-          {selectedSort()}
-        </Button>
-        <div className="h-64 p-2 z-50 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
+        <div onClick={() => setIsDisplay(true)}>
+          <Button tabIndex={0} className="py-2">
+            <FontAwesomeIcon
+              icon={faArrowUpAZ}
+              className=" w-6 h-6 mr-3"
+            ></FontAwesomeIcon>
+            {selectedSort()}
+          </Button>
+        </div>
+        <div
+          className={`h-64 p-2 z-50 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60 ${
+            !isDisplay && 'hidden'
+          }`}
+        >
           <ul tabIndex={0} className="menu menu-vertical">
             {navigationItems.map((item, index) => (
-              <li key={index} onClick={handleClick}>
+              <li key={index} onClick={() => setIsDisplay(false)}>
                 <Link href={{ query: item.href.query }}>{item.name}</Link>
               </li>
             ))}
