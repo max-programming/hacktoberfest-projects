@@ -352,6 +352,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "nidble",
+      "name": "Antonino Bertulla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1447119?v=4",
+      "profile": "https://dev.to/nidble/",
+      "contributions": [
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
