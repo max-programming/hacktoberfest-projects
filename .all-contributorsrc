@@ -334,6 +334,35 @@
         "design",
         "code"
       ]
+    },
+    {
+      "login": "beyzanur-seyhan",
+      "name": "Beyzanur Seyhan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80166639?v=4",
+      "profile": "https://github.com/beyzanur-seyhan",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "maitri-vv",
+      "name": "maitri-vv",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87691594?v=4",
+      "profile": "https://maitri-vv.github.io/Maitri-sPortfolio/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "nidble",
+      "name": "Antonino Bertulla",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1447119?v=4",
+      "profile": "https://dev.to/nidble/",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    }
   ],
   "contributorsPerLine": 7,
   "projectName": "hacktoberfest-projects",
