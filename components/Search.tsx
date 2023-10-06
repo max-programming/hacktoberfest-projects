@@ -43,7 +43,7 @@ export default function Search({ searchBarWrapperStyles }: SearchProps) {
             type="button"
             onClick={() => reset()}
           >
-            <GoX />
+            <GoX color='white'/>
           </button>
         </div>
       </form>
