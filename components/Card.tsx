@@ -61,11 +61,11 @@ function Card({ repo }: Props) {
         </div>
 
         {/* stars and forks cards */}
-        <div className="w-full grid grid-cols-[repeat(auto-fit,_minmax(120px,_1fr))] gap-3 xl:gap-5 text-neutral-100 cursor-pointer mt-8">
+        <div className="flex flex-wrap gap-3 xl:gap-5 text-neutral-100 cursor-pointer mt-8">
           <a
             href={`${repo.html_url}/stargazers`}
             target="_blank"
-            className="group w-full border rounded-xl p-3 xl:px-4 flex items-center gap-2 xl:gap-3 relative"
+            className="group w-full flex-shrink-0 flex-grow-1 mx-auto basis-[120px] border rounded-xl p-3 xl:px-4 flex items-center gap-2 xl:gap-3 relative"
           >
             <GoStar className="text-yellow-200 text-2xl" />
             <div className="flex flex-col">
@@ -76,7 +76,7 @@ function Card({ repo }: Props) {
             </div>
             <div
               id="tooltip"
-              className="hidden group-hover:block absolute bg-2023-void-2 text-2023-bavarian-gold-2 px-2 py-1 rounded-md"
+              className="hidden group-hover:block text-sm absolute bg-2023-void-2 text-2023-bavarian-gold-2 px-2 py-1 rounded-md"
             >
               Checkout all the stars here!
             </div>
@@ -84,7 +84,7 @@ function Card({ repo }: Props) {
           <a
             href={`${repo.html_url}/forks`}
             target="_blank"
-            className="group w-full border rounded-xl p-3 flex items-center gap-3 relative"
+            className="group flex-shrink-0 flex-grow-1 mx-auto basis-[120px] border rounded-xl p-3 flex items-center gap-3 relative"
           >
             <GoRepoForked className="text-yellow-200 text-2xl" />
             <div className="flex flex-col">
@@ -95,7 +95,7 @@ function Card({ repo }: Props) {
             </div>
             <div
               id="tooltip"
-              className="hidden group-hover:block absolute bg-2023-void-2 text-2023-bavarian-gold-2 px-2 py-1 rounded-md"
+              className="hidden group-hover:block absolute text-sm bg-2023-void-2 text-2023-bavarian-gold-2 px-2 py-1 rounded-md"
             >
               Checkout all the forks here!
             </div>
@@ -103,7 +103,7 @@ function Card({ repo }: Props) {
           <a
             href={`${repo.html_url}/issues`}
             target="_blank"
-            className="group w-full border rounded-xl p-3 flex items-center gap-3 relative"
+            className="group flex-shrink-0 flex-grow-1 mx-auto basis-[120px] border rounded-xl p-3 flex items-center gap-3 relative"
           >
             <GoIssueOpened className="text-yellow-200 text-2xl" />
             <div className="flex flex-col">
