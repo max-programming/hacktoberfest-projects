@@ -5,7 +5,7 @@ A Web app that lets you find eligible repositories for Hacktoberfest 2022!
 Use it here - https://finder.usmans.me
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-36-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-37-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -121,6 +121,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://maitri-vv.github.io/Maitri-sPortfolio/"><img src="https://avatars.githubusercontent.com/u/87691594?v=4?s=100" width="100px;" alt="maitri-vv"/><br /><sub><b>maitri-vv</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=maitri-vv" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://dev.to/nidble/"><img src="https://avatars.githubusercontent.com/u/1447119?v=4?s=100" width="100px;" alt="Antonino Bertulla"/><br /><sub><b>Antonino Bertulla</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=nidble" title="Code">💻</a> <a href="#design-nidble" title="Design">🎨</a></td>
     </tr>
   </tbody>
 </table>
