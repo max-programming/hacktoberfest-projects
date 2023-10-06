@@ -25,38 +25,37 @@ export default function Sort() {
 
   const navigationItems = [
     {
-      name: "Best match",
+      name: 'Best match',
       href: { query: { ...router.query } }
     },
     {
-      name: "Most stars",
+      name: 'Most stars',
       href: { query: { ...router.query, s: 'stars', o: 'desc' } }
     },
     {
-      name: "Fewest stars",
+      name: 'Fewest stars',
       href: { query: { ...router.query, s: 'stars', o: 'asc' } }
     },
     {
-      name: "Most forks",
+      name: 'Most forks',
       href: { query: { ...router.query, s: 'forks', o: 'desc' } }
     },
     {
-      name: "Fewest forks",
+      name: 'Fewest forks',
       href: { query: { ...router.query, s: 'forks', o: 'asc' } }
     },
     {
-      name: "Most help wanted issues",
+      name: 'Most help wanted issues',
       href: { query: { ...router.query, s: 'help-wanted-issues', o: 'desc' } }
     },
     {
-      name: "Recently updated",
+      name: 'Recently updated',
       href: { query: { ...router.query, s: 'updated', o: 'desc' } }
     },
     {
-      name: "Least recently updated",
+      name: 'Least recently updated',
       href: { query: { ...router.query, s: 'updated', o: 'asc' } }
-    },
-
+    }
   ];
 
   const selectedSort = (): SortTypes => {
@@ -79,7 +78,7 @@ export default function Sort() {
 
   const handleClick = () => {
     const elem = document.activeElement as HTMLElement;
-    if(elem){
+    if (elem) {
       elem?.blur();
     }
   };
@@ -117,9 +116,7 @@ export default function Sort() {
           <ul tabIndex={0} className="menu menu-vertical">
             {navigationItems.map((item, index) => (
               <li key={index} onClick={handleClick}>
-                <Link href={{ query: item.href.query }}>
-                  {item.name}
-                </Link>
+                <Link href={{ query: item.href.query }}>{item.name}</Link>
               </li>
             ))}
           </ul>
