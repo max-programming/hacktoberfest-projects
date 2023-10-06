@@ -20,10 +20,9 @@ function Hero() {
     if (search === '') {
       setErrorMessage('Empty search terms invalid!');
       return;
-    } else {
-      // Clear any previous error message & proceed to search
-      setErrorMessage(null);
     }
+    // Clear any previous error message & proceed to search
+    setErrorMessage(null);
     router.push(`/repos/${search}`);
   };
   return (
