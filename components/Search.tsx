@@ -6,7 +6,7 @@ interface FormValues {
   searchQuery: string;
 }
 export interface SearchProps {
-  searchBarWrapperStyles?: string
+  searchBarWrapperStyles?: string;
 }
 
 export default function Search({ searchBarWrapperStyles }: SearchProps) {
@@ -40,7 +40,7 @@ export default function Search({ searchBarWrapperStyles }: SearchProps) {
             type="button"
             onClick={() => reset()}
           >
-            <GoX />
+            <GoX color="lightgrey" />
           </button>
         </div>
       </form>
