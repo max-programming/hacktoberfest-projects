@@ -37,7 +37,9 @@ function Card({ repo }: Props) {
             </h2>
           </div>
 
-          <h6 className="my-5 text-2023-manga-2 text-lg">{emojify(repo.description)}</h6>
+          <h6 className="my-5 text-2023-manga-2 text-lg">
+            {emojify(repo.description)}
+          </h6>
 
           <div className="card-actions gap-y-3">
             {repo.topics.map((topic: string) => (
@@ -86,7 +88,9 @@ function Card({ repo }: Props) {
           >
             <GoRepoForked className="text-yellow-200 text-2xl" />
             <div className="flex flex-col">
-              <div className="text-lg xl:text-2xl font-semibold mb-0.5">{repo.forks}</div>
+              <div className="text-lg xl:text-2xl font-semibold mb-0.5">
+                {repo.forks}
+              </div>
               <div className="text-neutral-300 text-xs lg:text-sm">Forks</div>
             </div>
             <div

@@ -21,14 +21,14 @@ function Header() {
   return (
     <header className="border-b-[0.5px] border-dashed border-b-2023-manga-3 mb-5">
       <div className="container mx-auto px-4 py-2">
-        <div className="justify-between shadow-lg navbar">
+        <div className="justify-between lg:grid lg:grid-cols-3 shadow-lg navbar">
           <Link href="/">
             <img src="/hacktoberfest.svg" alt="Hacktoberfest" className="h-12 w-auto sm:h-auto" />
           </Link>
 
           <SearchBar searchBarWrapperStyles="hidden sm:inline-flex flex-1 max-w-md px-6" />
 
-          <div className="flex-none">
+          <div className="flex-none md:justify-end">
             <Link
               href="/contributors"
               className="btn btn-square btn-ghost umami--click--contributors-button"
