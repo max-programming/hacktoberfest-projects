@@ -26,7 +26,7 @@ function Header() {
             <img src="/hacktoberfest.svg" alt="Hacktoberfest" className="h-12 w-auto sm:h-auto" />
           </Link>
 
-          <SearchBar searchBarWrapperStyles="hidden sm:inline-flex flex-1 max-w-md px-6" />
+          <SearchBar searchBarWrapperStyles="hidden sm:inline-flex flex-1 max-w-md px-6 md:ml-5" />
 
           <div className="flex-none md:justify-end">
             <Link
