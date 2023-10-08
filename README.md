@@ -1,6 +1,7 @@
 # Hacktoberfest Projects 🎉
 
-A Web app that lets you find eligible repositories for Hacktoberfest 2022!
+
+A Web app that lets you find eligible repositories for Hacktoberfest!
 
 Use it here - https://finder.usmans.me
 
