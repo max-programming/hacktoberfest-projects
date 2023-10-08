@@ -6,7 +6,7 @@ interface FormValues {
   searchQuery: string;
 }
 export interface SearchProps {
-  searchBarWrapperStyles?: string
+  searchBarWrapperStyles?: string;
 }
 
 export default function Search({ searchBarWrapperStyles }: SearchProps) {
@@ -19,7 +19,11 @@ export default function Search({ searchBarWrapperStyles }: SearchProps) {
   });
 
   const onSubmit: SubmitHandler<FormValues> = ({ searchQuery }) => {
-    router.push({ query: { ...router.query, q: searchQuery } });
+    let trimmedQuery = searchQuery.trim();
+    //Performs search only with non-empty strings
+    if (trimmedQuery !== '') {
+      router.push({ query: { ...router.query, q: trimmedQuery } });
+    }
   };
 
   return (
@@ -40,7 +44,7 @@ export default function Search({ searchBarWrapperStyles }: SearchProps) {
             type="button"
             onClick={() => reset()}
           >
-            <GoX />
+            <GoX color="white" />
           </button>
         </div>
       </form>

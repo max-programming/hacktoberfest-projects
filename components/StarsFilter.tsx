@@ -75,7 +75,7 @@ export default function StarsFilter() {
           control={control}
         />
 
-        <button className="btn btn-ghost ml-2 ring-1 ring-2023-manga-2" type="submit">
+        <button className="btn btn-ghost ml-2 text-2023-manga-2 ring-1 ring-2023-manga-2" type="submit">
           Search
         </button>
       </div>

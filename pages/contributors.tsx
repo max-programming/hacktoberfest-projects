@@ -44,7 +44,6 @@ export default function Contrubutors({ contributors }: Props) {
           ))}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
