@@ -362,6 +362,26 @@
         "code",
         "design"
       ]
+    },
+    {
+      "login": "Mohit030802",
+      "name": "Mohit",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80634689?v=4",
+      "profile": "https://bright-ganache-eb99ae.netlify.app/",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "tmsagarofficial",
+      "name": "S A G A R",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110724849?v=4",
+      "profile": "https://github.com/tmsagarofficial",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
