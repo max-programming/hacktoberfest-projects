@@ -5,7 +5,7 @@ A Web app that lets you find eligible repositories for Hacktoberfest 2022!
 Use it here - https://finder.usmans.me
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-38-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-39-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -123,6 +123,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://maitri-vv.github.io/Maitri-sPortfolio/"><img src="https://avatars.githubusercontent.com/u/87691594?v=4?s=100" width="100px;" alt="maitri-vv"/><br /><sub><b>maitri-vv</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=maitri-vv" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://dev.to/nidble/"><img src="https://avatars.githubusercontent.com/u/1447119?v=4?s=100" width="100px;" alt="Antonino Bertulla"/><br /><sub><b>Antonino Bertulla</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=nidble" title="Code">💻</a> <a href="#design-nidble" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://bright-ganache-eb99ae.netlify.app/"><img src="https://avatars.githubusercontent.com/u/80634689?v=4?s=100" width="100px;" alt="Mohit"/><br /><sub><b>Mohit</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Mohit030802" title="Code">💻</a> <a href="#ideas-Mohit030802" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/tmsagarofficial"><img src="https://avatars.githubusercontent.com/u/110724849?v=4?s=100" width="100px;" alt="S A G A R"/><br /><sub><b>S A G A R</b></sub></a><br /><a href="#ideas-tmsagarofficial" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=tmsagarofficial" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
