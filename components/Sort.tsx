@@ -23,7 +23,7 @@ enum SortTypes {
 
 export default function Sort() {
   const router = useRouter();
-  const [isDisplay, setIsDisplay] = useState<boolean>(false);
+  const [isDisplay, setIsDisplay] = useState<string>('');
 
   const navigationItems = [
     {
@@ -77,10 +77,16 @@ export default function Sort() {
       return SortTypes.BestMatch;
     }
   };
+
+  const handleClick = () => {
+    const elem = document.activeElement as HTMLElement;
+    if(elem){
+      elem?.blur();
+    }
+  };
   return (
     <div className="flex justify-center items-center mb-8 flex-col gap-2">
       <div className="dropdown dropdown-hover">
-        <div onClick={() => setIsDisplay(true)}>
           <Button tabIndex={0} className="m-1 py-2">
             <FontAwesomeIcon
               icon={faCode}
@@ -88,15 +94,11 @@ export default function Sort() {
             ></FontAwesomeIcon>
             Language
           </Button>
-        </div>
         <div
-          className={`h-64 p-2 overflow-y-scroll shadow dropdown-content z-50 bg-base-100 rounded-box w-60 ${
-            !isDisplay && 'hidden'
-          }`}
-        >
+          className="h-64 p-2 overflow-y-scroll dropdown-content shadow z-50 bg-base-100 rounded-box w-60">
           <ul tabIndex={0} className="menu menu-vertical">
             {mainLanguages.sort(sortByName).map(language => (
-              <li key={language} onClick={() => setIsDisplay(false)}>
+              <li key={language} onClick={handleClick}>
                 <Link href={`/repos/${language.toLowerCase()}`}>
                   {language}
                 </Link>
@@ -106,7 +108,6 @@ export default function Sort() {
         </div>
       </div>
       <div className="dropdown dropdown-hover">
-        <div onClick={() => setIsDisplay(true)}>
           <Button tabIndex={0} className="py-2">
             <FontAwesomeIcon
               icon={faArrowUpAZ}
@@ -114,15 +115,11 @@ export default function Sort() {
             ></FontAwesomeIcon>
             {selectedSort()}
           </Button>
-        </div>
         <div
-          className={`h-64 p-2 z-50 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60 ${
-            !isDisplay && 'hidden'
-          }`}
-        >
+          className="h-64 p-2 z-50 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
           <ul tabIndex={0} className="menu menu-vertical">
             {navigationItems.map((item, index) => (
-              <li key={index} onClick={() => setIsDisplay(false)}>
+              <li key={index} onClick={handleClick}>
                 <Link href={{ query: item.href.query }}>{item.name}</Link>
               </li>
             ))}
