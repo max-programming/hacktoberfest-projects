@@ -20,7 +20,8 @@ export default function Search({ searchBarWrapperStyles }: SearchProps) {
 
   const onSubmit: SubmitHandler<FormValues> = ({ searchQuery }) => {
     let trimmedQuery = searchQuery.trim();
-    if(trimmedQuery !== ''){ //Performs search only with non-empty strings
+    //Performs search only with non-empty strings
+    if (trimmedQuery !== '') {
       router.push({ query: { ...router.query, q: trimmedQuery } });
     }
   };
@@ -43,7 +44,7 @@ export default function Search({ searchBarWrapperStyles }: SearchProps) {
             type="button"
             onClick={() => reset()}
           >
-            <GoX color="lightgrey" />
+            <GoX color="white" />
           </button>
         </div>
       </form>
