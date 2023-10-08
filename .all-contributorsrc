@@ -390,6 +390,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "commitConvention": "gitmoji",
+  "commitConvention": "angular",
   "commitType": "docs"
 }
