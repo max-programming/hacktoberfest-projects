@@ -80,22 +80,21 @@ export default function Sort() {
 
   const handleClick = () => {
     const elem = document.activeElement as HTMLElement;
-    if(elem){
+    if (elem) {
       elem?.blur();
     }
   };
   return (
     <div className="flex justify-center items-center mb-8 flex-col gap-2">
       <div className="dropdown dropdown-hover">
-          <Button tabIndex={0} className="m-1 py-2">
-            <FontAwesomeIcon
-              icon={faCode}
-              className=" w-6 h-6 mr-3"
-            ></FontAwesomeIcon>
-            Language
-          </Button>
-        <div
-          className="h-64 p-2 overflow-y-scroll dropdown-content shadow z-50 bg-base-100 rounded-box w-60">
+        <Button tabIndex={0} className="m-1 py-2">
+          <FontAwesomeIcon
+            icon={faCode}
+            className=" w-6 h-6 mr-3"
+          ></FontAwesomeIcon>
+          Language
+        </Button>
+        <div className="h-64 p-2 overflow-y-scroll dropdown-content shadow z-50 bg-base-100 rounded-box w-60">
           <ul tabIndex={0} className="menu menu-vertical">
             {mainLanguages.sort(sortByName).map(language => (
               <li key={language} onClick={handleClick}>
@@ -108,15 +107,14 @@ export default function Sort() {
         </div>
       </div>
       <div className="dropdown dropdown-hover">
-          <Button tabIndex={0} className="py-2">
-            <FontAwesomeIcon
-              icon={faArrowUpAZ}
-              className=" w-6 h-6 mr-3"
-            ></FontAwesomeIcon>
-            {selectedSort()}
-          </Button>
-        <div
-          className="h-64 p-2 z-50 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
+        <Button tabIndex={0} className="py-2">
+          <FontAwesomeIcon
+            icon={faArrowUpAZ}
+            className=" w-6 h-6 mr-3"
+          ></FontAwesomeIcon>
+          {selectedSort()}
+        </Button>
+        <div className="h-64 p-2 z-50 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
           <ul tabIndex={0} className="menu menu-vertical">
             {navigationItems.map((item, index) => (
               <li key={index} onClick={handleClick}>
