@@ -9,7 +9,7 @@
       "login": "max-programming",
       "name": "Max Programming",
       "avatar_url": "https://avatars.githubusercontent.com/u/51731966?v=4",
-      "profile": "https://usman-s.me",
+      "profile": "https://usmans.me",
       "contributions": [
         "code"
       ]
@@ -390,6 +390,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "commitConvention": "angular",
+  "commitConvention": "gitmoji",
   "commitType": "docs"
 }
