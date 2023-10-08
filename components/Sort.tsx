@@ -6,7 +6,6 @@ import { faCode } from '@fortawesome/free-solid-svg-icons';
 import { faArrowUpAZ } from '@fortawesome/free-solid-svg-icons';
 import sortByName from 'utils/sortByName';
 import Button from './Button';
-import { useState } from 'react';
 
 const { mainLanguages } = languages;
 
@@ -23,7 +22,6 @@ enum SortTypes {
 
 export default function Sort() {
   const router = useRouter();
-  const [isDisplay, setIsDisplay] = useState<string>('');
 
   const navigationItems = [
     {
