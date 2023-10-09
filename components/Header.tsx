@@ -15,7 +15,7 @@ const SearchBar = (props: SearchProps) => {
       <Search {...props} />
     )
     : 
-     <div className="hidden sm:inline-flex flex-1 max-w-md px-6 md:ml-5"></div>
+     <div className={props as string}></div>
   )
 }
 
