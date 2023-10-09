@@ -1,11 +1,12 @@
 # Hacktoberfest Projects 🎉
 
-A Web app that lets you find eligible repositories for Hacktoberfest 2022!
+
+A Web app that lets you find eligible repositories for Hacktoberfest!
 
 Use it here - https://finder.usmans.me
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-37-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-40-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -75,7 +76,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://usman-s.me"><img src="https://avatars.githubusercontent.com/u/51731966?v=4?s=100" width="100px;" alt="Max Programming"/><br /><sub><b>Max Programming</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=max-programming" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://usmans.me"><img src="https://avatars.githubusercontent.com/u/51731966?v=4?s=100" width="100px;" alt="Max Programming"/><br /><sub><b>Max Programming</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=max-programming" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://sunritjana.now.sh"><img src="https://avatars.githubusercontent.com/u/56873669?v=4?s=100" width="100px;" alt="Sunrit Jana"/><br /><sub><b>Sunrit Jana</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=janaSunrise" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://medium.com/@geeknees"><img src="https://avatars.githubusercontent.com/u/701242?v=4?s=100" width="100px;" alt="Masumi Kawasaki"/><br /><sub><b>Masumi Kawasaki</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=geeknees" title="Code">💻</a> <a href="#content-geeknees" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://rishit-khandelwal.github.io"><img src="https://avatars.githubusercontent.com/u/65018379?v=4?s=100" width="100px;" alt="Rishit Khandelwal"/><br /><sub><b>Rishit Khandelwal</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=rishit-khandelwal" title="Code">💻</a> <a href="#content-rishit-khandelwal" title="Content">🖋</a></td>
@@ -122,6 +123,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://maitri-vv.github.io/Maitri-sPortfolio/"><img src="https://avatars.githubusercontent.com/u/87691594?v=4?s=100" width="100px;" alt="maitri-vv"/><br /><sub><b>maitri-vv</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=maitri-vv" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://dev.to/nidble/"><img src="https://avatars.githubusercontent.com/u/1447119?v=4?s=100" width="100px;" alt="Antonino Bertulla"/><br /><sub><b>Antonino Bertulla</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=nidble" title="Code">💻</a> <a href="#design-nidble" title="Design">🎨</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://bright-ganache-eb99ae.netlify.app/"><img src="https://avatars.githubusercontent.com/u/80634689?v=4?s=100" width="100px;" alt="Mohit"/><br /><sub><b>Mohit</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Mohit030802" title="Code">💻</a> <a href="#ideas-Mohit030802" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/tmsagarofficial"><img src="https://avatars.githubusercontent.com/u/110724849?v=4?s=100" width="100px;" alt="S A G A R"/><br /><sub><b>S A G A R</b></sub></a><br /><a href="#ideas-tmsagarofficial" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=tmsagarofficial" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://prithvi2k2.github.io/"><img src="https://avatars.githubusercontent.com/u/72189314?v=4?s=100" width="100px;" alt="Prithvi Reddy"/><br /><sub><b>Prithvi Reddy</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=prithvi2k2" title="Code">💻</a> <a href="#design-prithvi2k2" title="Design">🎨</a></td>
     </tr>
   </tbody>
 </table>

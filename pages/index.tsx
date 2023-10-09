@@ -27,9 +27,7 @@ const Home: NextPage = () => {
 
       <Header />
       <Hero />
-      <Footer />
     </div>
   );
 };
-
 export default Home;
