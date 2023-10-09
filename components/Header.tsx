@@ -11,11 +11,9 @@ import Search, { SearchProps } from './Search';
 const SearchBar = (props: SearchProps) => {
   const router = useRouter();
 
-  return (router.pathname === '/repos/[language]' ?(
+  return (router.pathname === '/repos/[language]' && (
       <Search {...props} />
     )
-    : 
-     <div className={props as string}></div>
   )
 }
 
@@ -23,17 +21,17 @@ function Header() {
   return (
     <header className="border-b-[0.5px] border-dashed border-b-2023-manga-3 mb-5">
       <div className="container mx-auto px-4 py-2">
-        <div className="justify-between lg:grid lg:grid-cols-3 shadow-lg navbar">
+        <div className="justify-between shadow-lg navbar">
           <Link href="/">
             <img src="/hacktoberfest.svg" alt="Hacktoberfest" className="h-12 w-auto sm:h-auto" />
           </Link>
 
-          <SearchBar searchBarWrapperStyles="hidden sm:inline-flex flex-1 max-w-md px-6 md:ml-5" />
+          <SearchBar searchBarWrapperStyles="hidden sm:inline-flex flex-1 max-w-md px-6" />
 
-          <div className="flex-none md:justify-end">
+          <div className="flex-none lg:ml-40  md:10">
             <Link
               href="/contributors"
-              className="btn btn-square btn-ghost umami--click--contributors-button"
+              className="btn btn-square btn-ghost umami--click--contributors-button "
             >
               <BsPeopleFill size="1.5rem" color='white' title="Contributors" />
             </Link>
@@ -42,7 +40,7 @@ function Header() {
               href="https://github.com/max-programming/hacktoberfest-projects"
               target="_blank"
               rel="noreferrer"
-              className="btn btn-square btn-ghost umami--click--github-button"
+              className="btn btn-square btn-ghost umami--click--github-button ml-"
             >
               <IoLogoGithub size="1.5rem" color='white' title="GitHub" />
             </a>
