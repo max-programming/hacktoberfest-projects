@@ -11,9 +11,11 @@ import Search, { SearchProps } from './Search';
 const SearchBar = (props: SearchProps) => {
   const router = useRouter();
 
-  return (router.pathname === '/repos/[language]' && (
+  return (router.pathname === '/repos/[language]' ?(
       <Search {...props} />
     )
+    : 
+     <div className="hidden sm:inline-flex flex-1 max-w-md px-6 md:ml-5"></div>
   )
 }
 
