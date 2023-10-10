@@ -1,13 +1,14 @@
-import { XataError } from '@xata.io/client';
 import { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSession } from 'next-auth';
 import { getXataClient } from 'xata';
 import { ZodError, z } from 'zod';
+import { authOptions } from './auth/[...nextauth]';
 
 const sendReportSchema = z.object({
   message: z.string().trim().nonempty(),
   repoId: z.number().positive(),
   repoAuthor: z.string().trim().nonempty(),
-  userEmail: z.string().trim().email().nonempty()
+  repoUrl: z.string().trim().nonempty()
 });
 
 export default async function sendReport(
@@ -17,9 +18,15 @@ export default async function sendReport(
   if (req.method !== 'POST') return res.status(405).end();
   try {
     const body = sendReportSchema.parse(req.body);
+    const session = await getServerSession(req, res, authOptions);
+
+    if (!session) {
+      return res.status(401).json({ message: 'You must be logged in.' });
+    }
+
     const client = getXataClient();
     const user = await client.db.nextauth_users
-      .filter({ email: body.userEmail })
+      .filter({ email: session.user?.email })
       .getFirst();
 
     if (!user) return res.status(400).json({ code: 'USER_NOT_FOUND' });

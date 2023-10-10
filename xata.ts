@@ -19,6 +19,8 @@ const tables = [
         defaultValue: "No Message",
       },
       { name: "user", type: "link", link: { table: "nextauth_users" } },
+      { name: "valid", type: "bool", notNull: true, defaultValue: "true" },
+      { name: "repoUrl", type: "string", unique: true },
     ],
   },
   {
