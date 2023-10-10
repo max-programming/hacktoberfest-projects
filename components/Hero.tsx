@@ -46,7 +46,7 @@ function Hero() {
               />
               <button
                 type="submit"
-                className="btn btn-square rounded-tl-none rounded-bl-none bg-transparent border-2023-manga-3 hover:bg-2023-manga-2 hover:text-2023-void-2 hover:border-2023-manga-2"
+                className="group btn btn-square rounded-tl-none rounded-bl-none bg-transparent border-2023-manga-3 hover:bg-2023-manga-2 hover:text-2023-void-2 hover:border-2023-manga-2"
               >
                 <SearchIcon />
               </button>
@@ -92,7 +92,7 @@ function Hero() {
 
 const SearchIcon = () => (
   <svg
-    className="w-6 h-6"
+    className="w-6 h-6 group-hover:stroke-2023-bavarian-gold-3"
     fill="none"
     stroke="white"
     viewBox="0 0 24 24"
