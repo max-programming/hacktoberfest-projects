@@ -40,25 +40,6 @@ a {
   text-decoration: none;
 }
 
-/* Scrollbar Styles */
-::-webkit-scrollbar {
-  width: 0.6em;
-}
-
-::-webkit-scrollbar-track {
-  background: #2b3531;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #40ddff;
-  border-radius: 10px;
-}
-
-.button {
-  /* @apply bg-gradient-to-r from-primary-1 via-primary-2 to-primary-3 text-black; */
-}
-
 .btn-clip {
   clip-path: polygon(
     12px 0px,
