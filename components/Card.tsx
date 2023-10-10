@@ -19,32 +19,30 @@ function Card({ repo }: Props) {
     <section className="shadow-sm card bg-2023-void-2 ring-1 ring-2023-manga-3 transition duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-2023-bavarian-gold-2/30">
       <div className="relative card-body p-6">
         <div className="flex-1">
-          <div className="flex items-center justify-between">
-            <div className="flex gap-4 items-center justify-start">
+          <div className="flex gap-2 items-center">
+            <a
+              className="border-2 rounded-full h-14 aspect-square p-1.5 border-neutral-100"
+              href={repo.owner.html_url}
+              title={repo.owner.login}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={repo.owner.avatar_url}
+                alt={repo.owner.login}
+                className="rounded-full"
+              />
+            </a>
+            <h2 className="text-3xl cursor-pointer hover:underline text-2023-bavarian-gold-2 whitespace-nowrap text-ellipsis overflow-hidden">
               <a
-                className="border-2 rounded-full h-14 aspect-square p-1.5 border-neutral-100"
-                href={repo.owner.html_url}
-                title={repo.owner.login}
+                href={repo.html_url}
+                title={repo.name}
                 target="_blank"
                 rel="noreferrer"
               >
-                <img
-                  src={repo.owner.avatar_url}
-                  alt={repo.owner.login}
-                  className="rounded-full"
-                />
+                {repo.name}
               </a>
-              <h2 className="text-3xl cursor-pointer hover:underline text-2023-bavarian-gold-2 whitespace-pre-wrap text-ellipsis overflow-hidden">
-                <a
-                  href={repo.html_url}
-                  title={repo.name}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {repo.name}
-                </a>
-              </h2>
-            </div>
+            </h2>
             <button
               className="hover:bg-2023-bavarian-red-2 p-2 text-center stat-title items-center inline-flex rounded-lg transition ease-linear duration-200"
               onClick={() => {
