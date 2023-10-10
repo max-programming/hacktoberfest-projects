@@ -392,6 +392,16 @@
         "code",
         "design"
       ]
+    },
+    {
+      "login": "inderharrysingh",
+      "name": "Inderjot Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112561014?v=4",
+      "profile": "https://github.com/inderharrysingh",
+      "contributions": [
+        "design",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
