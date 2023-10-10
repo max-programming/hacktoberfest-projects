@@ -9,6 +9,7 @@ export function useGetRepo() {
 
   useEffect(() => {
     async function checkRepo() {
+      if (!repo) return;
       const repoId = repo?.id;
       const res = await axios.get(`/api/check-repo?repoId=${repoId}`);
       if (!res.data) {
@@ -19,6 +20,5 @@ export function useGetRepo() {
     checkRepo();
   }, [repo]);
 
-  console.log(isReported);
   return isReported;
 }
