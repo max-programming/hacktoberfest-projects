@@ -7,15 +7,11 @@ import { BsPeopleFill } from 'react-icons/bs';
 
 import Search, { SearchProps } from './Search';
 
-
 const SearchBar = (props: SearchProps) => {
   const router = useRouter();
 
-  return (router.pathname === '/repos/[language]' && (
-      <Search {...props} />
-    )
-  )
-}
+  return router.pathname === '/repos/[language]' && <Search {...props} />;
+};
 
 function Header() {
   return (
@@ -23,7 +19,11 @@ function Header() {
       <div className="container mx-auto px-4 py-2">
         <div className="justify-between shadow-lg navbar">
           <Link href="/">
-            <img src="/hacktoberfest.svg" alt="Hacktoberfest" className="h-12 w-auto sm:h-auto" />
+            <img
+              src="/hacktoberfest.svg"
+              alt="Hacktoberfest"
+              className="h-12 w-auto sm:h-auto"
+            />
           </Link>
 
           <SearchBar searchBarWrapperStyles="hidden sm:inline-flex flex-1 max-w-md px-6" />
@@ -33,7 +33,7 @@ function Header() {
               href="/contributors"
               className="btn btn-square btn-ghost umami--click--contributors-button "
             >
-              <BsPeopleFill size="1.5rem" color='white' title="Contributors" />
+              <BsPeopleFill size="1.5rem" color="white" title="Contributors" />
             </Link>
 
             <a
@@ -42,10 +42,10 @@ function Header() {
               rel="noreferrer"
               className="btn btn-square btn-ghost umami--click--github-button ml-"
             >
-              <IoLogoGithub size="1.5rem" color='white' title="GitHub" />
+              <IoLogoGithub size="1.5rem" color="white" title="GitHub" />
             </a>
           </div>
-        </div>          
+        </div>
 
         <SearchBar searchBarWrapperStyles="sm:hidden px-2 mb-3" />
       </div>

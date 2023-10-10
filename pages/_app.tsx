@@ -10,6 +10,7 @@ import '../styles/globals.css';
 
 import type { AppProps } from 'next/app';
 import Footer from 'components/Footer';
+import ReportModal from 'components/ReportModal';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
@@ -39,6 +40,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       <NextNProgress color="#ffd74d" options={{ showSpinner: false }} />
       <Component {...pageProps} />
       <Footer />
+      <ReportModal />
     </motion.div>
   );
 }
