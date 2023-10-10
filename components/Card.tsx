@@ -6,13 +6,15 @@ import {
   GoIssueOpened
 } from 'react-icons/go';
 import { RepoItem } from 'types';
-import ReportModal from './ReportModal';
+import { useSetAtom } from 'jotai';
+import { repoAtom } from 'utils/state/repoAtom';
 
 interface Props {
   repo: RepoItem;
 }
 
 function Card({ repo }: Props) {
+  const setRepo = useSetAtom(repoAtom);
   return (
     <section className="shadow-sm card bg-2023-void-2 ring-1 ring-2023-manga-3 transition duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-2023-bavarian-gold-2/30">
       <div className="relative card-body p-6">
@@ -49,7 +51,9 @@ function Card({ repo }: Props) {
                 const modal = document.getElementById(
                   'modal'
                 ) as HTMLDialogElement;
+
                 if (modal) {
+                  setRepo(repo);
                   modal.showModal();
                 }
               }}

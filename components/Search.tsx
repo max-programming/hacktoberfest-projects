@@ -6,10 +6,10 @@ interface FormValues {
   searchQuery: string;
 }
 export interface SearchProps {
-  searchBarWrapperStyles?: string;
+  className?: string;
 }
 
-export default function Search({ searchBarWrapperStyles }: SearchProps) {
+export default function Search({ className }: SearchProps) {
   const router = useRouter();
 
   const { register, handleSubmit, reset } = useForm<FormValues>({
@@ -27,7 +27,7 @@ export default function Search({ searchBarWrapperStyles }: SearchProps) {
   };
 
   return (
-    <div className={searchBarWrapperStyles}>
+    <div className={className}>
       <form
         className="w-full mx-auto m-2 form-control"
         onSubmit={handleSubmit(onSubmit)}
