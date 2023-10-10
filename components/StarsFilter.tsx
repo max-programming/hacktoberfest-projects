@@ -14,15 +14,17 @@ export default function StarsFilter() {
       startStars: !router.query.startStars
         ? ''
         : +(router.query.startStars as string),
-      endStars: !router.query.endStars
-        ? ''
-        : +(router.query.endStars as string)
+      endStars: !router.query.endStars ? '' : +(router.query.endStars as string)
     }
   });
 
   const onSubmit: SubmitHandler<FormValues> = ({ startStars, endStars }) => {
     let query;
-    if (typeof endStars === 'number' && typeof startStars === 'number' && endStars < startStars) {
+    if (
+      typeof endStars === 'number' &&
+      typeof startStars === 'number' &&
+      endStars < startStars
+    ) {
       reset({ startStars, endStars: '' });
       query = { startStars };
       const { endStars, ...rest } = router.query;
