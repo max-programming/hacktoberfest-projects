@@ -6,8 +6,9 @@ import { SelectedPick } from '@xata.io/client';
 import { ChangeEvent, useState } from 'react';
 import axios from 'axios';
 
+type Report = Readonly<SelectedPick<ReportsRecord, ['*']>>;
 interface ReportsPageProps {
-  reports: Readonly<SelectedPick<ReportsRecord, ['*']>>[];
+  reports: Report[];
 }
 
 export default function ReportsPage({ reports }: ReportsPageProps) {
@@ -24,11 +25,7 @@ export default function ReportsPage({ reports }: ReportsPageProps) {
   );
 }
 
-function ReportCard({
-  report
-}: {
-  report: ReportsPageProps['reports'][number];
-}) {
+function ReportCard({ report }: { report: Report }) {
   const [isValid, setIsValid] = useState(report.valid);
 
   async function handleToggleVisibility(e: ChangeEvent<HTMLInputElement>) {
