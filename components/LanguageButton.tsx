@@ -1,26 +1,24 @@
 import Link from 'next/link';
 import Button from './Button';
+import Icons from './Icons';
 
 function LanguageButton({ language }: { language: string }) {
-  let url;
-  if (language == 'HTML') {
-    language = 'HTML5';
-    url = `https://cdn.simpleicons.org/${language.toLowerCase()}/default`;
-  } else if (language == 'Java') {
-    url = 'https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png';
-  } else if (language == 'Rust') {
-    url = `https://cdn.simpleicons.org/${language.toLowerCase()}/red`;
-  } else {
-    url = `https://cdn.simpleicons.org/${language.toLowerCase()}/default`;
-  }
+
+  let lan:string = language.toLowerCase();
+  lan === "c++" ? lan = "cpp" : "";
+  let icon = Icons[lan];
+
   return (
     <Link href={`/repos/${language.toLowerCase()}`}>
-      <Button>
-        {' '}
-        <img className="mr-1 h-5 w-5" src={url} alt={language} /> {language}
+      <Button className='flex items-center gap-3'>
+      <svg className='w-5 h-4' >
+       {icon}
+      </svg>
+      
+         {language}
       </Button>
     </Link>
   );
-}
+} 
 
 export default LanguageButton;
