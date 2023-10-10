@@ -35,6 +35,7 @@ export default async function sendReport(
       message: body.message,
       repoAuthor: body.repoAuthor,
       repoId: body.repoId,
+      repoUrl: body.repoUrl,
       user: { id: user.id }
     });
 
