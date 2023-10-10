@@ -28,10 +28,10 @@ function Header() {
 
           <SearchBar searchBarWrapperStyles="hidden sm:inline-flex flex-1 max-w-md px-6" />
 
-          <div className="flex-none">
+          <div className="flex-none lg:ml-40  md:10">
             <Link
               href="/contributors"
-              className="btn btn-square btn-ghost umami--click--contributors-button"
+              className="btn btn-square btn-ghost umami--click--contributors-button "
             >
               <BsPeopleFill size="1.5rem" color='white' title="Contributors" />
             </Link>
@@ -40,7 +40,7 @@ function Header() {
               href="https://github.com/max-programming/hacktoberfest-projects"
               target="_blank"
               rel="noreferrer"
-              className="btn btn-square btn-ghost umami--click--github-button"
+              className="btn btn-square btn-ghost umami--click--github-button ml-"
             >
               <IoLogoGithub size="1.5rem" color='white' title="GitHub" />
             </a>

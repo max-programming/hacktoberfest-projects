@@ -9,6 +9,7 @@ import '@fontsource/poppins';
 import '../styles/globals.css';
 
 import type { AppProps } from 'next/app';
+import Footer from 'components/Footer';
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
@@ -31,12 +32,13 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           async
           defer
           data-website-id="2529a688-ee5c-4869-9f85-7bb8fa5b6518"
-          src="https://insights.usman-s.me/umami.js"
+          src="https://insights.usmans.me/umami.js"
         ></script>
       </Head>
       <DefaultSeo {...SEO} />
       <NextNProgress color="#ffd74d" options={{ showSpinner: false }} />
       <Component {...pageProps} />
+      <Footer />
     </motion.div>
   );
 }
