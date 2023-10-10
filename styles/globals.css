@@ -70,3 +70,18 @@ a {
   );
   border-radius: 2px;
 }
+
+.container-query {
+  container-type: inline-size;
+}
+
+@container (max-width: 383px) {
+  .issues-btn {
+    margin-inline: auto;
+  }
+}
+@container (max-width: 251px) {
+  .issues-btn {
+    margin-inline: 0;
+  }
+}
