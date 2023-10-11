@@ -1,0 +1,16 @@
+{
+  "id": "mig_ckigrcrvn469mi28pt9g",
+  "parentID": "mig_ckigpnbvn469mi28pt8g",
+  "checksum": "1:aa35d5b288a529d29cdb4360205e5c6e1e24b31728f475f9f53f390b255983ba",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "repoAuthor",
+          "type": "string"
+        },
+        "table": "reports"
+      }
+    }
+  ]
+}

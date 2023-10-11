@@ -9,7 +9,7 @@
       "login": "max-programming",
       "name": "Max Programming",
       "avatar_url": "https://avatars.githubusercontent.com/u/51731966?v=4",
-      "profile": "https://usman-s.me",
+      "profile": "https://usmans.me",
       "contributions": [
         "code"
       ]
@@ -361,6 +361,67 @@
       "contributions": [
         "code",
         "design"
+      ]
+    },
+    {
+      "login": "Mohit030802",
+      "name": "Mohit",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80634689?v=4",
+      "profile": "https://bright-ganache-eb99ae.netlify.app/",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "tmsagarofficial",
+      "name": "S A G A R",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110724849?v=4",
+      "profile": "https://github.com/tmsagarofficial",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    },
+    {
+      "login": "prithvi2k2",
+      "name": "Prithvi Reddy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72189314?v=4",
+      "profile": "https://prithvi2k2.github.io/",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "inderharrysingh",
+      "name": "Inderjot Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112561014?v=4",
+      "profile": "https://github.com/inderharrysingh",
+      "contributions": [
+        "design",
+        "code"
+      ]
+    },
+    {
+      "login": "Keith-Web3",
+      "name": "Olorunnishola Olamilekan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96974022?v=4",
+      "profile": "https://github.com/Keith-Web3",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    },
+    {
+      "login": "nabarvn",
+      "name": "Nabarun",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64539836?v=4",
+      "profile": "https://nabarun.xyz",
+      "contributions": [
+        "ideas",
+        "design",
+        "code"
       ]
     }
   ],

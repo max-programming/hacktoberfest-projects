@@ -31,7 +31,7 @@ export default function ContributorCard({ contributor }: Props) {
         target="_blank"
         rel="noreferrer"
       >
-        <figure className="px-10 pt-10">
+        <figure className="px-10 pt-10 h-[351px] md:h-[336px] lg:h-[204px] xl:h-[268px]">
           <img src={url} alt={contributor.name} className="rounded-xl" />
         </figure>
       </a>
@@ -43,9 +43,9 @@ export default function ContributorCard({ contributor }: Props) {
         >
           {contributor.profile}
         </a>
-        <div className="justify-center card-actions">
+        <div className="justify-center card-actions mt-auto">
           <a
-            className="text-white btn border-[#dbe8d9] hover:border-[#dbe8d9] btn-outline border-2 hover:bg-[#dbe8d9]"
+            className="text-white btn border-[#dbe8d9] hover:border-[#dbe8d9] btn-outline border-2 hover:bg-[#dbe8d9] hover:text-slate-900"
             href={`https://github.com/${contributor.login}`}
             target="_blank"
             rel="noreferrer"

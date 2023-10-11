@@ -6,10 +6,10 @@ interface FormValues {
   searchQuery: string;
 }
 export interface SearchProps {
-  searchBarWrapperStyles?: string
+  className?: string;
 }
 
-export default function Search({ searchBarWrapperStyles }: SearchProps) {
+export default function Search({ className }: SearchProps) {
   const router = useRouter();
 
   const { register, handleSubmit, reset } = useForm<FormValues>({
@@ -19,11 +19,15 @@ export default function Search({ searchBarWrapperStyles }: SearchProps) {
   });
 
   const onSubmit: SubmitHandler<FormValues> = ({ searchQuery }) => {
-    router.push({ query: { ...router.query, q: searchQuery } });
+    let trimmedQuery = searchQuery.trim();
+    //Performs search only with non-empty strings
+    if (trimmedQuery !== '') {
+      router.push({ query: { ...router.query, q: trimmedQuery } });
+    }
   };
 
   return (
-    <div className={searchBarWrapperStyles}>
+    <div className={className}>
       <form
         className="w-full mx-auto m-2 form-control"
         onSubmit={handleSubmit(onSubmit)}
@@ -40,7 +44,7 @@ export default function Search({ searchBarWrapperStyles }: SearchProps) {
             type="button"
             onClick={() => reset()}
           >
-            <GoX />
+            <GoX color="white" />
           </button>
         </div>
       </form>
