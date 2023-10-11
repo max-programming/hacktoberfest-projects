@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Usman-Sabuwala-s-workspace-u2kcvd.us-east-1.xata.sh/db/project-finder-hf",
+  "codegen": {
+    "output": "xata.ts"
+  }
+}

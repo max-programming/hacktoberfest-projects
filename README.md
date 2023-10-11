@@ -6,7 +6,7 @@ A Web app that lets you find eligible repositories for Hacktoberfest!
 Use it here - https://finder.usmans.me
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-42-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-43-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -128,6 +128,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://prithvi2k2.github.io/"><img src="https://avatars.githubusercontent.com/u/72189314?v=4?s=100" width="100px;" alt="Prithvi Reddy"/><br /><sub><b>Prithvi Reddy</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=prithvi2k2" title="Code">💻</a> <a href="#design-prithvi2k2" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/inderharrysingh"><img src="https://avatars.githubusercontent.com/u/112561014?v=4?s=100" width="100px;" alt="Inderjot Singh"/><br /><sub><b>Inderjot Singh</b></sub></a><br /><a href="#design-inderharrysingh" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=inderharrysingh" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Keith-Web3"><img src="https://avatars.githubusercontent.com/u/96974022?v=4?s=100" width="100px;" alt="Olorunnishola Olamilekan"/><br /><sub><b>Olorunnishola Olamilekan</b></sub></a><br /><a href="#ideas-Keith-Web3" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Keith-Web3" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://nabarun.xyz"><img src="https://avatars.githubusercontent.com/u/64539836?v=4?s=100" width="100px;" alt="Nabarun"/><br /><sub><b>Nabarun</b></sub></a><br /><a href="#ideas-nabarvn" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-nabarvn" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=nabarvn" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

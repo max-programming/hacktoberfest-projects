@@ -1,0 +1,11 @@
+{
+  "id": "mig_ckifep3vn469mi28pko0",
+  "checksum": "1:f77d7c3821433d23ef3963fc44ebba51d8e2cc4879857ddd8cf0c354120d33cb",
+  "operations": [
+    {
+      "addTable": {
+        "table": "reports"
+      }
+    }
+  ]
+}

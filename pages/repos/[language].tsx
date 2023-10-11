@@ -14,6 +14,7 @@ import StarsFilter from 'components/StarsFilter';
 import capFirstLetter from 'utils/capFirstLetter';
 import { RepoItem, RepoData } from 'types';
 import { env } from 'env.mjs';
+import { getXataClient } from 'xata';
 
 interface Props {
   page: number;
@@ -54,9 +55,16 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
     };
   }
 
+  const client = getXataClient();
   const repos = await res.json();
 
-  repos.items = repos.items.filter((repo: RepoItem) => !repo.archived);
+  const reports = await client.db.reports.filter({ valid: false }).getMany();
+
+  repos.items = repos.items
+    .filter((repo: RepoItem) => !repo.archived)
+    .filter(
+      (repo: RepoItem) => !reports.find(report => report.repoId === repo.id)
+    );
 
   if (repos.items.length < 1) {
     return {
