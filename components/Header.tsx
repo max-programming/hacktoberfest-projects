@@ -32,7 +32,7 @@ function Header() {
 
           <div className="flex gap-2 lg:ml-40">
             <button
-              className="btn btn-ghost capitalize"
+              className={`relative  bg-2023-void-2 hover:bg-2023-void-2 btn  text-white rounded-1xl  hover:text-shadow hover:shadow-2023-bavarian-gold-3 `}
               onClick={() => {
                 if (!session.data) signIn('github');
                 else signOut();
