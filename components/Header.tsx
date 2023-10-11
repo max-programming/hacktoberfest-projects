@@ -32,7 +32,7 @@ function Header() {
 
           <div className="flex gap-2 lg:ml-40">
             <button
-              className={`relative  bg-2023-void-2 hover:bg-2023-void-2 btn  text-white rounded-1xl  hover:text-shadow hover:shadow-2023-bavarian-gold-3 `}
+              className="btn btn-ghost text-white" 
               onClick={() => {
                 if (!session.data) signIn('github');
                 else signOut();
@@ -40,6 +40,7 @@ function Header() {
             >
               {session.data ? 'Sign Out' : 'Sign In'}
             </button>
+
             <Link
               href="/contributors"
               className="btn btn-square btn-ghost umami--click--contributors-button"
