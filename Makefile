@@ -1,17 +1,23 @@
-build-development:
+build-dev:
 	docker-compose -f docker/docker-compose.dev.yml build --no-cache
 
-run-development:
+run-dev:
 	docker-compose -f docker/docker-compose.dev.yml up -d
 
-stop-development:
+stop-dev:
 	docker-compose -f docker/docker-compose.dev.yml down
 
-build-production:
+rm-dev:
+	docker-compose -f docker/docker-compose.dev.yml down -v
+
+build-prod:
 	docker-compose -f docker/docker-compose.prod.yml build --no-cache
 
-run-production:
+run-prod:
 	docker-compose -f docker/docker-compose.prod.yml up -d
 
-stop-production:
+stop-prod:
 	docker-compose -f docker/docker-compose.prod.yml down
+
+rm-prod:
+	docker-compose -f docker/docker-compose.prod.yml down -v
