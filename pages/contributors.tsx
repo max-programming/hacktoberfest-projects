@@ -34,7 +34,9 @@ export default function Contrubutors({ contributors }: Props) {
     <div>
       <Header />
       <div className="container mx-auto mb-5">
-        <h1 className="my-5 text-neutral-100 text-5xl font-bold text-center">Contributors ✨</h1>
+        <h1 className="my-5 text-neutral-100 text-5xl font-bold text-center">
+          Contributors ✨
+        </h1>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           {contributors.map(contributor => (
             <ContributorCard
@@ -44,7 +46,6 @@ export default function Contrubutors({ contributors }: Props) {
           ))}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
