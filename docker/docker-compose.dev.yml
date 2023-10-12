@@ -2,7 +2,6 @@ version: '3.8'
 
 services:
   app:
-    restart: on-failure
     container_name: hacktoberfest_projects_dev
     build:
       context: ../
