@@ -45,6 +45,10 @@ Start the server
 pnpm dev
 ```
 
+### Using Docker
+
+This project provides a development and production Dockerfiles for your needs and a docker-compose to deploy locally the project with the required configuration. The development Dockerfile creates a volume pointing to /node_modules so you can match the files between your machine and the container, while the production Dockerfile will simply compile the code. There's a Makefile to build, run, stop the containers and remove their volumes if needed, or you can execute the commands directly from the project's root.
+
 ## Tech Stack
 
 - [Next.js](https://nextjs.org/)
