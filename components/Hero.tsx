@@ -58,7 +58,7 @@ function Hero() {
           </p>
 
           {mainLanguages.map(language => (
-            <LanguageButton key={language} language={language} />
+            <LanguageButton key={language.name} language={language} />
           ))}
 
           <div className="dropdown dropdown-top">

@@ -21,6 +21,7 @@ const Home: NextPage = () => {
         <link rel="icon" sizes="32x32" href="/favicon-32x32.ico" />
         <link rel="icon" sizes="16x16" href="/favicon-16x16.ico" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css"></link>
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#1A202C"></meta>
       </Head>

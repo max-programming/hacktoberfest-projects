@@ -38,18 +38,18 @@
   ],
 
   "main": [
-    "JavaScript",
-    "Python",
-    "C",
-    "C++",
-    "Rust",
-    "HTML",
-    "TypeScript",
-    "PHP",
-    "Dart",
-    "Java",
-    "Elixir",
-    "Ruby"
+    {"name":"JavaScript","icon":"devicon-javascript-plain colored"},
+    {"name":"Python","icon":"devicon-python-plain colored"},
+    {"name":"C","icon":"devicon-c-plain colored"},
+    {"name":"C++","icon":"devicon-cplusplus-plain colored"},
+    {"name":"Rust","icon":"devicon-rust-plain"},
+    {"name":"HTML","icon":"devicon-html5-plain colored"},
+    {"name":"Typescript","icon":"devicon-typescript-plain colored"},
+    {"name":"PHP","icon":"devicon-php-plain colored"},
+    {"name":"Dart","icon":"devicon-dart-plain colored"},
+    {"name":"Java","icon":"devicon-java-plain colored"},
+    {"name":"Elixir","icon":"devicon-elixir-plain colored"},
+    {"name":"Ruby","icon":"devicon-ruby-plain colored"}
   ],
   "others": [
     "Objective-C",
