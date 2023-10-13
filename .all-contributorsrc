@@ -433,6 +433,16 @@
         "code",
         "design"
       ]
+    },
+    {
+      "login": "jolbol1",
+      "name": "James Shopland",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5064896?v=4",
+      "profile": "http://jamesshopland.com",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
