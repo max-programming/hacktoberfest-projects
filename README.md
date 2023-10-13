@@ -6,7 +6,7 @@ A Web app that lets you find eligible repositories for Hacktoberfest!
 Use it here - https://finder.usmans.me
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-43-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-44-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -131,6 +131,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://nabarun.xyz"><img src="https://avatars.githubusercontent.com/u/64539836?v=4?s=100" width="100px;" alt="Nabarun"/><br /><sub><b>Nabarun</b></sub></a><br /><a href="#ideas-nabarvn" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-nabarvn" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=nabarvn" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Dhruvn-patel"><img src="https://avatars.githubusercontent.com/u/87563885?v=4?s=100" width="100px;" alt="Dhruv Patel"/><br /><sub><b>Dhruv Patel</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Dhruvn-patel" title="Code">💻</a> <a href="#design-Dhruvn-patel" title="Design">🎨</a></td>
     </tr>
   </tbody>
 </table>
