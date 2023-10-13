@@ -32,7 +32,8 @@ function Header() {
 
           <div className="flex gap-2 lg:ml-40">
             <button
-              className="btn btn-ghost capitalize"
+             
+              className="btn btn-ghost text-white border-1 border-white" 
               onClick={() => {
                 if (!session.data) signIn('github');
                 else signOut();
