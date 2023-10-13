@@ -392,6 +392,57 @@
         "code",
         "design"
       ]
+    },
+    {
+      "login": "inderharrysingh",
+      "name": "Inderjot Singh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112561014?v=4",
+      "profile": "https://github.com/inderharrysingh",
+      "contributions": [
+        "design",
+        "code"
+      ]
+    },
+    {
+      "login": "Keith-Web3",
+      "name": "Olorunnishola Olamilekan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96974022?v=4",
+      "profile": "https://github.com/Keith-Web3",
+      "contributions": [
+        "ideas",
+        "code"
+      ]
+    },
+    {
+      "login": "nabarvn",
+      "name": "Nabarun",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64539836?v=4",
+      "profile": "https://nabarun.xyz",
+      "contributions": [
+        "ideas",
+        "design",
+        "code"
+      ]
+    },
+    {
+      "login": "Dhruvn-patel",
+      "name": "Dhruv Patel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87563885?v=4",
+      "profile": "https://github.com/Dhruvn-patel",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "jolbol1",
+      "name": "James Shopland",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5064896?v=4",
+      "profile": "http://jamesshopland.com",
+      "contributions": [
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
