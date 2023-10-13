@@ -107,11 +107,18 @@ export default function Sort() {
         </Button>
         <div className="h-64 p-2 z-50 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
           <ul tabIndex={0} className="menu menu-vertical">
-            {navigationItems.map((item, index) => (
-              <li key={index}>
-                <Link href={{ query: item.href.query }}>{item.name}</Link>
-              </li>
-            ))}
+            {navigationItems.map((item, index) => {
+              const query = item.href.query;
+              if (item.name === SortTypes.BestMatch) {
+                delete query.o;
+                delete query.s;
+              }
+              return (
+                <li key={index}>
+                  <Link href={{ query }}>{item.name}</Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
