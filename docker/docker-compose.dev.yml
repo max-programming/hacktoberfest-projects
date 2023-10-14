@@ -6,8 +6,12 @@ services:
     build:
       context: ../
       dockerfile: docker/Dockerfile.dev
+      target: dev
+    environment:
+      - NODE_ENV=development
     ports:
       - 3000:3000
     volumes:
       - ../:/app
       - /app/node_modules
+      - /app/.next

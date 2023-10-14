@@ -1,11 +1,21 @@
-FROM node:14-alpine
+FROM node:18-slim AS base
+
+RUN npm i -g pnpm
+
+FROM base AS dependencies
+
+COPY package*.json pnpm-lock.yaml ./
+
+RUN pnpm install
+
+FROM base AS builder
 
 WORKDIR /app
 
-COPY package*.json yarn.lock* ./
+COPY . .
 
-RUN yarn
+COPY --from=dependencies /node_modules ./node_modules
 
-COPY ./ ./
+FROM builder AS dev
 
-CMD ["yarn", "dev"]
+CMD ["pnpm", "dev"]
