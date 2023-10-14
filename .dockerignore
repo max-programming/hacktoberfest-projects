@@ -1,4 +1,7 @@
 /node_modules
+/.pnp
+.pnp.js
+
 /docker
 
 npm-debug.log*
@@ -9,3 +12,4 @@ yarn-error.log*
 .gitignore
 .github
 .next
+.prettierrc
