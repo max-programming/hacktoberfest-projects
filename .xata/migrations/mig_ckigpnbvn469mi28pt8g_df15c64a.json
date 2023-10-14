@@ -1,0 +1,17 @@
+{
+  "id": "mig_ckigpnbvn469mi28pt8g",
+  "parentID": "mig_ckifep3vn469mi28pko0",
+  "checksum": "1:df15c64ab4c40b33b780ee15268a161013b52174efd5b38c2e50cb6bb5744c1c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "repoId",
+          "type": "int",
+          "unique": true
+        },
+        "table": "reports"
+      }
+    }
+  ]
+}

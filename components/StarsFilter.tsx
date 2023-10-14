@@ -14,15 +14,17 @@ export default function StarsFilter() {
       startStars: !router.query.startStars
         ? ''
         : +(router.query.startStars as string),
-      endStars: !router.query.endStars
-        ? ''
-        : +(router.query.endStars as string)
+      endStars: !router.query.endStars ? '' : +(router.query.endStars as string)
     }
   });
 
   const onSubmit: SubmitHandler<FormValues> = ({ startStars, endStars }) => {
     let query;
-    if (typeof endStars === 'number' && typeof startStars === 'number' && endStars < startStars) {
+    if (
+      typeof endStars === 'number' &&
+      typeof startStars === 'number' &&
+      endStars < startStars
+    ) {
       reset({ startStars, endStars: '' });
       query = { startStars };
       const { endStars, ...rest } = router.query;
@@ -42,7 +44,7 @@ export default function StarsFilter() {
 
   return (
     <form
-      className="w-full m-2 mx-auto mb-4 lg:w-2/4 form-control"
+      className="w-full m-2 mx-auto mb-4 lg:w-2/4 form-control px-2"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="flex gap-2 flex-col sm:flex-row">
@@ -51,7 +53,7 @@ export default function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 text-neutral-100 m-auto sm:w-full pr-4 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent"
+              className="w-3/5 text-neutral-100 m-auto sm:w-full pr-4 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent text-center md:text-left"
               {...field}
               onChange={e => {
                 field.onChange(parseInt(e.target.value, 10));
@@ -67,7 +69,7 @@ export default function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 text-neutral-100 m-auto sm:w-full pr-4 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent"
+              className="w-3/5 text-neutral-100 m-auto sm:w-full pr-4 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 bg-transparent text-center md:text-left"
               {...field}
               onChange={e => {
                 field.onChange(parseInt(e.target.value, 10));
@@ -79,12 +81,15 @@ export default function StarsFilter() {
           control={control}
         />
 
-        <button
-          className="btn btn-ghost ml-2 text-2023-manga-2 ring-1 ring-2023-manga-2"
-          type="submit"
-        >
-          Search
-        </button>
+        {/* Flex container to center the button */}
+        <div className="flex justify-center items-center">
+          <button
+            className="btn btn-ghost text-2023-manga-2 ring-1 ring-2023-manga-2 mx-auto w-3/5 md:w-full"
+            type="submit"
+          >
+            Search
+          </button>
+        </div>
       </div>
     </form>
   );

@@ -1,0 +1,12 @@
+{
+  "id": "mig_ckihejc6f7ng5inpnc0g",
+  "parentID": "mig_ckihebkujsmuf8reoo90",
+  "checksum": "1:89f032792639265df34734d37d011a368819d71d96374f593862e4c795689371",
+  "operations": [
+    {
+      "removeTable": {
+        "table": "invalid_repos"
+      }
+    }
+  ]
+}

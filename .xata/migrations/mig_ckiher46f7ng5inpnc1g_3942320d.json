@@ -1,0 +1,18 @@
+{
+  "id": "mig_ckiher46f7ng5inpnc1g",
+  "parentID": "mig_ckihejc6f7ng5inpnc0g",
+  "checksum": "1:3942320d04fa23e14e14aa2993f449ce87d98ab4d248adf42e2f76388b6aa672",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "valid",
+          "type": "bool",
+          "notNull": true,
+          "defaultValue": "true"
+        },
+        "table": "reports"
+      }
+    }
+  ]
+}
