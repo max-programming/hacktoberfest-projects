@@ -6,6 +6,7 @@ services:
     build:
       context: ../
       dockerfile: docker/Dockerfile.prod
+      target: prod
     restart: on-failure
     ports:
       - 3000:3000
