@@ -443,6 +443,16 @@
         "code",
         "bug"
       ]
+    },
+    {
+      "login": "Alone-Y154",
+      "name": "Yashwanth Krishna",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72192888?v=4",
+      "profile": "https://alone-y154.github.io/Portfolio-Website/",
+      "contributions": [
+        "design",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
