@@ -17,6 +17,7 @@ function Hero() {
   const handleClear: MouseEventHandler<HTMLButtonElement> = () => {
     if (formRef.current && !isSearchEmpty) {
       formRef.current.reset();
+      setIsSearchEmpty(true);
       setErrorMessage(null);
     }
   };
@@ -47,7 +48,7 @@ function Hero() {
             onSubmit={handleSubmit}
           >
             <div className="flex w-full">
-              <div className="flex relative">
+              <div className="flex relative w-full ">
                 <input
                   type="text"
                   placeholder="Search for your language"
