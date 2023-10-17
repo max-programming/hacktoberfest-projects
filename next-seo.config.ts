@@ -1,6 +1,6 @@
-const today: Date = new Date();
-const currentMonth: number = today.getMonth();
-const currentYear: number = today.getFullYear();
+const today = new Date();
+const currentMonth = today.getMonth();
+const currentYear = today.getFullYear();
 
 const config = {
   title: 'Hacktoberfest Projects',
