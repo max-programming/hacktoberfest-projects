@@ -1,6 +1,10 @@
+const today = new Date();
+const currentMonth = today.getMonth();
+const currentYear = today.getFullYear();
+
 const config = {
   title: 'Hacktoberfest Projects',
-  description: `Quickly and easily find projects to contribute to this Hacktoberfest 2021!`,
+  description: `Quickly and easily find projects to contribute to ${currentMonth > 9 ? `upcoming Hacktoberfest ${currentYear + 1}` : `this Hacktoberfest ${currentYear}`}!`,
   additionalMetaTags: [
     {
       property: 'keywords',
@@ -24,7 +28,7 @@ const config = {
     locale: 'en_US',
     url: 'https://hacktoberfest-projects.vercel.app',
     title: 'Hacktoberfest projects',
-    description: `Quickly and easily find projects to contribute to this Hacktoberfest 2022!`,
+    description: `Quickly and easily find projects to contribute to ${currentMonth > 9 ? `upcoming Hacktoberfest ${currentYear + 1}` : `this Hacktoberfest ${currentYear}`}!`,
     site_name: 'Hacktoberfest projects',
     images: [
       {
