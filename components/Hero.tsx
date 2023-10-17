@@ -11,11 +11,11 @@ const { main: mainLanguages, others: otherLanguages } = languages;
 
 function Hero() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [searchEmpty, setSearchEmpty] = useState<boolean>(false);
+  const [isSearchEmpty, setIsSearchEmpty] = useState(true);
   const formRef = useRef<HTMLFormElement | null>(null);
   const router = useRouter();
   const handleClear: MouseEventHandler<HTMLButtonElement> = () => {
-    if (formRef.current && !searchEmpty ) {
+    if (formRef.current && !isSearchEmpty ) {
 
       formRef.current.reset();
       setErrorMessage(null);
@@ -57,13 +57,13 @@ function Hero() {
                   name="search"
                   onChange={
                     (e) =>  {
-                      setSearchEmpty(e.target.value.trim() === '') ;
-                      console.log(searchEmpty);
+                      setIsSearchEmpty(e.target.value.trim() === '') ;
+                      console.log(e.target.value.trim(),e.target.value.trim() === '' );
                     }
                   }
                 />
 
-                {!searchEmpty && 
+                {!isSearchEmpty && 
                 <button onClick={handleClear} className='absolute right-0 top-0 bottom-0  p-2'>
                   <ClearIcon />
                 </button>}
