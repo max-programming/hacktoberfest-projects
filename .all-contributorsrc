@@ -453,6 +453,16 @@
         "design",
         "code"
       ]
+    },
+    {
+      "login": "massdx",
+      "name": "Massahoud",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63166764?v=4",
+      "profile": "https://github.com/massdx",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
