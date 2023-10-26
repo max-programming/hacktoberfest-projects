@@ -45,6 +45,28 @@ Start the server
 pnpm dev
 ```
 
+### Setup Xata
+
+You will need to sign up with Xata and set up a database for the build. After registering for an account, please proceed with the following steps.
+
+#### Installation
+
+```
+npm install -g @xata.io/cli@latest
+```
+#### Authentication
+```
+xata auth login
+```
+
+#### Migration
+
+Change DB settings in xata.ts and .xatarc (do not commit this) and run migration
+
+```
+xata push main
+```
+
 ## Tech Stack
 
 - [Next.js](https://nextjs.org/)
