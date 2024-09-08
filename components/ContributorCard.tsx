@@ -30,6 +30,7 @@ export default function ContributorCard({ contributor }: Props) {
     : contributor.avatar_url;
 
   useEffect(() => {
+    if (!hash) return;
     if (hash.toLowerCase() === contributor.login.toLowerCase()) {
       cardRef.current?.scrollIntoView({
         behavior: 'smooth',
@@ -41,18 +42,18 @@ export default function ContributorCard({ contributor }: Props) {
 
   return (
     <button
-      className="text-center shadow-2xl card min-w-full justify-center focus-within:outline-sky-300"
+      className="justify-center min-w-full text-center shadow-2xl card focus-within:outline-sky-300"
       id={contributor.login}
       onClick={() => router.replace({ hash: contributor.login })}
       ref={cardRef}
     >
-      <div className="w-full mx-auto pt-5">
-        <figure className="h-full w-full">
+      <div className="w-full pt-5 mx-auto">
+        <figure className="w-full h-full">
           <img src={url} alt={contributor.name} className="rounded-xl" />
         </figure>
       </div>
-      <div className="card-body gap-3 text-center w-full">
-        <h2 className="text-center text-2xl font-bold text-2023-bavarian-blue-1">
+      <div className="w-full gap-3 text-center card-body">
+        <h2 className="text-2xl font-bold text-center text-2023-bavarian-blue-1">
           {contributor.name}
         </h2>
         <a
@@ -61,9 +62,9 @@ export default function ContributorCard({ contributor }: Props) {
         >
           {contributor.profile}
         </a>
-        <div className="justify-center card-actions mt-auto">
+        <div className="justify-center mt-auto card-actions">
           <a
-            className="text-2023-bavarian-blue-1 btn border-2023-bavarian-blue-2 hover:border-2023-bavarian-blue-2 btn-outline border-2 hover:bg-2023-bavarian-blue-2 hover:text-2023-bavarian-blue-4"
+            className="border-2 text-2023-bavarian-blue-1 btn border-2023-bavarian-blue-2 hover:border-2023-bavarian-blue-2 btn-outline hover:bg-2023-bavarian-blue-2 hover:text-2023-bavarian-blue-4"
             href={`https://github.com/${contributor.login}`}
             target="_blank"
             rel="noreferrer"
