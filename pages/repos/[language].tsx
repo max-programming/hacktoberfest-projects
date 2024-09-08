@@ -34,10 +34,10 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
     startStars && endStars
       ? `stars:${startStars}..${endStars}`
       : startStars && !endStars
-      ? `stars:>${startStars}`
-      : !startStars && endStars
-      ? `stars:<${endStars}`
-      : '';
+        ? `stars:>${startStars}`
+        : !startStars && endStars
+          ? `stars:<${endStars}`
+          : '';
 
   const apiUrl = `https://api.github.com/search/repositories?q=topic%3Ahacktoberfest+language%3A${languageName}+${searchQuery}+${starsQuery}&page=${page}&per_page=21&sort=${sort}&order=${order}`;
 
@@ -126,7 +126,7 @@ const Language = ({ page, repos, languageName }: Props) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <button className="relative w-12 aspect-square flex justify-center items-center rounded-full bg-2023-bavarian-blue-2 text-2xl hover:scale-95 transition-transform ">
+            <button className="relative flex items-center justify-center w-12 text-2xl transition-transform rounded-full aspect-square bg-2023-bavarian-blue-2 hover:scale-95 ">
               <FaAngleUp className="text-slate-100" />
             </button>
           </motion.div>
@@ -136,7 +136,7 @@ const Language = ({ page, repos, languageName }: Props) => {
         <div className="min-h-screen pt-5">
           <div className="text-center">
             <div className="w-5/6 max-w-md mx-auto">
-              <h1 className="mb-5 text-5xl text-neutral-100 font-bold uppercase">
+              <h1 className="mb-5 text-5xl font-bold uppercase text-neutral-100">
                 {repos.total_count} repositories for{' '}
                 <span className="font-mono text-2023-bavarian-gold-2">
                   {router.query.q
@@ -148,7 +148,7 @@ const Language = ({ page, repos, languageName }: Props) => {
           </div>
           <Sort />
           <StarsFilter />
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 p-4 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 p-4 md:grid-cols-2 lg:grid-cols-3">
             {repos.items.map(repo => (
               <Card key={repo.id} repo={repo} />
             ))}

@@ -76,6 +76,7 @@
     "Pascal",
     "CoffeeScript",
     "Crystal",
-    "Clojure"
+    "Clojure",
+    "Solidity"
   ]
 }
