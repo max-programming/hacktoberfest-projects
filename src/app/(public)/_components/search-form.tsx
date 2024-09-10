@@ -13,15 +13,15 @@ export function SearchForm() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  if (!pathname.startsWith('/repos')) {
-    return null;
-  }
-
   const { register, handleSubmit, reset } = useForm<FormValues>({
     defaultValues: {
       searchQuery: searchParams.get('q') as string
     }
   });
+
+  if (!pathname.startsWith('/repos')) {
+    return null;
+  }
 
   function onSubmit({ searchQuery }: FormValues) {
     const trimmedQuery = searchQuery.trim();

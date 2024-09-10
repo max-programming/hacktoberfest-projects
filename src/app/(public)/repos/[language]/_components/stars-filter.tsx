@@ -30,6 +30,7 @@ export function StarsFilter() {
     }
   });
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => reset(), [params.language]);
 
   function onSubmit({ startStars, endStars }: FormValues) {

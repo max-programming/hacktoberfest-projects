@@ -35,6 +35,7 @@ export function ContributorCard({ contributor }: ContributorCardProps) {
       block: 'center'
     });
     cardRef.current.focus();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
