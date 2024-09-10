@@ -52,7 +52,7 @@ You will need to sign up with Xata and set up a database for the build. After re
 #### Installation
 
 ```
-npm install -g @xata.io/cli@latest
+npm install -g "@xata.io/cli@latest"
 ```
 #### Authentication
 ```

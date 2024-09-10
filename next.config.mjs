@@ -1,6 +1,6 @@
-await import('./env.mjs');
+import './src/env.mjs';
 
-/** @type {import('next').NextConfig} */
+/**@type {import('next').NextConfig}*/
 const config = {
   reactStrictMode: true,
   async redirects() {
