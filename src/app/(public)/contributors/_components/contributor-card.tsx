@@ -51,7 +51,7 @@ export function ContributorCard({ contributor }: ContributorCardProps) {
         </figure>
       </div>
       <div className="w-full gap-3 text-center card-body">
-        <h2 className="text-2xl font-bold text-center text-2023-bavarian-blue-1">
+        <h2 className="text-2xl font-medium text-center text-2023-bavarian-blue-1">
           {contributor.name}
         </h2>
         <a

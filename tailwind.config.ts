@@ -9,7 +9,7 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-poppins)', 'ui-sans-serif', 'system-ui']
+        sans: ['var(--font-space-grotesk)', 'ui-sans-serif', 'system-ui']
       },
       backgroundImage: {
         'gradient-radial':

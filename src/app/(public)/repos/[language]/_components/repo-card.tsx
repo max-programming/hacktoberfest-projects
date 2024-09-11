@@ -76,7 +76,7 @@ export function RepoCard({ repo }: RepoCardProps) {
           >
             <GoStar className="text-2xl text-yellow-200" />
             <div className="flex flex-col">
-              <div className="text-lg xl:text-2xl font-semibold mb-0.5">
+              <div className="text-lg xl:text-2xl font-medium mb-0.5">
                 {repo.stargazers_count}
               </div>
               <div className="text-xs text-neutral-300 lg:text-sm">Stars</div>
@@ -95,7 +95,7 @@ export function RepoCard({ repo }: RepoCardProps) {
           >
             <GoRepoForked className="text-2xl text-yellow-200" />
             <div className="flex flex-col">
-              <div className="text-lg xl:text-2xl font-semibold mb-0.5">
+              <div className="text-lg xl:text-2xl font-medium mb-0.5">
                 {repo.forks}
               </div>
               <div className="text-xs text-neutral-300 lg:text-sm">Forks</div>
@@ -114,7 +114,7 @@ export function RepoCard({ repo }: RepoCardProps) {
           >
             <GoIssueOpened className="text-2xl text-yellow-200" />
             <div className="flex flex-col">
-              <div className="text-lg xl:text-2xl font-semibold mb-0.5">
+              <div className="text-lg xl:text-2xl font-medium mb-0.5">
                 {repo.open_issues_count}
               </div>
               <div className="text-xs text-neutral-300 lg:text-sm">Issues</div>

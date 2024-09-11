@@ -1,22 +1,22 @@
 import '@/styles/globals.css';
 import type { Metadata, Viewport } from 'next';
-import { Poppins } from 'next/font/google';
+import { Space_Grotesk } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import { SessionProvider } from 'next-auth/react';
 import { Footer } from '@/components/footer';
 import { ReportModal } from '@/components/report-modal';
 
-const poppins = Poppins({
+const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: '500',
+  weight: ['400', '500'],
   display: 'swap',
-  variable: '--font-poppins'
+  variable: '--font-space-grotesk'
 });
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <html className={poppins.variable}>
-      <body className="font-sans">
+    <html className={spaceGrotesk.variable}>
+      <body className="font-sans font-normal">
         {children}
         <Footer />
         <SessionProvider>

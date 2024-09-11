@@ -59,7 +59,7 @@ export function ReportModal() {
   return (
     <dialog id="modal" className="modal modal-bottom sm:modal-middle">
       <div className="w-full max-w-2xl modal-box md:w-11/12">
-        <h3 className="block mb-2 text-2xl font-bold text-center text-2023-manga-2">
+        <h3 className="block mb-2 text-2xl font-medium text-center text-2023-manga-2">
           Report This Repository
         </h3>
         {session.data ? (

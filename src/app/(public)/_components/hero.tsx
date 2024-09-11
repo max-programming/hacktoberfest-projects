@@ -27,7 +27,7 @@ export function Hero() {
       <div className="w-0 hero-overlay bg-opacity-60"></div>
       <div className="text-center hero-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-bold uppercase text-2023-manga-3">
+          <h1 className="mb-5 text-5xl font-medium uppercase text-2023-manga-3">
             Search your language
           </h1>
           <form
@@ -51,7 +51,7 @@ export function Hero() {
               </button>
             </div>
           </form>
-          <p className="mb-5 font-semibold uppercase text-2023-manga-3">
+          <p className="mb-5 font-medium uppercase text-2023-manga-3">
             Or select the programming language you would like to find
             repositories for.
           </p>
