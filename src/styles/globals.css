@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background: #b4ff39;
+  color: #170f1e;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn-clip {
+  clip-path: polygon(
+    12px 0px,
+    100% 0px,
+    100% 72%,
+    calc(100% - 12px) 100%,
+    0px 100%,
+    0px 12px
+  );
+  border-radius: 2px;
+}
+
+.container-query {
+  container-type: inline-size;
+}
+
+@container (max-width: 383px) {
+  .issues-btn {
+    margin-inline: auto;
+  }
+}
+@container (max-width: 251px) {
+  .issues-btn {
+    margin-inline: 0;
+  }
+}
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .underline-expand {
+    @apply relative inline-block;
+  }
+
+  .underline-expand::after {
+    content: '';
+    @apply absolute w-0 h-0.5 bottom-0 left-1/2 bg-current transition-all duration-300 ease-in-out;
+  }
+
+  .underline-expand:hover::after {
+    @apply w-full left-0;
+  }
+}
