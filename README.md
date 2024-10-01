@@ -21,51 +21,7 @@ We welcome contributions from everyone! If you're interested in helping improve 
 
 ### Run Locally
 
-Clone the project
-
-```bash
-git clone https://github.com/max-programming/hacktoberfest-projects.git
-```
-
-Go to the project directory
-
-```bash
-cd hacktoberfest-projects
-```
-
-Install dependencies (if you want to use `npm` you can use but its recommended to use `pnpm`)
-
-```bash
-pnpm i
-```
-
-Start the server
-
-```bash
-pnpm dev
-```
-
-### Setup Xata
-
-You will need to sign up with Xata and set up a database for the build. After registering for an account, please proceed with the following steps.
-
-#### Installation
-
-```
-npm install -g "@xata.io/cli@latest"
-```
-#### Authentication
-```
-xata auth login
-```
-
-#### Migration
-
-Change DB settings in xata.ts and .xatarc (do not commit this) and run migration
-
-```
-xata push main
-```
+Follow the steps in the [CONTRIBUTING.md](CONTRIBUTING.md) file to set up the project locally.
 
 ## Tech Stack
 
