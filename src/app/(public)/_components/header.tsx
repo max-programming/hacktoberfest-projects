@@ -11,14 +11,14 @@ export async function Header() {
   const session = await auth();
 
   return (
-    <header className="border-b-[0.5px] border-dashed border-b-2023-manga-3 mb-5">
+    <header className="border-b-[0.5px] border-dashed border-b-hacktoberfest-light-green mb-5">
       <div className="container px-4 py-2 mx-auto">
         <div className="justify-between shadow-lg navbar">
           <Link href="/">
             <img
-              src="/hacktoberfest.svg"
+              src="/horizontal_beige.png"
               alt="Hacktoberfest"
-              className="w-auto h-12 sm:h-auto"
+              className="w-56"
             />
           </Link>
 

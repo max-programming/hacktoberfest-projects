@@ -11,30 +11,6 @@
   color: #170f1e;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-html,
-body {
-  background-color: #0f0913;
-  padding: 0;
-  margin: 0;
-  font-family:
-    Poppins,
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -69,5 +45,20 @@ a {
 @layer base {
   :root {
     --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .underline-expand {
+    @apply relative inline-block;
+  }
+
+  .underline-expand::after {
+    content: '';
+    @apply absolute w-0 h-0.5 bottom-0 left-1/2 bg-current transition-all duration-300 ease-in-out;
+  }
+
+  .underline-expand:hover::after {
+    @apply w-full left-0;
   }
 }

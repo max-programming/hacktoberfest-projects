@@ -41,7 +41,7 @@ export function SearchForm() {
         <div className="relative">
           <input
             placeholder="Search"
-            className="w-full pr-16 bg-transparent text-neutral-100 input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2"
+            className="w-full pr-16 bg-transparent text-hacktoberfest-light input input-bordered border-hacktoberfest-light focus:outline-hacktoberfest-light-pink placeholder:text-hacktoberfest-light-green"
             type="text"
             {...register('searchQuery', { required: true })}
           />

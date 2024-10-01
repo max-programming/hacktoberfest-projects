@@ -61,11 +61,9 @@ export function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 pr-4 m-auto text-center bg-transparent text-neutral-100 sm:w-full input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 md:text-left"
+              className="w-3/5 pr-4 m-auto text-center bg-transparent sm:w-full input input-bordered md:text-left text-hacktoberfest-light placeholder:text-hacktoberfest-light-green border-hacktoberfest-light focus:outline-hacktoberfest-light-pink"
               {...field}
-              onChange={e => {
-                field.onChange(parseInt(e.target.value, 10));
-              }}
+              onChange={e => field.onChange(e.target.valueAsNumber)}
               placeholder="Star's Starting Range"
               min="0"
             />
@@ -77,11 +75,9 @@ export function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 pr-4 m-auto text-center bg-transparent text-neutral-100 sm:w-full input input-bordered border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2 md:text-left"
+              className="w-3/5 pr-4 m-auto text-center bg-transparent sm:w-full input input-bordered md:text-left text-hacktoberfest-light placeholder:text-hacktoberfest-light-green border-hacktoberfest-light focus:outline-hacktoberfest-light-pink"
               {...field}
-              onChange={e => {
-                field.onChange(parseInt(e.target.value, 10));
-              }}
+              onChange={e => field.onChange(e.target.valueAsNumber)}
               placeholder="Star's Finish Range"
               min="0"
             />
@@ -92,7 +88,7 @@ export function StarsFilter() {
         {/* Flex container to center the button */}
         <div className="flex items-center justify-center">
           <button
-            className="w-3/5 mx-auto btn btn-ghost text-2023-manga-2 ring-1 ring-2023-manga-2 md:w-full"
+            className="w-3/5 mx-auto btn btn-ghost text-hacktoberfest-light ring-1 ring-hacktoberfest-light md:w-full"
             type="submit"
           >
             Search

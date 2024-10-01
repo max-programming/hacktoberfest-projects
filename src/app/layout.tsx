@@ -16,7 +16,7 @@ const spaceGrotesk = Space_Grotesk({
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html className={spaceGrotesk.variable}>
-      <body className="font-sans font-normal">
+      <body className="font-sans font-normal bg-hacktoberfest-dark-green">
         {children}
         <Footer />
         <SessionProvider>

@@ -23,35 +23,35 @@ export function Hero() {
   }
 
   return (
-    <div className="min-h-screen pt-10 hero bg-gradient-radial from-2023-bavarian-gold-4 to-2023-void-2 bg-blend-overlay">
+    <div className="min-h-screen pt-10 hero bg-gradient-radial from-hacktoberfest-green to-hacktoberfest-dark-green bg-blend-overlay">
       <div className="w-0 hero-overlay bg-opacity-60"></div>
       <div className="text-center hero-content">
         <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-medium uppercase text-2023-manga-3">
+          <h1 className="mb-5 text-5xl font-medium uppercase text-hacktoberfest-light-pink">
             Search your language
           </h1>
           <form
-            className="items-center w-full max-w-xs mx-auto mt-10 mb-12 form-control"
+            className="items-center w-full max-w-xs mx-auto my-5 form-control"
             onSubmit={handleSearch}
           >
             <div className="flex w-full">
-              <div className="relative flex w-full ">
+              <div className="relative flex w-full">
                 <input
                   type="text"
                   placeholder="Search for your language"
-                  className="w-full max-w-xs bg-transparent rounded-tr-none rounded-br-none input input-bordered text-neutral-100 border-2023-bavarian-gold-2 focus:outline-2023-bavarian-gold-2"
+                  className="w-full max-w-xs bg-transparent rounded-tr-none rounded-br-none input input-bordered text-hacktoberfest-light border-hacktoberfest-light focus:outline-hacktoberfest-light-pink placeholder:text-hacktoberfest-light-green"
                   name="search"
                 />
               </div>
               <button
                 type="submit"
-                className="bg-transparent rounded-tl-none rounded-bl-none group btn btn-square border-2023-bavarian-gold-2 hover:bg-2023-manga-2 hover:text-2023-void-2 hover:border-2023-manga-2"
+                className="bg-transparent rounded-tl-none rounded-bl-none group btn btn-square text-hacktoberfest-light-green border-hacktoberfest-light hover:bg-hacktoberfest-light-pink hover:text-hacktoberfest-deep-pink hover:border-hacktoberfest-light-pink"
               >
                 <Search />
               </button>
             </div>
           </form>
-          <p className="mb-5 font-medium uppercase text-2023-manga-3">
+          <p className="mb-5 font-medium uppercase text-hacktoberfest-light">
             Or select the programming language you would like to find
             repositories for.
           </p>

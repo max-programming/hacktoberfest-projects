@@ -40,7 +40,7 @@ export function ContributorCard({ contributor }: ContributorCardProps) {
 
   return (
     <button
-      className="justify-center min-w-full text-center shadow-2xl card focus-within:outline-sky-300"
+      className="justify-center min-w-full text-center shadow-2xl card focus-within:outline-hacktoberfest-green bg-hacktoberfest-black"
       id={contributor.login}
       onClick={() => router.replace(`/contributors#${contributor.login}`)}
       ref={cardRef}
@@ -50,19 +50,19 @@ export function ContributorCard({ contributor }: ContributorCardProps) {
           <img src={url} alt={contributor.name} className="rounded-xl" />
         </figure>
       </div>
-      <div className="w-full gap-3 text-center card-body">
-        <h2 className="text-2xl font-medium text-center text-2023-bavarian-blue-1">
+      <div className="w-full gap-3 items-center card-body">
+        <h2 className="text-2xl font-medium text-hacktoberfest-green">
           {contributor.name}
         </h2>
         <a
           href={contributor.profile}
-          className="link text-2023-bavarian-blue-1 hover:text-2023-bavarian-blue-2"
+          className="link text-hacktoberfest-green hover:text-hacktoberfest-pink w-fit underline-expand"
         >
           {contributor.profile}
         </a>
         <div className="justify-center mt-auto card-actions">
           <a
-            className="border-2 text-2023-bavarian-blue-1 btn border-2023-bavarian-blue-2 hover:border-2023-bavarian-blue-2 btn-outline hover:bg-2023-bavarian-blue-2 hover:text-2023-bavarian-blue-4"
+            className="border-2 text-hacktoberfest-light btn border-hacktoberfest-pink hover:border-hacktoberfest-pink btn-outline hover:bg-hacktoberfest-pink hover:text-hacktoberfest-black"
             href={`https://github.com/${contributor.login}`}
             target="_blank"
             rel="noreferrer"

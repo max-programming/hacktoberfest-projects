@@ -32,9 +32,9 @@ export default async function ReposPage({
         <div className="min-h-screen pt-5">
           <div className="text-center">
             <div className="w-5/6 max-w-md mx-auto">
-              <h1 className="mb-5 text-5xl font-medium uppercase text-neutral-100">
+              <h1 className="mb-5 text-5xl font-medium uppercase text-hacktoberfest-light-green">
                 {repos.total_count} repositories for{' '}
-                <span className="font-mono text-2023-bavarian-gold-2">
+                <span className="font-mono font-bold text-hacktoberfest-pink">
                   {searchParams.q
                     ? searchParams.q +
                       ' in ' +

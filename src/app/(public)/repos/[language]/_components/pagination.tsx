@@ -18,7 +18,7 @@ export function Pagination({
     <div className="flex flex-col items-center gap-4 my-6 justify-evenly sm:gap-0 sm:flex-row">
       {page > 1 && (
         <Link href={{ query: { ...searchParams, p: page - 1 } }}>
-          <Button className="btn-wide">
+          <Button className="btn-wide hover:bg-hacktoberfest-green hover:text-hacktoberfest-dark-green">
             <ArrowLeft />
             <span className="ml-2">Previous Page</span>
           </Button>
@@ -27,7 +27,7 @@ export function Pagination({
       {totalCount >= MAX_PER_PAGE &&
         page < Math.ceil(totalCount / MAX_PER_PAGE) && (
           <Link href={{ query: { ...searchParams, p: page + 1 } }}>
-            <Button className="btn-wide">
+            <Button className="btn-wide hover:bg-hacktoberfest-green hover:text-hacktoberfest-dark-green">
               <span className="mr-2">Next Page</span>
               <ArrowRight />
             </Button>

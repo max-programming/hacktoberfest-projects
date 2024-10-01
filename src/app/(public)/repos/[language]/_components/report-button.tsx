@@ -14,7 +14,7 @@ export function ReportButton({ repo }: ReportButtonProps) {
 
   return (
     <button
-      className="inline-flex items-center p-2 text-center transition duration-200 ease-linear rounded-lg hover:bg-2023-bavarian-red-2 stat-title"
+      className="inline-flex items-center p-2 text-center transition duration-200 ease-linear rounded-lg hover:bg-hacktoberfest-light-pink hover:*:text-hacktoberfest-deep-pink stat-title"
       onClick={() => {
         const modal = document.getElementById('modal') as HTMLDialogElement;
         console.log(modal);
@@ -25,7 +25,7 @@ export function ReportButton({ repo }: ReportButtonProps) {
         }
       }}
     >
-      <GoAlertFill className="text-lg border-none outline-none text-2023-manga-2" />
+      <GoAlertFill className="text-lg border-none outline-none text-hacktoberfest-light" />
     </button>
   );
 }

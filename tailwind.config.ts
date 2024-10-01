@@ -26,33 +26,16 @@ const config = {
         lg: '0 8px 16px var(--tw-shadow-color)'
       },
       colors: {
-        '2023': {
-          'bavarian-red': {
-            '1': '#f8bd89',
-            '2': '#ec4237',
-            '3': '#a3180f',
-            '4': '#460a07'
-          },
-          'bavarian-blue': {
-            '1': '#b2e3f0',
-            '2': '#33b6d8',
-            '3': '#14596b',
-            '4': '#0c3640'
-          },
-          'bavarian-gold': {
-            '1': '#fffba4',
-            '2': '#d2b863',
-            '3': '#ad832d',
-            '4': '#382e10'
-          },
-          manga: {
-            '2': '#efedef',
-            '3': '#c3bcc3',
-            '4': '#655f67'
-          },
-          void: {
-            '2': '#0f0913'
-          }
+        hacktoberfest: {
+          black: '#1C1C1C',
+          green: '#50DA4C',
+          pink: '#FF8BFF',
+          light: '#FEFDF8',
+          beige: '#F3F0E0',
+          'dark-green': '#183717',
+          'light-green': '#D8FFD8',
+          'deep-pink': '#C401C4',
+          'light-pink': '#FFDBFF'
         }
       },
       borderRadius: {
