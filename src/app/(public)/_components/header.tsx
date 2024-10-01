@@ -13,7 +13,7 @@ export async function Header() {
   return (
     <header className="border-b-[0.5px] border-dashed border-b-hacktoberfest-light-green mb-5">
       <div className="container px-4 py-2 mx-auto">
-        <div className="justify-between shadow-lg navbar">
+        <div className="justify-between shadow-lg navbar gap-2">
           <Link href="/">
             <img
               src="/horizontal_beige.png"
