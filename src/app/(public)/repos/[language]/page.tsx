@@ -11,6 +11,7 @@ import { Pagination } from './_components/pagination';
 import { Suspense } from 'react';
 import type { RepoData, RepoItem, RepoResponse } from '@/types';
 import type { Metadata } from 'next';
+import { auth } from '@/auth';
 
 interface ReposPageProps {
   params: { language: string };
@@ -72,6 +73,8 @@ async function getRepos(
   language: string,
   searchParams: ReposPageProps['searchParams']
 ): Promise<RepoResponse> {
+  const client = getXataClient();
+  const session = await auth();
   const {
     p: page = '1',
     s: sort = '',
@@ -103,9 +106,22 @@ async function getRepos(
   const headers: HeadersInit = {
     Accept: 'application/vnd.github.mercy-preview+json'
   };
+  const userId = session?.user?.id;
 
-  if (env.AUTH_GITHUB_TOKEN)
+  if (userId) {
+    const account = await client.db.nextauth_accounts
+      .select(['access_token'])
+      .filter({ 'user.id': userId })
+      .getFirst();
+
+    if (account && account.access_token) {
+      headers.Authorization = `Bearer ${account.access_token}`;
+    } else if (env.AUTH_GITHUB_TOKEN) {
+      headers.Authorization = `Bearer ${env.AUTH_GITHUB_TOKEN}`;
+    }
+  } else if (env.AUTH_GITHUB_TOKEN) {
     headers.Authorization = `Bearer ${env.AUTH_GITHUB_TOKEN}`;
+  }
 
   const res = await fetch(apiUrl, { headers });
   if (!res.ok) notFound();
