@@ -12,7 +12,7 @@ export const env = createEnv({
   },
   client: {
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: z.string().optional(),
-    NEXT_PUBLIC_ANALYTICS_WEBSITE_ID: z.string().uuid().optional()
+    NEXT_PUBLIC_ANALYTICS_WEBSITE_ID: z.string().uuid().optional().nullable(),
   },
   experimental__runtimeEnv: {
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME:

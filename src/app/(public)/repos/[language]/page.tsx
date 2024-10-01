@@ -127,11 +127,11 @@ async function getRepos(
   if (!res.ok) notFound();
 
   const repos = (await res.json()) as RepoData;
-  const reports = await getReportedRepos();
+  // const reports = await getReportedRepos();
 
-  repos.items = repos.items.filter((repo: RepoItem) => {
-    return !repo.archived && !reports.find(report => report.repoId === repo.id);
-  });
+  // repos.items = repos.items.filter((repo: RepoItem) => {
+    // return !repo.archived && !reports.find(report => report.repoId === repo.id);
+  // });
 
   if (!repos.items || repos.items.length < 1) notFound();
 
@@ -142,12 +142,12 @@ async function getRepos(
   };
 }
 
-async function getReportedRepos() {
-  const client = getXataClient();
-  const reports = await client.db.reports
-    .select(['repoId'])
-    .filter({ valid: false })
-    .getMany();
+// async function getReportedRepos() {
+//   const client = getXataClient();
+//   const reports = await client.db.reports
+//     .select(['repoId'])
+//     .filter({ valid: false })
+//     .getMany();
 
-  return reports;
-}
+//   return reports;
+// }
