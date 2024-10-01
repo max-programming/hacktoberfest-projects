@@ -31,7 +31,7 @@ export function RepoCard({ repo }: RepoCardProps) {
   const hasMoreTopics = sortedTopics.length > MAX_TOPICS_DISPLAY;
 
   return (
-    <section className="transition duration-300 shadow-sm card bg-hacktoberfest-black ring-1 ring-hacktoberfest-light-pink hover:scale-105 hover:shadow-2xl hover:shadow-hacktoberfest-deep-pink h-96">
+    <section className="transition duration-300 shadow-sm card bg-hacktoberfest-black ring-1 ring-hacktoberfest-light-pink hover:scale-105 hover:shadow-2xl hover:shadow-hacktoberfest-deep-pink">
       <div className="relative p-6 card-body">
         <div className="flex-1">
           <div className="flex items-center gap-2">
