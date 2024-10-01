@@ -47,8 +47,7 @@ npm install -g "@xata.io/cli@latest"
 ```sh
 xata auth login
 ```
-4. Update the database settings in `xata.ts` and `.xatarc` files (do not commit these changes).
-5. Run the migration:
+4. Run the migration:
 ```sh
 xata push main
 ```
