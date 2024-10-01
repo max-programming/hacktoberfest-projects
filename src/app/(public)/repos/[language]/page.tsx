@@ -117,7 +117,7 @@ async function getRepos(
     return !repo.archived && !reports.find(report => report.repoId === repo.id);
   });
 
-  if (repos.items.length < 1) notFound();
+  if (!repos.items || repos.items.length < 1) notFound();
 
   return {
     page: +page.toString(),
