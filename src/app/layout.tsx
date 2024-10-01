@@ -24,11 +24,13 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
           <ReportModal />
         </SessionProvider>
         <Toaster position="bottom-right" />
-        {process.env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID && <Script
-          src="https://cloud.umami.is/script.js"
-          data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID}
-          strategy="lazyOnLoad"
-        />}
+        {process.env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID && (
+          <Script
+            src="https://cloud.umami.is/script.js"
+            data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID}
+            strategy="lazyOnload"
+          />
+        )}
       </body>
     </html>
   );
