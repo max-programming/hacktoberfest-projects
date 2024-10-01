@@ -1,0 +1,21 @@
+FROM node:18-slim AS base
+
+RUN npm i -g pnpm
+
+FROM base AS dependencies
+
+COPY package*.json pnpm-lock.yaml ./
+
+RUN pnpm install
+
+FROM base AS builder
+
+WORKDIR /app
+
+COPY . .
+
+COPY --from=dependencies /node_modules ./node_modules
+
+FROM builder AS dev
+
+CMD ["pnpm", "dev"]

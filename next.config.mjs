@@ -3,6 +3,14 @@ import './src/env.mjs';
 /**@type {import('next').NextConfig}*/
 const config = {
   reactStrictMode: true,
+  swcMinify: true,
+  webpack: (config, context) => {
+    config.watchOptions = {
+      poll: 1000,
+      aggregateTimeout: 300
+    }
+    return config
+  },
   async redirects() {
     return [
       {

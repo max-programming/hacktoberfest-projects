@@ -1,0 +1,15 @@
+/node_modules
+/.pnp
+.pnp.js
+
+/docker
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.vercel
+.gitignore
+.github
+.next
+.prettierrc
