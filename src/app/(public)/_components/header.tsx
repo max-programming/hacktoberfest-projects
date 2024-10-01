@@ -26,13 +26,13 @@ export async function Header() {
 
           <div className="flex gap-2 lg:ml-40">
             <form action={session ? signOutAction : signInAction}>
-              <button className="text-white border-white btn btn-ghost border-1">
+              <button className="text-white border-white btn btn-ghost border-1 text-nowrap">
                 {session && session.user ? 'Sign Out' : 'Sign In'}
               </button>
             </form>
             <Link
               href="/contributors"
-              className="btn btn-square btn-ghost umami--click--contributors-button"
+              className="btn btn-square btn-ghost umami--click--contributors-button hidden md:block"
             >
               <BsPeopleFill size="1.5rem" color="white" title="Contributors" />
             </Link>
