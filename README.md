@@ -15,7 +15,7 @@ Use it here - https://finder.usmans.me
 
 ## Contributing
 
-Contributions are always welcome!
+We welcome contributions from everyone! If you're interested in helping improve the Hacktoberfest Projects Finder, please take a look at our [CONTRIBUTING.md](CONTRIBUTING.md) file. It contains detailed information on how to set up the project locally, create a GitHub OAuth application, set up the Xata database, and submit your contributions.
 
 > Pull Requests about adding languages will not be merged, if you want to suggest adding a new language, please [create an issue](https://github.com/max-programming/hacktoberfest-projects/issues/new) for that 🙂
 
