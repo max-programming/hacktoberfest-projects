@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import Script from 'next/script';
 import type { Metadata, Viewport } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
@@ -23,6 +24,11 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
           <ReportModal />
         </SessionProvider>
         <Toaster position="bottom-right" />
+        {process.env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID && <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID}
+          strategy="lazyOnLoad"
+        />}
       </body>
     </html>
   );
