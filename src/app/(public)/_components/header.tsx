@@ -26,7 +26,7 @@ export async function Header() {
 
           <div className="flex gap-2 lg:ml-40">
             <form action={session ? signOutAction : signInAction}>
-              <button className="text-white border-white btn btn-ghost border-1">
+              <button className="text-white border-white btn btn-ghost border-1 ms-4">
                 {session && session.user ? 'Sign Out' : 'Sign In'}
               </button>
             </form>
