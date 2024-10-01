@@ -1,17 +1,17 @@
 # Hacktoberfest Projects 🎉
 
-
 A Web app that lets you find eligible repositories for Hacktoberfest!
 
 Use it here - https://finder.usmans.me
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-47-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
 </a>
-
 
 ## Contributing
 
@@ -54,7 +54,9 @@ You will need to sign up with Xata and set up a database for the build. After re
 ```
 npm install -g "@xata.io/cli@latest"
 ```
+
 #### Authentication
+
 ```
 xata auth login
 ```
@@ -73,7 +75,6 @@ xata push main
 - [Github API](https://api.github.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Daisy UI](http://daisyui.com)
-
 
 ## Feedback
 
