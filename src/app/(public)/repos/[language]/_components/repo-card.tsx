@@ -51,7 +51,7 @@ export function RepoCard({ repo }: RepoCardProps) {
             </a>
             <h2 className="overflow-hidden text-3xl cursor-pointer text-hacktoberfest-pink whitespace-nowrap text-ellipsis underline-expand">
               <a
-                href={repo.html_url}
+                href={repo.html_url + '?ref=finder.usmans.me'}
                 title={repo.name}
                 target="_blank"
                 rel="noreferrer"
@@ -66,7 +66,7 @@ export function RepoCard({ repo }: RepoCardProps) {
             {emojify(truncatedDescription)}
             {repo.description.length > MAX_DESCRIPTION_LENGTH && (
               <a
-                href={repo.html_url}
+                href={repo.html_url + '?ref=finder.usmans.me'}
                 target="_blank"
                 rel="noreferrer"
                 className="text-hacktoberfest-pink ml-2 underline-expand"
@@ -101,7 +101,7 @@ export function RepoCard({ repo }: RepoCardProps) {
         {/* stars and forks cards */}
         <div className="flex flex-wrap justify-between gap-4 mt-8 cursor-pointer container-query text-neutral-100">
           <a
-            href={`${repo.html_url}/stargazers`}
+            href={`${repo.html_url}/stargazers?ref=finder.usmans.me`}
             target="_blank"
             className="w-full flex-shrink-0 flex-grow basis-[120px] border rounded-xl flex items-center justify-center py-4 gap-3 relative border-hacktoberfest-pink tooltip tooltip-bottom"
             data-tip="Click to see stargazers"
@@ -115,7 +115,7 @@ export function RepoCard({ repo }: RepoCardProps) {
             </div>
           </a>
           <a
-            href={`${repo.html_url}/forks`}
+            href={`${repo.html_url}/forks?ref=finder.usmans.me`}
             target="_blank"
             className="flex-shrink-0 flex-grow basis-[120px] border rounded-xl p-4 flex items-center justify-center gap-3 relative border-hacktoberfest-pink tooltip tooltip-bottom"
             data-tip="Click to see forks"
@@ -129,7 +129,7 @@ export function RepoCard({ repo }: RepoCardProps) {
             </div>
           </a>
           <a
-            href={`${repo.html_url}/issues`}
+            href={`${repo.html_url}/issues?ref=finder.usmans.me`}
             target="_blank"
             className="flex-shrink-0 flex-grow basis-[120px] border rounded-xl p-4 flex items-center justify-center gap-3 relative border-hacktoberfest-pink tooltip tooltip-bottom"
             data-tip="Click to see issues"
