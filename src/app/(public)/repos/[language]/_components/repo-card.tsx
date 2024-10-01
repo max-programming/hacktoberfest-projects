@@ -5,6 +5,10 @@ import { ReportButton } from './report-button';
 
 const MAX_DESCRIPTION_LENGTH = 100;
 const MAX_TOPICS_DISPLAY = 3;
+const numberFormatter = new Intl.NumberFormat('en-US', {
+  notation: 'compact',
+  compactDisplay: 'short'
+});
 
 interface RepoCardProps {
   repo: RepoItem;
@@ -17,7 +21,7 @@ export function RepoCard({ repo }: RepoCardProps) {
       : repo.description;
 
   // Ensure 'hacktoberfest' topic appears first
-  const sortedTopics = [...repo.topics].sort((a, b) => {
+  const sortedTopics = repo.topics.toSorted((a, b) => {
     if (a === 'hacktoberfest') return -1;
     if (b === 'hacktoberfest') return 1;
     return 0;
@@ -25,11 +29,6 @@ export function RepoCard({ repo }: RepoCardProps) {
 
   const displayedTopics = sortedTopics.slice(0, MAX_TOPICS_DISPLAY);
   const hasMoreTopics = sortedTopics.length > MAX_TOPICS_DISPLAY;
-
-  const numberFormatter = new Intl.NumberFormat('en-US', {
-    notation: 'compact',
-    compactDisplay: 'short'
-  });
 
   return (
     <section className="transition duration-300 shadow-sm card bg-hacktoberfest-black ring-1 ring-hacktoberfest-light-pink hover:scale-105 hover:shadow-2xl hover:shadow-hacktoberfest-deep-pink h-96">
