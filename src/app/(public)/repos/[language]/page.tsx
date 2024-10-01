@@ -144,7 +144,10 @@ async function getRepos(
 
 async function getReportedRepos() {
   const client = getXataClient();
-  const reports = await client.db.reports.filter({ valid: false }).getMany();
+  const reports = await client.db.reports
+    .select(['repoId'])
+    .filter({ valid: false })
+    .getMany();
 
   return reports;
 }
