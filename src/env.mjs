@@ -3,13 +3,12 @@ import { z } from 'zod';
 
 export const env = createEnv({
   server: {
-    GITHUB_SECRET: z.string().optional(),
-    XATA_BRANCH: z.string().optional(),
-    XATA_API_KEY: z.string().optional(),
+    AUTH_GITHUB_SECRET: z.string().min(1, 'AUTH_GITHUB_SECRET is required'),
+    AUTH_GITHUB_ID: z.string().min(1, 'AUTH_GITHUB_ID is required'),
+    AUTH_SECRET: z.string().min(1, 'AUTH_SECRET is required'),
     AUTH_GITHUB_TOKEN: z.string().optional(),
-    AUTH_GITHUB_ID: z.string().optional(),
-    AUTH_SECRET: z.string(),
-    AUTH_URL: z.string()
+    XATA_BRANCH: z.string().optional(),
+    XATA_API_KEY: z.string().optional()
   },
   client: {
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: z.string().optional()
