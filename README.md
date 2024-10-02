@@ -6,7 +6,7 @@ A Web app that lets you find eligible repositories for Hacktoberfest!
 Use it here - https://finder.usmans.me
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-47-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-48-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -113,6 +113,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://jamesshopland.com"><img src="https://avatars.githubusercontent.com/u/5064896?v=4?s=100" width="100px;" alt="James Shopland"/><br /><sub><b>James Shopland</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=jolbol1" title="Code">💻</a> <a href="https://github.com/max-programming/hacktoberfest-projects/issues?q=author%3Ajolbol1" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://alone-y154.github.io/Portfolio-Website/"><img src="https://avatars.githubusercontent.com/u/72192888?v=4?s=100" width="100px;" alt="Yashwanth Krishna"/><br /><sub><b>Yashwanth Krishna</b></sub></a><br /><a href="#design-Alone-Y154" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=Alone-Y154" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/massdx"><img src="https://avatars.githubusercontent.com/u/63166764?v=4?s=100" width="100px;" alt="Massahoud"/><br /><sub><b>Massahoud</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=massdx" title="Code">💻</a> <a href="#ideas-massdx" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/SharizHussain"><img src="https://avatars.githubusercontent.com/u/155846046?v=4?s=100" width="100px;" alt="SharizHussain"/><br /><sub><b>SharizHussain</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/issues?q=author%3ASharizHussain" title="Bug reports">🐛</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=SharizHussain" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
