@@ -31,7 +31,7 @@ export function RepoCard({ repo }: RepoCardProps) {
   const hasMoreTopics = sortedTopics.length > MAX_TOPICS_DISPLAY;
 
   return (
-    <section className="transition duration-300 shadow-sm card bg-hacktoberfest-black ring-1 ring-hacktoberfest-light-pink hover:scale-105 hover:shadow-2xl hover:shadow-hacktoberfest-deep-pink h-96">
+    <section className="transition duration-300 shadow-sm card bg-hacktoberfest-black ring-1 ring-hacktoberfest-light-pink hover:scale-105 hover:shadow-2xl hover:shadow-hacktoberfest-deep-pink h-125">
       <div className="relative p-6 card-body">
         <div className="flex-1">
           <div className="flex items-center gap-2">
@@ -82,11 +82,10 @@ export function RepoCard({ repo }: RepoCardProps) {
                 href={`https://github.com/topics/${topic}`}
                 target="_blank"
                 rel="noreferrer"
-                className={`badge inline px-3 py-0.5 h-auto ${
-                  topic === 'hacktoberfest'
+                className={`badge inline px-3 py-0.5 h-auto ${topic === 'hacktoberfest'
                     ? 'bg-hacktoberfest-light-green text-hacktoberfest-dark-green'
                     : 'bg-hacktoberfest-deep-pink text-hacktoberfest-light-pink'
-                }`}
+                  }`}
               >
                 {topic}
               </a>
@@ -98,7 +97,7 @@ export function RepoCard({ repo }: RepoCardProps) {
         </div>
 
         {/* stars and forks cards */}
-        <div className="flex flex-wrap justify-between gap-4 mt-8 cursor-pointer container-query text-neutral-100">
+        <div className="flex flex-wrap justify-between mt-8 gap-4 cursor-pointer container-query text-neutral-100">
           <a
             href={`${repo.html_url}/stargazers?ref=finder.usmans.me`}
             target="_blank"

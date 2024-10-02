@@ -11,10 +11,10 @@ export function Button({
   ...props
 }: PropsWithChildren<ButtonProps>) {
   return (
-    <div className="relative inline-block m-3 group w-fit">
+    <div className="relative inline-block group w-fit">
       <button
         className={cn(
-          'bg-hacktoberfest-black hover:bg-hacktoberfest-dark-green btn btn-lg text-hacktoberfest-light rounded-2xl leading-none border-none',
+          'bg-hacktoberfest-black m-1 hover:bg-hacktoberfest-dark-green btn btn-lg text-hacktoberfest-light rounded-2xl leading-none border-none',
           className
         )}
         {...props}
