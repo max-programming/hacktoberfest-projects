@@ -2,6 +2,7 @@ import type { RepoItem } from '@/types';
 import { emojify } from '@twuni/emojify';
 import { GoIssueOpened, GoRepoForked, GoStar } from 'react-icons/go';
 import { ReportButton } from './report-button';
+import { cn } from '@/lib/utils';
 
 const MAX_DESCRIPTION_LENGTH = 100;
 const MAX_TOPICS_DISPLAY = 3;
@@ -82,10 +83,12 @@ export function RepoCard({ repo }: RepoCardProps) {
                 href={`https://github.com/topics/${topic}`}
                 target="_blank"
                 rel="noreferrer"
-                className={`badge inline px-3 py-0.5 h-auto ${topic === 'hacktoberfest'
+                className={cn(
+                  'badge inline px-3 py-0.5 h-auto',
+                  topic === 'hacktoberfest'
                     ? 'bg-hacktoberfest-light-green text-hacktoberfest-dark-green'
                     : 'bg-hacktoberfest-deep-pink text-hacktoberfest-light-pink'
-                  }`}
+                )}
               >
                 {topic}
               </a>
