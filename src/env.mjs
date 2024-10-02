@@ -11,7 +11,7 @@ export const env = createEnv({
     AUTH_GITHUB_TOKEN: z.string().optional()
   },
   client: {
-    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: z.string().optional(),
+    NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: z.string().optional().nullable(),
     NEXT_PUBLIC_ANALYTICS_WEBSITE_ID: z.string().uuid().optional().nullable(),
   },
   experimental__runtimeEnv: {
