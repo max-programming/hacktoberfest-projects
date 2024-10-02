@@ -17,7 +17,7 @@ interface RepoCardProps {
 
 export function RepoCard({ repo }: RepoCardProps) {
   const truncatedDescription =
-    repo.description.length > MAX_DESCRIPTION_LENGTH
+    repo.description?.length > MAX_DESCRIPTION_LENGTH
       ? repo.description.substring(0, MAX_DESCRIPTION_LENGTH) + '...'
       : repo.description;
 
@@ -29,7 +29,7 @@ export function RepoCard({ repo }: RepoCardProps) {
   });
 
   const displayedTopics = sortedTopics.slice(0, MAX_TOPICS_DISPLAY);
-  const hasMoreTopics = sortedTopics.length > MAX_TOPICS_DISPLAY;
+  const hasMoreTopics = sortedTopics?.length > MAX_TOPICS_DISPLAY;
 
   return (
     <section className="transition duration-300 shadow-sm card bg-hacktoberfest-black ring-1 ring-hacktoberfest-light-pink hover:scale-105 hover:shadow-2xl hover:shadow-hacktoberfest-deep-pink h-125">
@@ -64,7 +64,7 @@ export function RepoCard({ repo }: RepoCardProps) {
 
           <h6 className="my-5 text-lg text-hacktoberfest-beige">
             {emojify(truncatedDescription)}
-            {repo.description.length > MAX_DESCRIPTION_LENGTH && (
+            {repo.description?.length > MAX_DESCRIPTION_LENGTH && (
               <a
                 href={repo.html_url + '?ref=finder.usmans.me'}
                 target="_blank"
