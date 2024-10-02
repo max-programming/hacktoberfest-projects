@@ -117,7 +117,7 @@ export function Sorter() {
 
   return (
     <div className="flex items-center justify-center gap-2 mb-8">
-      <div className="dropdown dropdown-hover">
+      <div className="dropdown group dropdown-hover">
         <Button
           tabIndex={0}
           className="hover:bg-hacktoberfest-green hover:text-hacktoberfest-dark-green"
@@ -125,7 +125,7 @@ export function Sorter() {
           <Code className="w-6 h-6 mr-2" />
           Language
         </Button>
-        <div className="z-50 h-64 p-2 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
+        <div className="z-50 h-64 p-2 overflow-y-scroll shadow dropdown-content hidden group-hover:block bg-base-100 rounded-box w-60">
           <ul tabIndex={0} className="menu menu-vertical">
             {mainLanguages.sort(sortByName).map(language => (
               <li key={language} onClick={handleClick}>
@@ -137,7 +137,7 @@ export function Sorter() {
           </ul>
         </div>
       </div>
-      <div className="dropdown dropdown-hover">
+      <div className="dropdown dropdown-hover group">
         <Button
           tabIndex={0}
           className="hover:bg-hacktoberfest-green hover:text-hacktoberfest-dark-green"
@@ -145,7 +145,7 @@ export function Sorter() {
           <ArrowUpAZ className="w-6 h-6 mr-2" />
           {selectedSort()}
         </Button>
-        <div className="z-50 h-64 p-2 overflow-y-scroll shadow dropdown-content bg-base-100 rounded-box w-60">
+        <div className="z-50 h-64 p-2 overflow-y-scroll shadow dropdown-content hidden group-hover:block -ml-16 bg-base-100 rounded-box w-60">
           <ul tabIndex={0} className="menu menu-vertical">
             {navigationItems.map((item, index) => {
               const sp = item.onSelect(new URLSearchParams(searchParams));
