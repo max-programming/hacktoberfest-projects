@@ -100,7 +100,7 @@ async function getRepos(
   apiUrl.searchParams.set('order', order.toString());
   apiUrl.searchParams.set(
     'q',
-    `topic:hacktoberfest language:${encodeURIComponent(language)} ${searchQuery} ${starsQuery}`
+    `topic:hacktoberfest language:${language} ${searchQuery} ${starsQuery}`
   );
 
   const headers: HeadersInit = {
