@@ -100,7 +100,7 @@ async function getRepos(
   apiUrl.searchParams.set('order', order.toString());
   apiUrl.searchParams.set(
     'q',
-    `topic:hacktoberfest language:${encodeURIComponent(language)} ${searchQuery} ${starsQuery}`
+    `topic:hacktoberfest language:${language} ${searchQuery} ${starsQuery}`
   );
 
   const headers: HeadersInit = {
@@ -133,7 +133,7 @@ async function getRepos(
     return !repo.archived && !reports.find(report => report.repoId === repo.id);
   });
 
-  if (!repos.items || repos.items.length < 1) notFound();
+  if (!Array.isArray(repos.items) || repos.items?.length < 1) notFound();
 
   return {
     page: +page.toString(),
@@ -144,7 +144,7 @@ async function getRepos(
 
 async function getReportedRepos() {
   const client = getXataClient();
-  const reports = await client.db.reports
+  const reports = await client.db.reports 
     .select(['repoId'])
     .filter({ valid: false })
     .getMany();

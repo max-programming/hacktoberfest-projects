@@ -6,6 +6,7 @@ import { Toaster } from 'react-hot-toast';
 import { SessionProvider } from 'next-auth/react';
 import { Footer } from '@/components/footer';
 import { ReportModal } from '@/components/report-modal';
+import { env } from '@/env.mjs';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -24,10 +25,10 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
           <ReportModal />
         </SessionProvider>
         <Toaster position="bottom-right" />
-        {process.env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID && (
+        {env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID && (
           <Script
             src="https://cloud.umami.is/script.js"
-            data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID}
+            data-website-id={env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID}
             strategy="lazyOnload"
           />
         )}
