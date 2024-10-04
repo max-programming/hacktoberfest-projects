@@ -67,7 +67,9 @@ NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="" # Optional
 NEXT_PUBLIC_ANALYTICS_WEBSITE_ID="" # Optional
 ```
 
-Make sure to fill in the required values for each variable. The `AUTH_SECRET` should be a random string, and `AUTH_URL` should be set to `http://localhost:3000` for local development. The `XATA_BRANCH` should typically be set to "main" unless you're using a different branch. Remember that the `NEXT_PUBLIC_` variables are optional.
+Make sure to fill in the required values for each variable. The `AUTH_SECRET` should be a random string, and `AUTH_URL` should be set to `http://localhost:3000` for local development. The `XATA_BRANCH` should typically be set to "main" unless you're using a different branch. 
+
+Remember to remove env variables that are optional and you are empty, they will cause validation errors 
 
 ## Running the Project
 
