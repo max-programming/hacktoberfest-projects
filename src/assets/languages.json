@@ -4,6 +4,8 @@
     "Python",
     "C",
     "C++",
+    "React",
+    "NextJs",
     "Rust",
     "HTML",
     "TypeScript",
@@ -49,12 +51,14 @@
     "Dart",
     "Java",
     "Elixir",
-    "Ruby"
+    "Ruby",
+    "React"
   ],
   "others": [
     "Objective-C",
     "Swift",
     "Kotlin",
+    "NextJs",
     "Vue",
     "Svelte",
     "Go",
