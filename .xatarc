@@ -1,6 +1,6 @@
 {
-  "databaseURL": "https://Usman-Sabuwala-s-workspace-u2kcvd.us-east-1.xata.sh/db/project-finder-hf",
+  "databaseURL": "https://Amandee-Manushika-s-workspace-d6c47s.us-east-1.xata.sh/db/amandee-db",
   "codegen": {
-    "output": "xata.ts"
+    "output": "src/xata.ts"
   }
 }
