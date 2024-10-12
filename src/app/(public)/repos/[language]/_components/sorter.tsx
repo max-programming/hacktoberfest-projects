@@ -23,6 +23,7 @@ enum SortTypes {
 export function Sorter() {
   const searchParams = useSearchParams();
   const pathname = usePathname();
+  const urlSearchParam = new URLSearchParams(searchParams);
 
   const navigationItems = [
     {
@@ -129,7 +130,7 @@ export function Sorter() {
           <ul tabIndex={0} className="menu menu-vertical">
             {mainLanguages.sort(sortByName).map(language => (
               <li key={language} onClick={handleClick}>
-                <Link href={`/repos/${language.toLowerCase()}`}>
+                <Link href={`/repos/${language.toLowerCase()}?${urlSearchParam.toString()}`}>
                   {language}
                 </Link>
               </li>
@@ -148,7 +149,7 @@ export function Sorter() {
         <div className="z-50 h-64 p-2 overflow-y-scroll shadow dropdown-content hidden group-hover:block -ml-16 bg-base-100 rounded-box w-60">
           <ul tabIndex={0} className="menu menu-vertical">
             {navigationItems.map((item, index) => {
-              const sp = item.onSelect(new URLSearchParams(searchParams));
+              const sp = item.onSelect(urlSearchParam);
               if (item.name === SortTypes.BestMatch) {
                 sp.delete('o');
                 sp.delete('s');
