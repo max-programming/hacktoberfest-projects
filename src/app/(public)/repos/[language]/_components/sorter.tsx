@@ -129,7 +129,7 @@ export function Sorter() {
           <ul tabIndex={0} className="menu menu-vertical">
             {mainLanguages.sort(sortByName).map(language => (
               <li key={language} onClick={handleClick}>
-                <Link href={`/repos/${language.toLowerCase()}`}>
+                <Link href={`/repos/${language.toLowerCase()}?${searchParams.toString()}`}>
                   {language}
                 </Link>
               </li>
