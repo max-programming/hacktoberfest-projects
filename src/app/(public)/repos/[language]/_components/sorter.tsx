@@ -127,13 +127,17 @@ export function Sorter() {
         </Button>
         <div className="z-50 h-64 p-2 overflow-y-scroll shadow dropdown-content hidden group-hover:block bg-base-100 rounded-box w-60">
           <ul tabIndex={0} className="menu menu-vertical">
-            {mainLanguages.sort(sortByName).map(language => (
+            {mainLanguages.sort(sortByName).map(language => {
+              const sp = new URLSearchParams(searchParams);
+              sp.delete('p');
+              return (
               <li key={language} onClick={handleClick}>
-                <Link href={`/repos/${language.toLowerCase()}?${searchParams.toString()}`}>
+                <Link href={`/repos/${language.toLowerCase()}?${sp.toString()}`}>
                   {language}
                 </Link>
               </li>
-            ))}
+              );
+              })}
           </ul>
         </div>
       </div>
@@ -149,6 +153,7 @@ export function Sorter() {
           <ul tabIndex={0} className="menu menu-vertical">
             {navigationItems.map((item, index) => {
               const sp = item.onSelect(new URLSearchParams(searchParams));
+              sp.delete('p');
               if (item.name === SortTypes.BestMatch) {
                 sp.delete('o');
                 sp.delete('s');

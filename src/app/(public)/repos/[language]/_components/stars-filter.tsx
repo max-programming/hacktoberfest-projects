@@ -47,6 +47,7 @@ export function StarsFilter() {
       sp.set('startStars', startStars.toString());
       sp.set('endStars', endStars.toString());
     }
+    sp.delete('p');
     router.push(`${pathname}?${sp.toString()}`);
   }
 
