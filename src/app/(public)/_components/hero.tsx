@@ -9,6 +9,7 @@ import Link from 'next/link';
 
 import { sortByName } from '@/lib/utils';
 import languages from '@/assets/languages.json';
+import { HeroSectionSvg } from '@/components/Icons';
 
 const { main: mainLanguages, others: otherLanguages } = languages;
 
@@ -23,9 +24,8 @@ export function Hero() {
   }
 
   return (
-    <div className="min-h-screen pt-10 hero bg-gradient-radial from-hacktoberfest-green to-hacktoberfest-dark-green bg-blend-overlay">
-      <div className="w-0 hero-overlay bg-opacity-60"></div>
-      <div className="text-center hero-content">
+    <div className="relative min-h-screen bg-(radial-gradient(85.48% 85.48% at 50% 0%, rgb(64, 63, 125) 0%, rgb(from rgb(28, 28, 63) r g b / 0) 100%)) ">
+      {/* <div className="text-center hero-content">
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-medium uppercase text-hacktoberfest-light-pink">
             Search your language
@@ -39,13 +39,13 @@ export function Hero() {
                 <input
                   type="text"
                   placeholder="Search for your language"
-                  className="w-full max-w-xs bg-transparent rounded-tr-none rounded-br-none input input-bordered text-hacktoberfest-light border-hacktoberfest-light focus:outline-hacktoberfest-light-pink placeholder:text-hacktoberfest-light-green"
+                  className="w-full max-w-xs bg-transparent rounded-tr-none rounded-br-none input input-bordered text-hacktoberfest-light border-hacktoberfest-light focus:outline-hacktoberfest-light-pink placeholder:text-hacktoberfest-light-blue"
                   name="search"
                 />
               </div>
               <button
                 type="submit"
-                className="bg-transparent rounded-tl-none rounded-bl-none group btn btn-square text-hacktoberfest-light-green border-hacktoberfest-light hover:bg-hacktoberfest-light-pink hover:text-hacktoberfest-deep-pink hover:border-hacktoberfest-light-pink"
+                className="bg-transparent rounded-tl-none rounded-bl-none group btn btn-square text-hacktoberfest-light-blue border-hacktoberfest-light hover:bg-hacktoberfest-light-pink hover:text-hacktoberfest-deep-pink hover:border-hacktoberfest-light-pink"
               >
                 <Search />
               </button>
@@ -79,6 +79,9 @@ export function Hero() {
             </ul>
           </div>
         </div>
+      </div> */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <HeroSectionSvg className="w-full h-full" />
       </div>
     </div>
   );
