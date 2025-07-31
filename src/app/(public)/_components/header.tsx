@@ -13,7 +13,7 @@ export async function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 py-3 px-6">
-      <div className="border border-hacktoberfest-light-blue rounded-lg py-4 px-6 container mx-auto bg-[radial-gradient(85.48%_85.48%_at_50%_0%,rgb(64,63,125)_0%,rgb(from_rgb(28,28,63)_r_g_b/_0)_100%)] backdrop-blur-md shadow-lg">
+      <div className="border border-hacktoberfest-light-blue rounded-lg py-4 px-6 container mx-auto  backdrop-blur-md shadow-lg">
         <div className="flex justify-between items-center">
           <Link href="/" className="z-5">
             <LogoIconsSvg />

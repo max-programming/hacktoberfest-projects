@@ -24,14 +24,14 @@ export function Hero() {
   }
 
   return (
-    <div className="relative min-h-screen bg-(radial-gradient(85.48% 85.48% at 50% 0%, rgb(64, 63, 125) 0%, rgb(from rgb(28, 28, 63) r g b / 0) 100%)) ">
-      {/* <div className="text-center hero-content">
-        <div className="max-w-md">
-          <h1 className="mb-5 text-5xl font-medium uppercase text-hacktoberfest-light-pink">
+    <div className="relative min-h-screen bg-[radial-gradient(85.48%_85.48%_at_50%_0%,rgb(64,63,125)_0%,rgb(from_rgb(28,28,63)_r_g_b/_0)_100%)] ">
+      <div className="z-50 flex justify-center items-center text-center h-screen">
+        <div className="max-w-md space-y-5">
+          <h1 className="text-5xl font-medium uppercase text-hacktoberfest-light-pink">
             Search your language
           </h1>
           <form
-            className="items-center w-full max-w-xs mx-auto my-5 form-control"
+            className="items-center w-full max-w-xs mx-auto form-control"
             onSubmit={handleSearch}
           >
             <div className="flex w-full">
@@ -51,15 +51,15 @@ export function Hero() {
               </button>
             </div>
           </form>
-          <p className="mb-5 font-medium uppercase text-hacktoberfest-light">
+          <p className="font-medium uppercase text-hacktoberfest-light">
             Or select the programming language you would like to find
             repositories for.
           </p>
-
-          {mainLanguages.map(language => (
-            <LanguageButton key={language} language={language} />
-          ))}
-
+          <div className="flex flex-wrap gap-6 items-center justify-center ">
+            {mainLanguages.map(language => (
+              <LanguageButton key={language} language={language} />
+            ))}
+          </div>
           <div className="dropdown dropdown-top">
             <Button tabIndex={0} className="umami--click--otherlangs-button">
               Other languages
@@ -79,8 +79,8 @@ export function Hero() {
             </ul>
           </div>
         </div>
-      </div> */}
-      <div className="absolute top-0 left-0 w-full h-full">
+      </div>
+      <div className="absolute top-0 left-0 w-full h-full -z-10">
         <HeroSectionSvg className="w-full h-full" />
       </div>
     </div>
