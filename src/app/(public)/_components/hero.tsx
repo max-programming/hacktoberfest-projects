@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { sortByName } from '@/lib/utils';
 import languages from '@/assets/languages.json';
 import { HeroSectionSvg } from '@/components/Icons';
+import { MarqueTextAnimation } from './marque-text-animation';
 
 const { main: mainLanguages, others: otherLanguages } = languages;
 
@@ -24,14 +25,14 @@ export function Hero() {
   }
 
   return (
-    <div className="relative min-h-screen bg-[radial-gradient(85.48%_85.48%_at_50%_0%,rgb(64,63,125)_0%,rgb(from_rgb(28,28,63)_r_g_b/_0)_100%)] ">
-      <div className="z-50 flex justify-center items-center text-center h-screen">
+    <div className="relative bg-hero-gradient ">
+      <div className="z-50 flex flex-col space-y-8 justify-center items-center text-center min-h-screen pt-28 sm:pt-24">
         <div className="max-w-md space-y-5">
-          <h1 className="text-5xl font-medium uppercase text-hacktoberfest-light-pink">
+          <h1 className="text-5xl font-medium uppercase heading-text">
             Search your language
           </h1>
           <form
-            className="items-center w-full max-w-xs mx-auto form-control"
+            className="items-center w-full max-w-xs mx-auto form-control outline-none "
             onSubmit={handleSearch}
           >
             <div className="flex w-full">
@@ -39,13 +40,14 @@ export function Hero() {
                 <input
                   type="text"
                   placeholder="Search for your language"
-                  className="w-full max-w-xs bg-transparent rounded-tr-none rounded-br-none input input-bordered text-hacktoberfest-light border-hacktoberfest-light focus:outline-hacktoberfest-light-pink placeholder:text-hacktoberfest-light-blue"
+                  className="w-full max-w-xs bg-transparent rounded-tr-none rounded-br-none input input-bordered text-hacktoberfest-light border-hacktoberfest-light
+                  focus:border-hacktoberfest-light focus:!outline-none focus-visible:!outline-none placeholder:text-hacktoberfest-light"
                   name="search"
                 />
               </div>
               <button
                 type="submit"
-                className="bg-transparent rounded-tl-none rounded-bl-none group btn btn-square text-hacktoberfest-light-blue border-hacktoberfest-light hover:bg-hacktoberfest-light-pink hover:text-hacktoberfest-deep-pink hover:border-hacktoberfest-light-pink"
+                className="bg-transparent rounded-tl-none rounded-bl-none group btn btn-square text-hacktoberfest-light border-hacktoberfest-light hover:!border-hacktoberfest-light    hover:bg-primary-btn-hover-gradient"
               >
                 <Search />
               </button>
@@ -79,6 +81,7 @@ export function Hero() {
             </ul>
           </div>
         </div>
+        <MarqueTextAnimation />
       </div>
       <div className="absolute top-0 left-0 w-full h-full -z-10">
         <HeroSectionSvg className="w-full h-full" />

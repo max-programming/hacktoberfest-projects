@@ -53,7 +53,17 @@ a {
   transition:
     inset 300ms ease-in-out,
     clip-path 300ms ease-in-out,
-    color 300ms ease-in-out;
+    color 300ms ease-in-out !important;
+}
+
+.btn-clip:hover {
+  inset: 0px;
+  color: transparent;
+}
+
+.heading-text {
+  color: #ffffff;
+  text-shadow: rgb(from #d0cce3 r g b / 0.5) 0px 0px 10px;
 }
 
 .container-query {
@@ -89,4 +99,32 @@ a {
   .underline-expand:hover::after {
     @apply w-full left-0;
   }
+}
+.text-webkit {
+  -webkit-text-stroke: 1px #5a5ab5;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 20s linear infinite;
 }

@@ -12,12 +12,14 @@ const config = {
         sans: ['var(--font-space-grotesk)', 'ui-sans-serif', 'system-ui']
       },
       backgroundImage: {
-        'gradient-radial':
-          'radial-gradient(30% 50% at center 50%, var(--tw-gradient-stops))',
         'primary-btn-hover-gradient':
           'linear-gradient(270deg, rgb(194, 194, 255) 0%, rgb(90, 90, 181) 100%)',
+        'hero-gradient':
+          'radial-gradient(85.48% 85.48% at 50% 0%,rgb(64,63,125) 0%,rgb(from rgb(28,28,63) r g b/ 0) 100%)',
         'primary-btn-gradient':
-          'linear-gradient(90deg,rgb(from rgb(90, 90, 181) r g b / 0.15) 0%,rgb(from rgb(194, 194, 255) r g b / 0.15) 100%)'
+          'linear-gradient(90deg,rgb(from rgb(90, 90, 181) r g b / 0.15) 0%,rgb(from rgb(194, 194, 255) r g b / 0.15) 100%)',
+        'square-box-gradient':
+          'linear-gradient(to right,rgb(194, 194, 255) 0px,rgb(194, 194, 255) 12px,transparent 12px,transparent 28px,rgb(90, 90, 181) 28px,rgb(90, 90, 181) 40px,transparent 40px,transparent 56px,rgb(64, 63, 125) 56px,rgb(64, 63, 125) 68px)'
       },
       backgroundSize: {
         '50': '50%',
