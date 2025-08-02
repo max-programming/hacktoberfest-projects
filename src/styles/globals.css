@@ -100,6 +100,7 @@ a {
     @apply w-full left-0;
   }
 }
+
 .text-webkit {
   -webkit-text-stroke: 1px #5a5ab5;
 }
@@ -127,4 +128,26 @@ a {
 
 .animate-marquee-reverse {
   animation: marquee-reverse 20s linear infinite;
+}
+
+@layer utilities {
+  /* Shimmer animation for skeleton loaders */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 1.5s infinite;
+    background-size: 200% 100%;
+  }
+
+  .bg-shimmer {
+    background: linear-gradient(90deg, #183717 25%, #50da4c 50%, #183717 75%);
+    background-size: 200% 100%;
+  }
 }

@@ -42,7 +42,7 @@ export function ReportModal() {
         toast.success('Report sent successfully');
         setRepo(null);
       } else {
-        toast.error(response.formErrors.join(', '));
+        toast.error(response.errors.join(', '));
       }
     } catch (err: any) {
       toast.error(err.message);

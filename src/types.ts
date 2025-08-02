@@ -128,3 +128,5 @@ export interface RepoResponse {
   languageName: string;
   repos: RepoData;
 }
+
+export type SearchParams = Record<string, string | string[] | undefined>;

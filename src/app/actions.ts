@@ -3,6 +3,7 @@
 import { auth, signIn, signOut } from '@/auth';
 import { sendReportSchema, SendReportSchema } from './validation';
 import { getXataClient } from '@/xata';
+import { z } from 'zod';
 
 const client = getXataClient();
 
@@ -19,7 +20,7 @@ export async function sendReportAction(data: SendReportSchema) {
   if (!session || !session.user) throw new Error('You must be logged in.');
   const { success, data: body, error } = sendReportSchema.safeParse(data);
 
-  if (!success) return error.formErrors;
+  if (!success) return z.treeifyError(error);
 
   const user = await client.db.nextauth_users
     .filter({ email: session.user.email })

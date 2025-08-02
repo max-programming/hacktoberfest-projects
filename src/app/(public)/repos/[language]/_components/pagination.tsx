@@ -1,12 +1,13 @@
 import { Button } from '@/app/(public)/_components/button';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import type { SearchParams } from '@/types';
 
 const MAX_PER_PAGE = 21;
 interface PaginationProps {
   page: number;
   totalCount: number;
-  searchParams: Record<string, string | string[] | undefined>;
+  searchParams: SearchParams;
 }
 
 export function Pagination({
