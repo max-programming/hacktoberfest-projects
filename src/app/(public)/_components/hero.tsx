@@ -69,11 +69,14 @@ export function Hero() {
 
             <ul
               tabIndex={0}
-              className="h-64 p-2 overflow-y-scroll shadow menu dropdown-content bg-base-100 rounded-box w-60"
+              className="h-64 p-2 overflow-y-auto shadow-lg menu dropdown-content bg-white/95 backdrop-blur-sm rounded-xl w-60 border border-gray-200/50 z-[9999]"
             >
               {otherLanguages.sort(sortByName).map(language => (
                 <li key={language}>
-                  <Link href={`/repos/${language.toLowerCase()}`}>
+                  <Link
+                    href={`/repos/${language.toLowerCase()}`}
+                    className="text-gray-700 hover:text-white hover:bg-hacktoberfest-blue rounded-lg transition-colors duration-200 px-3 py-2"
+                  >
                     {language}
                   </Link>
                 </li>
