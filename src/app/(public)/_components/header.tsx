@@ -7,25 +7,31 @@ import { SearchForm } from './search-form';
 import { auth } from '@/auth';
 import { signInAction, signOutAction } from '../../actions';
 import { LogoIconsSvg } from '@/components/Icons';
+import { Button } from './button';
+import { MobileMenu } from './mobile-menu';
 
 export async function Header() {
   const session = await auth();
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 py-3 px-6">
-      <div className="border border-hacktoberfest-light-blue rounded-lg py-4 px-6 container mx-auto  backdrop-blur-md shadow-lg">
+    <header className="fixed top-0 left-0 w-full z-50 py-3 px-4 sm:px-6">
+      <div className="border border-hacktoberfest-light-blue rounded-lg py-4 px-4 sm:px-6 container mx-auto backdrop-blur-md shadow-lg">
         <div className="flex justify-between items-center">
           <Link href="/" className="z-5">
             <LogoIconsSvg />
           </Link>
 
-          <SearchForm />
+          {/* Desktop Search - Hidden on mobile */}
+          <div className="hidden md:block">
+            <SearchForm />
+          </div>
 
-          <div className="flex gap-2 lg:ml-40">
+          {/* Desktop Navigation - Hidden on mobile */}
+          <div className="hidden md:flex gap-2 lg:ml-40">
             <form action={session ? signOutAction : signInAction}>
-              <button className="text-white border-white btn btn-ghost border-1 ms-4 hover:bg-blue-700 transition-colors">
+              <Button className="text-xs sm:text-sm">
                 {session && session.user ? 'Sign Out' : 'Sign In'}
-              </button>
+              </Button>
             </form>
             <Link
               href="/contributors"
@@ -43,6 +49,14 @@ export async function Header() {
               <IoLogoGithub size="1.5rem" color="white" title="GitHub" />
             </a>
           </div>
+
+          {/* Mobile Hamburger Menu */}
+          <MobileMenu session={session} />
+        </div>
+
+        {/* Mobile Search - Visible only on mobile */}
+        <div className="md:hidden md:mt-4">
+          <SearchForm />
         </div>
       </div>
     </header>
