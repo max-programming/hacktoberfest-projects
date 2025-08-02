@@ -8,25 +8,27 @@ import { RepoCard } from './_components/repo-card';
 import { Sorter } from './_components/sorter';
 import { StarsFilter } from './_components/stars-filter';
 import { Pagination } from './_components/pagination';
-import { Suspense } from 'react';
-import type { RepoData, RepoItem, RepoResponse } from '@/types';
+import type { RepoData, RepoItem, RepoResponse, SearchParams } from '@/types';
 import type { Metadata } from 'next';
 import { auth } from '@/auth';
 
 interface ReposPageProps {
-  params: { language: string };
-  searchParams: Record<string, string | string[] | undefined>;
+  params: Promise<{ language: string }>;
+  searchParams: Promise<SearchParams>;
 }
 
 export default async function ReposPage({
-  params: { language },
+  params,
   searchParams
 }: ReposPageProps) {
-  const key = JSON.stringify(searchParams);
-  const { repos, page } = await getRepos(language, searchParams);
+  const { language } = await params;
+  const sp = await searchParams;
+
+  const key = JSON.stringify(sp);
+  const { repos, page } = await getRepos(language, sp);
 
   return (
-    <Suspense fallback={<p>Loading...</p>} key={key}>
+    <>
       <Header />
       <ScrollToTop />
       <div className="container mx-auto">
@@ -36,10 +38,8 @@ export default async function ReposPage({
               <h1 className="mb-5 text-5xl font-medium uppercase text-hacktoberfest-light-green">
                 {repos.total_count} repositories for{' '}
                 <span className="font-mono font-bold text-hacktoberfest-pink">
-                  {searchParams.q
-                    ? searchParams.q +
-                      ' in ' +
-                      capitalize(decodeURIComponent(language))
+                  {sp.q
+                    ? sp.q + ' in ' + capitalize(decodeURIComponent(language))
                     : capitalize(decodeURIComponent(language))}
                 </span>
               </h1>
@@ -56,22 +56,25 @@ export default async function ReposPage({
         <Pagination
           page={page}
           totalCount={repos.total_count}
-          searchParams={searchParams}
+          searchParams={sp}
         />
       </div>
-    </Suspense>
+    </>
   );
 }
 
-export function generateMetadata({ params }: ReposPageProps): Metadata {
+export async function generateMetadata({
+  params
+}: ReposPageProps): Promise<Metadata> {
+  const { language } = await params;
   return {
-    title: `${capitalize(decodeURIComponent(params.language))} Repositories`
+    title: `${capitalize(decodeURIComponent(language))} Repositories`
   };
 }
 
 async function getRepos(
   language: string,
-  searchParams: ReposPageProps['searchParams']
+  searchParams: SearchParams
 ): Promise<RepoResponse> {
   const client = getXataClient();
   const session = await auth();
@@ -144,7 +147,7 @@ async function getRepos(
 
 async function getReportedRepos() {
   const client = getXataClient();
-  const reports = await client.db.reports 
+  const reports = await client.db.reports
     .select(['repoId'])
     .filter({ valid: false })
     .getMany();
