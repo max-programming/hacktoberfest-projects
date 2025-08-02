@@ -32,7 +32,7 @@ export function RepoCard({ repo }: RepoCardProps) {
   const hasMoreTopics = sortedTopics?.length > MAX_TOPICS_DISPLAY;
 
   return (
-    <section className="transition duration-300 shadow-sm card bg-hacktoberfest-black ring-1 ring-hacktoberfest-light-pink hover:scale-105 hover:shadow-2xl hover:shadow-hacktoberfest-deep-pink h-125">
+    <section className="transition duration-300 shadow-sm card bg-hacktoberfest-blue ring-1 ring-hacktoberfest-light hover:scale-105 hover:shadow-2xl hover:shadow-hacktoberfest-light-blue h-125">
       <div className="relative p-6 card-body">
         <div className="flex-1">
           <div className="flex items-center gap-2">
@@ -49,7 +49,7 @@ export function RepoCard({ repo }: RepoCardProps) {
                 className="rounded-full"
               />
             </a>
-            <h2 className="overflow-hidden text-3xl cursor-pointer text-hacktoberfest-pink whitespace-nowrap text-ellipsis underline-expand">
+            <h2 className="overflow-hidden text-3xl cursor-pointer text-hacktoberfest-light whitespace-nowrap text-ellipsis underline-expand">
               <a
                 href={repo.html_url + '?ref=finder.usmans.me'}
                 title={repo.name}
@@ -69,7 +69,7 @@ export function RepoCard({ repo }: RepoCardProps) {
                 href={repo.html_url + '?ref=finder.usmans.me'}
                 target="_blank"
                 rel="noreferrer"
-                className="text-hacktoberfest-pink ml-2 underline-expand"
+                className="text-hacktoberfest-light ml-2 underline-expand"
               >
                 Read more
               </a>
@@ -86,15 +86,15 @@ export function RepoCard({ repo }: RepoCardProps) {
                 className={cn(
                   'badge inline px-3 py-0.5 h-auto',
                   topic === 'hacktoberfest'
-                    ? 'bg-hacktoberfest-light-green text-hacktoberfest-dark-green'
-                    : 'bg-hacktoberfest-deep-pink text-hacktoberfest-light-pink'
+                    ? 'bg-hacktoberfest-beige text-hacktoberfest-blue'
+                    : 'bg-hacktoberfest-light-blue text-hacktoberfest-light'
                 )}
               >
                 {topic}
               </a>
             ))}
             {hasMoreTopics && (
-              <span className="text-hacktoberfest-pink ml-2">...</span>
+              <span className="text-hacktoberfest-light ml-2">...</span>
             )}
           </div>
         </div>
@@ -104,43 +104,49 @@ export function RepoCard({ repo }: RepoCardProps) {
           <a
             href={`${repo.html_url}/stargazers?ref=finder.usmans.me`}
             target="_blank"
-            className="w-full flex-shrink-0 flex-grow basis-[120px] border rounded-xl flex items-center justify-center py-4 gap-3 relative border-hacktoberfest-pink tooltip tooltip-bottom"
+            className="w-full flex-shrink-0 flex-grow basis-[120px] border rounded-xl flex items-center justify-center py-4 gap-3 relative border-hacktoberfest-light tooltip tooltip-bottom"
             data-tip="Click to see stargazers"
           >
-            <GoStar className="text-2xl text-hacktoberfest-pink" />
+            <GoStar className="text-2xl text-hacktoberfest-light" />
             <div className="flex flex-col">
-              <div className="text-lg xl:text-2xl font-medium mb-0.5 text-hacktoberfest-light">
+              <div className="text-lg xl:text-2xl font-medium mb-0.5 text-hacktoberfest-beige">
                 {numberFormatter.format(repo.stargazers_count)}
               </div>
-              <div className="text-xs text-neutral-300 lg:text-sm">Stars</div>
+              <div className="text-xs text-hacktoberfest-light lg:text-sm">
+                Stars
+              </div>
             </div>
           </a>
           <a
             href={`${repo.html_url}/forks?ref=finder.usmans.me`}
             target="_blank"
-            className="flex-shrink-0 flex-grow basis-[120px] border rounded-xl p-4 flex items-center justify-center gap-3 relative border-hacktoberfest-pink tooltip tooltip-bottom"
+            className="flex-shrink-0 flex-grow basis-[120px] border rounded-xl p-4 flex items-center justify-center gap-3 relative border-hacktoberfest-light tooltip tooltip-bottom"
             data-tip="Click to see forks"
           >
-            <GoRepoForked className="text-2xl text-hacktoberfest-pink" />
+            <GoRepoForked className="text-2xl text-hacktoberfest-light" />
             <div className="flex flex-col">
-              <div className="text-lg xl:text-2xl font-medium mb-0.5 text-hacktoberfest-light">
+              <div className="text-lg xl:text-2xl font-medium mb-0.5 text-hacktoberfest-beige">
                 {numberFormatter.format(repo.forks)}
               </div>
-              <div className="text-xs text-neutral-300 lg:text-sm">Forks</div>
+              <div className="text-xs text-hacktoberfest-light lg:text-sm">
+                Forks
+              </div>
             </div>
           </a>
           <a
             href={`${repo.html_url}/issues?ref=finder.usmans.me`}
             target="_blank"
-            className="flex-shrink-0 flex-grow basis-[120px] border rounded-xl p-4 flex items-center justify-center gap-3 relative border-hacktoberfest-pink tooltip tooltip-bottom"
+            className="flex-shrink-0 flex-grow basis-[120px] border rounded-xl p-4 flex items-center justify-center gap-3 relative border-hacktoberfest-light tooltip tooltip-bottom"
             data-tip="Click to see issues"
           >
-            <GoIssueOpened className="text-2xl text-hacktoberfest-pink" />
+            <GoIssueOpened className="text-2xl text-hacktoberfest-light" />
             <div className="flex flex-col">
-              <div className="text-lg xl:text-2xl font-medium mb-0.5 text-hacktoberfest-light">
+              <div className="text-lg xl:text-2xl font-medium mb-0.5 text-hacktoberfest-beige">
                 {numberFormatter.format(repo.open_issues_count)}
               </div>
-              <div className="text-xs text-neutral-300 lg:text-sm">Issues</div>
+              <div className="text-xs text-hacktoberfest-light lg:text-sm">
+                Issues
+              </div>
             </div>
           </a>
         </div>

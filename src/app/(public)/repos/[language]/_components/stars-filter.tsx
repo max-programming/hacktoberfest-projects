@@ -62,7 +62,7 @@ export function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 pr-4 m-auto text-center bg-transparent sm:w-full input input-bordered md:text-left text-hacktoberfest-light placeholder:text-hacktoberfest-light-green border-hacktoberfest-light focus:outline-hacktoberfest-light-pink"
+              className="w-3/5 pr-4 m-auto text-center bg-transparent sm:w-full input input-bordered md:text-left text-hacktoberfest-light placeholder:text-hacktoberfest-beige border-hacktoberfest-light focus:border-hacktoberfest-light-blue focus:outline-none transition-colors duration-200"
               {...field}
               onChange={e => field.onChange(e.target.valueAsNumber)}
               placeholder="Star's Starting Range"
@@ -76,7 +76,7 @@ export function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 pr-4 m-auto text-center bg-transparent sm:w-full input input-bordered md:text-left text-hacktoberfest-light placeholder:text-hacktoberfest-light-green border-hacktoberfest-light focus:outline-hacktoberfest-light-pink"
+              className="w-3/5 pr-4 m-auto text-center bg-transparent sm:w-full input input-bordered md:text-left text-hacktoberfest-light placeholder:text-hacktoberfest-beige border-hacktoberfest-light focus:border-hacktoberfest-light-blue focus:outline-none transition-colors duration-200"
               {...field}
               onChange={e => field.onChange(e.target.valueAsNumber)}
               placeholder="Star's Finish Range"
@@ -89,7 +89,7 @@ export function StarsFilter() {
         {/* Flex container to center the button */}
         <div className="flex items-center justify-center">
           <button
-            className="w-3/5 mx-auto btn btn-ghost text-hacktoberfest-light ring-1 ring-hacktoberfest-light md:w-full"
+            className="w-3/5 mx-auto btn bg-hacktoberfest-blue border-hacktoberfest-light text-hacktoberfest-light hover:bg-hacktoberfest-light-blue hover:text-hacktoberfest-blue transition-colors duration-200 md:w-full"
             type="submit"
           >
             Search

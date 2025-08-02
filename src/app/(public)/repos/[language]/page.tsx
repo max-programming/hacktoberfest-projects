@@ -29,13 +29,13 @@ export default async function ReposPage({
     <Suspense fallback={<p>Loading...</p>} key={key}>
       <Header />
       <ScrollToTop />
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-32">
         <div className="min-h-screen pt-5">
           <div className="text-center">
             <div className="w-5/6 max-w-md mx-auto">
-              <h1 className="mb-5 text-5xl font-medium uppercase text-hacktoberfest-light-green">
+              <h1 className="mb-5 text-5xl font-medium uppercase text-hacktoberfest-light-blue">
                 {repos.total_count} repositories for{' '}
-                <span className="font-mono font-bold text-hacktoberfest-pink">
+                <span className="font-mono font-bold text-hacktoberfest-light">
                   {searchParams.q
                     ? searchParams.q +
                       ' in ' +
@@ -127,11 +127,11 @@ async function getRepos(
   if (!res.ok) notFound();
 
   const repos = (await res.json()) as RepoData;
-  const reports = await getReportedRepos();
+  // const reports = await getReportedRepos();
 
-  repos.items = repos.items.filter((repo: RepoItem) => {
-    return !repo.archived && !reports.find(report => report.repoId === repo.id);
-  });
+  // repos.items = repos.items.filter((repo: RepoItem) => {
+  //   return !repo.archived && !reports.find(report => report.repoId === repo.id);
+  // });
 
   if (!Array.isArray(repos.items) || repos.items?.length < 1) notFound();
 
@@ -142,12 +142,12 @@ async function getRepos(
   };
 }
 
-async function getReportedRepos() {
-  const client = getXataClient();
-  const reports = await client.db.reports 
-    .select(['repoId'])
-    .filter({ valid: false })
-    .getMany();
+// async function getReportedRepos() {
+//   const client = getXataClient();
+//   const reports = await client.db.reports
+//     .select(['repoId'])
+//     .filter({ valid: false })
+//     .getMany();
 
-  return reports;
-}
+//   return reports;
+// }
