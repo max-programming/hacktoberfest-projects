@@ -35,7 +35,7 @@ export async function Header() {
             </form>
             <Link
               href="/contributors"
-              className="btn btn-square btn-ghost umami--click--contributors-button hover:bg-blue-700 transition-colors"
+              className="btn btn-square btn-ghost umami--click--contributors-button hover:text-hacktoberfest-light transition-colors"
             >
               <BsPeopleFill size="1.5rem" color="white" title="Contributors" />
             </Link>
@@ -44,7 +44,7 @@ export async function Header() {
               href="https://github.com/max-programming/hacktoberfest-projects"
               target="_blank"
               rel="noreferrer"
-              className="btn btn-square btn-ghost umami--click--github-button hover:bg-blue-700 transition-colors"
+              className="btn btn-square btn-ghost umami--click--github-button hover:text-hacktoberfest-light transition-colors"
             >
               <IoLogoGithub size="1.5rem" color="white" title="GitHub" />
             </a>
