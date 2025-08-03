@@ -14,7 +14,7 @@ export function Button({
     <div className="relative inline-block group w-fit transition-all duration-500">
       <button
         className={cn(
-          'text-sm font-bold inline-flex justify-center items-center uppercase py-3 px-4 text-center text-white bg-primary-btn-gradient shadow-primary-btn-shadow hover:bg-primary-btn-hover-gradient min-w-20',
+          'text-sm font-bold inline-flex justify-center items-center uppercase py-3 px-4 text-center text-white bg-primary-btn-gradient shadow-primary-btn-shadow hover:bg-primary-btn-hover-gradient min-w-20 active:scale-95 active:shadow-lg transition-all duration-150 ease-in-out',
           className
         )}
         {...props}
