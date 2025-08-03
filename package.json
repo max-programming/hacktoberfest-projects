@@ -7,7 +7,7 @@
     "build": "npm run xata:init && next build",
     "start": "next start",
     "lint": "next lint",
-    "xata:init": "dotenv -- xata init --db \"$XATA_HTTP_ENDPOINT\" --sdk --no-input --yes --codegen=src/xata.ts --force",
+    "xata:init": "node prebuild.mjs",
     "format": "prettier --write \"./**/*.{ts,tsx,json}\""
   },
   "dependencies": {
@@ -20,6 +20,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "daisyui": "^4.12.24",
+    "dotenv": "^17.2.1",
     "dotenv-cli": "^10.0.0",
     "framer-motion": "^12.23.12",
     "jotai": "^2.12.5",

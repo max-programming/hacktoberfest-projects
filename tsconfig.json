@@ -30,7 +30,8 @@
     "**/*.tsx",
     "src/env.mjs",
     "next.config.mjs",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "prebuild.mjs"
   ],
   "exclude": ["node_modules"]
 }
