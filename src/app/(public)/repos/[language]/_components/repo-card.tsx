@@ -35,30 +35,32 @@ export function RepoCard({ repo }: RepoCardProps) {
     <section className="transition duration-300 shadow-sm card bg-hacktoberfest-blue ring-1 ring-hacktoberfest-light hover:scale-105 hover:shadow-2xl hover:shadow-hacktoberfest-light-blue h-125">
       <div className="relative p-6 card-body">
         <div className="flex-1">
-          <div className="flex items-center gap-2">
-            <a
-              className="border-2 rounded-full h-14 aspect-square p-1.5 border-hacktoberfest-beige"
-              href={repo.owner.html_url}
-              title={repo.owner.login}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={repo.owner.avatar_url}
-                alt={repo.owner.login}
-                className="rounded-full"
-              />
-            </a>
-            <h2 className="overflow-hidden text-3xl cursor-pointer text-hacktoberfest-light whitespace-nowrap text-ellipsis underline-expand">
+          <div className="flex items-center gap-2 justify-between">
+            <div className="flex items-center gap-2">
               <a
-                href={repo.html_url + '?ref=finder.usmans.me'}
-                title={repo.name}
+                className="border-2 rounded-full h-14 aspect-square p-1.5 border-hacktoberfest-beige"
+                href={repo.owner.html_url}
+                title={repo.owner.login}
                 target="_blank"
                 rel="noreferrer"
               >
-                {repo.name}
+                <img
+                  src={repo.owner.avatar_url}
+                  alt={repo.owner.login}
+                  className="rounded-full"
+                />
               </a>
-            </h2>
+              <h2 className="overflow-hidden text-3xl cursor-pointer text-hacktoberfest-light line-clamp-1">
+                <a
+                  href={repo.html_url + '?ref=finder.usmans.me'}
+                  title={repo.name}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {repo.name}
+                </a>
+              </h2>
+            </div>
             <ReportButton repo={repo} />
           </div>
 

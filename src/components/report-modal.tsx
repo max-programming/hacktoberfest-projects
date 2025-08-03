@@ -12,6 +12,7 @@ import { repoAtom } from '@/state/repoAtom';
 import { SendReportSchema } from '@/app/validation';
 import { sendReportAction } from '@/app/actions';
 import { cn } from '@/lib/utils';
+import { Button } from '@/app/(public)/_components/button';
 
 export function ReportModal() {
   const isReported = useGetRepo();
@@ -59,65 +60,85 @@ export function ReportModal() {
 
   return (
     <dialog id="modal" className="modal modal-bottom sm:modal-middle">
-      <div className="w-full max-w-2xl modal-box bg-hacktoberfest-black border-hacktoberfest-light-green border md:w-11/12">
-        <h3 className="block mb-2 text-2xl font-medium text-center text-hacktoberfest-light-green">
+      <div
+        className="w-full max-w-2xl modal-box bg-hacktoberfest-blue shadow-2xl md:w-11/12 rounded-xl border border-hacktoberfest-light-blue"
+        style={{ boxShadow: '0 25px 50px -12px rgba(208, 204, 227, 0.25)' }}
+      >
+        <h3 className="block text-3xl font-bold text-hacktoberfest-light">
           Report This Repository
         </h3>
         {session.data ? (
           !isReported ? (
             <div className="flex flex-col modal-action">
-              <p className="text-lg text-hacktoberfest-light">
+              <p className="text-lg text-hacktoberfest-light mb-4">
                 Please provide as much detail as possible to explain why you are
                 reporting this repository.
-                <span className="flex items-center gap-2 mt-2 text-sm font-bold text-hacktoberfest-green">
-                  <GoStop />
+                <span className="flex items-center gap-2 mt-3 text-sm font-bold text-hacktoberfest-light bg-hacktoberfest-light-blue/20 p-3 rounded-lg">
+                  <GoStop className="text-red-400" />
                   Note that we may remove the repository
                 </span>
               </p>
 
-              <form method="dialog" onSubmit={handleSubmit}>
+              <form method="dialog" onSubmit={handleSubmit} className="w-full">
                 <textarea
                   name="message"
                   placeholder="Why do you want to report this repository..."
-                  className="w-full p-2 mt-6 -ml-2 text-white rounded-md textarea-lg textarea textarea-bordered textarea-ghost focus:outline-hacktoberfest-pink"
+                  className="w-full p-4 mt-4 text-white rounded-lg textarea-lg textarea textarea-bordered bg-hacktoberfest-light-blue/10 focus:outline-none focus:ring-2 focus:ring-hacktoberfest-light/50 transition-all duration-200"
                   required
+                  rows={4}
                 />
-                <div className="flex items-center justify-end p-2 mt-4 ml-6 space-x-4">
+                <div className="flex items-center justify-end p-2 mt-6 space-x-4">
                   <button
+                    type="button"
+                    onClick={handleCloseClick}
+                    className="btn bg-transparent text-hacktoberfest-light hover:bg-hacktoberfest-light hover:text-hacktoberfest-blue transition-all duration-200"
+                    style={{
+                      boxShadow: '0 10px 15px -3px rgba(208, 204, 227, 0.1)'
+                    }}
+                  >
+                    Cancel
+                  </button>
+                  <Button
                     type="submit"
                     className={cn(
-                      'btn glass shadow-md bg-hacktoberfest-deep-pink text-xl text-hacktoberfest-light hover:bg-hacktoberfest-pink',
                       isLoading &&
-                        'disabled cursor-not-allowed pointer-events-none'
+                        'disabled cursor-not-allowed pointer-events-none opacity-50'
                     )}
                   >
-                    {isLoading ? <span>Loading...</span> : <span>Submit</span>}
-                  </button>
+                    {isLoading ? (
+                      <span className="flex items-center gap-2">
+                        <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin"></div>
+                        Loading...
+                      </span>
+                    ) : (
+                      <span>Submit Report</span>
+                    )}
+                  </Button>
                 </div>
               </form>
               <button
-                className="absolute btn btn-md text-sxl btn-circle btn-ghost right-2 top-2"
+                className="absolute btn btn-md text-xl  btn-ghost right-2 top-2 text-hacktoberfest-light transition-all duration-200"
                 onClick={handleCloseClick}
               >
                 ✕
               </button>
             </div>
           ) : (
-            <div className="flex items-center justify-center mt-5">
-              <span className="text-hacktoberfest-green">
+            <div className="flex items-center justify-center p-6">
+              <span className="text-hacktoberfest-light text-lg font-medium">
                 This repository is already reported and in review
               </span>
             </div>
           )
         ) : (
-          <div className="flex items-center justify-center mt-5">
-            <button
-              className="text-black capitalize btn bg-hacktoberfest-light hover:bg-hacktoberfest-light-green"
-              onClick={() => signIn('github')}
-            >
-              <BsGithub className="w-6 h-6 mr-1" />
+          <div className="flex flex-col items-center justify-center p-8">
+            <p className="text-hacktoberfest-light text-lg mb-4 text-center">
+              Please sign in to report this repository
+            </p>
+            <Button onClick={() => signIn('github')}>
+              <BsGithub className="w-6 h-6 mr-2" />
               Sign in with GitHub
-            </button>
+            </Button>
           </div>
         )}
       </div>

@@ -53,7 +53,7 @@ export function StarsFilter() {
 
   return (
     <form
-      className="w-full px-2 m-2 mx-auto mb-4 lg:w-2/4 form-control"
+      className="w-full px-2 m-2 mx-auto mb-4 sm:w-3/4 xl:w-2/4 form-control"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="flex flex-col gap-2 sm:flex-row">
@@ -62,7 +62,7 @@ export function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 pr-4 m-auto text-center bg-transparent sm:w-full input input-bordered md:text-left text-hacktoberfest-light placeholder:text-hacktoberfest-beige border-hacktoberfest-light focus:border-hacktoberfest-light-blue focus:outline-none transition-colors duration-200"
+              className="w-3/5 pr-4 m-auto text-center bg-transparent sm:w-full input input-bordered md:text-left text-hacktoberfest-light placeholder:text-hacktoberfest-beige border-hacktoberfest-light focus:border-hacktoberfest-light-blue focus:outline-none transition-colors duration-200 placeholder:line-clamp-1"
               {...field}
               onChange={e => field.onChange(e.target.valueAsNumber)}
               placeholder="Star's Starting Range"
