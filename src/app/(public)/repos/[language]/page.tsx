@@ -127,7 +127,7 @@ async function getRepos(
   }
 
   const res = await fetch(apiUrl, { headers });
-  console.log(res.ok);
+  console.log(JSON.stringify(res));
   if (!res.ok) notFound();
 
   const repos = (await res.json()) as RepoData;
@@ -137,7 +137,6 @@ async function getRepos(
     return !repo.archived && !reports.find(report => report.repoId === repo.id);
   });
 
-  console.log(repos.items);
   if (!Array.isArray(repos.items) || repos.items?.length < 1) notFound();
 
   return {
