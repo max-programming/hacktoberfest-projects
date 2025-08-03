@@ -9,7 +9,7 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-space-grotesk)', 'ui-sans-serif', 'system-ui']
+        mono: ['var(--font-atkinson-hyperlegible-mono)', 'monospace']
       },
       backgroundImage: {
         'primary-btn-hover-gradient':
