@@ -38,3 +38,5 @@ yarn-error.log*
 
 .xata
 .xatarc
+
+src/xata.ts
