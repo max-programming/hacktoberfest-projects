@@ -140,7 +140,7 @@ const DatabaseClient = buildClient();
 
 const defaultOptions = {
   databaseURL:
-    "https://Usman-Sabuwala-s-workspace-u2kcvd.us-east-1.xata.sh/db/project-finder-hf:main",
+    "https://Usman-Sabuwala-s-workspace-u2kcvd.us-east-1.xata.sh/db/project-finder-hf",
 };
 
 export class XataClient extends DatabaseClient<DatabaseSchema> {
