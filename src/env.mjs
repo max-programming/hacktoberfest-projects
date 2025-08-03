@@ -8,11 +8,12 @@ export const env = createEnv({
     AUTH_SECRET: z.string().min(1, 'AUTH_SECRET is required'),
     XATA_BRANCH: z.string().min(1, 'XATA_BRANCH is required'),
     XATA_API_KEY: z.string().min(1, 'XATA_API_KEY is required'),
+    XATA_HTTP_ENDPOINT: z.string().min(1, 'XATA_HTTP_ENDPOINT is required'),
     AUTH_GITHUB_TOKEN: z.string().optional()
   },
   client: {
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: z.string().optional().nullable(),
-    NEXT_PUBLIC_ANALYTICS_WEBSITE_ID: z.string().uuid().optional().nullable(),
+    NEXT_PUBLIC_ANALYTICS_WEBSITE_ID: z.string().uuid().optional().nullable()
   },
   experimental__runtimeEnv: {
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME:

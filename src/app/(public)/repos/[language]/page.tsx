@@ -24,8 +24,11 @@ export default async function ReposPage({
   const { language } = await params;
   const sp = await searchParams;
 
-  const key = JSON.stringify(sp);
-  const { repos, page } = await getRepos(language, sp);
+  const reposRes = await getRepos(language, sp);
+
+  if (!reposRes) notFound();
+
+  const { repos, page } = reposRes;
 
   return (
     <>
@@ -78,7 +81,7 @@ export async function generateMetadata({
 async function getRepos(
   language: string,
   searchParams: SearchParams
-): Promise<RepoResponse> {
+): Promise<RepoResponse | undefined> {
   const client = getXataClient();
   const session = await auth();
   const {
@@ -130,7 +133,7 @@ async function getRepos(
   }
 
   const res = await fetch(apiUrl, { headers });
-  if (!res.ok) notFound();
+  if (!res.ok) return undefined;
 
   const repos = (await res.json()) as RepoData;
   const reports = await getReportedRepos();
@@ -139,7 +142,7 @@ async function getRepos(
     return !repo.archived && !reports.find(report => report.repoId === repo.id);
   });
 
-  if (!Array.isArray(repos.items) || repos.items?.length < 1) notFound();
+  if (!Array.isArray(repos.items) || repos.items?.length < 1) return undefined;
 
   return {
     page: +page.toString(),
