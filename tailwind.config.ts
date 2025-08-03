@@ -36,17 +36,17 @@ const config = {
       },
       colors: {
         hacktoberfest: {
-          black: '#1C1C1C',
-          green: '#50DA4C',
+          // black: '#1C1C1C',
+          // green: '#50DA4C',
           blue: '#1c1c3f',
-          pink: '#FF8BFF',
+          // pink: '#FF8BFF',
           light: '#d0cce3',
           beige: '#F3F0E0',
-          'dark-green': '#183717',
-          'light-green': '#D8FFD8',
-          'light-blue': '#403f7d',
-          'deep-pink': '#C401C4',
-          'light-pink': '#FFDBFF'
+          // 'dark-green': '#183717',
+          // 'light-green': '#D8FFD8',
+          'light-blue': '#403f7d'
+          // 'deep-pink': '#C401C4',
+          // 'light-pink': '#FFDBFF'
         }
       },
       borderRadius: {

@@ -147,7 +147,7 @@ a {
   }
 
   .bg-shimmer {
-    background: linear-gradient(90deg, #183717 25%, #50da4c 50%, #183717 75%);
+    background: linear-gradient(90deg, #1c1c3f 25%, #403f7d 50%, #1c1c3f 75%);
     background-size: 200% 100%;
   }
 }
