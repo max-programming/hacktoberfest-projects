@@ -131,6 +131,8 @@ async function getRepos(
 
   const res = await fetch(apiUrl, { headers });
   console.log(res);
+  console.log(headers);
+  console.log(env);
   if (!res.ok) return undefined;
 
   const repos = (await res.json()) as RepoData;
