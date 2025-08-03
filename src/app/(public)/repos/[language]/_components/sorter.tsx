@@ -118,10 +118,7 @@ export function Sorter() {
   return (
     <div className="flex items-center justify-center gap-4 mb-8">
       <div className="dropdown group dropdown-hover">
-        <Button
-          tabIndex={0}
-          className="bg-hacktoberfest-blue border-hacktoberfest-light text-hacktoberfest-light hover:bg-primary-btn-hover-gradient transition-colors duration-200"
-        >
+        <Button tabIndex={0}>
           <Code className="w-6 h-6 mr-2" />
           Language
         </Button>
@@ -145,10 +142,7 @@ export function Sorter() {
         </div>
       </div>
       <div className="dropdown dropdown-hover group">
-        <Button
-          tabIndex={0}
-          className="bg-hacktoberfest-blue border-hacktoberfest-light text-hacktoberfest-light hover:bg-primary-btn-hover-gradient transition-colors duration-200"
-        >
+        <Button tabIndex={0}>
           <ArrowUpAZ className="w-6 h-6 mr-2" />
           {selectedSort()}
         </Button>

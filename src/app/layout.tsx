@@ -1,7 +1,7 @@
 import '@/styles/globals.css';
 import Script from 'next/script';
 import type { Metadata, Viewport } from 'next';
-import { Space_Grotesk } from 'next/font/google';
+import { Atkinson_Hyperlegible_Mono } from 'next/font/google';
 import { unstable_ViewTransition as ViewTransition } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { SessionProvider } from 'next-auth/react';
@@ -9,7 +9,7 @@ import { Footer } from '@/components/footer';
 import { ReportModal } from '@/components/report-modal';
 import { env } from '@/env.mjs';
 
-const spaceGrotesk = Space_Grotesk({
+const atkinsonHyperlegibleMono = Atkinson_Hyperlegible_Mono({
   subsets: ['latin'],
   weight: ['400', '500'],
   display: 'swap',
@@ -18,7 +18,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <html className={spaceGrotesk.variable}>
+    <html className={atkinsonHyperlegibleMono.variable}>
       <body className="font-sans font-normal bg-hacktoberfest-blue">
         <ViewTransition>
           {children}
