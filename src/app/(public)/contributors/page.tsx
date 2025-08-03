@@ -17,11 +17,11 @@ export default async function ContributorsPage() {
   return (
     <div>
       <Header />
-      <div className="container mx-auto mb-5">
-        <h1 className="my-5 text-5xl font-medium text-center text-neutral-100">
+      <div className="container mx-auto mb-5 space-y-8 mt-36">
+        <h1 className="text-4xl sm:text-5xl font-medium text-center text-neutral-100">
           Contributors ✨
         </h1>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-4">
           {contributors.map(contributor => (
             <ContributorCard
               key={contributor.login}

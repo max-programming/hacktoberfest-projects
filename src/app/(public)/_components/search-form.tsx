@@ -13,11 +13,13 @@ export function SearchForm() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const { register, handleSubmit, reset } = useForm<FormValues>({
+  const { register, handleSubmit, reset, watch } = useForm<FormValues>({
     defaultValues: {
       searchQuery: searchParams.get('q') as string
     }
   });
+
+  const searchQuery = watch('searchQuery');
 
   if (!pathname.startsWith('/repos')) {
     return null;
@@ -41,17 +43,19 @@ export function SearchForm() {
         <div className="relative">
           <input
             placeholder="Search"
-            className="w-full pr-16 bg-transparent text-hacktoberfest-light input input-bordered border-hacktoberfest-light focus:outline-hacktoberfest-light-pink placeholder:text-hacktoberfest-light-green"
+            className="w-full pr-16 bg-transparent text-hacktoberfest-light input input-bordered border-hacktoberfest-light focus:border-hacktoberfest-light-blue focus:outline-none placeholder:text-hacktoberfest-beige transition-colors duration-200"
             type="text"
             {...register('searchQuery', { required: true })}
           />
-          <button
-            className="absolute top-0 right-0 rounded-l-none btn btn-ghost"
-            type="button"
-            onClick={() => reset()}
-          >
-            <GoX color="white" />
-          </button>
+          {searchQuery && searchQuery.trim() !== '' && (
+            <button
+              className="absolute top-0 right-0 rounded-l-none btn btn-ghost"
+              type="button"
+              onClick={() => reset()}
+            >
+              <GoX color="white" />
+            </button>
+          )}
         </div>
       </form>
     </div>

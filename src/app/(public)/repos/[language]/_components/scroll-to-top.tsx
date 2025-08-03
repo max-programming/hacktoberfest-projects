@@ -34,7 +34,7 @@ export function ScrollToTop() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <button className="relative flex items-center justify-center w-12 text-2xl transition-transform rounded-full aspect-square bg-hacktoberfest-green text-hacktoberfest-dark-green hover:scale-95 ">
+          <button className="relative flex items-center justify-center w-12 text-2xl transition-transform rounded-full aspect-square bg-hacktoberfest-light-blue text-hacktoberfest-blue hover:scale-95 ">
             <ChevronUp className="text-slate-100" />
           </button>
         </motion.div>

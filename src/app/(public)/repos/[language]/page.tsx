@@ -34,13 +34,16 @@ export default async function ReposPage({
     <>
       <Header />
       <ScrollToTop />
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-32">
         <div className="min-h-screen pt-5">
           <div className="text-center">
             <div className="w-5/6 max-w-md mx-auto">
-              <h1 className="mb-5 text-5xl font-medium uppercase text-hacktoberfest-light-green">
-                {repos.total_count} repositories for{' '}
-                <span className="font-mono font-bold text-hacktoberfest-pink">
+              <h1 className="mb-5 text-5xl font-medium uppercase text-hacktoberfest-light">
+                <span className="font-bold heading-text">
+                  {repos.total_count}
+                </span>{' '}
+                repositories for{' '}
+                <span className="font-bold heading-text">
                   {sp.q
                     ? sp.q + ' in ' + capitalize(decodeURIComponent(language))
                     : capitalize(decodeURIComponent(language))}

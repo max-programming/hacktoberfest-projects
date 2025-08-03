@@ -116,40 +116,37 @@ export function Sorter() {
   }
 
   return (
-    <div className="flex items-center justify-center gap-2 mb-8">
+    <div className="flex items-center justify-center gap-4 mb-8">
       <div className="dropdown group dropdown-hover">
-        <Button
-          tabIndex={0}
-          className="hover:bg-hacktoberfest-green hover:text-hacktoberfest-dark-green"
-        >
+        <Button tabIndex={0}>
           <Code className="w-6 h-6 mr-2" />
           Language
         </Button>
-        <div className="z-50 h-64 p-2 overflow-y-scroll shadow dropdown-content hidden group-hover:block bg-base-100 rounded-box w-60">
+        <div className="z-[9999] h-64 p-2 overflow-y-auto shadow-lg dropdown-content hidden group-hover:block bg-white/95 backdrop-blur-sm rounded-xl w-60 border border-gray-200/50">
           <ul tabIndex={0} className="menu menu-vertical">
             {mainLanguages.sort(sortByName).map(language => {
               const sp = new URLSearchParams(searchParams);
               sp.delete('p');
               return (
-              <li key={language} onClick={handleClick}>
-                <Link href={`/repos/${language.toLowerCase()}?${sp.toString()}`}>
-                  {language}
-                </Link>
-              </li>
+                <li key={language} onClick={handleClick}>
+                  <Link
+                    href={`/repos/${language.toLowerCase()}?${sp.toString()}`}
+                    className="text-gray-700 hover:text-white hover:bg-hacktoberfest-light-blue rounded-lg transition-colors duration-200 px-3 py-2"
+                  >
+                    {language}
+                  </Link>
+                </li>
               );
-              })}
+            })}
           </ul>
         </div>
       </div>
       <div className="dropdown dropdown-hover group">
-        <Button
-          tabIndex={0}
-          className="hover:bg-hacktoberfest-green hover:text-hacktoberfest-dark-green"
-        >
+        <Button tabIndex={0}>
           <ArrowUpAZ className="w-6 h-6 mr-2" />
           {selectedSort()}
         </Button>
-        <div className="z-50 h-64 p-2 overflow-y-scroll shadow dropdown-content hidden group-hover:block -ml-16 bg-base-100 rounded-box w-60">
+        <div className="z-[9999] h-64 p-2 overflow-y-auto shadow-lg dropdown-content hidden group-hover:block -ml-16 bg-white/95 backdrop-blur-sm rounded-xl w-60 border border-gray-200/50">
           <ul tabIndex={0} className="menu menu-vertical">
             {navigationItems.map((item, index) => {
               const sp = item.onSelect(new URLSearchParams(searchParams));
@@ -160,7 +157,12 @@ export function Sorter() {
               }
               return (
                 <li key={index} onClick={handleClick}>
-                  <Link href={`${pathname}?${sp.toString()}`}>{item.name}</Link>
+                  <Link
+                    href={`${pathname}?${sp.toString()}`}
+                    className="text-gray-700 hover:text-white hover:bg-hacktoberfest-light-blue rounded-lg transition-colors duration-200 px-3 py-2"
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               );
             })}

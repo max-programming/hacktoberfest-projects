@@ -11,7 +11,7 @@ export function LanguageButton({ language }: LanguageButtonProps) {
 
   return (
     <Link href={`/repos/${lan}`}>
-      <Button className="flex items-center gap-3">
+      <Button>
         <svg className="w-5 h-4">{Icons[lan === 'c++' ? 'cpp' : lan]}</svg>
         {language}
       </Button>

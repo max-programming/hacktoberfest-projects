@@ -40,29 +40,33 @@ export function ContributorCard({ contributor }: ContributorCardProps) {
 
   return (
     <button
-      className="justify-center min-w-full text-center shadow-2xl card focus-within:outline-hacktoberfest-green bg-hacktoberfest-black"
+      className="group justify-center min-w-full text-center shadow-2xl card focus-within:outline-hacktoberfest-blue bg-hacktoberfest-light-blue hover:bg-hacktoberfest-light transition-all duration-300 transform hover:-translate-y-1 overflow-hidden pt-6"
       id={contributor.login}
       onClick={() => router.replace(`/contributors#${contributor.login}`)}
       ref={cardRef}
     >
-      <div className="w-full pt-5 mx-auto">
-        <figure className="w-full h-full">
-          <img src={url} alt={contributor.name} className="rounded-xl" />
+      <div className="w-full mx-auto">
+        <figure className="size-56 rounded-full mx-auto">
+          <img
+            src={url}
+            alt={contributor.name}
+            className="max-h-full w-auto object-cover transition-transform duration-300 group-hover:scale-110"
+          />
         </figure>
       </div>
       <div className="w-full gap-3 items-center card-body">
-        <h2 className="text-2xl font-medium text-hacktoberfest-green">
+        <h2 className="text-2xl font-medium text-hacktoberfest-light group-hover:text-hacktoberfest-blue">
           {contributor.name}
         </h2>
         <a
           href={contributor.profile}
-          className="link text-hacktoberfest-green hover:text-hacktoberfest-pink w-fit underline-expand"
+          className="link text-hacktoberfest-light group-hover:text-hacktoberfest-black group-hover:text-hacktoberfest-blue w-fit underline-expand"
         >
           {contributor.profile}
         </a>
         <div className="justify-center mt-auto card-actions">
           <a
-            className="border-2 text-hacktoberfest-light btn border-hacktoberfest-pink hover:border-hacktoberfest-pink btn-outline hover:bg-hacktoberfest-pink hover:text-hacktoberfest-black"
+            className="border-2 text-hacktoberfest-light btn border-hacktoberfest-blue  group-hover:!text-white group-hover:-translate-y-1"
             href={`https://github.com/${contributor.login}`}
             target="_blank"
             rel="noreferrer"

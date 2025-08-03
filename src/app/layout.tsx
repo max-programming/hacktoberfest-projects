@@ -1,25 +1,37 @@
 import '@/styles/globals.css';
 import Script from 'next/script';
 import type { Metadata, Viewport } from 'next';
-import { Space_Grotesk } from 'next/font/google';
 import { unstable_ViewTransition as ViewTransition } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { SessionProvider } from 'next-auth/react';
 import { Footer } from '@/components/footer';
 import { ReportModal } from '@/components/report-modal';
 import { env } from '@/env.mjs';
+import localFont from 'next/font/local';
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  display: 'swap',
-  variable: '--font-space-grotesk'
+const atkinsonHyperlegibleMono = localFont({
+  variable: '--font-atkinson-hyperlegible-mono',
+  src: [
+    {
+      path: './fonts/AtkinsonHyperlegibleMono-Italic-VariableFont_wght.ttf',
+      weight: '400',
+      style: 'italic'
+    },
+    {
+      path: './fonts/AtkinsonHyperlegibleMono-VariableFont_wght.ttf',
+      weight: '400',
+      style: 'normal'
+    }
+  ]
 });
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <html className={spaceGrotesk.variable}>
-      <body className="font-sans font-normal bg-hacktoberfest-dark-green">
+    <html className={atkinsonHyperlegibleMono.variable}>
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
+      <body className="font-mono font-normal bg-hacktoberfest-blue">
         <ViewTransition>
           {children}
           <Footer />

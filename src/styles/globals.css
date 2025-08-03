@@ -17,15 +17,53 @@ a {
 }
 
 .btn-clip {
+  --corner-size: 5px;
+  --border-width: 1px;
+  --full-width: calc(var(--corner-size) + var(--border-width));
+  position: absolute;
+  inset: -2px;
+  background-color: white;
   clip-path: polygon(
-    12px 0px,
-    100% 0px,
-    100% 72%,
-    calc(100% - 12px) 100%,
+    0px var(--full-width),
+    var(--border-width) var(--full-width),
+    var(--border-width) var(--border-width),
+    var(--full-width) var(--border-width),
+    var(--full-width) 0px,
+    0px 0px,
     0px 100%,
-    0px 12px
+    100% 100%,
+    100% 0px,
+    calc(100% - var(--full-width)) 0px,
+    calc(100% - var(--full-width)) var(--border-width),
+    calc(100% - var(--border-width)) var(--border-width),
+    calc(100% - var(--border-width)) var(--full-width),
+    100% var(--full-width),
+    100% calc(100% - var(--full-width)),
+    calc(100% - var(--border-width)) calc(100% - var(--full-width)),
+    calc(100% - var(--border-width)) calc(100% - var(--border-width)),
+    calc(100% - var(--full-width)) calc(100% - var(--border-width)),
+    calc(100% - var(--full-width)) 100%,
+    var(--full-width) 100%,
+    var(--full-width) calc(100% - var(--border-width)),
+    var(--border-width) calc(100% - var(--border-width)),
+    var(--border-width) calc(100% - var(--full-width)),
+    0px calc(100% - var(--full-width)),
+    0px var(--full-width)
   );
-  border-radius: 2px;
+  transition:
+    inset 300ms ease-in-out,
+    clip-path 300ms ease-in-out,
+    color 300ms ease-in-out !important;
+}
+
+.btn-clip:hover {
+  inset: 0px;
+  color: transparent;
+}
+
+.heading-text {
+  color: #ffffff;
+  text-shadow: rgb(from #d0cce3 r g b / 0.5) 0px 0px 10px;
 }
 
 .container-query {
@@ -63,6 +101,35 @@ a {
   }
 }
 
+.text-webkit {
+  -webkit-text-stroke: 1px #5a5ab5;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 20s linear infinite;
+}
+
 @layer utilities {
   /* Shimmer animation for skeleton loaders */
   @keyframes shimmer {
@@ -80,7 +147,7 @@ a {
   }
 
   .bg-shimmer {
-    background: linear-gradient(90deg, #183717 25%, #50da4c 50%, #183717 75%);
+    background: linear-gradient(90deg, #1c1c3f 25%, #403f7d 50%, #1c1c3f 75%);
     background-size: 200% 100%;
   }
 }
