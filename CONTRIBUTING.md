@@ -38,18 +38,23 @@ To use GitHub authentication in the project, you need to create a GitHub OAuth a
 
 Xata is used as the database for this project. Follow these steps to set it up:
 
-1. Sign up for a Xata account at https://xata.io/
-2. Install the Xata CLI globally:
+1. Sign up for a Xata account at https://lite.xata.io/
+2. Create a new workspace and database from Xata dashboard
+3. Install the Xata CLI globally:
 ```sh
 npm install -g "@xata.io/cli@latest"
 ```
-3. Authenticate with Xata:
+4. Authenticate with Xata:
 ```sh
 xata auth login
 ```
-4. Run the migration:
+5. Initialize the database:
 ```sh
-xata push main
+xata init
+```
+5. Upload the database schema:
+```sh
+xata schema upload db-schema.json
 ```
 
 ## Environment Variables
