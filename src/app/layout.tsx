@@ -28,6 +28,9 @@ const atkinsonHyperlegibleMono = localFont({
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
     <html className={atkinsonHyperlegibleMono.variable}>
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      </head>
       <body className="font-mono font-normal bg-hacktoberfest-blue">
         <ViewTransition>
           {children}
