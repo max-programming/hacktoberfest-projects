@@ -90,8 +90,10 @@ AUTH_GITHUB_SECRET=""
 XATA_API_KEY=""
 XATA_BRANCH="" # Default should be "main"
 
+XATA_HTTP_ENDPOINT="http://localhost" # Add this too for local development otherwise xata gives error while pnpm run dev
+
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="" # Optional
-NEXT_PUBLIC_ANALYTICS_WEBSITE_ID="" # Optional
+NEXT_PUBLIC_ANALYTICS_WEBSITE_ID="" # Mandatory for local add : 00000000-0000-0000-0000-000000000000
 ```
 
 Make sure to fill in the required values for each variable. The `AUTH_SECRET` should be a random string, and `AUTH_URL` should be set to `http://localhost:3000` for local development. The `XATA_BRANCH` should typically be set to "main" unless you're using a different branch.

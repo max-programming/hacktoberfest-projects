@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@auth/xata-adapter':
         specifier: ^1.10.0
-        version: 1.10.0(@xata.io/client@0.30.1(typescript@5.9.2))
+        version: 1.10.0(@xata.io/client@0.0.0-next.v93343b9646f57a1e5c51c35eccf0767c2bb80baa(typescript@5.9.2))
       '@eslint/eslintrc':
         specifier: ^3.3.1
         version: 3.3.1
@@ -36,8 +36,8 @@ importers:
         specifier: ^0.16.12
         version: 0.16.12(@types/node@24.1.0)(typescript@5.9.2)
       '@xata.io/client':
-        specifier: ^0.30.1
-        version: 0.30.1(typescript@5.9.2)
+        specifier: 0.0.0-next.v93343b9646f57a1e5c51c35eccf0767c2bb80baa
+        version: 0.0.0-next.v93343b9646f57a1e5c51c35eccf0767c2bb80baa(typescript@5.9.2)
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.6)
@@ -920,6 +920,11 @@ packages:
     resolution: {integrity: sha512-wyZh0cxDOISz667LLqmQXrx0i4eFZ8Dw6E9WBe7xP6l9LOthnAvw7JKxuORdz9o74WuZKBcEEDgEi+I1eRC/Ig==}
     engines: {node: '>=18'}
     hasBin: true
+
+  '@xata.io/client@0.0.0-next.v93343b9646f57a1e5c51c35eccf0767c2bb80baa':
+    resolution: {integrity: sha512-4Js4SAKwmmOPmZVIS1l2K8XVGGkUOi8L1jXuagDfeUX56n95wfA4xYMSmsVS0RLMmRWI4UM4bp5UcFJxwbFYGw==}
+    peerDependencies:
+      typescript: '>=4.5'
 
   '@xata.io/client@0.30.1':
     resolution: {integrity: sha512-dAzDPHmIfenVIpF39m1elmW5ngjWu2mO8ZqJBN7dmYdXr98uhPANfLdVZnc3mUNG+NH37LqY1dSO862hIo2oRw==}
@@ -3430,10 +3435,10 @@ snapshots:
       preact: 10.24.3
       preact-render-to-string: 6.5.11(preact@10.24.3)
 
-  '@auth/xata-adapter@1.10.0(@xata.io/client@0.30.1(typescript@5.9.2))':
+  '@auth/xata-adapter@1.10.0(@xata.io/client@0.0.0-next.v93343b9646f57a1e5c51c35eccf0767c2bb80baa(typescript@5.9.2))':
     dependencies:
       '@auth/core': 0.40.0
-      '@xata.io/client': 0.30.1(typescript@5.9.2)
+      '@xata.io/client': 0.0.0-next.v93343b9646f57a1e5c51c35eccf0767c2bb80baa(typescript@5.9.2)
     transitivePeerDependencies:
       - '@simplewebauthn/browser'
       - '@simplewebauthn/server'
@@ -4233,6 +4238,10 @@ snapshots:
       - supports-color
       - typescript
       - utf-8-validate
+
+  '@xata.io/client@0.0.0-next.v93343b9646f57a1e5c51c35eccf0767c2bb80baa(typescript@5.9.2)':
+    dependencies:
+      typescript: 5.9.2
 
   '@xata.io/client@0.30.1(typescript@5.9.2)':
     dependencies:
