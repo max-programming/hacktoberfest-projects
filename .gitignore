@@ -6,6 +6,8 @@
 .pnp.js
 package-lock.json
 .env*
+src/xata.js
+src/xata.ts
 
 # testing
 /coverage
