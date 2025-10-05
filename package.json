@@ -7,13 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "xata:init": "node prebuild.mjs",
     "format": "prettier --write \"./**/*.{ts,tsx,json}\""
   },
   "dependencies": {
     "@auth/core": "^0.40.0",
     "@auth/drizzle-adapter": "^1.10.0",
-    "@auth/xata-adapter": "^1.10.0",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.32.0",
     "@t3-oss/env-nextjs": "^0.13.8",
@@ -21,7 +19,6 @@
     "@types/node": "^24.1.0",
     "@types/react": "^19.1.9",
     "@types/twuni__emojify": "^1.0.2",
-    "@xata.io/cli": "^0.16.12",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
     "class-variance-authority": "^0.7.1",
