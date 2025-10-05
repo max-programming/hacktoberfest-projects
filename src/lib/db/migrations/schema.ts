@@ -69,7 +69,6 @@ export const accountsTable = pgTable(
 export const verificationTokensTable = pgTable(
   'nextauth_verificationtokens',
   {
-    id: text().primaryKey().notNull(),
     identifier: varchar({ length: 255 }).notNull(),
     token: varchar({ length: 255 }).notNull(),
     expires: timestamp({ mode: 'date' }).notNull(),
