@@ -24,7 +24,6 @@
     "@xata.io/cli": "^0.16.12",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
-    "better-auth": "^1.3.26",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "daisyui": "^4.12.24",
