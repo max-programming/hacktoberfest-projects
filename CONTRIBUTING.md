@@ -42,59 +42,80 @@ To use GitHub authentication in the project, you need to create a GitHub OAuth a
 6. On the next page, you'll see your Client ID. Click "Generate a new client secret" to create your Client Secret.
 7. Copy the Client ID and Client Secret to your `.env.local` file.
 
-## Setting Up Xata
+## Setting Up the Database
 
-Xata is used as the database for this project. Follow these steps to set it up:
+This project uses PostgreSQL as the database. You have several options for setting up the database:
 
-1. Sign up for a Xata account at https://lite.xata.io/
-2. Create a new workspace and database from Xata dashboard
-3. Install the Xata CLI globally:
+### Option 1: Docker Compose (Recommended)
 
-```sh
-npm install -g "@xata.io/cli@latest"
-```
+The easiest way to get started is using Docker Compose, which will set up a PostgreSQL database with simple credentials:
 
-4. Authenticate with Xata:
+1. Start the PostgreSQL database:
 
 ```sh
-xata auth login
+docker compose up -d
 ```
 
-5. Initialize the database:
+> Use `docker-compose` if you are on an older version of Docker and the above command does not work.
+
+2. Wait for the database to be ready (you can check with `docker compose ps`)
+
+3. Run database migrations:
 
 ```sh
-xata init
+pnpm drizzle-kit migrate
 ```
 
-5. Upload the database schema:
+The database will be available at `localhost:5432` with these credentials:
 
-```sh
-xata schema upload db-schema.json
-```
+- Database: `hacktoberfest`
+- Username: `hacktoberfest`
+- Password: `hacktoberfest123`
 
-6. Generate the Xata client:
+### Option 2: Local PostgreSQL Installation
 
-```sh
-xata codegen
-```
+If you prefer to install PostgreSQL locally:
+
+1. Install PostgreSQL on your system
+2. Create a database named `hacktoberfest`
+3. Create a user `hacktoberfest` with password `hacktoberfest123`
+4. Grant all privileges on the database to the user
+
+### Option 3: Cloud Database Providers
+
+You can also use cloud database providers like:
+
+- **Neon** (https://neon.tech/) - Free tier available
+- **Supabase** (https://supabase.com/) - Free tier available
+- **Railway** (https://railway.app/) - Free tier available
+- **PlanetScale** (https://planetscale.com/) - Free tier available
+
+Simply create a PostgreSQL database and copy the connection string.
 
 ## Environment Variables
 
-Create a `.env.local` file in the root of the project and add the following variables:
+Create a `.env` file in the root of the project and add the following variables:
 
 ```sh
+
+# Database
+DATABASE_URL="" # PostgreSQL connection string
+# For Docker Compose: postgresql://hacktoberfest:hacktoberfest123@localhost:5432/hacktoberfest
+# For cloud providers: copy the connection string from your provider
+
+# Authentication
 AUTH_SECRET="" # A random string
 AUTH_URL="" # Should be http://localhost:3000 for local development
 AUTH_GITHUB_ID=""
 AUTH_GITHUB_SECRET=""
-XATA_API_KEY=""
-XATA_BRANCH="" # Default should be "main"
+AUTH_DRIZZLE_URL="$DATABASE_URL" # Should be the same as DATABASE_URL
 
+# Optional
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="" # Optional
 NEXT_PUBLIC_ANALYTICS_WEBSITE_ID="" # Optional
 ```
 
-Make sure to fill in the required values for each variable. The `AUTH_SECRET` should be a random string, and `AUTH_URL` should be set to `http://localhost:3000` for local development. The `XATA_BRANCH` should typically be set to "main" unless you're using a different branch.
+Make sure to fill in the required values for each variable. The `AUTH_SECRET` should be a random string, and `AUTH_URL` should be set to `http://localhost:3000` for local development. The `DATABASE_URL` should point to your PostgreSQL database.
 
 Remember to remove env variables that are optional and you are empty, they will cause validation errors
 
