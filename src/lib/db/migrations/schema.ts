@@ -111,7 +111,11 @@ export const sessionsTable = pgTable('nextauth_sessions', {
 });
 
 export const bookmarksTable = pgTable('bookmarks', {
-  id: text().primaryKey().notNull(),
+  id: text()
+    .primaryKey()
+    .notNull()
+    .notNull()
+    .$defaultFn(() => crypto.randomUUID()),
   userId: text('user_id').references(() => usersTable.id, {
     onDelete: 'cascade'
   }),
@@ -128,7 +132,10 @@ export const bookmarksTable = pgTable('bookmarks', {
 });
 
 export const reportsTable = pgTable('reports', {
-  id: text().primaryKey().notNull(),
+  id: text()
+    .primaryKey()
+    .notNull()
+    .$defaultFn(() => crypto.randomUUID()),
   repoId: integer().unique(),
   repoAuthor: varchar({ length: 255 }),
   message: text().default('No Message').notNull(),

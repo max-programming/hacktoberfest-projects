@@ -34,7 +34,6 @@ export async function sendReportAction(data: SendReportSchema) {
   const [report] = await db
     .insert(reportsTable)
     .values({
-      id: crypto.randomUUID(),
       message: body.message,
       repoAuthor: body.repoAuthor,
       repoId: body.repoId,
