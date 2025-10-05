@@ -97,7 +97,6 @@ Simply create a PostgreSQL database and copy the connection string.
 Create a `.env` file in the root of the project and add the following variables:
 
 ```sh
-
 # Database
 DATABASE_URL="" # PostgreSQL connection string
 # For Docker Compose: postgresql://hacktoberfest:hacktoberfest123@localhost:5432/hacktoberfest
