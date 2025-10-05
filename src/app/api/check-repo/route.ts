@@ -11,11 +11,13 @@ export async function GET(req: NextRequest) {
   const repoId = req.nextUrl.searchParams.get('repoId');
   if (typeof repoId !== 'string') return new Response(null, { status: 400 });
 
-  const repo = await db
+  const [repo] = await db
     .select()
     .from(reportsTable)
     .where(eq(reportsTable.repoId, parseInt(repoId)))
     .limit(1);
+
+  if (!repo) return Response.json(null);
 
   return Response.json(repo);
 }
