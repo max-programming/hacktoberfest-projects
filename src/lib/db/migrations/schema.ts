@@ -10,7 +10,10 @@ import {
 import type { AdapterAccountType } from '@auth/core/adapters';
 
 export const usersTable = pgTable('nextauth_users', {
-  id: text().primaryKey().notNull(),
+  id: text()
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID())
+    .notNull(),
   email: varchar({ length: 255 }),
   emailVerified: timestamp({ mode: 'date' }),
   name: varchar({ length: 255 }),
@@ -30,7 +33,6 @@ export const usersTable = pgTable('nextauth_users', {
 export const accountsTable = pgTable(
   'nextauth_accounts',
   {
-    id: text().primaryKey().notNull(),
     userId: text('userId')
       .notNull()
       .references(() => usersTable.id, { onDelete: 'cascade' }),
