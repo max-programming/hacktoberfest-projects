@@ -1,0 +1,1 @@
+ALTER TABLE "nextauth_verificationtokens" DROP COLUMN "id";

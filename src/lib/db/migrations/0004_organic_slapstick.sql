@@ -1,0 +1,1 @@
+ALTER TABLE "nextauth_accounts" DROP COLUMN "id";
