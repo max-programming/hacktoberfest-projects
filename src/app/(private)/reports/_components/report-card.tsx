@@ -3,11 +3,10 @@
 import toast from 'react-hot-toast';
 import { useState } from 'react';
 import { updateReportAction } from '@/app/actions';
-import type { ReportsRecord } from '@/xata';
-import type { SelectedPick } from '@xata.io/client';
+import type { reportsTable } from '@/lib/db/migrations/schema';
 
 interface ReportCardProps {
-  report: SelectedPick<ReportsRecord, ['*']>;
+  report: typeof reportsTable.$inferSelect;
 }
 
 export function ReportCard({ report }: ReportCardProps) {

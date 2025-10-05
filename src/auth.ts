@@ -1,11 +1,15 @@
-import { XataAdapter } from '@auth/xata-adapter';
+import { DrizzleAdapter } from '@auth/drizzle-adapter';
 import NextAuth from 'next-auth';
 import GitHub from 'next-auth/providers/github';
-import { getXataClient } from './xata';
-
-const client = getXataClient();
+import { db } from './lib/db/connection';
+import * as schema from './lib/db/migrations/schema';
 
 export const { auth, handlers, signIn, signOut } = NextAuth({
-  adapter: XataAdapter(client),
+  adapter: DrizzleAdapter(db, {
+    usersTable: schema.usersTable,
+    accountsTable: schema.accountsTable,
+    sessionsTable: schema.sessionsTable,
+    verificationTokensTable: schema.verificationTokensTable
+  }),
   providers: [GitHub]
 });

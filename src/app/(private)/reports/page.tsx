@@ -1,9 +1,10 @@
 import { auth } from '@/auth';
-import { getXataClient, ReportsRecord } from '@/xata';
 import { notFound } from 'next/navigation';
 import { ReportCard } from './_components/report-card';
-import { SelectedPick } from '@xata.io/client';
 import { Metadata } from 'next';
+import { reportsTable } from '@/lib/db/migrations/schema';
+import { db } from '@/lib/db/connection';
+import { desc } from 'drizzle-orm';
 
 export const metadata: Metadata = {
   title: 'Reports'
@@ -33,12 +34,11 @@ async function getReports() {
     notFound();
   }
 
-  const client = getXataClient();
-  const reports = await client.db.reports
-    .sort('xata.createdAt', 'desc')
-    .getAll();
+  const reports = await db
+    .select()
+    .from(reportsTable)
+    .orderBy(desc(reportsTable.createdAt))
+    .limit(100);
 
-  return reports.toSerializable() as unknown as Array<
-    SelectedPick<ReportsRecord, ['*']>
-  >;
+  return reports;
 }

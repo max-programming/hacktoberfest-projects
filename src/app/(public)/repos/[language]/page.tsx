@@ -1,5 +1,4 @@
 import { env } from '@/env.mjs';
-import { getXataClient } from '@/xata';
 import { notFound } from 'next/navigation';
 import { capitalize } from '@/lib/utils';
 import { Header } from '@/app/(public)/_components/header';
@@ -11,6 +10,9 @@ import { Pagination } from './_components/pagination';
 import type { RepoData, RepoItem, RepoResponse, SearchParams } from '@/types';
 import type { Metadata } from 'next';
 import { auth } from '@/auth';
+import { db } from '@/lib/db/connection';
+import { accountsTable, reportsTable } from '@/lib/db/migrations/schema';
+import { eq } from 'drizzle-orm';
 
 interface ReposPageProps {
   params: Promise<{ language: string }>;
@@ -82,7 +84,6 @@ async function getRepos(
   language: string,
   searchParams: SearchParams
 ): Promise<RepoResponse | undefined> {
-  const client = getXataClient();
   const session = await auth();
   const {
     p: page = '1',
@@ -118,10 +119,11 @@ async function getRepos(
   const userId = session?.user?.id;
 
   if (userId) {
-    const account = await client.db.nextauth_accounts
-      .select(['access_token'])
-      .filter({ 'user.id': userId })
-      .getFirst();
+    const [account] = await db
+      .select()
+      .from(accountsTable)
+      .where(eq(accountsTable.userId, userId))
+      .limit(1);
 
     if (account && account.access_token) {
       headers.Authorization = `Bearer ${account.access_token}`;
@@ -152,11 +154,11 @@ async function getRepos(
 }
 
 async function getReportedRepos() {
-  const client = getXataClient();
-  const reports = await client.db.reports
-    .select(['repoId'])
-    .filter({ valid: false })
-    .getMany();
+  const reports = await db
+    .select()
+    .from(reportsTable)
+    .where(eq(reportsTable.valid, false))
+    .limit(100);
 
   return reports;
 }
