@@ -36,11 +36,11 @@ export default async function ReposPage({
     <>
       <Header />
       <ScrollToTop />
-      <div className="container mx-auto mt-32">
-        <div className="min-h-screen pt-5">
+      <div className="container mx-auto px-4 mt-16 md:mt-32">
+        <div className="min-h-screen pt-5 sm:pt-8 md:pt-12">
           <div className="text-center">
             <div className="w-5/6 max-w-md mx-auto">
-              <h1 className="mb-5 text-5xl font-medium uppercase text-hacktoberfest-light">
+              <h1 className="mb-5 text-3xl sm:text-4xl md:text-5xl font-medium uppercase text-hacktoberfest-light">
                 <span className="font-bold heading-text">
                   {repos.total_count}
                 </span>{' '}
@@ -55,7 +55,7 @@ export default async function ReposPage({
           </div>
           <Sorter />
           <StarsFilter />
-          <div className="grid grid-cols-1 gap-8 p-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {repos.items.map(repo => (
               <RepoCard key={repo.id} repo={repo} />
             ))}
@@ -69,6 +69,7 @@ export default async function ReposPage({
       </div>
     </>
   );
+
 }
 
 export async function generateMetadata({
