@@ -8,6 +8,11 @@ const config = {
   media: false, // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        'xs': '320px',
+        // This adds support for very small screens
+        // Now we can use xs:text-xs, xs:px-2, etc.
+      },
       fontFamily: {
         mono: ['var(--font-atkinson-hyperlegible-mono)', 'monospace']
       },

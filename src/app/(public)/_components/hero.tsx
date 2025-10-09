@@ -1,5 +1,3 @@
-'use client';
-
 import { useRouter } from 'next/navigation';
 
 import { Search } from 'lucide-react';
@@ -27,12 +25,12 @@ export function Hero() {
   return (
     <div className="relative bg-hero-gradient ">
       <div className="z-50 flex flex-col space-y-8 justify-center items-center text-center min-h-screen pt-28 sm:pt-24">
-        <div className="max-w-md space-y-5">
-          <h1 className="text-5xl font-medium uppercase heading-text">
+        <div className="max-w-md space-y-5 px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium uppercase heading-text">
             Search your language
           </h1>
           <form
-            className="items-center w-full max-w-xs mx-auto form-control outline-none "
+            className="items-center w-full max-w-xs mx-auto form-control outline-none"
             onSubmit={handleSearch}
           >
             <div className="flex w-full">
@@ -41,29 +39,29 @@ export function Hero() {
                   type="text"
                   placeholder="Search for your language"
                   className="w-full max-w-xs bg-transparent rounded-tr-none rounded-br-none input input-bordered text-hacktoberfest-light border-hacktoberfest-light
-                  focus:border-hacktoberfest-light focus:!outline-none focus-visible:!outline-none placeholder:text-hacktoberfest-light"
+                  focus:border-hacktoberfest-light focus:!outline-none focus-visible:!outline-none placeholder:text-hacktoberfest-light text-sm sm:text-base"
                   name="search"
                 />
               </div>
               <button
                 type="submit"
-                className="bg-transparent rounded-tl-none rounded-bl-none group btn btn-square text-hacktoberfest-light border-hacktoberfest-light hover:!border-hacktoberfest-light    hover:bg-primary-btn-hover-gradient"
+                className="bg-transparent rounded-tl-none rounded-bl-none group btn btn-square text-hacktoberfest-light border-hacktoberfest-light hover:!border-hacktoberfest-light hover:bg-primary-btn-hover-gradient flex-shrink-0"
               >
-                <Search />
+                <Search size={16} className="sm:w-5 sm:h-5" />
               </button>
             </div>
           </form>
-          <p className="font-medium uppercase text-hacktoberfest-light">
+          <p className="font-medium uppercase text-hacktoberfest-light text-sm sm:text-base">
             Or select the programming language you would like to find
             repositories for.
           </p>
-          <div className="flex flex-wrap gap-6 items-center justify-center ">
+          <div className="flex flex-wrap gap-4 sm:gap-6 items-center justify-center">
             {mainLanguages.map(language => (
               <LanguageButton key={language} language={language} />
             ))}
           </div>
           <div className="dropdown dropdown-top">
-            <Button tabIndex={0} className="umami--click--otherlangs-button">
+            <Button tabIndex={0} className="umami--click--otherlangs-button text-sm sm:text-base">
               Other languages
             </Button>
 
@@ -75,7 +73,7 @@ export function Hero() {
                 <li key={language}>
                   <Link
                     href={`/repos/${language.toLowerCase()}`}
-                    className="text-gray-700 hover:text-white hover:bg-hacktoberfest-blue rounded-lg transition-colors duration-200 px-3 py-2"
+                    className="text-gray-700 hover:text-white hover:bg-hacktoberfest-blue rounded-lg transition-colors duration-200 px-3 py-2 text-sm"
                   >
                     {language}
                   </Link>
