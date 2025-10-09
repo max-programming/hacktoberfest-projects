@@ -1,3 +1,5 @@
+'use client';
+
 import { usePathname, useSearchParams, useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { GoX } from 'react-icons/go';
