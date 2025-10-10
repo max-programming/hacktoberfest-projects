@@ -482,6 +482,17 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "anuja12mishra",
+      "name": "Anuja Mishra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/109236275?v=4",
+      "profile": "https://github.com/anuja12mishra",
+      "contributions": [
+        "design",
+        "code",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
