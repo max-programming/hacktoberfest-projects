@@ -36,40 +36,41 @@ export default async function ReposPage({
     <>
       <Header />
       <ScrollToTop />
-      <div className="container mx-auto px-4 mt-16 md:mt-32">
-        <div className="min-h-screen pt-5 sm:pt-8 md:pt-12">
-          <div className="text-center">
-            <div className="w-5/6 max-w-md mx-auto">
-              <h1 className="mb-5 text-3xl sm:text-4xl md:text-5xl font-medium uppercase text-hacktoberfest-light">
-                <span className="font-bold heading-text">
-                  {repos.total_count}
-                </span>{' '}
-                repositories for{' '}
-                <span className="font-bold heading-text">
-                  {sp.q
-                    ? sp.q + ' in ' + capitalize(decodeURIComponent(language))
-                    : capitalize(decodeURIComponent(language))}
-                </span>
-              </h1>
+      <div className="w-full overflow-x-hidden">
+        <div className="container mx-auto px-4 pt-32 sm:pt-36 md:pt-40 pb-8">
+          <div className="min-h-screen">
+            <div className="text-center mb-8">
+              <div className="max-w-4xl mx-auto">
+                <h1 className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium uppercase text-hacktoberfest-light break-words px-2">
+                  <span className="font-bold heading-text">
+                    {repos.total_count}
+                  </span>{' '}
+                  repositories for{' '}
+                  <span className="font-bold heading-text">
+                    {sp.q
+                      ? sp.q + ' in ' + capitalize(decodeURIComponent(language))
+                      : capitalize(decodeURIComponent(language))}
+                  </span>
+                </h1>
+              </div>
+            </div>
+            <Sorter />
+            <StarsFilter />
+            <div className="grid grid-cols-1 gap-6 px-2 sm:px-4 sm:grid-cols-2 lg:grid-cols-3">
+              {repos.items.map(repo => (
+                <RepoCard key={repo.id} repo={repo} />
+              ))}
             </div>
           </div>
-          <Sorter />
-          <StarsFilter />
-          <div className="grid grid-cols-1 gap-8 p-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {repos.items.map(repo => (
-              <RepoCard key={repo.id} repo={repo} />
-            ))}
-          </div>
+          <Pagination
+            page={page}
+            totalCount={repos.total_count}
+            searchParams={sp}
+          />
         </div>
-        <Pagination
-          page={page}
-          totalCount={repos.total_count}
-          searchParams={sp}
-        />
       </div>
     </>
   );
-
 }
 
 export async function generateMetadata({

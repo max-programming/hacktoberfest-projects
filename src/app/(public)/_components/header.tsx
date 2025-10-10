@@ -16,26 +16,28 @@ export async function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 py-3 px-4 sm:px-6">
       <div className="border border-hacktoberfest-light-blue rounded-lg py-4 px-4 sm:px-6 container mx-auto backdrop-blur-md shadow-lg">
-        <div className="flex justify-between items-center flex-wrap gap-2">
-          <Link href="/" className="z-5 flex-shrink-0">
+        {/* Desktop Layout */}
+        <div className="hidden md:flex justify-between items-center gap-4">
+          {/* Logo */}
+          <Link href="/" className="flex-shrink-0">
             <LogoIconsSvg />
           </Link>
 
-          {/* Desktop Search - Hidden on mobile */}
-          <div className="hidden md:block flex-1 max-w-md mx-4">
+          {/* Search Form */}
+          <div className="flex-1 max-w-md">
             <SearchForm />
           </div>
 
-          {/* Desktop Navigation - Hidden on mobile */}
-          <div className="hidden md:flex gap-2 flex-shrink-0">
+          {/* Navigation Actions */}
+          <div className="flex gap-2 flex-shrink-0 items-center">
             <form action={session ? signOutAction : signInAction}>
-              <Button className="text-xs sm:text-sm whitespace-nowrap">
+              <Button className="text-sm whitespace-nowrap">
                 {session && session.user ? 'Sign Out' : 'Sign In'}
               </Button>
             </form>
             <Link
               href="/contributors"
-              className="btn btn-square btn-ghost umami--click--contributors-button hover:text-hacktoberfest-light transition-colors flex-shrink-0"
+              className="btn btn-square btn-ghost umami--click--contributors-button hover:text-hacktoberfest-light transition-colors"
             >
               <BsPeopleFill size="1.5rem" color="white" title="Contributors" />
             </Link>
@@ -44,19 +46,22 @@ export async function Header() {
               href="https://github.com/max-programming/hacktoberfest-projects"
               target="_blank"
               rel="noreferrer"
-              className="btn btn-square btn-ghost umami--click--github-button hover:text-hacktoberfest-light transition-colors flex-shrink-0"
+              className="btn btn-square btn-ghost umami--click--github-button hover:text-hacktoberfest-light transition-colors"
             >
               <IoLogoGithub size="1.5rem" color="white" title="GitHub" />
             </a>
           </div>
-
-          {/* Mobile Hamburger Menu */}
-          <MobileMenu session={session} />
         </div>
 
-        {/* Mobile Search - Visible only on mobile */}
-        <div className="md:hidden mt-4">
-          <SearchForm />
+        {/* Mobile Layout */}
+        <div className="md:hidden">
+          {/* Logo and Hamburger Menu */}
+          <div className="flex justify-between items-center ">
+            <Link href="/" className="flex-shrink-0">
+              <LogoIconsSvg />
+            </Link>
+            <MobileMenu session={session} />
+          </div>
         </div>
       </div>
     </header>
