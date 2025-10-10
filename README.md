@@ -6,7 +6,7 @@ A Web app that lets you find eligible repositories for Hacktoberfest!
 Use it here - https://finder.usmans.me
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-49-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-50-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -115,6 +115,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/massdx"><img src="https://avatars.githubusercontent.com/u/63166764?v=4?s=100" width="100px;" alt="Massahoud"/><br /><sub><b>Massahoud</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=massdx" title="Code">💻</a> <a href="#ideas-massdx" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SharizHussain"><img src="https://avatars.githubusercontent.com/u/155846046?v=4?s=100" width="100px;" alt="SharizHussain"/><br /><sub><b>SharizHussain</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/issues?q=author%3ASharizHussain" title="Bug reports">🐛</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=SharizHussain" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/amandee27"><img src="https://avatars.githubusercontent.com/u/47607256?v=4?s=100" width="100px;" alt="Amandee Manushika"/><br /><sub><b>Amandee Manushika</b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=amandee27" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/anuja12mishra"><img src="https://avatars.githubusercontent.com/u/109236275?v=4?s=100" width="100px;" alt="Anuja Mishra"/><br /><sub><b>Anuja Mishra</b></sub></a><br /><a href="#design-anuja12mishra" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=anuja12mishra" title="Code">💻</a> <a href="https://github.com/max-programming/hacktoberfest-projects/issues?q=author%3Aanuja12mishra" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
