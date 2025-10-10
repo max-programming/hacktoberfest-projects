@@ -53,16 +53,16 @@ export function StarsFilter() {
 
   return (
     <form
-      className="w-full px-2 m-2 mx-auto mb-4 sm:w-3/4 xl:w-2/4 form-control"
+      className="w-full px-4 mx-auto mb-4 sm:w-3/4 xl:w-2/4 form-control"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <div className="flex flex-col gap-2 sm:flex-row">
+      <div className="flex flex-col sm:flex-row gap-3 items-stretch">
         <Controller
           name="startStars"
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 pr-4 m-auto text-center bg-transparent sm:w-full input input-bordered md:text-left text-hacktoberfest-light placeholder:text-hacktoberfest-beige border-hacktoberfest-light focus:border-hacktoberfest-light-blue focus:outline-none transition-colors duration-200 placeholder:line-clamp-1"
+              className="w-full px-4 py-3 text-center sm:text-left bg-transparent input input-bordered text-hacktoberfest-light placeholder:text-hacktoberfest-beige border-hacktoberfest-light focus:border-hacktoberfest-light-blue focus:outline-none transition-colors duration-200"
               {...field}
               onChange={e => field.onChange(e.target.valueAsNumber)}
               placeholder="Star's Starting Range"
@@ -76,7 +76,7 @@ export function StarsFilter() {
           render={({ field }) => (
             <input
               type="number"
-              className="w-3/5 pr-4 m-auto text-center bg-transparent sm:w-full input input-bordered md:text-left text-hacktoberfest-light placeholder:text-hacktoberfest-beige border-hacktoberfest-light focus:border-hacktoberfest-light-blue focus:outline-none transition-colors duration-200"
+              className="w-full px-4 py-3 text-center sm:text-left bg-transparent input input-bordered text-hacktoberfest-light placeholder:text-hacktoberfest-beige border-hacktoberfest-light focus:border-hacktoberfest-light-blue focus:outline-none transition-colors duration-200"
               {...field}
               onChange={e => field.onChange(e.target.valueAsNumber)}
               placeholder="Star's Finish Range"
@@ -86,15 +86,12 @@ export function StarsFilter() {
           control={control}
         />
 
-        {/* Flex container to center the button */}
-        <div className="flex items-center justify-center">
-          <button
-            className="w-3/5 mx-auto btn bg-hacktoberfest-blue border-hacktoberfest-light text-hacktoberfest-light hover:bg-hacktoberfest-light-blue hover:text-hacktoberfest-blue transition-colors duration-200 md:w-full"
-            type="submit"
-          >
-            Search
-          </button>
-        </div>
+        <button
+          className="w-full sm:w-auto sm:min-w-[120px] px-6 py-3 btn bg-hacktoberfest-blue border-hacktoberfest-light text-hacktoberfest-light hover:bg-hacktoberfest-light-blue hover:text-hacktoberfest-blue transition-colors duration-200 whitespace-nowrap"
+          type="submit"
+        >
+          Search
+        </button>
       </div>
     </form>
   );

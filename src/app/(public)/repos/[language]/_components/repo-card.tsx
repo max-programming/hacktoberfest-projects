@@ -35,10 +35,10 @@ export function RepoCard({ repo }: RepoCardProps) {
     <section className="transition duration-300 shadow-sm card bg-hacktoberfest-blue ring-1 ring-hacktoberfest-light hover:scale-105 hover:shadow-2xl hover:shadow-hacktoberfest-light-blue h-125">
       <div className="relative p-6 card-body">
         <div className="flex-1">
-          <div className="flex items-center gap-2 justify-between">
+          <div className="flex items-center justify-between gap-4 overflow-hidden">
             <div className="flex items-center gap-2">
               <a
-                className="border-2 rounded-full h-14 aspect-square p-1.5 border-hacktoberfest-beige"
+                className="border-2 rounded-full h-12 w-12 sm:h-14 sm:w-14 p-1.5 border-hacktoberfest-beige flex-shrink-0"
                 href={repo.owner.html_url}
                 title={repo.owner.login}
                 target="_blank"
@@ -50,9 +50,9 @@ export function RepoCard({ repo }: RepoCardProps) {
                   className="rounded-full"
                 />
               </a>
-              <h2 className="overflow-hidden text-3xl cursor-pointer text-hacktoberfest-light line-clamp-1">
+              <h2 className="overflow-hidden text-xl sm:text-3xl cursor-pointer text-hacktoberfest-light line-clamp-1">
                 <a
-                  href={repo.html_url + '?ref=finder.usmans.me'}
+                  href={repo.html_url + "?ref=finder.usmans.me"}
                   title={repo.name}
                   target="_blank"
                   rel="noreferrer"
@@ -63,6 +63,7 @@ export function RepoCard({ repo }: RepoCardProps) {
             </div>
             <ReportButton repo={repo} />
           </div>
+
 
           <h6 className="my-5 text-lg text-hacktoberfest-beige">
             {emojify(truncatedDescription)}

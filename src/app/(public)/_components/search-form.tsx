@@ -35,21 +35,21 @@ export function SearchForm() {
   }
 
   return (
-    <div className="hidden px-2 mb-3 sm:flex-1 sm:max-w-md sm:mb-0 sm:px-6 sm:inline-flex">
+    <div className="w-full">
       <form
-        className="w-full m-2 mx-auto form-control"
+        className="w-full form-control"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="relative">
           <input
             placeholder="Search"
-            className="w-full pr-16 bg-transparent text-hacktoberfest-light input input-bordered border-hacktoberfest-light focus:border-hacktoberfest-light-blue focus:outline-none placeholder:text-hacktoberfest-beige transition-colors duration-200"
+            className="w-full pr-16 bg-transparent text-hacktoberfest-light input input-bordered border-hacktoberfest-light focus:border-hacktoberfest-light-blue focus:outline-none placeholder:text-hacktoberfest-beige transition-colors duration-200 text-sm sm:text-base"
             type="text"
             {...register('searchQuery', { required: true })}
           />
           {searchQuery && searchQuery.trim() !== '' && (
             <button
-              className="absolute top-0 right-0 rounded-l-none btn btn-ghost"
+              className="absolute top-0 right-0 rounded-l-none btn btn-ghost btn-sm"
               type="button"
               onClick={() => reset()}
             >

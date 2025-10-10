@@ -16,20 +16,22 @@ export async function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 py-3 px-4 sm:px-6">
       <div className="border border-hacktoberfest-light-blue rounded-lg py-4 px-4 sm:px-6 container mx-auto backdrop-blur-md shadow-lg">
-        <div className="flex justify-between items-center">
-          <Link href="/" className="z-5">
+        {/* Desktop Layout */}
+        <div className="hidden md:flex justify-between items-center gap-4">
+          {/* Logo */}
+          <Link href="/" className="flex-shrink-0">
             <LogoIconsSvg />
           </Link>
 
-          {/* Desktop Search - Hidden on mobile */}
-          <div className="hidden md:block">
+          {/* Search Form */}
+          <div className="flex-1 max-w-md">
             <SearchForm />
           </div>
 
-          {/* Desktop Navigation - Hidden on mobile */}
-          <div className="hidden md:flex gap-2 lg:ml-40">
+          {/* Navigation Actions */}
+          <div className="flex gap-2 flex-shrink-0 items-center">
             <form action={session ? signOutAction : signInAction}>
-              <Button className="text-xs sm:text-sm">
+              <Button className="text-sm whitespace-nowrap">
                 {session && session.user ? 'Sign Out' : 'Sign In'}
               </Button>
             </form>
@@ -49,14 +51,17 @@ export async function Header() {
               <IoLogoGithub size="1.5rem" color="white" title="GitHub" />
             </a>
           </div>
-
-          {/* Mobile Hamburger Menu */}
-          <MobileMenu session={session} />
         </div>
 
-        {/* Mobile Search - Visible only on mobile */}
-        <div className="md:hidden md:mt-4">
-          <SearchForm />
+        {/* Mobile Layout */}
+        <div className="md:hidden">
+          {/* Logo and Hamburger Menu */}
+          <div className="flex justify-between items-center ">
+            <Link href="/" className="flex-shrink-0">
+              <LogoIconsSvg />
+            </Link>
+            <MobileMenu session={session} />
+          </div>
         </div>
       </div>
     </header>
