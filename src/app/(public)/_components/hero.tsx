@@ -1,11 +1,10 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { useMemo, useState } from 'react';
 
 import { Search } from 'lucide-react';
-import { LanguageButton } from './language-button';
 import { Button } from './button';
-import Link from 'next/link';
 
 import { sortByName } from '@/lib/utils';
 import languages from '@/assets/languages.json';
@@ -17,11 +16,34 @@ const { main: mainLanguages, others: otherLanguages } = languages;
 export function Hero() {
   const router = useRouter();
 
+  // Track selected languages as a string array
+  const [selected, setSelected] = useState<string[]>([]);
+
+  const toggleLanguage = (language: string) => {
+    setSelected(prev =>
+      prev.includes(language) ? prev.filter(l => l !== language) : [...prev, language]
+    );
+  };
+
+  const sortedOthers = useMemo(() => [...otherLanguages].sort(sortByName), []);
+
   function handleSearch(e: React.FormEvent) {
+    e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
-    const lang = formData.get('search') as string;
-    if (lang.trim() === '') return;
-    router.push(`/repos/${lang}`);
+    let chosen = selected;
+
+    // Fallback: if no checkbox selected, use the single input value
+    if (chosen.length === 0) {
+      const typed = String(formData.get('search') || '').trim();
+      if (typed) {
+        chosen = [typed];
+      }
+    }
+
+    if (chosen.length === 0) return; // nothing to search
+
+    const csv = chosen.map(l => l.toLowerCase()).join(',');
+    router.push(`/repos?l=${encodeURIComponent(csv)}`);
   }
 
   return (
@@ -29,17 +51,72 @@ export function Hero() {
       <div className="z-50 flex flex-col space-y-8 justify-center items-center text-center min-h-screen pt-28 sm:pt-24">
         <div className="max-w-md space-y-5 px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium uppercase heading-text">
-            Search your language
+            Search your language(s)
           </h1>
+          <p className="font-medium uppercase text-hacktoberfest-light text-sm sm:text-base">
+            Or select one or more programming languages you would like to find
+            repositories for.
+          </p>
+
+          <div className="flex flex-wrap gap-4 sm:gap-6 items-center justify-center">
+            {mainLanguages.map(language => {
+              const id = `lang-${language}`;
+              const checked = selected.includes(language);
+              return (
+                <label key={language} htmlFor={id} className="flex items-center gap-2 cursor-pointer select-none">
+                  <input
+                    id={id}
+                    type="checkbox"
+                    className="checkbox checkbox-primary"
+                    checked={checked}
+                    onChange={() => toggleLanguage(language)}
+                  />
+                  <span className="text-hacktoberfest-light text-sm sm:text-base">{language}</span>
+                </label>
+              );
+            })}
+          </div>
+
+          <div className="dropdown dropdown-top mt-4">
+            <Button tabIndex={0} className="umami--click--otherlangs-button text-sm sm:text-base">
+              Other languages
+            </Button>
+
+            <ul
+              tabIndex={0}
+              className="h-64 p-2 overflow-y-auto shadow-lg menu dropdown-content bg-white/95 backdrop-blur-sm rounded-xl w-72 border border-gray-200/50 z-[9999]"
+            >
+              {sortedOthers.map(language => {
+                const id = `other-${language}`;
+                const checked = selected.includes(language);
+                return (
+                  <li key={language} className="px-1">
+                    <label htmlFor={id} className="flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-hacktoberfest-blue/80 hover:text-white cursor-pointer">
+                      <input
+                        id={id}
+                        type="checkbox"
+                        className="checkbox checkbox-primary"
+                        checked={checked}
+                        onChange={() => toggleLanguage(language)}
+                      />
+                      <span className="text-sm text-gray-800">{language}</span>
+                    </label>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          {/* Search form moved below language selection */}
           <form
-            className="items-center w-full max-w-xs mx-auto form-control outline-none"
+            className="items-center w-full max-w-xs mx-auto form-control outline-none mt-8"
             onSubmit={handleSearch}
           >
             <div className="flex w-full">
               <div className="relative flex w-full">
                 <input
                   type="text"
-                  placeholder="Search for your language"
+                  placeholder="Type a language (optional)"
                   className="w-full max-w-xs bg-transparent rounded-tr-none rounded-br-none input input-bordered text-hacktoberfest-light border-hacktoberfest-light
                   focus:border-hacktoberfest-light focus:!outline-none focus-visible:!outline-none placeholder:text-hacktoberfest-light text-sm sm:text-base"
                   name="search"
@@ -53,36 +130,6 @@ export function Hero() {
               </button>
             </div>
           </form>
-          <p className="font-medium uppercase text-hacktoberfest-light text-sm sm:text-base">
-            Or select the programming language you would like to find
-            repositories for.
-          </p>
-          <div className="flex flex-wrap gap-4 sm:gap-6 items-center justify-center">
-            {mainLanguages.map(language => (
-              <LanguageButton key={language} language={language} />
-            ))}
-          </div>
-          <div className="dropdown dropdown-top">
-            <Button tabIndex={0} className="umami--click--otherlangs-button text-sm sm:text-base">
-              Other languages
-            </Button>
-
-            <ul
-              tabIndex={0}
-              className="h-64 p-2 overflow-y-auto shadow-lg menu dropdown-content bg-white/95 backdrop-blur-sm rounded-xl w-60 border border-gray-200/50 z-[9999]"
-            >
-              {otherLanguages.sort(sortByName).map(language => (
-                <li key={language}>
-                  <Link
-                    href={`/repos/${language.toLowerCase()}`}
-                    className="text-gray-700 hover:text-white hover:bg-hacktoberfest-blue rounded-lg transition-colors duration-200 px-3 py-2 text-sm"
-                  >
-                    {language}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
         <MarqueTextAnimation />
       </div>
