@@ -51,32 +51,10 @@ export function Hero() {
       <div className="z-50 flex flex-col space-y-8 justify-center items-center text-center min-h-screen pt-28 sm:pt-24">
         <div className="max-w-md space-y-5 px-4">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-medium uppercase heading-text">
-            Search your language
+            Search your language(s)
           </h1>
-          <form
-            className="items-center w-full max-w-xs mx-auto form-control outline-none"
-            onSubmit={handleSearch}
-          >
-            <div className="flex w-full">
-              <div className="relative flex w-full">
-                <input
-                  type="text"
-                  placeholder="Type a language (optional)"
-                  className="w-full max-w-xs bg-transparent rounded-tr-none rounded-br-none input input-bordered text-hacktoberfest-light border-hacktoberfest-light
-                  focus:border-hacktoberfest-light focus:!outline-none focus-visible:!outline-none placeholder:text-hacktoberfest-light text-sm sm:text-base"
-                  name="search"
-                />
-              </div>
-              <button
-                type="submit"
-                className="bg-transparent rounded-tl-none rounded-bl-none group btn btn-square text-hacktoberfest-light border-hacktoberfest-light hover:!border-hacktoberfest-light hover:bg-primary-btn-hover-gradient flex-shrink-0"
-              >
-                <Search size={16} className="sm:w-5 sm:h-5" />
-              </button>
-            </div>
-          </form>
           <p className="font-medium uppercase text-hacktoberfest-light text-sm sm:text-base">
-            Or select the programming languages you would like to find
+            Or select one or more programming languages you would like to find
             repositories for.
           </p>
 
@@ -99,7 +77,7 @@ export function Hero() {
             })}
           </div>
 
-          <div className="dropdown dropdown-top">
+          <div className="dropdown dropdown-top mt-4">
             <Button tabIndex={0} className="umami--click--otherlangs-button text-sm sm:text-base">
               Other languages
             </Button>
@@ -128,6 +106,30 @@ export function Hero() {
               })}
             </ul>
           </div>
+
+          {/* Search form moved below language selection */}
+          <form
+            className="items-center w-full max-w-xs mx-auto form-control outline-none mt-8"
+            onSubmit={handleSearch}
+          >
+            <div className="flex w-full">
+              <div className="relative flex w-full">
+                <input
+                  type="text"
+                  placeholder="Type a language (optional)"
+                  className="w-full max-w-xs bg-transparent rounded-tr-none rounded-br-none input input-bordered text-hacktoberfest-light border-hacktoberfest-light
+                  focus:border-hacktoberfest-light focus:!outline-none focus-visible:!outline-none placeholder:text-hacktoberfest-light text-sm sm:text-base"
+                  name="search"
+                />
+              </div>
+              <button
+                type="submit"
+                className="bg-transparent rounded-tl-none rounded-bl-none group btn btn-square text-hacktoberfest-light border-hacktoberfest-light hover:!border-hacktoberfest-light hover:bg-primary-btn-hover-gradient flex-shrink-0"
+              >
+                <Search size={16} className="sm:w-5 sm:h-5" />
+              </button>
+            </div>
+          </form>
         </div>
         <MarqueTextAnimation />
       </div>
