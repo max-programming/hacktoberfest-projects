@@ -105,16 +105,7 @@ async function getRepos(
           ? `stars:<${endStars}`
           : '';
 
-  const apiUrl = new URL('https://api.github.com/search/repositories');
-  apiUrl.searchParams.set('page', page.toString());
-  apiUrl.searchParams.set('per_page', '21');
-  apiUrl.searchParams.set('sort', sort.toString());
-  apiUrl.searchParams.set('order', order.toString());
-  apiUrl.searchParams.set(
-    'q',
-    `topic:hacktoberfest language:${language} ${searchQuery} ${starsQuery}`
-  );
-
+  const languages = language.split(',').map(l => l.trim()); // split multi-language
   const headers: HeadersInit = {
     Accept: 'application/vnd.github.mercy-preview+json'
   };
@@ -136,24 +127,49 @@ async function getRepos(
     headers.Authorization = `Bearer ${env.AUTH_GITHUB_TOKEN}`;
   }
 
-  const res = await fetch(apiUrl, { headers });
-  if (!res.ok) return undefined;
-
-  const repos = (await res.json()) as RepoData;
   const reports = await getReportedRepos();
+  let allRepos: RepoItem[] = [];
 
-  repos.items = repos.items.filter((repo: RepoItem) => {
-    return !repo.archived && !reports.find(report => report.repoId === repo.id);
-  });
+  // fetch github repos for each language and merge
+  for (const lang of languages) {
+    const apiUrl = new URL('https://api.github.com/search/repositories');
+    apiUrl.searchParams.set('page', page.toString());
+    apiUrl.searchParams.set('per_page', '21');
+    apiUrl.searchParams.set('sort', sort.toString());
+    apiUrl.searchParams.set('order', order.toString());
+    apiUrl.searchParams.set(
+      'q',
+      `topic:hacktoberfest language:${lang} ${searchQuery} ${starsQuery}`
+    );
 
-  if (!Array.isArray(repos.items) || repos.items?.length < 1) return undefined;
+    const res = await fetch(apiUrl, { headers });
+    if (!res.ok) continue;
+
+    const reposData: RepoData = await res.json();
+    const filteredItems = reposData.items.filter(
+      (repo: RepoItem) => !repo.archived && !reports.find(r => r.repoId === repo.id)
+    );
+
+    allRepos = allRepos.concat(filteredItems);
+  }
+
+  if (allRepos.length < 1) return undefined;
+
+  // sort merged repos by updated date descending
+  allRepos.sort(
+    (a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+  );
 
   return {
     page: +page.toString(),
     languageName: language,
-    repos
+    repos: {
+      ...{ total_count: allRepos.length, incomplete_results: false },
+      items: allRepos
+    }
   };
 }
+
 
 async function getReportedRepos() {
   const reports = await db
