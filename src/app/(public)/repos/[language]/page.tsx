@@ -141,30 +141,6 @@ async function getRepos(
 
   const repos = (await res.json()) as RepoData;
   const reports = await getReportedRepos();
-  let allRepos: RepoItem[] = [];
-
-  // fetch github repos for each language and merge
-  for (const lang of languages) {
-    const apiUrl = new URL('https://api.github.com/search/repositories');
-    apiUrl.searchParams.set('page', page.toString());
-    apiUrl.searchParams.set('per_page', '21');
-    apiUrl.searchParams.set('sort', sort.toString());
-    apiUrl.searchParams.set('order', order.toString());
-    apiUrl.searchParams.set(
-      'q',
-      `topic:hacktoberfest language:${lang} ${searchQuery} ${starsQuery}`
-    );
-
-    const res = await fetch(apiUrl, { headers });
-    if (!res.ok) continue;
-
-    const reposData: RepoData = await res.json();
-    const filteredItems = reposData.items.filter(
-      (repo: RepoItem) => !repo.archived && !reports.find(r => r.repoId === repo.id)
-    );
-
-    allRepos = allRepos.concat(filteredItems);
-  }
 
   repos.items = repos.items.filter((repo: RepoItem) => {
     return !repo.archived && !reports.find(report => report.repoId === repo.id);
