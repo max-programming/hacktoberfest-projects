@@ -76,7 +76,7 @@ export function Hero() {
             </div>
           </form>
           <p className="font-medium uppercase text-hacktoberfest-light text-sm sm:text-base">
-            Or select the programming languages you would like to find
+            Or select one or more programming languages you would like to find
             repositories for.
           </p>
 
