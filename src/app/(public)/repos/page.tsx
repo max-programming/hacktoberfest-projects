@@ -14,7 +14,7 @@ import type { RepoResponse, RepoData, RepoItem, SearchParams } from '@/types';
 
 export default async function ReposPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
   const sp = await searchParams;
-  const raw: string[] = Array.isArray(sp.l) ? sp.l : sp.l ? [String(sp.l)] : [];
+  const langs: string[] = Array.isArray(sp.l) ? sp.l : sp.l ? [String(sp.l)] : [];
 
   const langs = raw
   .flatMap(r => r.split(',')) // handles comma-separated and multi params
