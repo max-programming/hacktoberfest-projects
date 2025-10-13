@@ -14,10 +14,12 @@ import type { RepoResponse, RepoData, RepoItem, SearchParams } from '@/types';
 
 export default async function ReposPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
   const sp = await searchParams;
-  const raw = (sp as any).l ?? (sp as any).langs ?? '';
-  const langs = (Array.isArray(raw) ? raw : raw.toString().split(','))
-    .map((s: string) => decodeURIComponent(s.trim()))
-    .filter(Boolean);
+  const raw: string[] = Array.isArray(sp.l) ? sp.l : sp.l ? [String(sp.l)] : [];
+
+  const langs = raw
+  .flatMap(r => r.split(',')) // handles comma-separated and multi params
+  .map(s => decodeURIComponent(s.trim()))
+  .filter(Boolean);
 
   const reposRes = await getRepos(langs, sp);
   if (!reposRes) notFound();
