@@ -56,6 +56,7 @@ router.push(`/repos?${params.toString()}`);
             Search your language(s)
           </h1>
           <form
+            id="hero-search-form"
             className="items-center w-full max-w-xs mx-auto form-control outline-none mt-8"
             onSubmit={handleSearch}
           >
@@ -69,12 +70,6 @@ router.push(`/repos?${params.toString()}`);
                   name="search"
                 />
               </div>
-              <button
-                type="submit"
-                className="bg-transparent rounded-tl-none rounded-bl-none group btn btn-square text-hacktoberfest-light border-hacktoberfest-light hover:!border-hacktoberfest-light hover:bg-primary-btn-hover-gradient flex-shrink-0"
-              >
-                <Search size={16} className="sm:w-5 sm:h-5" />
-              </button>
             </div>
           </form>
           <p className="font-medium uppercase text-hacktoberfest-light text-sm sm:text-base">
@@ -142,14 +137,18 @@ router.push(`/repos?${params.toString()}`);
               })}
             </ul>
           </div>
-          <form className="mt-6 flex justify-center" onSubmit={handleSearch}>
+          <div className="mt-6 flex items-center justify-center">
             <button
               type="submit"
-              className="bg-transparent rounded-tl-none rounded-bl-none group btn btn-square text-hacktoberfest-light border-hacktoberfest-light hover:!border-hacktoberfest-light hover:bg-primary-btn-hover-gradient flex-shrink-0"
+              form="hero-search-form"
+              aria-label="Search repositories"
+              title="Search"
+              className="bg-transparent rounded-tl-none rounded-bl-none group btn text-hacktoberfest-light border-hacktoberfest-light hover:!border-hacktoberfest-light hover:bg-primary-btn-hover-gradient flex items-center gap-2 px-5"
             >
               <Search size={16} className="sm:w-5 sm:h-5" />
+              <span className="text-sm sm:text-base">Search</span>
             </button>
-          </form>
+          </div>
 
         </div>
         <MarqueTextAnimation />
