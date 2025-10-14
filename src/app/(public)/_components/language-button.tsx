@@ -7,12 +7,15 @@ interface LanguageButtonProps {
 }
 
 export function LanguageButton({ language }: LanguageButtonProps) {
-  const lan = language.toLowerCase();
+  let lan = language.toLowerCase();
 
+  if (lan === 'c++') 
+    lan = 'cpp'
+  
   return (
     <Link href={`/repos/${lan}`}>
       <Button>
-        <svg className="w-5 h-4">{Icons[lan === 'c++' ? 'cpp' : lan]}</svg>
+        <svg className="w-5 h-4">{Icons[lan]}</svg>
         {language}
       </Button>
     </Link>
