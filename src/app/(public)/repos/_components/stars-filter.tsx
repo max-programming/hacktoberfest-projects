@@ -14,9 +14,11 @@ interface FormValues {
   endStars: number | '';
 }
 
+type Pathname = '/repos' | `/repos/${string}`;
+
 export function StarsFilter() {
   const router = useRouter();
-  const pathname = usePathname();
+  const pathname = usePathname() as Pathname;
   const searchParams = useSearchParams();
   const params = useParams();
   const { handleSubmit, control, reset } = useForm<FormValues>({

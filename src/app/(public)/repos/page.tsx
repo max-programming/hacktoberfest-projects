@@ -1,37 +1,37 @@
 import { env } from '@/env.mjs';
 import { notFound } from 'next/navigation';
-import { capitalize } from '@/lib/utils';
 import { Header } from '@/app/(public)/_components/header';
-import { ScrollToTop } from '../_components/scroll-to-top';
-import { RepoCard } from '../_components/repo-card';
-import { Sorter } from '../_components/sorter';
-import { StarsFilter } from '../_components/stars-filter';
-import { Pagination } from '../_components/pagination';
-import type { RepoData, RepoItem, RepoResponse, SearchParams } from '@/types';
-import type { Metadata } from 'next';
+import { ScrollToTop } from './_components/scroll-to-top';
+import { RepoCard } from './_components/repo-card';
+import { Sorter } from './_components/sorter';
+import { StarsFilter } from './_components/stars-filter';
+import { Pagination } from './_components/pagination';
 import { auth } from '@/auth';
 import { db } from '@/lib/db/connection';
 import { accountsTable, reportsTable } from '@/lib/db/migrations/schema';
 import { eq } from 'drizzle-orm';
-
-interface ReposPageProps {
-  params: Promise<{ language: string }>;
-  searchParams: Promise<SearchParams>;
-}
+import type { RepoResponse, RepoData, RepoItem, SearchParams } from '@/types';
+import { capitalize } from '@/lib/utils';
 
 export default async function ReposPage({
-  params,
   searchParams
-}: ReposPageProps) {
-  const { language } = await params;
+}: {
+  searchParams: Promise<SearchParams>;
+}) {
   const sp = await searchParams;
+  const langs: string[] = Array.isArray(sp.l)
+    ? sp.l
+    : sp.l
+      ? [String(sp.l)]
+      : [];
 
-  const reposRes = await getRepos(language, sp);
-
+  const reposRes = await getRepos(langs, sp);
   if (!reposRes) notFound();
 
   const { repos, page } = reposRes;
-  const languageName = capitalize(decodeURIComponent(language));
+  const languagesList = langs
+    .map(lang => capitalize(decodeURIComponent(lang)))
+    .join(', ');
 
   return (
     <>
@@ -48,7 +48,7 @@ export default async function ReposPage({
                   </span>{' '}
                   repositories for{' '}
                   <span className="font-bold heading-text">
-                    {sp.q ? sp.q + ' in ' + languageName : languageName}
+                    {sp.q ? sp.q + ' in ' + languagesList : languagesList}
                   </span>
                 </h1>
               </div>
@@ -72,17 +72,8 @@ export default async function ReposPage({
   );
 }
 
-export async function generateMetadata({
-  params
-}: ReposPageProps): Promise<Metadata> {
-  const { language } = await params;
-  return {
-    title: `${capitalize(decodeURIComponent(language))} Repositories`
-  };
-}
-
 async function getRepos(
-  language: string,
+  languages: string[],
   searchParams: SearchParams
 ): Promise<RepoResponse | undefined> {
   const session = await auth();
@@ -104,6 +95,8 @@ async function getRepos(
           ? `stars:<${endStars}`
           : '';
 
+  const combinedLangs = languages.map(l => `language:${l}`).join(' ');
+
   const apiUrl = new URL('https://api.github.com/search/repositories');
   apiUrl.searchParams.set('page', page.toString());
   apiUrl.searchParams.set('per_page', '21');
@@ -111,12 +104,13 @@ async function getRepos(
   apiUrl.searchParams.set('order', order.toString());
   apiUrl.searchParams.set(
     'q',
-    `topic:hacktoberfest language:${language} ${searchQuery} ${starsQuery}`
+    `topic:hacktoberfest ${combinedLangs} ${searchQuery} ${starsQuery}`
   );
 
   const headers: HeadersInit = {
     Accept: 'application/vnd.github.mercy-preview+json'
   };
+
   const userId = session?.user?.id;
 
   if (userId) {
@@ -145,11 +139,9 @@ async function getRepos(
     return !repo.archived && !reports.find(report => report.repoId === repo.id);
   });
 
-  if (!Array.isArray(repos.items) || repos.items?.length < 1) return undefined;
-
   return {
     page: +page.toString(),
-    languageName: language,
+    languageName: languages.join(', '),
     repos
   };
 }
