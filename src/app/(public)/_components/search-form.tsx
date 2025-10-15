@@ -26,20 +26,20 @@ export function SearchForm() {
   }
 
   function onSubmit({ searchQuery }: FormValues) {
+    if (!pathname.startsWith('/repos')) return;
+
+    const reposPathname = pathname as `/repos/${string}`;
     const trimmedQuery = searchQuery.trim();
     if (trimmedQuery !== '') {
       const sp = new URLSearchParams(searchParams);
       sp.set('q', trimmedQuery);
-      router.push(`${pathname}?${sp.toString()}`);
+      router.push(`${reposPathname}?${sp.toString()}`);
     }
   }
 
   return (
     <div className="w-full">
-      <form
-        className="w-full form-control"
-        onSubmit={handleSubmit(onSubmit)}
-      >
+      <form className="w-full form-control" onSubmit={handleSubmit(onSubmit)}>
         <div className="relative">
           <input
             placeholder="Search"

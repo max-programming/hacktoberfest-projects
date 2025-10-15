@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename);
 /**@type {import('next').NextConfig}*/
 const config = {
   reactStrictMode: true,
+  typedRoutes: true,
   experimental: {
     viewTransition: true
   },

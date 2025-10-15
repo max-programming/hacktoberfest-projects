@@ -32,13 +32,13 @@ export function Hero() {
   function handleSearch(e: React.FormEvent) {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
-    let chosenLanguages = selected;
+    const chosenLanguages = [...selected];
 
     // Fallback: if no checkbox selected, use the single input value
     if (chosenLanguages.length === 0) {
       const typed = String(formData.get('search') || '').trim();
       if (typed) {
-        chosenLanguages = [typed];
+        chosenLanguages.push(typed);
       }
     }
 
