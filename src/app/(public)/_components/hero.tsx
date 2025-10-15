@@ -67,7 +67,7 @@ export function Hero() {
                 <input
                   type="text"
                   placeholder="Type a language (optional)"
-                  className="w-full max-w-xs bg-transparent rounded-tr-none rounded-br-none input input-bordered text-hacktoberfest-light border-hacktoberfest-light
+                  className="w-full max-w-xs bg-transparent input input-bordered text-hacktoberfest-light border-hacktoberfest-light
                   focus:border-hacktoberfest-light focus:!outline-none focus-visible:!outline-none placeholder:text-hacktoberfest-light text-sm sm:text-base"
                   name="search"
                 />
@@ -145,7 +145,7 @@ export function Hero() {
               form="hero-search-form"
               aria-label="Search repositories"
               title="Search"
-              className="bg-transparent rounded-tl-none rounded-bl-none group btn text-hacktoberfest-light border-hacktoberfest-light hover:!border-hacktoberfest-light hover:bg-primary-btn-hover-gradient flex items-center gap-2 px-5"
+              className="bg-transparent group btn text-hacktoberfest-light border-hacktoberfest-light hover:!border-hacktoberfest-light hover:bg-primary-btn-hover-gradient flex items-center gap-2 px-5"
             >
               <Search size={16} className="sm:w-5 sm:h-5" />
               <span className="text-sm sm:text-base">Search</span>
