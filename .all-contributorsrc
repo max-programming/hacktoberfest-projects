@@ -493,6 +493,17 @@
         "code",
         "bug"
       ]
+    },
+    {
+      "login": "offbeatjs",
+      "name": "Yash Raj ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193760898?v=4",
+      "profile": "https://github.com/offbeatjs",
+      "contributions": [
+        "code",
+        "design",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
