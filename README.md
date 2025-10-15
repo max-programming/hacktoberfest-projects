@@ -6,7 +6,7 @@ A Web app that lets you find eligible repositories for Hacktoberfest!
 Use it here - https://finder.usmans.me
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-50-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-51-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="https://gitmoji.dev">
   <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
@@ -118,6 +118,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/anuja12mishra"><img src="https://avatars.githubusercontent.com/u/109236275?v=4?s=100" width="100px;" alt="Anuja Mishra"/><br /><sub><b>Anuja Mishra</b></sub></a><br /><a href="#design-anuja12mishra" title="Design">🎨</a> <a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=anuja12mishra" title="Code">💻</a> <a href="https://github.com/max-programming/hacktoberfest-projects/issues?q=author%3Aanuja12mishra" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/offbeatjs"><img src="https://avatars.githubusercontent.com/u/193760898?v=4?s=100" width="100px;" alt="Yash Raj "/><br /><sub><b>Yash Raj </b></sub></a><br /><a href="https://github.com/max-programming/hacktoberfest-projects/commits?author=offbeatjs" title="Code">💻</a> <a href="#design-offbeatjs" title="Design">🎨</a> <a href="#ideas-offbeatjs" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
