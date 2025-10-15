@@ -21,7 +21,9 @@ export function Hero() {
 
   const toggleLanguage = (language: string) => {
     setSelected(prev =>
-      prev.includes(language) ? prev.filter(l => l !== language) : [...prev, language]
+      prev.includes(language)
+        ? prev.filter(l => l !== language)
+        : [...prev, language]
     );
   };
 
@@ -33,19 +35,19 @@ export function Hero() {
     let chosenLanguages = selected;
 
     // Fallback: if no checkbox selected, use the single input value
- if (chosenLanguages.length === 0) {
-  const typed = String(formData.get('search') || '').trim();
-  if (typed) {
-    chosenLanguages = [typed];
-  }
-}
+    if (chosenLanguages.length === 0) {
+      const typed = String(formData.get('search') || '').trim();
+      if (typed) {
+        chosenLanguages = [typed];
+      }
+    }
 
-if (chosenLanguages.length === 0) return; // nothing to search
+    if (chosenLanguages.length === 0) return; // nothing to search
 
-const params = new URLSearchParams();
-chosenLanguages.forEach(lang => params.append('l', lang.toLowerCase()));
+    const params = new URLSearchParams();
+    chosenLanguages.forEach(lang => params.append('l', lang.toLowerCase()));
 
-router.push(`/repos?${params.toString()}`);
+    router.push(`/repos?${params.toString()}`);
   }
 
   return (
@@ -149,7 +151,6 @@ router.push(`/repos?${params.toString()}`);
               <span className="text-sm sm:text-base">Search</span>
             </button>
           </div>
-
         </div>
         <MarqueTextAnimation />
       </div>
