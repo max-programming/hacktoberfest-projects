@@ -79,7 +79,7 @@ async function getRepos(
   const session = await auth();
   const {
     p: page = '1',
-    s: sort = 'updated',
+    s: sort = '',
     o: order = 'desc',
     q: searchQuery = '',
     startStars = '1',
