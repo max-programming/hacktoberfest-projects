@@ -31,6 +31,7 @@ export default async function ReposPage({
   if (!reposRes) notFound();
 
   const { repos, page } = reposRes;
+  const languageName = capitalize(decodeURIComponent(language));
 
   return (
     <>
@@ -43,13 +44,11 @@ export default async function ReposPage({
               <div className="max-w-4xl mx-auto">
                 <h1 className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium uppercase text-hacktoberfest-light break-words px-2">
                   <span className="font-bold heading-text">
-                    {repos.total_count}
+                    {Intl.NumberFormat().format(repos.total_count)}
                   </span>{' '}
                   repositories for{' '}
                   <span className="font-bold heading-text">
-                    {sp.q
-                      ? sp.q + ' in ' + capitalize(decodeURIComponent(language))
-                      : capitalize(decodeURIComponent(language))}
+                    {sp.q ? sp.q + ' in ' + languageName : languageName}
                   </span>
                 </h1>
               </div>
