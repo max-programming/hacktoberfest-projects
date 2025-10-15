@@ -8,6 +8,7 @@ import { Footer } from '@/components/footer';
 import { ReportModal } from '@/components/report-modal';
 import { env } from '@/env.mjs';
 import localFont from 'next/font/local';
+import { Databuddy } from '@databuddy/sdk/react';
 
 const atkinsonHyperlegibleMono = localFont({
   variable: '--font-atkinson-hyperlegible-mono',
@@ -44,6 +45,19 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
               src="https://cloud.umami.is/script.js"
               data-website-id={env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID}
               strategy="lazyOnload"
+            />
+          )}
+          {env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID && (
+            <Databuddy
+              clientId={env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID}
+              trackOutgoingLinks
+              trackInteractions
+              trackEngagement
+              trackScrollDepth
+              trackExitIntent
+              trackBounceRate
+              trackErrors
+              enableBatching
             />
           )}
         </ViewTransition>

@@ -14,6 +14,9 @@ importers:
       '@auth/drizzle-adapter':
         specifier: ^1.10.0
         version: 1.10.0
+      '@databuddy/sdk':
+        specifier: ^2.1.77
+        version: 2.1.77(@types/react@19.1.9)(react@19.1.1)
       '@eslint/eslintrc':
         specifier: ^3.3.1
         version: 3.3.1
@@ -176,6 +179,17 @@ packages:
 
   '@cloudinary/url-gen@1.15.0':
     resolution: {integrity: sha512-bjU67eZxLUgoRy/Plli4TQio7q6P31OYqnEgXxeN9TKXrzr6h0DeEdIUhKI9gy3HkEBWXWWJIPh7j7gkOJPnyA==}
+
+  '@databuddy/sdk@2.1.77':
+    resolution: {integrity: sha512-aTJqXvj7LZUEwZdLJzcNIMlw/2NI/uKwBjB9CUHYIuj4MxfylihIx+hgqNorlX32vD1jXj4QCWM8Yk8rwhy/dA==}
+    peerDependencies:
+      react: '>=18'
+      vue: '>=3'
+    peerDependenciesMeta:
+      react:
+        optional: true
+      vue:
+        optional: true
 
   '@drizzle-team/brocli@0.10.2':
     resolution: {integrity: sha512-z33Il7l5dKjUgGULTqBsQBQwckHh5AbIuxhdsIxDDiZAzBOrZO6q9ogcWC65kU382AfynTfgNumVcNIjuIua6w==}
@@ -2882,6 +2896,14 @@ snapshots:
   '@cloudinary/url-gen@1.15.0':
     dependencies:
       '@cloudinary/transformation-builder-sdk': 1.20.0
+
+  '@databuddy/sdk@2.1.77(@types/react@19.1.9)(react@19.1.1)':
+    dependencies:
+      jotai: 2.12.5(@types/react@19.1.9)(react@19.1.1)
+    optionalDependencies:
+      react: 19.1.1
+    transitivePeerDependencies:
+      - '@types/react'
 
   '@drizzle-team/brocli@0.10.2': {}
 

@@ -12,6 +12,7 @@
   "dependencies": {
     "@auth/core": "^0.40.0",
     "@auth/drizzle-adapter": "^1.10.0",
+    "@databuddy/sdk": "^2.1.77",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.32.0",
     "@t3-oss/env-nextjs": "^0.13.8",

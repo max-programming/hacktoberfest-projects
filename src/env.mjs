@@ -12,12 +12,14 @@ export const env = createEnv({
   },
   client: {
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: z.string().optional().nullable(),
-    NEXT_PUBLIC_ANALYTICS_WEBSITE_ID: z.string().uuid().optional().nullable()
+    NEXT_PUBLIC_ANALYTICS_WEBSITE_ID: z.string().uuid().optional().nullable(),
+    NEXT_PUBLIC_DATABUDDY_CLIENT_ID: z.string().optional().nullable()
   },
   experimental__runtimeEnv: {
     NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME:
       process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
     NEXT_PUBLIC_ANALYTICS_WEBSITE_ID:
-      process.env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID
+      process.env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID,
+    NEXT_PUBLIC_DATABUDDY_CLIENT_ID: process.env.NEXT_PUBLIC_DATABUDDY_CLIENT_ID
   }
 });
