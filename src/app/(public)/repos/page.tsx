@@ -11,15 +11,27 @@ import { db } from '@/lib/db/connection';
 import { accountsTable, reportsTable } from '@/lib/db/migrations/schema';
 import { eq } from 'drizzle-orm';
 import type { RepoResponse, RepoData, RepoItem, SearchParams } from '@/types';
+import { capitalize } from '@/lib/utils';
 
-export default async function ReposPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
+export default async function ReposPage({
+  searchParams
+}: {
+  searchParams: Promise<SearchParams>;
+}) {
   const sp = await searchParams;
-  const langs: string[] = Array.isArray(sp.l) ? sp.l : sp.l ? [String(sp.l)] : [];
+  const langs: string[] = Array.isArray(sp.l)
+    ? sp.l
+    : sp.l
+      ? [String(sp.l)]
+      : [];
 
   const reposRes = await getRepos(langs, sp);
   if (!reposRes) notFound();
 
   const { repos, page } = reposRes;
+  const languagesList = langs
+    .map(lang => capitalize(decodeURIComponent(lang)))
+    .join(', ');
 
   return (
     <>
@@ -28,6 +40,19 @@ export default async function ReposPage({ searchParams }: { searchParams: Promis
       <div className="w-full overflow-x-hidden">
         <div className="container mx-auto px-4 pt-32 sm:pt-36 md:pt-40 pb-8">
           <div className="min-h-screen">
+            <div className="text-center mb-8">
+              <div className="max-w-4xl mx-auto">
+                <h1 className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium uppercase text-hacktoberfest-light break-words px-2">
+                  <span className="font-bold heading-text">
+                    {Intl.NumberFormat().format(repos.total_count)}
+                  </span>{' '}
+                  repositories for{' '}
+                  <span className="font-bold heading-text">
+                    {sp.q ? sp.q + ' in ' + languagesList : languagesList}
+                  </span>
+                </h1>
+              </div>
+            </div>
             <Sorter />
             <StarsFilter />
             <div className="grid grid-cols-1 gap-6 px-2 sm:px-4 sm:grid-cols-2 lg:grid-cols-3">
