@@ -20,9 +20,11 @@ enum SortTypes {
   LeastRecentlyUpdated = 'Least recently updated'
 }
 
+type Pathname = '/repos' | `/repos/${string}`;
+
 export function Sorter() {
   const searchParams = useSearchParams();
-  const pathname = usePathname();
+  const pathname = usePathname() as Pathname;
 
   const navigationItems = [
     {
