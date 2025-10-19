@@ -1,25 +1,29 @@
 'use client';
 
-import { usePathname, useSearchParams, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { GoX } from 'react-icons/go';
+import { useQueryState } from 'nuqs';
 
 interface FormValues {
   searchQuery: string;
 }
 
 export function SearchForm() {
-  const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const [searchQuery, setSearchQuery] = useQueryState('q', {
+    defaultValue: '',
+    parse: (value: string) => value,
+    serialize: (value: string) => value || ''
+  });
 
   const { register, handleSubmit, reset, watch } = useForm<FormValues>({
     defaultValues: {
-      searchQuery: searchParams.get('q') as string
+      searchQuery: searchQuery
     }
   });
 
-  const searchQuery = watch('searchQuery');
+  const queryValue = watch('searchQuery');
 
   if (!pathname.startsWith('/repos')) {
     return null;
@@ -28,12 +32,9 @@ export function SearchForm() {
   function onSubmit({ searchQuery }: FormValues) {
     if (!pathname.startsWith('/repos')) return;
 
-    const reposPathname = pathname as `/repos/${string}`;
     const trimmedQuery = searchQuery.trim();
     if (trimmedQuery !== '') {
-      const sp = new URLSearchParams(searchParams);
-      sp.set('q', trimmedQuery);
-      router.push(`${reposPathname}?${sp.toString()}`);
+      void setSearchQuery(trimmedQuery);
     }
   }
 
@@ -47,11 +48,14 @@ export function SearchForm() {
             type="text"
             {...register('searchQuery', { required: true })}
           />
-          {searchQuery && searchQuery.trim() !== '' && (
+          {queryValue && queryValue.trim() !== '' && (
             <button
               className="absolute top-0 right-0 rounded-l-none btn btn-ghost btn-sm"
               type="button"
-              onClick={() => reset()}
+              onClick={() => {
+                reset();
+                void setSearchQuery(null);
+              }}
             >
               <GoX color="white" />
             </button>
