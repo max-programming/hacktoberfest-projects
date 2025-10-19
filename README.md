@@ -42,7 +42,7 @@ If you have any feedback, please reach out to us at the issues 😉
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=max-programming/hacktoberfest-projects&type=Date)](https://star-history.com/#max-programming/hacktoberfest-projects&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=max-programming/hacktoberfest-projects&type=date&legend=top-left)](https://www.star-history.com/#max-programming/hacktoberfest-projects&type=date&legend=top-left)
 
 ## Contributors ✨
 
