@@ -3,7 +3,7 @@
 import { Button } from '@/app/(public)/_components/button';
 import { ArrowLeft, ArrowRight, Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useTransition } from 'react';
 import type { SearchParams } from '@/types';
 
 const MAX_PER_PAGE = 21;
@@ -18,38 +18,29 @@ export function Pagination({
   totalCount,
   searchParams
 }: PaginationProps) {
-  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const [isPending, startTransition] = useTransition();
 
-  const handlePrevPage = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    setIsLoading(true);
-    const newParams = { ...searchParams, p: page - 1 };
-    const queryString = new URLSearchParams(
-      Object.entries(newParams).map(([k, v]) => [k, String(v)])
-    ).toString();
-    router.push(`?${queryString}`);
-  };
+  function changePage(delta: number) {
+    const params = new URLSearchParams(
+      Object.entries(searchParams).map(([k, v]) => [k, String(v)])
+    );
+    params.set('p', String(page + delta));
 
-  const handleNextPage = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    setIsLoading(true);
-    const newParams = { ...searchParams, p: page + 1 };
-    const queryString = new URLSearchParams(
-      Object.entries(newParams).map(([k, v]) => [k, String(v)])
-    ).toString();
-    router.push(`?${queryString}`);
-  };
+    startTransition(() => {
+      router.push(`?${params.toString()}`);
+    });
+  }
 
   return (
     <div className="flex flex-col items-center gap-4 my-6 justify-evenly sm:gap-0 sm:flex-row">
       {page > 1 && (
         <Button
-          onClick={handlePrevPage}
-          disabled={isLoading}
+          onClick={() => changePage(-1)}
+          disabled={isPending}
           className="btn-wide hover:bg-primary-btn-hover-gradient hover:text-hacktoberfest-dark-green disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isLoading ? (
+          {isPending ? (
             <>
               <Loader2 className="animate-spin" />
               <span className="ml-2">Loading...</span>
@@ -65,11 +56,11 @@ export function Pagination({
       {totalCount >= MAX_PER_PAGE &&
         page < Math.ceil(totalCount / MAX_PER_PAGE) && (
           <Button
-            onClick={handleNextPage}
-            disabled={isLoading}
+            onClick={() => changePage(1)}
+            disabled={isPending}
             className="btn-wide hover:bg-primary-btn-hover-gradient hover:text-hacktoberfest-dark-green disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isLoading ? (
+            {isPending ? (
               <>
                 <span className="mr-2">Loading...</span>
                 <Loader2 className="animate-spin" />
