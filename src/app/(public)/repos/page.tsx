@@ -64,7 +64,6 @@ export default async function ReposPage({
           <Pagination
             page={page}
             totalCount={repos.total_count}
-            searchParams={sp}
           />
         </div>
       </div>

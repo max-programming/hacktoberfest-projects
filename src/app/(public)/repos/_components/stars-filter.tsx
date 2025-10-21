@@ -2,12 +2,11 @@
 
 import {
   useParams,
-  usePathname,
-  useRouter,
-  useSearchParams
+  usePathname
 } from 'next/navigation';
 import { useEffect } from 'react';
 import { Controller, useForm } from 'react-hook-form';
+import { useQueryStates } from 'nuqs';
 
 interface FormValues {
   startStars: number | '';
@@ -17,18 +16,18 @@ interface FormValues {
 type Pathname = '/repos' | `/repos/${string}`;
 
 export function StarsFilter() {
-  const router = useRouter();
   const pathname = usePathname() as Pathname;
-  const searchParams = useSearchParams();
   const params = useParams();
+  const [{ startStars, endStars, p }, setStarsParams] = useQueryStates({
+    startStars: { parse: (value: string) => (value ? +value : ''), serialize: (value: number | '') => value === '' ? '' : String(value) },
+    endStars: { parse: (value: string) => (value ? +value : ''), serialize: (value: number | '') => value === '' ? '' : String(value) },
+    p: { parse: (value: string) => (value ? +value : 1), serialize: (value: number) => String(value) }
+  });
+
   const { handleSubmit, control, reset } = useForm<FormValues>({
     defaultValues: {
-      startStars: !searchParams.get('startStars')
-        ? ''
-        : +(searchParams.get('startStars') as string),
-      endStars: !searchParams.get('endStars')
-        ? ''
-        : +(searchParams.get('endStars') as string)
+      startStars: startStars === '' ? '' : startStars || '',
+      endStars: endStars === '' ? '' : endStars || ''
     }
   });
 
@@ -36,21 +35,24 @@ export function StarsFilter() {
   useEffect(() => reset(), [params.language]);
 
   function onSubmit({ startStars, endStars }: FormValues) {
-    const sp = new URLSearchParams(searchParams);
     if (
       typeof endStars === 'number' &&
       typeof startStars === 'number' &&
       endStars < startStars
     ) {
       reset({ startStars, endStars: '' });
-      sp.delete('endStars');
-      sp.set('startStars', startStars.toString());
+      void setStarsParams({
+        startStars,
+        endStars: '',
+        p: 1
+      });
     } else {
-      sp.set('startStars', startStars.toString());
-      sp.set('endStars', endStars.toString());
+      void setStarsParams({
+        startStars: typeof startStars === 'number' ? startStars : '',
+        endStars: typeof endStars === 'number' ? endStars : '',
+        p: 1
+      });
     }
-    sp.delete('p');
-    router.push(`${pathname}?${sp.toString()}`);
   }
 
   return (

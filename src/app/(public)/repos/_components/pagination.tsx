@@ -1,20 +1,41 @@
 import { Button } from '@/app/(public)/_components/button';
+<<<<<<< Updated upstream
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import type { SearchParams } from '@/types';
+=======
+import { ArrowLeft, ArrowRight, Loader2 } from 'lucide-react';
+import { useTransition } from 'react';
+import { useQueryState } from 'nuqs';
+>>>>>>> Stashed changes
 
 const MAX_PER_PAGE = 21;
 interface PaginationProps {
   page: number;
   totalCount: number;
-  searchParams: SearchParams;
 }
 
 export function Pagination({
   page,
-  totalCount,
-  searchParams
+  totalCount
 }: PaginationProps) {
+<<<<<<< Updated upstream
+=======
+  const [, setPageParam] = useQueryState('p', {
+    defaultValue: '1',
+    parse: (value: string) => value,
+    serialize: (value: string) => value
+  });
+  const [isPending, startTransition] = useTransition();
+
+  function changePage(delta: number) {
+    const newPage = page + delta;
+    startTransition(() => {
+      void setPageParam(String(newPage));
+    });
+  }
+
+>>>>>>> Stashed changes
   return (
     <div className="flex flex-col items-center gap-4 my-6 justify-evenly sm:gap-0 sm:flex-row">
       {page > 1 && (
