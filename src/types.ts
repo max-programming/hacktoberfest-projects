@@ -1,3 +1,9 @@
+import type { GetRepositories } from './lib/gql/repositories.gql.ts';
+
+export type Repository = NonNullable<
+  ReturnType<GetRepositories>['search']['nodes']
+>[number];
+
 export interface RepoData {
   total_count: number;
   items: RepoItem[];
@@ -127,6 +133,7 @@ export interface RepoResponse {
   page: number;
   languageName: string;
   repos: RepoData;
+  result: ReturnType<GetRepositories>;
 }
 
 export type SearchParams = Record<string, string | string[] | undefined>;

@@ -1,4 +1,4 @@
 import { atom } from 'jotai';
-import { RepoItem } from '@/types';
+import type { Repository } from '@/types';
 
-export const repoAtom = atom<RepoItem | null>(null);
+export const repoAtom = atom<Repository | null>(null);

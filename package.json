@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"./**/*.{ts,tsx,json}\""
+    "format": "prettier --write \"./**/*.{ts,tsx,json}\"",
+    "gql-to-ts": "megaera --schema=./github_api.schema.graphql ./src/lib/gql/repositories.gql"
   },
   "dependencies": {
     "@auth/core": "^0.40.0",
@@ -15,6 +16,8 @@
     "@databuddy/sdk": "^2.1.77",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.32.0",
+    "@octokit/core": "^7.0.5",
+    "@octokit/graphql": "^9.0.2",
     "@t3-oss/env-nextjs": "^0.13.8",
     "@twuni/emojify": "^1.0.2",
     "@types/node": "^24.1.0",
@@ -33,6 +36,7 @@
     "framer-motion": "^12.23.12",
     "jotai": "^2.12.5",
     "lucide-react": "^0.536.0",
+    "megaera": "^1.0.2",
     "next": "^15.5.4",
     "next-auth": "5.0.0-beta.29",
     "next-cloudinary": "^6.16.0",

@@ -1,0 +1,47 @@
+query GetRepositories($queryString: String!, $after: String, $before: String) {
+  search(
+    query: $queryString
+    type: REPOSITORY
+    first: 21
+    after: $after
+    before: $before
+  ) {
+    repositoryCount
+    pageInfo {
+      startCursor
+      endCursor
+      hasNextPage
+      hasPreviousPage
+    }
+    nodes {
+      ... on Repository {
+        id
+        name
+        description
+        url
+        stargazerCount
+        forkCount
+        primaryLanguage {
+          name
+        }
+        owner {
+          login
+          avatarUrl
+        }
+        repositoryTopics(first: 20) {
+          nodes {
+            topic {
+              name
+            }
+          }
+        }
+        issues(states: OPEN) {
+          totalCount
+        }
+        pullRequests(states: OPEN) {
+          totalCount
+        }
+      }
+    }
+  }
+}

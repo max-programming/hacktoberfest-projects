@@ -10,8 +10,11 @@ import { auth } from '@/auth';
 import { db } from '@/lib/db/connection';
 import { accountsTable, reportsTable } from '@/lib/db/migrations/schema';
 import { eq } from 'drizzle-orm';
-import type { RepoResponse, RepoData, RepoItem, SearchParams } from '@/types';
 import { capitalize } from '@/lib/utils';
+import type { RepoResponse, RepoData, RepoItem, SearchParams } from '@/types';
+import { graphql } from '@octokit/graphql';
+import { GetRepositories } from '@/lib/gql/repositories.gql.ts';
+import fs from 'fs/promises';
 
 export default async function ReposPage({
   searchParams
@@ -28,7 +31,7 @@ export default async function ReposPage({
   const reposRes = await getRepos(langs, sp);
   if (!reposRes) notFound();
 
-  const { repos, page } = reposRes;
+  const { result } = reposRes;
   const languagesList = langs
     .map(lang => capitalize(decodeURIComponent(lang)))
     .join(', ');
@@ -44,7 +47,7 @@ export default async function ReposPage({
               <div className="max-w-4xl mx-auto">
                 <h1 className="mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium uppercase text-hacktoberfest-light break-words px-2">
                   <span className="font-bold heading-text">
-                    {Intl.NumberFormat().format(repos.total_count)}
+                    {Intl.NumberFormat().format(result.search.repositoryCount)}
                   </span>{' '}
                   repositories for{' '}
                   <span className="font-bold heading-text">
@@ -56,14 +59,14 @@ export default async function ReposPage({
             <Sorter />
             <StarsFilter />
             <div className="grid grid-cols-1 gap-6 px-2 sm:px-4 sm:grid-cols-2 lg:grid-cols-3">
-              {repos.items.map(repo => (
-                <RepoCard key={repo.id} repo={repo} />
-              ))}
+              {result.search.nodes?.map(
+                repo => repo && <RepoCard key={repo?.id} repo={repo} />
+              )}
             </div>
           </div>
           <Pagination
-            page={page}
-            totalCount={repos.total_count}
+            pageInfo={result.search.pageInfo}
+            totalCount={result.search.repositoryCount}
             searchParams={sp}
           />
         </div>
@@ -83,7 +86,8 @@ async function getRepos(
     o: order = 'desc',
     q: searchQuery = '',
     startStars = '1',
-    endStars = ''
+    endStars = '',
+    after = null
   } = searchParams;
 
   const starsQuery =
@@ -107,9 +111,7 @@ async function getRepos(
     `topic:hacktoberfest ${combinedLangs} ${searchQuery} ${starsQuery}`
   );
 
-  const headers: HeadersInit = {
-    Accept: 'application/vnd.github.mercy-preview+json'
-  };
+  const headers: Record<Lowercase<string>, string | number | undefined> = {};
 
   const userId = session?.user?.id;
 
@@ -121,28 +123,44 @@ async function getRepos(
       .limit(1);
 
     if (account && account.access_token) {
-      headers.Authorization = `Bearer ${account.access_token}`;
+      headers.authorization = `Bearer ${account.access_token}`;
     } else if (env.AUTH_GITHUB_TOKEN) {
-      headers.Authorization = `Bearer ${env.AUTH_GITHUB_TOKEN}`;
+      headers.authorization = `Bearer ${env.AUTH_GITHUB_TOKEN}`;
     }
   } else if (env.AUTH_GITHUB_TOKEN) {
-    headers.Authorization = `Bearer ${env.AUTH_GITHUB_TOKEN}`;
+    headers.authorization = `Bearer ${env.AUTH_GITHUB_TOKEN}`;
   }
 
-  const res = await fetch(apiUrl, { headers });
-  if (!res.ok) return undefined;
-
-  const repos = (await res.json()) as RepoData;
-  const reports = await getReportedRepos();
-
-  repos.items = repos.items.filter((repo: RepoItem) => {
-    return !repo.archived && !reports.find(report => report.repoId === repo.id);
+  const graphqlWithAuth = graphql.defaults({
+    headers
   });
+
+  const result = await graphqlWithAuth<ReturnType<GetRepositories>>(
+    GetRepositories,
+    {
+      queryString:
+        `topic:hacktoberfest ${combinedLangs} ${searchQuery} ${starsQuery} ${sort ? `sort:${sort}-${order}` : ''}`.trim(),
+      after: Array.isArray(after) ? null : after
+    }
+  );
+
+  await fs.writeFile('result.json', JSON.stringify(result));
+
+  // const res = await fetch(apiUrl, { headers });
+  // if (!res.ok) return undefined;
+
+  // const repos = (await res.json()) as RepoData;
+  // const reports = await getReportedRepos();
+
+  // repos.items = repos.items.filter((repo: RepoItem) => {
+  //   return !repo.archived && !reports.find(report => report.repoId === repo.id);
+  // });
 
   return {
     page: +page.toString(),
     languageName: languages.join(', '),
-    repos
+    repos: null,
+    result
   };
 }
 

@@ -35,7 +35,7 @@ export function ReportModal() {
       message,
       repoAuthor,
       repoId,
-      repoUrl: repo.html_url
+      repoUrl: repo.url
     } satisfies SendReportSchema;
     try {
       const response = await sendReportAction(data);

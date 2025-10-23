@@ -1,12 +1,12 @@
 'use client';
 
 import { repoAtom } from '@/state/repoAtom';
-import { RepoItem } from '@/types';
 import { useSetAtom } from 'jotai';
 import { GoAlertFill } from 'react-icons/go';
+import type { Repository } from '@/types';
 
 interface ReportButtonProps {
-  repo: RepoItem;
+  repo: NonNullable<Repository>;
 }
 
 export function ReportButton({ repo }: ReportButtonProps) {
