@@ -1,9 +1,10 @@
 # Hacktoberfest Projects 🎉
 
 
-A Web app that lets you find eligible repositories for Hacktoberfest!
+> [!IMPORTANT]
+> **This project has been discontinued.** Hacktoberfest no longer counts pull requests, so there is no need to search for eligible repositories anymore. https://finder.usmans.me now shows a static notice that points visitors to [hacktoberfest.com](https://hacktoberfest.com). All search, sign-in, reporting, database and analytics features are switched off, and the old source code is kept in [`archive/`](archive) for reference. New contributions are no longer being accepted.
 
-Use it here - https://finder.usmans.me
+A Web app that lets you find eligible repositories for Hacktoberfest!
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-51-orange.svg?style=flat-square)](#contributors-)
