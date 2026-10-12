@@ -1,36 +1,17 @@
-import type { PropsWithChildren, ReactNode } from 'react';
+import Link from 'next/link';
+import type { ReactNode } from 'react';
 import { ArrowRight, KeyRound, MapPin, Sticker } from 'lucide-react';
-
-const HACKTOBERFEST_URL = 'https://hacktoberfest.com';
-const GITHUB_URL = 'https://github.com/max-programming/hacktoberfest-projects';
+import {
+  CoralButton,
+  Eyebrow,
+  GITHUB_URL,
+  HACKTOBERFEST_URL,
+  SiteFooter,
+  SiteHeader
+} from '@/components/site';
+import { avatarUrl, getContributors } from '@/lib/contributors';
 
 export const dynamic = 'force-static';
-
-function CoralButton({ href, children }: PropsWithChildren<{ href: string }>) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="inline-flex items-center justify-center gap-2 border-2 border-hf-ink bg-hf-coral px-6 py-3.5 font-mono text-sm font-bold text-hf-ink shadow-block transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0_0_#681913] sm:text-base"
-    >
-      {children}
-    </a>
-  );
-}
-
-function Eyebrow({
-  className,
-  children
-}: PropsWithChildren<{ className: string }>) {
-  return (
-    <p
-      className={`font-mono text-xs font-bold uppercase tracking-[0.18em] sm:text-sm ${className}`}
-    >
-      {children}
-    </p>
-  );
-}
 
 /** Hexagon "sticker" badge, like the ones on hacktoberfest.com. */
 function HexIcon({ color, children }: { color: string; children: ReactNode }) {
@@ -115,33 +96,12 @@ const steps = [
   }
 ];
 
-export default function DiscontinuedPage() {
+export default async function DiscontinuedPage() {
+  const contributors = await getContributors();
+
   return (
     <>
-      <header className="border-b-2 border-hf-ink bg-hf-teal">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-5 sm:px-6">
-          <div className="flex min-w-0 items-center gap-3">
-            <img
-              src="/hacktoberfest-2026.svg"
-              alt="Hacktoberfest 2026"
-              width={2243}
-              height={215}
-              className="h-5 w-auto sm:h-7"
-            />
-            <span className="hidden whitespace-nowrap border border-hf-cream/60 px-2 py-0.5 font-mono text-[11px] uppercase tracking-wider text-hf-cream/80 sm:inline">
-              Project Finder
-            </span>
-          </div>
-          <a
-            href={HACKTOBERFEST_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="whitespace-nowrap border-2 border-hf-ink bg-hf-coral px-3 py-2 font-mono text-xs font-bold text-hf-ink shadow-block-sm transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#681913] sm:px-5 sm:text-sm"
-          >
-            hacktoberfest.com
-          </a>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main>
         {/* Hero */}
@@ -215,6 +175,45 @@ export default function DiscontinuedPage() {
           </div>
         </section>
 
+        {/* Contributors */}
+        <section className="border-t-2 border-hf-ink bg-hf-paper px-4 py-20 text-hf-ink sm:px-6 sm:py-24">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2">
+            <div>
+              <Eyebrow className="text-hf-ink">Hall of fame</Eyebrow>
+              <h2 className="mt-5 font-display text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl">
+                {contributors.length} people built this.{' '}
+                <span className="text-hf-red">Thank you.</span>
+              </h2>
+              <p className="mt-6 max-w-lg text-base leading-relaxed text-hf-ink/80 sm:text-lg">
+                The finder may be retired, but the people who wrote its code,
+                designed it, reported bugs and shared ideas deserve the credit.
+              </p>
+              <div className="mt-10">
+                <CoralButton href="/contributors">
+                  Meet the contributors <ArrowRight size={18} />
+                </CoralButton>
+              </div>
+            </div>
+            <Link
+              href="/contributors"
+              aria-label="Meet the contributors"
+              className="grid grid-cols-6 gap-2 sm:gap-3"
+            >
+              {contributors.slice(0, 24).map(contributor => (
+                <img
+                  key={contributor.login}
+                  src={avatarUrl(contributor, 120)}
+                  alt=""
+                  width={60}
+                  height={60}
+                  loading="lazy"
+                  className="aspect-square w-full border-2 border-hf-ink bg-hf-sage object-cover transition-transform hover:-translate-y-1"
+                />
+              ))}
+            </Link>
+          </div>
+        </section>
+
         {/* What to do now */}
         <section className="border-t-2 border-hf-ink bg-hf-sage px-4 py-20 text-hf-ink sm:px-6 sm:py-24">
           <div className="mx-auto max-w-6xl">
@@ -256,21 +255,7 @@ export default function DiscontinuedPage() {
         </section>
       </main>
 
-      <footer className="border-t-2 border-hf-ink bg-hf-cream px-4 py-8 text-hf-ink sm:px-6">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <p className="font-display text-2xl font-extrabold tracking-tight">
-            Hacktoberfest Project Finder:{' '}
-            <span className="text-hf-red">thanks for every PR.</span>
-          </p>
-          <div className="space-y-1 font-mono text-xs uppercase tracking-wider text-hf-ink/70 md:text-right">
-            <p>
-              Made with <span className="text-hf-red">♥</span> by Usman, Sunrit
-              and you all
-            </p>
-            <p>Independent project · not affiliated with Hacktoberfest</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }
