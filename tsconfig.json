@@ -28,10 +28,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/env.mjs",
     "next.config.mjs",
     ".next/types/**/*.ts",
     "prebuild.mjs"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "archive"]
 }

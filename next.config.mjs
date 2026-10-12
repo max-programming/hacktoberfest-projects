@@ -1,16 +1,26 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
-import './src/env.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+/**
+ * The project finder has been discontinued (Hacktoberfest no longer counts
+ * pull requests). The site is now a single static notice page, and this
+ * config keeps hosting usage close to zero:
+ * - every old route (/repos, /contributors, /reports, /api/*, ...) is
+ *   redirected to the notice page by the routing layer, so no server
+ *   function, database or GitHub API call is ever invoked;
+ * - image optimization is turned off so no image transformations are billed.
+ *
+ * The retired feature code lives in /archive for reference.
+ */
+
 /**@type {import('next').NextConfig}*/
 const config = {
   reactStrictMode: true,
-  typedRoutes: true,
-  experimental: {
-    viewTransition: true
+  images: {
+    unoptimized: true
   },
   webpack(config) {
     config.resolve.alias['@'] = path.resolve(__dirname, 'src');
@@ -23,6 +33,13 @@ const config = {
         destination:
           'https://github.com/max-programming/hacktoberfest-projects',
         permanent: true
+      },
+      {
+        // Any path without a file extension (i.e. any old page or API route)
+        // goes to the notice page. Static assets and /_next are left alone.
+        source: '/:path((?!_next/)[^.]+)',
+        destination: '/',
+        permanent: false
       }
     ];
   }
