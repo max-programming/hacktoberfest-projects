@@ -4,4 +4,5 @@
 .github
 node_modules
 .all-contributorsrc
-.xatarcarchive
+.xatarc
+archive

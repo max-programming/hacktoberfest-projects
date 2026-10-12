@@ -1,6 +1,12 @@
+// Fonts are self-hosted (bundled from npm) so visitors make no requests to
+// third-party font services.
+import '@fontsource/barlow-semi-condensed/latin-700.css';
+import '@fontsource/barlow-semi-condensed/latin-800.css';
+import '@fontsource/space-mono/latin-400.css';
+import '@fontsource/space-mono/latin-700.css';
+import '@fontsource-variable/inter/wght.css';
 import '@/styles/globals.css';
 import type { Metadata, Viewport } from 'next';
-import localFont from 'next/font/local';
 
 // Analytics are disabled now that the project finder is discontinued.
 // Uncomment these (and the matching blocks below) to bring them back.
@@ -9,29 +15,13 @@ import localFont from 'next/font/local';
 // import { Databuddy } from '@databuddy/sdk/react';
 // import { env } from '@/env.mjs';
 
-const atkinsonHyperlegibleMono = localFont({
-  variable: '--font-atkinson-hyperlegible-mono',
-  src: [
-    {
-      path: './fonts/AtkinsonHyperlegibleMono-Italic-VariableFont_wght.ttf',
-      weight: '400',
-      style: 'italic'
-    },
-    {
-      path: './fonts/AtkinsonHyperlegibleMono-VariableFont_wght.ttf',
-      weight: '400',
-      style: 'normal'
-    }
-  ]
-});
-
 export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <html lang="en" className={atkinsonHyperlegibleMono.variable}>
+    <html lang="en">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head>
-      <body className="font-mono font-normal bg-hacktoberfest-blue">
+      <body className="bg-hf-teal font-sans text-hf-cream antialiased">
         {children}
         {/* Umami analytics (disabled)
         {env.NEXT_PUBLIC_ANALYTICS_WEBSITE_ID && (
@@ -63,7 +53,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1c1c3f',
+  themeColor: '#3d5e58',
   colorScheme: 'dark'
 };
 
